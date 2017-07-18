@@ -60,9 +60,11 @@ MonthDay类，只包含月日信息，不包含年信息，可以用它来代表
 	Output:
 	Sorry, today is not your birthday!
 1. 检查固定的日期
+
 正如MonthDay表示的是某个重复出现的日子的，YearMonth又是另一个组合，它代表的是像信用卡还款日，定期存款到期日这类的日期。其中lengthOfMonth()这个方法返回的是这个YearMonth实例有多少天，这对于检查2月到底是28天还是29天可是非常有用的。
     ```
-    YearMonth currentYearMonth = YearMonth.now();`  `System.out.printf("Days in month year %s: %d%n",currentYearMonth, currentYearMonth.lengthOfMonth()); 
+    YearMonth currentYearMonth = YearMonth.now();
+    System.out.printf("Days in month year %s: %d%n",currentYearMonth, currentYearMonth.lengthOfMonth()); 
     YearMonth creditCardExpiry = YearMonth.of(2018, Month.FEBRUARY);
     System.out.printf("Your credit card expires on %s %n", creditCardExpiry); 
     ```
