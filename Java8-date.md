@@ -204,7 +204,7 @@ Java 8不仅将日期和时间进行了分离，同时还有时区。现在已�
 	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM dd yyyy");     
 	    LocalDate holiday = LocalDate.parse(goodFriday, formatter); 
 	    System.out.printf("Successfully parsed String %s, date is %s%n", goodFriday, holiday);
-	} catch (DateTimeParseException ex) {`
+	} catch (DateTimeParseException ex) {
 	    System.out.printf("%s is not parsable!%n", goodFriday);
 	    ex.printStackTrace(); 
 	}
