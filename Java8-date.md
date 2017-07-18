@@ -11,14 +11,14 @@ Java 8 在 **java.time** 包下提供了很多新的 API。以下为两个比较
 
 新的**java.time**包涵盖了所有处理日期，时间，日期/时间，时区，时刻（instants），过程（during）与时钟（clock）的操作。
 
-## 本地化日期（LocalDate） ##
+## 一、本地化日期（LocalDate） ##
 Java 8中有一个叫LocalDate的类，它只包含日期，没有时间。以下是它的一些常用的API：
 1. 获取当天的日期
     ``` 
 	LocalDate localDate = LocalDate.now();
     System.out.println("Today's Local date : " + localDate); 
-	```	
-    Output : 
+	```
+    Output :  
     Today's Local date : 2017-07-14
 1. 独立获取当前的年月日
     ```
@@ -27,16 +27,14 @@ Java 8中有一个叫LocalDate的类，它只包含日期，没有时间。以�
     int day = localDate.getDayOfMonth(); 
     System.out.printf("Year : %d Month : %d day : %d \t %n", year, month, day); 
     ```    
-
-    Output:
+    Output:  
     Year : 2017 Month : 7 day : 14
 1. 创建某个特定的日期
     ```
     LocalDate dateOfBirth = LocalDate.of(1994, 08, 27);
     System.out.println("Your Date of birth is : " + dateOfBirth); 
     ```
-
-    Output：
+    Output：  
 	Your Date of birth is : 1994-08-27
 1. 检查两个日期是否相等
     ```
@@ -44,10 +42,10 @@ Java 8中有一个叫LocalDate的类，它只包含日期，没有时间。以�
         System.out.printf("dateOfBirth %s and localDate %s are not the same date %n", dateOfBirth, localDate); 
     } 
    ```
-Output:
-dateOfBirth 1994-08-27 and localDate 2017-07-14 are not the same date
-1. 检查每年的重复事件
-MonthDay类，只包含月日信息，不包含年信息，可以用它来代表每年重复出现的一些日子，比如生日、节日、结婚纪念日等。
+    Output:  
+    dateOfBirth 1994-08-27 and localDate 2017-07-14 are not the same date
+1. 检查每年的重复事件  
+   MonthDay类，只包含月日信息，不包含年信息，可以用它来代表每年重复出现的一些日子，比如生日、节日、结婚纪念日等。
 	```
 	MonthDay birthday = MonthDay.of(dateOfBirth.getMonth(), dateOfBirth.getDayOfMonth());
 	MonthDay currentMonthDay = MonthDay.from(localDate);
@@ -57,19 +55,18 @@ MonthDay类，只包含月日信息，不包含年信息，可以用它来代表
 	    System.out.println("Sorry, today is not your birthday！");
 	}
 	``` 
-	Output:
+	Output:  
 	Sorry, today is not your birthday!
-1. 检查固定的日期
-
-正如MonthDay表示的是某个重复出现的日子的，YearMonth又是另一个组合，它代表的是像信用卡还款日，定期存款到期日这类的日期。其中lengthOfMonth()这个方法返回的是这个YearMonth实例有多少天，这对于检查2月到底是28天还是29天可是非常有用的。
+1. 检查固定的日期  
+   正如MonthDay表示的是某个重复出现的日子的，YearMonth又是另一个组合，它代表的是像信用卡还款日，定期存款到期日这类的日期。其中lengthOfMonth()这个方法返回的是这个YearMonth实例有多少天，这对于检查2月到底是28天还是29天可是非常有用的。
     ```
     YearMonth currentYearMonth = YearMonth.now();
     System.out.printf("Days in month year %s: %d%n",currentYearMonth, currentYearMonth.lengthOfMonth()); 
     YearMonth creditCardExpiry = YearMonth.of(2018, Month.FEBRUARY);
     System.out.printf("Your credit card expires on %s %n", creditCardExpiry); 
     ```
-    Output:
-    Days in month year 2017-07: 31 
+    Output:  
+    Days in month year 2017-07: 31  
     Your credit card expires on 2018-02
 1. 增加当前日期的日、周、月
     ```
@@ -77,9 +74,9 @@ MonthDay类，只包含月日信息，不包含年信息，可以用它来代表
     System.out.println("Today is : " + localDate); 
     System.out.println("Date after 1 week : " + nextWeek); 
     ```
-    OutPut:
+    OutPut:  
     Today is : 2017-07-14 
-    Date after 1 week : 2017-07-21
+    Date after 1 week : 2017-07-21  
     可以用同样的方法来增加月、年、小时、分钟等，查看Java API中的ChronoUnit类来获取更多的选项。
 1. 减少当前日期的日、周、月
     ```
@@ -88,24 +85,24 @@ MonthDay类，只包含月日信息，不包含年信息，可以用它来代表
     LocalDate nextYear = localDate.plus(1, ChronoUnit.YEARS); 
     System.out.println("Date after 1 year : " + nextYear); 
     ```
-    Output:
-    Date before 1 year : 2016-07-14 
+    Output:  
+    Date before 1 year : 2016-07-14  
 	Date after 1 year : 2018-07-14
-1. 日期的比较（之前 or 之后）
-如果调用方法的那个日期比给定的日期要早的话，isBefore()方法会返回true。
-如果调用方法的那个日期比给定的日期要晚的话，isAfter()方法会返回true。
+1. 日期的比较（之前 or 之后）  
+   如果调用方法的那个日期比给定的日期要早的话，isBefore()方法会返回true。  
+   如果调用方法的那个日期比给定的日期要晚的话，isAfter()方法会返回true。
     ```
     LocalDate today = LocalDate.Now();
     LocalDate tomorrow = localDate.plus(1, ChronoUnit.DAYS);
     if(tommorow.isAfter(today)){ 
-    	System.out.println("Tomorrow comes after today");} 
-    	LocalDate yesterday = localDate.minus(1, ChronoUnit.DAYS) 
+        System.out.println("Tomorrow comes after today");} 
+        LocalDate yesterday = localDate.minus(1, ChronoUnit.DAYS) 
     if(yesterday.isBefore(today)){ 
-    	System.out.println("Yesterday is day before today");
+        System.out.println("Yesterday is day before today");
     } 
     ```
-    Output:
-    Tomorrow comes after today 
+    Output:  
+    Tomorrow comes after today   
     Yesterday is day before today
 1. 检查是否是闰年
     ```
@@ -115,79 +112,79 @@ MonthDay类，只包含月日信息，不包含年信息，可以用它来代表
          System.out.println("2017 is not a Leap year"); 
     } 
     ```
-    Output:
+    Output:  
     2017 is not a Leap year
 
-1. 计算两个日期间相隔的日、月、周、年
-java.time.Period类可以用来完成这个功能。
+1. 计算两个日期间相隔的日、月、周、年  
+   java.time.Period类可以用来完成这个功能。
     ```
     LocalDate java8ReleaseDate = LocalDate.of(2014, Month.MARCH, 14);
     Period period = Period.between(java8ReleaseDate，LocalDate); 
     System.out.println("Months left between current date and Java 8 release date : " +  (period.getYears()*12+period.getMonths()) );
 	```
-	Output:
+	Output:  
 	Months left between current date and Java 8 release date : 40
-## 本地化时间（LocalTime） ##
+## 二、本地化时间（LocalTime） ##
 Java 8中有一个叫LocalTime的类，它只包含时间，没有日期。以下是它的一些常用的API：
 1. 获取当前的时间
 	```
-    LocalTime localTime = LocalTime.now();
-    System.out.println("local time now : " + localTime);
+	LocalTime localTime = LocalTime.now();
+	System.out.println("local time now : " + localTime);
 	``` 
-    Output：
+    Output：  
 	local time now : 11:19:329.482   // in hour, minutes, seconds, nano seconds
 
 1. 增加当前时间的小时数
 	```
-    LocalTime newLocalTime = localTime.plusHours(2); // adding two hours 
-    System.out.println("Time after 2 hours : " + newLocalTime);
+	LocalTime newLocalTime = localTime.plusHours(2); // adding two hours 
+	System.out.println("Time after 2 hours : " + newLocalTime);
 	```
-    Output：
+    Output：  
 	Time after 2 hours : 13:19:329.482
-## 时钟类（Clock） ##
+## 三、时钟类（Clock） ##
 Java 8中自带了一个Clock类，你可以用它来获取某个时区下当前的瞬时时间，日期或者时间。可以用Clock来替代System.currentTimeInMillis()与 TimeZone.getDefault()方法。
 1. 获取当前时间
 	```
-    // Returns the current time based on your system clock and set to UTC. 
+	// Returns the current time based on your system clock and set to UTC. 
 	Clock clock = Clock.systemUTC(); 
 	System.out.println("Clock : " + clock); 
 	// Returns time based on system clock zone Clock 
 	defaultClock = Clock.systemDefaultZone(); 
 	System.out.println("Clock : " + clock);
 	```
-	Output:
-	Clock : SystemClock[Z] 
+	Output:  
+	Clock : SystemClock[Z]  
 	Clock : SystemClock[Z]
 
-## 时区类（LocalDateTime） ##
+## 四、时区类（LocalDateTime） ##
 Java 8不仅将日期和时间进行了分离，同时还有时区。现在已经有好几组与时区相关的类了，比如ZonId代表的是某个特定的时区，而ZonedDateTime代表的是带时区的时间。
 1. 不同时区的时间转换
 	```
-    LocalDateTime localtDateAndTime = LocalDateTime.now(); 
-    // Date and time with timezone in Java 8 ZoneId america = ZoneId.of("America/New_York"); 
-    ZonedDateTime dateAndTimeInNewYork = ZonedDateTime.of(localtDateAndTime, america ); 
+	LocalDateTime localtDateAndTime = LocalDateTime.now(); 
+	// Date and time with timezone in Java 8 ZoneId america = ZoneId.of("America/New_York"); 
+	ZonedDateTime dateAndTimeInNewYork = ZonedDateTime.of(localtDateAndTime, america ); 
 	System.out.println("Current date and time in a particular timezone : " + dateAndTimeInNewYork); 
 	```
-    Output:
+    Output:  
 	Current date and time in a particular timezone : 2017-07-14T11:38:10.916-04:00[America/New_York]
 
-1. 带时区偏移量的日期与时间
-在Java 8里面，你可以用ZoneOffset类来代表某个时区，比如印度是GMT或者UTC5：30，你可以使用它的静态方法ZoneOffset.of()方法来获取对应的时区。只要获取到了这个偏移量，你就可以拿LocalDateTime和这个偏移量创建出一个OffsetDateTime。
+1. 带时区偏移量的日期与时间  
+   在Java 8里面，你可以用ZoneOffset类来代表某个时区，比如印度是GMT或者UTC5：30，你可以使用它的静态方法ZoneOffset.of()方法来获取对应的时区。只要获取到了这个偏移量，你就可以拿LocalDateTime和这个偏移量创建出一个OffsetDateTime。
 	```
 	LocalDateTime datetime = LocalDateTime.of(2017, Month.JULY, 14, 12, 30);
 	ZoneOffset offset = ZoneOffset.of("+05:30");
 	OffsetDateTime date = OffsetDateTime.of(datetime, offset); 
 	System.out.println("Date and Time with timezone offset in Java : " + date);
 	```
-	Output:
+	Output:  
 	Date and Time with timezone offset in Java : 2017-07-14T12:30+05:30
-## 时间戳（Instant） ##
+## 五、时间戳（Instant） ##
 1. 获取当前时间戳
 	```
 	Instant timestamp = Instant.now();
 	System.out.println("What is value of this instant " + timestamp);
 	```
-	Output:
+	Output:  
 	What is value of this instant 2017-07-14T03:49:18.868Z
 ## 日期解析/格式化 ##
 在Java 8之前，时间日期的格式化是利用SimpleDateFormat实现的，但SimpleDateFormat并不是线程安全的，而用作本地变量来格式化又显得有些笨重。Java 8，这次它引入了一个全新的线程安全的日期与时间格式器。它还自带了一些预定义好的格式器，包含了常用的日期格式。
@@ -197,7 +194,7 @@ Java 8不仅将日期和时间进行了分离，同时还有时区。现在已�
 	LocalDate formatted = LocalDate.parse(dayAfterTommorrow, DateTimeFormatter.BASIC_ISO_DATE);
 	System.out.printf("Date generated from String %s is %s %n", dayAfterTommorrow, formatted); 
 	```
-	Output:
+	Output:   
 	Date generated from String 20170715 is 2017-07-15
 
 1. 用自定义格式器对日期进行解析
@@ -212,7 +209,7 @@ Java 8不仅将日期和时间进行了分离，同时还有时区。现在已�
 	    ex.printStackTrace(); 
 	}
 	```
-	Output:
+	Output:  
 	Successfully parsed String 07 14 2017, date is 2017-07-14 
 1. 对日期进行格式化，转换成字符串
 	```
@@ -226,7 +223,7 @@ Java 8不仅将日期和时间进行了分离，同时还有时区。现在已�
 	    ex.printStackTrace(); 
 	} 
 	```
-	Output:
+	Output:  
     Arriving at : 七月 14 2017 11:55 上午
 
     
