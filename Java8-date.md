@@ -60,9 +60,11 @@ MonthDay类，只包含月日信息，不包含年信息，可以用它来代表
 	Output:
 	Sorry, today is not your birthday!
 1. 检查固定的日期
+
 正如MonthDay表示的是某个重复出现的日子的，YearMonth又是另一个组合，它代表的是像信用卡还款日，定期存款到期日这类的日期。其中lengthOfMonth()这个方法返回的是这个YearMonth实例有多少天，这对于检查2月到底是28天还是29天可是非常有用的。
     ```
-    YearMonth currentYearMonth = YearMonth.now();`  `System.out.printf("Days in month year %s: %d%n",currentYearMonth, currentYearMonth.lengthOfMonth()); 
+    YearMonth currentYearMonth = YearMonth.now();
+    System.out.printf("Days in month year %s: %d%n",currentYearMonth, currentYearMonth.lengthOfMonth()); 
     YearMonth creditCardExpiry = YearMonth.of(2018, Month.FEBRUARY);
     System.out.printf("Your credit card expires on %s %n", creditCardExpiry); 
     ```
@@ -96,10 +98,10 @@ MonthDay类，只包含月日信息，不包含年信息，可以用它来代表
     LocalDate today = LocalDate.Now();
     LocalDate tomorrow = localDate.plus(1, ChronoUnit.DAYS);
     if(tommorow.isAfter(today)){ 
-    System.out.println("Tomorrow comes after today");} 
-    LocalDate yesterday = localDate.minus(1, ChronoUnit.DAYS) 
+    	System.out.println("Tomorrow comes after today");} 
+    	LocalDate yesterday = localDate.minus(1, ChronoUnit.DAYS) 
     if(yesterday.isBefore(today)){ 
-    System.out.println("Yesterday is day before today");
+    	System.out.println("Yesterday is day before today");
     } 
     ```
     Output:
@@ -202,12 +204,12 @@ Java 8不仅将日期和时间进行了分离，同时还有时区。现在已�
 	```
 	String isFriday = "07 14 2017";
 	try {
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM dd yyyy");     
-    LocalDate holiday = LocalDate.parse(goodFriday, formatter); 
-    System.out.printf("Successfully parsed String %s, date is %s%n", goodFriday, holiday);
+	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM dd yyyy");     
+	    LocalDate holiday = LocalDate.parse(goodFriday, formatter); 
+	    System.out.printf("Successfully parsed String %s, date is %s%n", goodFriday, holiday);
 	} catch (DateTimeParseException ex) {`
-    System.out.printf("%s is not parsable!%n", goodFriday);
-    ex.printStackTrace(); 
+	    System.out.printf("%s is not parsable!%n", goodFriday);
+	    ex.printStackTrace(); 
 	}
 	```
 	Output:
@@ -216,12 +218,12 @@ Java 8不仅将日期和时间进行了分离，同时还有时区。现在已�
 	```
 	LocalDateTime arrivalDate = LocalDateTime.now();
 	try { 
-    DateTimeFormatter format = DateTimeFormatter.ofPattern("MMM dd yyyy hh:mm a"); 
-    String landing = arrivalDate.format(format); 
-    System.out.printf("Arriving at : %s %n", landing);
+	    DateTimeFormatter format = DateTimeFormatter.ofPattern("MMM dd yyyy hh:mm a"); 
+	    String landing = arrivalDate.format(format); 
+	    System.out.printf("Arriving at : %s %n", landing);
     } catch (DateTimeException ex) { 
-    System.out.printf("%s can't be formatted!%n", arrivalDate); 
-    ex.printStackTrace(); 
+	    System.out.printf("%s can't be formatted!%n", arrivalDate); 
+	    ex.printStackTrace(); 
 	} 
 	```
 	Output:
