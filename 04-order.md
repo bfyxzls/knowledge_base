@@ -502,9 +502,9 @@
   "fee":4000,
   "payType":1,
   "completeDate":"2017-07-13 15:13:14",
-    "driveOutEmployeeId":"1002",
-    "driveOutPosSn":"123",
-    "status":3
+  "driveOutEmployeeId":"1002",
+  "driveOutPosSn":"123",
+  "status":3
 } 
 ```
 
