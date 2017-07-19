@@ -552,6 +552,8 @@
 }
 ```
 
+- 注意: `当MultipartFile file接收上传的文件时，如果文件太大，file为空。解决方法：在访问地址中添加/zuul/*，让请求越过DispatcherServlet,从而避免对MultipartFile文件进行处理。但是我们在测试的过程中用大小为4KB的图片上传仍然出现了该问题，因此建议在上传任何MultipartFile在url中加上/zuul/*`
+
 
 
 
@@ -564,7 +566,9 @@
 
 - 请求示例: `http://domain/order/orders/10000096/image?access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
 
-- 返回示例:
+- 返回示例: 
+
+    ![Markdown](http://i2.kiimg.com/1949/7c84a20ddd1f1eaa.png)
 
 
 
