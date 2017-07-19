@@ -543,7 +543,7 @@
 - 请求动作: `PUT`
 
 - 请求示例: `http://domain/zuul/order/orders/uploadOrderVehicleImage?id=10000122&access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
-
+![Markdown](http://i1.buimg.com/1949/84c15df0a215c259.png)
 
 - 返回示例:
 ```
@@ -569,13 +569,4 @@
 
 
 
-### 4.2 findDefaultPostSiblings接口
-- 功能描述: 
 
-- 请求地址: 
-
-- 请求动作: `GET`
-
-- 请求示例: 
-
-- 返回示例:
