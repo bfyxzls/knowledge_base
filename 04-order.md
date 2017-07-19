@@ -502,9 +502,9 @@
   "fee":4000,
   "payType":1,
   "completeDate":"2017-07-13 15:13:14",
-    "driveOutEmployeeId":"1002",
-    "driveOutPosSn":"123",
-    "status":3
+  "driveOutEmployeeId":"1002",
+  "driveOutPosSn":"123",
+  "status":3
 } 
 ```
 
@@ -543,7 +543,7 @@
 - 请求动作: `PUT`
 
 - 请求示例: `http://domain/zuul/order/orders/uploadOrderVehicleImage?id=10000122&access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
-
+![Markdown](http://i1.buimg.com/1949/84c15df0a215c259.png)
 
 - 返回示例:
 ```
@@ -552,30 +552,25 @@
 }
 ```
 
+- 注意: `当MultipartFile file接收上传的文件时，如果文件太大，file为空。解决方法：在访问地址中添加/zuul/*，让请求越过DispatcherServlet,从而避免对MultipartFile文件进行处理。但是我们在测试的过程中用大小为4KB的图片上传仍然出现了该问题，因此建议在上传任何MultipartFile在url中加上/zuul/*`
+
 
 
 
 ### 4.7 /{id}/image接口
 - 功能描述: `获取车辆图片`
 
-- 请求地址: 
+- 请求地址: `http://domain/order/orders/{id}/image`
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/order/orders/10000096/image?access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
+- 请求示例: `http://domain/order/orders/10000096/image?access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
 
-- 返回示例:
+- 返回示例: 
+
+    ![Markdown](http://i2.kiimg.com/1949/7c84a20ddd1f1eaa.png)
 
 
 
 
-### 4.2 findDefaultPostSiblings接口
-- 功能描述: 
 
-- 请求地址: 
-
-- 请求动作: `GET`
-
-- 请求示例: 
-
-- 返回示例:
