@@ -567,7 +567,8 @@
 - 请求示例: `http://domain/order/orders/10000096/image?access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
 
 - 返回示例: 
-![Markdown](http://i2.kiimg.com/1949/7c84a20ddd1f1eaa.png)
+
+    ![Markdown](http://i2.kiimg.com/1949/7c84a20ddd1f1eaa.png)
 
 
 
