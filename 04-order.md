@@ -558,11 +558,11 @@
 ### 4.7 /{id}/image接口
 - 功能描述: `获取车辆图片`
 
-- 请求地址: 
+- 请求地址: `http://domain/order/orders/{id}/image`
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/order/orders/10000096/image?access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
+- 请求示例: `http://domain/order/orders/10000096/image?access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
 
 - 返回示例:
 
