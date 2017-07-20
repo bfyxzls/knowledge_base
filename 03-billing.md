@@ -1,4 +1,4 @@
-# 3.1 MonthBillController测试用例
+## 3.1 月票（MonthBill）
 PS:需要用admin用户获得access_token
 ### 3.1.1 get接口
 - 功能描述: 根据id查找该MonthBill的详细信息
@@ -162,7 +162,7 @@ PS:需要用admin用户获得access_token
     }
 }
 ```
-# 3.2 ChargingStrategyController测试用例
+## 3.2 收费策略（ChargingStrategy）
 ### 3.1.1 save接口
 - 功能描述: 新增一个收费策略，并保存进数据库
 - 请求地址: `http://domain/billing/chargingStrategies?access_token=token`
