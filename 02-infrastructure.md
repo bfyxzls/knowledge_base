@@ -1,11 +1,10 @@
 # 2.1 BusinessParkingAreaController测试用例
 PS:需要用admin用户获得access_token
 ### 2.1.1 get接口
-- 功能描述: 根据id查找单个BusinessParkingArea的信息
-- 请求地址: `http://localhost:8080/infras/businessParkingAreas/1028?access_token`
+- 功能描述: 根据id查找商业停车场的信息
+- 请求地址: `http://localhost:8080/infras/businessParkingAreas/{id}?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/businessParkingAreas/1028?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
-
 - 返回示例
 ```
 {
@@ -42,11 +41,10 @@ PS:需要用admin用户获得access_token
 
 ```
 ### 2.1.2 list接口
-- 功能描述: 查找列表BusinessParkingArea
-- 请求地址: `http://localhost:8080/infras/businessParkingAreas/?access_token`
+- 功能描述: 查商业停车场列表信息
+- 请求地址: `http://localhost:8080/infras/businessParkingAreas?access_token`
 - 请求动作: `GET`
-- 请求示例: ``
-
+- 请求示例: `http://localhost:8080/infras/businessParkingAreas?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - 返回示例
 ```
 {
@@ -98,10 +96,10 @@ PS:需要用admin用户获得access_token
 }
 ```
 ### 2.1.3 save接口
-- 功能描述: 新增一个,BusinessParkingArea并保存进数据库
-- 请求地址: `http://localhost:8080/infras/businessParkingAreas/?access_token`
+- 功能描述: 添加新的商业停车场信息
+- 请求地址: `http://localhost:8080/infras/businessParkingAreas?access_token`
 - 请求动作: `POST`
-- 请求示例: `http://localhost:8080/infras/businessParkingAreas/?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+- 请求示例: `http://localhost:8080/infras/businessParkingAreas?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body：
 ```
 {
@@ -123,9 +121,7 @@ PS:需要用admin用户获得access_token
     "isOwnBusiness": null,
     "createdBy": "wyf"
                
-}
-           
-
+}        
 ```
 - 返回示例
 ```
@@ -163,14 +159,13 @@ PS:需要用admin用户获得access_token
 
 ```
 ### 2.1.4 update接口
-- 功能描述: 传入Id，更新该BusinessParkingArea
+- 功能描述: 更新商业停车场信息
 - 请求地址: `http://localhost:8080/infras/businessParkingAreas/{id}?access_token`
 - 请求动作: `PUT`
 - 请求示例: `http://localhost:8080/infras/businessParkingAreas/1030?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body：
 ```
-{
-               
+{               
     "code": "888",
     "name":  "万达广场",
     "coordinate": {
@@ -225,14 +220,14 @@ PS:需要用admin用户获得access_token
 }
 
 ```
-### 2.1.5 query接口
-- 功能描述: 传入名字部分信息，得到BusinessParkingArea信息
-- 请求地址: `http://localhost:8080/infras/businessParkingAreas/query?access_token`
+### 2.1.5 queryByName接口
+- 功能描述: 根据名字查询商业停车场信息
+- 请求地址: `http://localhost:8080/infras/businessParkingAreas/query?access_token&name`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/businessParkingAreas/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=广场`
 - 返回示例：
 ```
-
+{
     "status": "SUCCESS",
     "data": {
         "content": [
@@ -334,8 +329,8 @@ PS:需要用admin用户获得access_token
 
 ```
 ### 2.1.6 autoTop接口
-- 功能描述: 传入名字信息，得到BusinessParkingArea信息
-- 请求地址: `http://localhost:8080/infras/businessParkingAreas/autoTop?access_token`
+- 功能描述: 根据名字自动提示查询商业停车场信息
+- 请求地址: `http://localhost:8080/infras/businessParkingAreas/autoTop?access_token&name`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/businessParkingAreas/autoTop?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=广场`
 - 返回示例：
@@ -429,12 +424,10 @@ PS:需要用admin用户获得access_token
         }
     ]
 }
-
-
 ```
 # 2.2 CodeTypeController测试用例
 ### 2.2.1 get接口
-- 功能描述: 根据id，查找编码类型
+- 功能描述: 根据id查找编码类型
 - 请求地址: `http://localhost:8080/infras/codetypes/{id}?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/codetypes/1009?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
@@ -470,16 +463,10 @@ PS:需要用admin用户获得access_token
 
 ```
 ### 2.2.2 List接口
-- 功能描述: 得到编码类型列表
-- 请求地址: 
-```
-http://localhost:8080/infras/codetypes?access_token
-```
+- 功能描述: 查询编码类型列表信息
+- 请求地址: `http://localhost:8080/infras/codetypes?access_token`
 - 请求动作: `GET`
-- 请求示例: 
-```
-http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee
-```
+- 请求示例: `http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - 返回示例
 ```
 {
@@ -676,7 +663,7 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
 
 ```
 ### 2.2.3 save接口
-- 功能描述: 添加编码类型
+- 功能描述: 添加新的编码类型
 - 请求地址: `http://localhost:8080/infras/codetypes?access_token`
 - 请求动作: `POST`
 - 请求示例: `http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
@@ -698,9 +685,7 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
             "value": "公斤"
         }
     ]
-}
-      
-
+}      
 ```
 - 返回示例
 ```
@@ -738,14 +723,13 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
    
 ```
 ### 2.2.4 update接口
-- 功能描述: 根据Id,更新编码类型信息
+- 功能描述: 根据id更新编码类型信息
 - 请求地址: `http://localhost:8080/infras/codetypes/{id}?access_token`
 - 请求动作: `put`
 - 请求示例: `http://localhost:8080/infras/codetypes/1018?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body
 ```
-{
-   
+{ 
     "codes": [
         {
           
@@ -798,9 +782,9 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
 }
 
 ```
-### 2.2.5 query接口
-- 功能描述: 根据单位,获取编码类型信息
-- 请求地址: `http://localhost:8080/infras/codetypes/query?access_token`
+### 2.2.5 queryByName接口
+- 功能描述: 根据名字查询编码类型信息
+- 请求地址: `http://localhost:8080/infras/codetypes/query?access_token&name`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/codetypes/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=单位`
 - 返回示例
@@ -966,7 +950,7 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
 
 ```
 ### 2.3.2 list接口
-- 功能描述: 查找路段信息列表
+- 功能描述: 查询路段信息列表
 - 请求地址: `http://localhost:8080/infras/roadSections?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/roadSections?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
@@ -1032,15 +1016,13 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
 - 请求示例: `http://localhost:8080/infras/roadSections?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body:
 ```
-{
-                
+{               
     "name": "望江西路-创新大道",
     "level": 1023,
     "levelText": "B级路段",
     "coordinates": null,
     "parkingArea": null,
-    "createdBy": "wyf"
-               
+    "createdBy": "wyf"               
 }
        
 ```
@@ -1070,7 +1052,7 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
 
 ```
 ### 2.3.4 update接口
-- 功能描述: 根据id，更新路段信息
+- 功能描述: 根据id更新路段信息
 - 请求地址: `http://localhost:8080/infras/roadSections/{id}?access_token`
 - 请求动作: `PUT`
 - 请求示例: `http://localhost:8080/infras/roadSections/1022?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
@@ -1112,7 +1094,7 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
     }
 }
 ```
-### 2.3.5 query接口
+### 2.3.5 queryByName接口
 - 功能描述: 根据名字查询路段信息
 - 请求地址: `http://localhost:8080/infras/roadSections/query?access_token`
 - 请求动作: `GET`
@@ -1153,9 +1135,77 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
     }
 }
 ```
+### 2.3.6 autoTop接口
+- 功能描述: 根据路段名自动提示查询匹配的路段信息
+- 请求地址: `http://localhost:8080/infras/roadSections/autoTop?access_token&name`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/infras/roadSections/autoTop?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&name=路`
+- 返回示例:
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 1020,
+            "name": "潜山路-怀宁路",
+            "level": 1023,
+            "levelText": "B级路段",
+            "coordinates": null,
+            "parkingArea": null,
+            "createdBy": "wyf",
+            "createdDate": {
+                "epochSecond": 1499741709,
+                "nano": 108000000
+            },
+            "lastModifiedBy": "wyf",
+            "lastModifiedDate": {
+                "epochSecond": 1499741709,
+                "nano": 214000000
+            }
+        },
+        {
+            "id": 1021,
+            "name": "岳西路-长江西路",
+            "level": 1022,
+            "levelText": "A级路段",
+            "coordinates": null,
+            "parkingArea": null,
+            "createdBy": "wyf",
+            "createdDate": {
+                "epochSecond": 1499742628,
+                "nano": 516000000
+            },
+            "lastModifiedBy": "wyf",
+            "lastModifiedDate": {
+                "epochSecond": 1499742628,
+                "nano": 535000000
+            }
+        },
+        {
+            "id": 1022,
+            "name": "望江西路-创新大道",
+            "level": 1023,
+            "levelText": "B级路段",
+            "coordinates": null,
+            "parkingArea": null,
+            "createdBy": "wyf",
+            "createdDate": {
+                "epochSecond": 1500434109,
+                "nano": 113000000
+            },
+            "lastModifiedBy": "wyf",
+            "lastModifiedDate": {
+                "epochSecond": 1500434109,
+                "nano": 179000000
+            }
+        }
+    ]
+}
+}
+```
 # 2.4 ParkingController测试用例
 ### 2.4.1 get接口
-- 功能描述: 根据id，查找停车场信息
+- 功能描述: 根据id查询泊位信息
 - 请求地址: `http://localhost:8080/infras/parkings/{id}?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/parkings/1017?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
@@ -1205,10 +1255,10 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
 
 ```
 ### 2.4.2 list接口
-- 功能描述: 查找停车场信息列表
-- 请求地址: `http://localhost:8080/infras/parkings/1017?access_toke`
+- 功能描述: 查找泊位信息列表
+- 请求地址: `http://localhost:8080/infras/parkings?access_toke`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/parkings/1017?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+- 请求示例: `http://localhost:8080/infras/parkings?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - 返回示例:
 ```
 {
@@ -1381,7 +1431,7 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
 
 ```
 ### 2.4.3 save接口
-- 功能描述: 添加停车场信息
+- 功能描述: 添加新的泊位信息
 - 请求地址: `http://localhost:8080/infras/parkings?access_token`
 - 请求动作: `POST`
 - 请求示例: `http://localhost:8080/infras/parkings?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
@@ -1449,12 +1499,32 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
 }
 ```
 ### 2.4.4 update接口
-- 功能描述: 根据id，更改停车场信息
+- 功能描述: 根据id更新泊位信息
 - 请求地址: `http://localhost:8080/infras/parkings/{id}?access_token`
 - 请求动作: `PUT`
-- 请求示例: `http://localhost:8080/infras/parkings?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+- 请求示例: `http://localhost:8080/infras/parkings/1021?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body:
 ```
+{       
+    "code": "22222",
+    "post": {
+        "id": 1014,
+        "name": "岗位1",
+        "direction": 1,
+        "coordinates": null,
+        "parkingType": 1,
+        "parkingDistribution": 1,
+        "roadSection": {
+            "id": 1021,
+            "name": "岳西路-长江西路",
+            "level": 1022,
+            "levelText": "A级路段",
+            "coordinates": null,
+            "parkingArea": null
+          
+          }      
+    }
+ }
 ```
 -返回示例
 ```
@@ -1462,25 +1532,42 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
     "status": "SUCCESS",
     "data": {
         "id": 1021,
-        "code": "154147",
+        "code": "22222",
         "post": {
             "id": 1014,
-            "name": "岗位007",
+            "name": "岗位1",
             "direction": 1,
             "coordinates": null,
             "parkingType": 1,
             "parkingDistribution": 1,
-            "roadSection": null,
-            "employees": [],
+            "roadSection": {
+                "id": 1021,
+                "name": "岳西路-长江西路",
+                "level": 1022,
+                "levelText": "A级路段",
+                "coordinates": null,
+                "parkingArea": null,
+                "createdBy": null,
+                "createdDate": {
+                    "epochSecond": 1500511071,
+                    "nano": 805000000
+                },
+                "lastModifiedBy": null,
+                "lastModifiedDate": {
+                    "epochSecond": 1500511071,
+                    "nano": 805000000
+                }
+            },
+            "employees": null,
             "createdBy": null,
             "createdDate": {
-                "epochSecond": 1500432607,
-                "nano": 884000000
+                "epochSecond": 1500511071,
+                "nano": 805000000
             },
             "lastModifiedBy": null,
             "lastModifiedDate": {
-                "epochSecond": 1500432607,
-                "nano": 884000000
+                "epochSecond": 1500511071,
+                "nano": 805000000
             }
         },
         "type": null,
@@ -1489,20 +1576,20 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
         "chargingStrategy": null,
         "createdBy": "wyf",
         "createdDate": {
-            "epochSecond": 1500432607,
-            "nano": 884000000
+            "epochSecond": 1500511071,
+            "nano": 805000000
         },
         "lastModifiedBy": "wyf",
         "lastModifiedDate": {
-            "epochSecond": 1500432607,
-            "nano": 992000000
+            "epochSecond": 1500511071,
+            "nano": 964000000
         }
     }
 }
 ```
-### 2.4.5 query接口
-- 功能描述: 根据code，查找停车场信息
-- 请求地址: `http://localhost:8080/infras/parkings/query?access_token`
+### 2.4.5 queryByCode接口
+- 功能描述: 根据编码查询停车场信息
+- 请求地址: `http://localhost:8080/infras/parkings/query?access_token&code`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/parkings/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&code=154142`
 - 返回示例:
@@ -1564,7 +1651,7 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
 ```
 # 2.5 EnterpriseController测试用例
 ### 2.5.1 get接口
-- 功能描述: 根据id，查找企业信息
+- 功能描述: 根据id查询企业信息
 - 请求地址: `http://localhost:8080/infras/enterprises/{id}?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/enterprises/1003?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
@@ -1601,7 +1688,7 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
 
 ```
 ### 2.5.2 list接口
-- 功能描述: 查找企业信息列表
+- 功能描述: 查询企业信息列表
 - 请求地址: `http://localhost:8080/infras/enterprises?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/enterprises?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
@@ -1700,28 +1787,28 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
 
 ```
 ### 2.5.3 save接口
-- 功能描述: 添加企业信息
+- 功能描述: 添加新的企业信息
 - 请求地址: `http://localhost:8080/infras/enterprises?access_token`
 - 请求动作: `POST`
 - 请求示例: `http://localhost:8080/infras/enterprises?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body:
 ```
 {
+
+    "name": "合肥城市泊车投资管理有限公司全资子公司",
+    "abbr": "合肥城泊分公司",
+    "type": null,
+    "contactPerson": "",
+    "contactPersonPhoneNum": "",
+    "contactPersonEmail": "",
+    "province": "安徽省",
+    "city": "合肥市",
+    "district": "庐阳区",
+    "address": "劳动局10楼",
+    "parentEnterprise": null,
+    "sort": null,
+    "createdBy": "wyf"
   
-        "name": "合肥城市泊车投资管理有限公司全资子公司",
-        "abbr": "合肥城泊分公司",
-        "type": null,
-        "contactPerson": "",
-        "contactPersonPhoneNum": "",
-        "contactPersonEmail": "",
-        "province": "安徽省",
-        "city": "合肥市",
-        "district": "庐阳区",
-        "address": "劳动局10楼",
-        "parentEnterprise": null,
-        "sort": null,
-        "createdBy": "wyf"
-      
 }
 ```
 - 返回示例：
@@ -1757,18 +1844,14 @@ http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c
 
 ```
 ### 2.5.4 update接口
-- 功能描述: 更新企业信息
-- 请求地址: `http://localhost:8080/infras/enterprises?access_token`
+- 功能描述: 根据id更新企业信息
+- 请求地址: `http://localhost:8080/infras/enterprises/{id}?access_token`
 - 请求动作: `PUT`
-- 请求示例: `http://localhost:8080/infras/enterprises?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+- 请求示例: `http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body:
 ```
-http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee
-{
-  
-      
-        "abbr": "合肥城泊分公司1"
-        
+{       
+        "abbr": "合肥城泊分公司1"        
 }
 ```
 - 返回示例:
@@ -1803,10 +1886,10 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 }
 
 ```
-### 2.5.5 query接口
-- 功能描述: 根据名字，查询企业信息
-- 请求地址: `http://localhost:8080/infras/enterprises/query?access_token`
-- 请求动作: `PUT`
+### 2.5.5 queryByName接口
+- 功能描述: 根据名字查询企业信息
+- 请求地址: `http://localhost:8080/infras/enterprises/query?access_token&name`
+- 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/enterprises/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=合肥城市泊车投资管理有限公司全资子公司`
 - 返回示例:
 ```
@@ -1878,9 +1961,9 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 
 ```
 ### 2.5.6 autoTop接口
-- 功能描述: 根据名字，自动提示企业信息
-- 请求地址: `http://localhost:8080/infras/enterprises/autoTop?access_token`
-- 请求动作: `PUT`
+- 功能描述: 根据名字查询匹配的企业信息
+- 请求地址: `http://localhost:8080/infras/enterprises/autoTop?access_token&name`
+- 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/enterprises/autoTop?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=合肥城市泊车投资管理有限公司全资子公司`
 - 返回示例:
 ```
@@ -1943,7 +2026,7 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 ```
 # 2.6 ParkingAreasController测试用例
 ### 2.6.1 get接口
-- 功能描述: 根据id，查找停车场信息
+- 功能描述: 根据id查找停车场信息
 - 请求地址: `http://localhost:8080/infras/parkingAreas/{id}?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/parkingAreas/1037?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
@@ -1976,7 +2059,7 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 
 ```
 ### 2.6.2 list接口
-- 功能描述: 查找停车场信息列表
+- 功能描述: 查询停车场信息列表
 - 请求地址: `http://localhost:8080/infras/parkingAreas?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/parkingAreas?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
@@ -2086,15 +2169,13 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 }
 ```
 ### 2.6.3 save接口
-- 功能描述: 添加停车场信息列表
+- 功能描述: 添加新的停车场信息
 - 请求地址: `http://localhost:8080/infras/parkingAreas?access_token`
 - 请求动作: `POST`
 - 请求示例: `http://localhost:8080/infras/parkingAreas?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body:
 ```
-{
-    
-              
+{               
     "code": "700000",
     "name": "岳东路停车场",
     "coordinates": null,
@@ -2102,11 +2183,7 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
     "maintainEnterprise": null,
     "province": "安徽省",
     "city": "合肥市",
-    "district": "蜀山区",
-    "createdBy": "wyf",
-   
-    "lastModifiedBy": "wyf"
-              
+    "district": "蜀山区",              
 }
 ```
 - 返回示例
@@ -2138,16 +2215,14 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 
 ```
 ### 2.6.4 update接口
-- 功能描述: 更新停车场信息
-- 请求地址: `http://localhost:8080/infras/parkingAreas/1037?access_token`
+- 功能描述: 根据id更新停车场信息
+- 请求地址: `http://localhost:8080/infras/parkingAreas/{id}?access_token`
 - 请求动作: `PUT`
 - 请求示例: `http://localhost:8080/infras/parkingAreas/1037?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body:
 ```
-{
-  
-    "city": "北京市"
-  
+{  
+    "city": "北京市"  
 }
 ```
 - 返回示例
@@ -2178,9 +2253,9 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 }
 
 ```
-### 2.6.5 query接口
+### 2.6.5 queryByName接口
 - 功能描述: 根据名字查询停车场信息
-- 请求地址: `http://localhost:8080/infras/parkingAreas/query?access_token`
+- 请求地址: `http://localhost:8080/infras/parkingAreas/query?access_token&name`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/parkingAreas/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=长江西路停车场`
 - 返回示例:
@@ -2247,8 +2322,8 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 }
 ```
 ### 2.6.6 autoTop接口
-- 功能描述: 根据名字提示停车场信息
-- 请求地址: `http://localhost:8080/infras/parkingAreas/autoTop?access_token`
+- 功能描述: 根据名字查询匹配的停车场信息
+- 请求地址: `http://localhost:8080/infras/parkingAreas/autoTop?access_token&name`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/parkingAreas/autoTop?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=岳东路停车场`
 - 返回示例:
@@ -2300,13 +2375,10 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
         }
     ]
 }
-
-
-
 ```
 # 2.7 PostController测试用例
 ### 2.7.1 get接口
-- 功能描述: 根据id，查找岗位信息
+- 功能描述: 根据id查询岗位信息
 - 请求地址: `http://localhost:8080/infras/posts/{id}?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/posts/1014?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
@@ -2355,13 +2427,13 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 
 ```
 ### 2.7.2 list接口
-- 功能描述: 查找岗位信息列表
+- 功能描述: 查询岗位信息列表
 - 请求地址: `http://localhost:8080/infras/posts?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/posts?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - 返回示例:
 ```
-
+{
     "status": "SUCCESS",
     "data": {
         "content": [
@@ -2490,14 +2562,13 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 
 ```
 ### 2.7.3 save接口
-- 功能描述: 添加岗位信息
+- 功能描述: 添加新的岗位信息
 - 请求地址: `http://localhost:8080/infras/posts?access_token`
 - 请求动作: `POST`
 - 请求示例: `http://localhost:8080/infras/posts?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body:
 ```
-{
-   
+{  
     "name": "岗位3",
     "direction": 1,
     "coordinates": null,
@@ -2564,16 +2635,14 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 
 ```
 ### 2.7.4 update接口
-- 功能描述: 更新岗位信息
-- 请求地址: `http://localhost:8080/infras/posts/1015?access_token`
+- 功能描述: 根据id更新岗位信息
+- 请求地址: `http://localhost:8080/infras/posts/{id}?access_token`
 - 请求动作: `PUT`
 - 请求示例: `http://localhost:8080/infras/posts/1015?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body:
 ```
-{
-   
-    "parkingType": 2
-   
+{  
+    "parkingType": 2   
 }
 ```
 - 返回示例
@@ -2620,11 +2689,11 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 }
 
 ```
-### 2.7.5 query接口
+### 2.7.5 queryByRoadSectionName接口
 - 功能描述: 根据路段名查询岗位信息
-- 请求地址: `http://localhost:8080/infras/posts/query/?access_token`
+- 请求地址: `http://localhost:8080/infras/posts/query?access_token&roadSectionName`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/posts/query/?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&roadSectionName=岳西路-长江西路`
+- 请求示例: `http://localhost:8080/infras/posts/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&roadSectionName=岳西路-长江西路`
 - 返回示例:
 ```
 {
@@ -2682,8 +2751,8 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 
 ```
 ### 2.7.6 autoTop接口
-- 功能描述: 根据路段名提示岗位信息
-- 请求地址: `http://localhost:8080/infras/posts/autoTop?access_token`
+- 功能描述: 根据路段名查询岗位信息
+- 请求地址: `http://localhost:8080/infras/posts/autoTop?access_token&roadSectionName`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/posts/autoTop?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&roadSectionName=潜山路-怀宁路`
 - 返回示例:
@@ -2808,7 +2877,7 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 ```
 # 2.8 DeptController测试用例
 ### 2.8.1 get接口
-- 功能描述: 根据id，查找部门信息
+- 功能描述: 根据id查询部门信息
 - 请求地址: `http://localhost:8080/infras/depts/{id}?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/depts/1003?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
@@ -2862,7 +2931,7 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 
 ```
 ### 2.8.2 list接口
-- 功能描述: 查找部门信息列表
+- 功能描述: 查询部门信息列表
 - 请求地址: `http://localhost:8080/infras/depts?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/depts?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
@@ -3011,30 +3080,30 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 }
 ```
 ### 2.8.3 save接口
-- 功能描述: 添加部门信息
+- 功能描述: 添加新的部门信息
 - 请求地址: `http://localhost:8080/infras/depts?access_token`
 - 请求动作: `POST`
 - 请求示例: `http://localhost:8080/infras/depts?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body:
 ```
 {
-                "name": "情报部门",
-                "abbr": "情报",
-                "enterprise": {
-                    "id": 1003,
-                    "name": "合肥城市泊车投资管理有限公司",
-                    "abbr": "合肥城泊",
-                    "type": null,
-                    "contactPerson": "",
-                    "contactPersonPhoneNum": "",
-                    "contactPersonEmail": "",
-                    "province": "安徽省",
-                    "city": "合肥市",
-                    "district": "庐阳区",
-                    "address": "劳动局5楼",
-                    "parentEnterprise": null,
-                    "sort": null    
-                 }
+    "name": "情报部门",
+    "abbr": "情报",
+    "enterprise": {
+        "id": 1003,
+        "name": "合肥城市泊车投资管理有限公司",
+        "abbr": "合肥城泊",
+        "type": null,
+        "contactPerson": "",
+        "contactPersonPhoneNum": "",
+        "contactPersonEmail": "",
+        "province": "安徽省",
+        "city": "合肥市",
+        "district": "庐阳区",
+        "address": "劳动局5楼",
+        "parentEnterprise": null,
+        "sort": null    
+     }
  }
 ```
 -  返回示例：
@@ -3087,37 +3156,32 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 
 ```
 ### 2.8.4 update接口
-- 功能描述: 更新部门信息
-- 请求地址: `http://localhost:8080/infras/depts/1004?access_token`
+- 功能描述: 根据id更新部门信息
+- 请求地址: `http://localhost:8080/infras/depts/{id}?access_token`
 - 请求动作: `PUT`
-- 请求示例: `http://localhost:8080/infras/depts/1004?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee       
+- 请求示例: `http://localhost:8080/infras/depts/1004?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`       
 - Body:
 ```
 {
-                "name": "清洁部门",
-                "abbr": "情报",
-                "enterprise": {
-                    "id": 1003,
-                    "name": "合肥城市泊车投资管理有限公司",
-                    "abbr": "合肥城泊",
-                    "type": null,
-                    "contactPerson": "",
-                    "contactPersonPhoneNum": "",
-                    "contactPersonEmail": "",
-                    "province": "安徽省",
-                    "city": "合肥市",
-                    "district": "庐阳区",
-                    "address": "劳动局5楼",
-                    "parentEnterprise": null,
-                    "sort": null
-                   
-                    }
-                  
-                  
-                
+    "name": "清洁部门",
+    "abbr": "情报",
+    "enterprise": {
+        "id": 1003,
+        "name": "合肥城市泊车投资管理有限公司",
+        "abbr": "合肥城泊",
+        "type": null,
+        "contactPerson": "",
+        "contactPersonPhoneNum": "",
+        "contactPersonEmail": "",
+        "province": "安徽省",
+        "city": "合肥市",
+        "district": "庐阳区",
+        "address": "劳动局5楼",
+        "parentEnterprise": null,
+        "sort": null
+       
+        }                                            
 }               
-
-
 ```
 - 返回示例:
 ```
@@ -3168,9 +3232,9 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 }
 
 ```
-### 2.8.5 query接口
-- 功能描述: 根据部分名字查询部门信息
-- 请求地址: `http://localhost:8080/infras/depts/query?access_token`
+### 2.8.5 queryByName接口
+- 功能描述: 根据部门名字查询匹配的所有部门信息
+- 请求地址: `http://localhost:8080/infras/depts/query?access_token&name`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/depts/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=清洁`      
 - 返回示例:
@@ -3235,7 +3299,7 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 
 ```
 ### 2.8.6 autoTop接口
-- 功能描述: 根据部分名字提示部门信息
+- 功能描述: 根据部门名字自动提示匹配的部门信息
 - 请求地址: `http://localhost:8080/infras/depts/autoTop?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/depts/autoTop?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=部门`  
@@ -3376,8 +3440,8 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
 ```
 # 2.9 DictionaryController测试用例
 ### 2.9.1 get接口
-- 功能描述: 根据id，查找编码与编码的名字
-- 请求地址: `http://localhost:8080/infras/dictionaries/getCodes?access_token`
+- 功能描述: 根据id查找编码与编码类型名
+- 请求地址: `http://localhost:8080/infras/dictionaries/getCodes?access_token&codeTypeId`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/dictionaries/getCodes?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&codeTypeId=1006`
 - 返回示例:
@@ -3400,9 +3464,9 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
     ]
 }
 ```
-# 3.0 EmployeeController测试用例
-### 3.0.1 get接口
-- 功能描述: 根据id，查找员工的信息
+# 2.10 EmployeeController测试用例
+### 2.10.1 get接口
+- 功能描述: 根据id查找雇员信息
 - 请求地址: `http://localhost:8080/infras/employees/{id}?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/employees/1005?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
@@ -3433,14 +3497,13 @@ http://localhost:8080/infras/enterprises/1005?access_token=f1235ff1-521b-4ec3-ad
     }
 }
 ```
-### 3.0.2 list接口
-- 功能描述: 查找员工的信息列表
+### 2.10.2 list接口
+- 功能描述: 查询雇员信息列表
 - 请求地址: `http://localhost:8080/infras/employees?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/employees?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - 返回示例:
 ```
-http://localhost:8080/infras/employees?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee
 {
     "status": "SUCCESS",
     "data": {
@@ -3702,8 +3765,8 @@ http://localhost:8080/infras/employees?access_token=f1235ff1-521b-4ec3-add0-6c7c
 }
 
 ```
-### 3.0.3 save接口
-- 功能描述: 查找员工的信息列表
+### 2.10.3 save接口
+- 功能描述: 添加新的雇员信息
 - 请求地址: `http://localhost:8080/infras/employees?access_token`
 - 请求动作: `POST`
 - 请求示例: `http://localhost:8080/infras/employees?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
@@ -3718,14 +3781,10 @@ http://localhost:8080/infras/employees?access_token=f1235ff1-521b-4ec3-add0-6c7c
     "positionText": null,
     "phoneNum": null,
     "sort": null,
-    "defaultPost": null,
-    "createdBy": "wyf",
-   
-    "lastModifiedBy": "wyf"
-  
+    "defaultPost": null,  
 }
 ```
-- 返回实例
+- 返回示例
 ```
 {
     "status": "SUCCESS",
@@ -3753,9 +3812,9 @@ http://localhost:8080/infras/employees?access_token=f1235ff1-521b-4ec3-add0-6c7c
 }
 
 ```
-### 3.0.4 update接口
-- 功能描述: 查找员工的信息列表
-- 请求地址: `http://localhost:8080/infras/employees?access_token`
+### 2.10.4 update接口
+- 功能描述: 根据id更新雇员信息
+- 请求地址: `http://localhost:8080/infras/employees/{id}?access_token`
 - 请求动作: `PUT`
 - 请求示例: `http://localhost:8080/infras/employees/1005?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body:
@@ -3769,11 +3828,7 @@ http://localhost:8080/infras/employees?access_token=f1235ff1-521b-4ec3-add0-6c7c
     "positionText": null,
     "phoneNum": null,
     "sort": null,
-    "defaultPost": null,
-    "createdBy": "wyf",
-   
-    "lastModifiedBy": "wyf"
-  
+    "defaultPost": null, 
 }
 
 ```
@@ -3803,274 +3858,129 @@ http://localhost:8080/infras/employees?access_token=f1235ff1-521b-4ec3-add0-6c7c
         }
     }
 }
-
-
 ```
-### 3.0.4 query接口
-- 功能描述: 查找员工的信息列表
+### 2.10.5 queryByNameAndPhoneNum接口
+- 功能描述: 根据姓名或电话查询员工信息
 - 请求地址: `http://localhost:8080/infras/employees/query?access_token`
-- 请求动作: `PUT`
-- 请求示例: `http://localhost:8080/infras/employees/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+         或 `http://localhost:8080/infras/employees/query?access_token&name`
+         或 `http://localhost:8080/infras/employees/query?access_token&name&phoneNum`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/infras/employees/query?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&name=佘能斌`
 - 返回示例:
 ```
-
-    "status": "SUCCESS",
-    "data": {
-        "content": [
-            {
-                "id": 1001,
-                "name": "佘能斌",
-                "gender": 1,
-                "dept": {
-                    "id": 1003,
-                    "name": "人力资源部",
-                    "abbr": "人力",
-                    "enterprise": {
-                        "id": 1003,
-                        "name": "合肥城市泊车投资管理有限公司",
-                        "abbr": "合肥城泊",
-                        "type": null,
-                        "contactPerson": "",
-                        "contactPersonPhoneNum": "",
-                        "contactPersonEmail": "",
-                        "province": "安徽省",
-                        "city": "合肥市",
-                        "district": "庐阳区",
-                        "address": "劳动局5楼",
-                        "parentEnterprise": null,
-                        "sort": null,
-                        "createdBy": "wyf",
-                        "createdDate": {
-                            "epochSecond": 1499241690,
-                            "nano": 619000000
-                        },
-                        "lastModifiedBy": "wyf",
-                        "lastModifiedDate": {
-                            "epochSecond": 1499241690,
-                            "nano": 701000000
-                        }
-                    },
-                    "personInCharge": "zz",
-                    "parentDept": null,
-                    "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499242699,
-                        "nano": 339000000
-                    },
-                    "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499242699,
-                        "nano": 420000000
-                    }
-                },
-                "position": 1025,
-                "positionText": "收费员",
-                "phoneNum": "18621061991",
-                "sort": null,
-                "defaultPost": {
-                    "id": 1014,
-                    "name": "岗位1",
-                    "direction": 1,
-                    "coordinates": null,
-                    "parkingType": 1,
-                    "parkingDistribution": 1,
-                    "roadSection": {
-                        "id": 1021,
-                        "name": "岳西路-长江西路",
-                        "level": 1022,
-                        "levelText": "A级路段",
-                        "coordinates": null,
-                        "parkingArea": null,
-                        "createdBy": "wyf",
-                        "createdDate": {
-                            "epochSecond": 1499742628,
-                            "nano": 516000000
-                        },
-                        "lastModifiedBy": "wyf",
-                        "lastModifiedDate": {
-                            "epochSecond": 1499742628,
-                            "nano": 535000000
-                        }
-                    },
-                    "employees": [],
-                    "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499741143,
-                        "nano": 601000000
-                    },
-                    "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499741143,
-                        "nano": 925000000
-                    }
-                },
-                "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499257071,
-                    "nano": 186000000
-                },
-                "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499257071,
-                    "nano": 196000000
-                }
-            },
-            {
-                "id": 1002,
-                "name": "赵朋飞",
-                "gender": 2,
-                "dept": null,
-                "position": null,
-                "positionText": null,
-                "phoneNum": null,
-                "sort": null,
-                "defaultPost": null,
-                "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500429196,
-                    "nano": 313000000
-                },
-                "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500429196,
-                    "nano": 343000000
-                }
-            },
-            {
-                "id": 1003,
-                "name": "赵朋飞",
-                "gender": 2,
-                "dept": null,
-                "position": null,
-                "positionText": null,
-                "phoneNum": null,
-                "sort": null,
-                "defaultPost": null,
-                "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500429210,
-                    "nano": 195000000
-                },
-                "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500429210,
-                    "nano": 195000000
-                }
-            },
-            {
-                "id": 1004,
-                "name": "刘鹏飞",
-                "gender": 2,
-                "dept": {
-                    "id": 1003,
-                    "name": "人力资源部",
-                    "abbr": "人力",
-                    "enterprise": {
-                        "id": 1003,
-                        "name": "合肥城市泊车投资管理有限公司",
-                        "abbr": "合肥城泊",
-                        "type": null,
-                        "contactPerson": "",
-                        "contactPersonPhoneNum": "",
-                        "contactPersonEmail": "",
-                        "province": "安徽省",
-                        "city": "合肥市",
-                        "district": "庐阳区",
-                        "address": "劳动局5楼",
-                        "parentEnterprise": null,
-                        "sort": null,
-                        "createdBy": "wyf",
-                        "createdDate": {
-                            "epochSecond": 1499241690,
-                            "nano": 619000000
-                        },
-                        "lastModifiedBy": "wyf",
-                        "lastModifiedDate": {
-                            "epochSecond": 1499241690,
-                            "nano": 701000000
-                        }
-                    },
-                    "personInCharge": "zz",
-                    "parentDept": null,
-                    "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499242699,
-                        "nano": 339000000
-                    },
-                    "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499242699,
-                        "nano": 420000000
-                    }
-                },
-                "position": null,
-                "positionText": null,
-                "phoneNum": null,
-                "sort": null,
-                "defaultPost": null,
-                "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500430839,
-                    "nano": 704000000
-                },
-                "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500430839,
-                    "nano": 893000000
-                }
-            },
-            {
-                "id": 1006,
-                "name": "小V",
-                "gender": 2,
-                "dept": null,
-                "position": null,
-                "positionText": null,
-                "phoneNum": null,
-                "sort": null,
-                "defaultPost": null,
-                "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500449011,
-                    "nano": 503000000
-                },
-                "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500449011,
-                    "nano": 517000000
-                }
-            },
-            {
-                "id": 1005,
-                "name": "小吧",
-                "gender": 2,
-                "dept": null,
-                "position": null,
-                "positionText": null,
-                "phoneNum": null,
-                "sort": null,
-                "defaultPost": null,
-                "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500460602,
-                    "nano": 552000000
-                },
-                "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500460602,
-                    "nano": 731000000
-                }
-            }
-        ],
-        "last": true,
-        "totalElements": 6,
-        "totalPages": 1,
-        "number": 0,
-        "size": 20,
-        "sort": null,
-        "first": true,
-        "numberOfElements": 6
-    }
+{   
+   "status": "SUCCESS",
+   "data": {
+       "content": [
+           {
+               "id": 1001,
+               "name": "佘能斌",
+               "gender": 1,
+               "dept": {
+                   "id": 1003,
+                   "name": "人力资源部",
+                   "abbr": "人力",
+                   "enterprise": {
+                       "id": 1003,
+                       "name": "合肥城市泊车投资管理有限公司",
+                       "abbr": "合肥城泊",
+                       "type": null,
+                       "contactPerson": "",
+                       "contactPersonPhoneNum": "",
+                       "contactPersonEmail": "",
+                       "province": "安徽省",
+                       "city": "合肥市",
+                       "district": "庐阳区",
+                       "address": "劳动局5楼",
+                       "parentEnterprise": null,
+                       "sort": null,
+                       "createdBy": "wyf",
+                       "createdDate": {
+                           "epochSecond": 1499241690,
+                           "nano": 619000000
+                       },
+                       "lastModifiedBy": "wyf",
+                       "lastModifiedDate": {
+                           "epochSecond": 1499241690,
+                           "nano": 701000000
+                       }
+                   },
+                   "personInCharge": "zz",
+                   "parentDept": null,
+                   "createdBy": "wyf",
+                   "createdDate": {
+                       "epochSecond": 1499242699,
+                       "nano": 339000000
+                   },
+                   "lastModifiedBy": "wyf",
+                   "lastModifiedDate": {
+                       "epochSecond": 1499242699,
+                       "nano": 420000000
+                   }
+               },
+               "position": 1025,
+               "positionText": "收费员",
+               "phoneNum": "18621061991",
+               "sort": null,
+               "defaultPost": {
+                   "id": 1014,
+                   "name": "岗位1",
+                   "direction": 1,
+                   "coordinates": null,
+                   "parkingType": 1,
+                   "parkingDistribution": 1,
+                   "roadSection": {
+                       "id": 1021,
+                       "name": "岳西路-长江西路",
+                       "level": 1022,
+                       "levelText": "A级路段",
+                       "coordinates": null,
+                       "parkingArea": null,
+                       "createdBy": "wyf",
+                       "createdDate": {
+                           "epochSecond": 1499742628,
+                           "nano": 516000000
+                       },
+                       "lastModifiedBy": "wyf",
+                       "lastModifiedDate": {
+                           "epochSecond": 1499742628,
+                           "nano": 535000000
+                       }
+                   },
+                   "employees": [],
+                   "createdBy": "wyf",
+                   "createdDate": {
+                       "epochSecond": 1499741143,
+                       "nano": 601000000
+                   },
+                   "lastModifiedBy": "wyf",
+                   "lastModifiedDate": {
+                       "epochSecond": 1499741143,
+                       "nano": 925000000
+                   }
+               },
+               "createdBy": "wyf",
+               "createdDate": {
+                   "epochSecond": 1499257071,
+                   "nano": 186000000
+               },
+               "lastModifiedBy": "wyf",
+               "lastModifiedDate": {
+                   "epochSecond": 1499257071,
+                   "nano": 196000000
+               }
+           }
+       ],
+       "last": true,
+       "totalPages": 1,
+       "totalElements": 1,
+       "number": 0,
+       "size": 20,
+       "sort": null,
+       "first": true,
+       "numberOfElements": 1
+   }
+   
 }
 ```
 
