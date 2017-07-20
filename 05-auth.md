@@ -4,13 +4,6 @@
 HTTP请求方式:GET  
 URL：http://.../uaa/sysusers/{id}?access_token=ACCESS_TOKEN
 
-**参数说明**
-
-|:-------------:|:-------------:|:-------------:|
-|参数名          |必填           |描述           |
-|  access_token    |         是      |        用户授权凭证      |
-|  id    |         是      |        查询的用户id      |
-
 **返回字段JSON示例**
 
     {
@@ -61,55 +54,10 @@ URL：http://.../uaa/sysusers/{id}?access_token=ACCESS_TOKEN
     	}
     }
 
-**返回data用户字段说明:**
-
-|:-------------:|:-------------:|:-------------:|
-|参数名          |类型           | 描述         |
-|id|Long|用户id|
-|username|String|用户名|
-|password|String|用户密码|
-|firstname|String|名|
-|lastname|String|姓|
-|email|String|邮箱地址|
-|imageUrl|String|图片资源路径|
-|roles|JSON结构|角色信息集合|
-|authority|JSON结构|权限信息集合|
-
-
-**roles字段说明:**
-
-|:-------------:|:-------------:|:-------------:|
-|参数名          |类型           | 描述         |
-|       id        |        Long       |      角色id        |
-|      name         |     String          |      角色描述        |
-|       value        |         String      |        角色名      |
-|   authorities            |     JSON结构          |      权限列表        |
-
-**authorities字段说明:**
-
-|:-------------:|:-------------:|:-------------:|
-|参数名          |类型           | 描述         |
-|       id        |        Long       |      权限id        |
-|      name         |     String          |      权限描述       |
-|       value        |         String      |        权限名     |
-
-**authority字段说明:**
-
-|:-------------:|:-------------:|:-------------:|
-|参数名          |类型           | 描述         |
-|      authority         |     String          |      权限名        |
-
 ## 查询用户列表接口 ##
 
 HTTP请求方式:GET  
 URL：http://.../uaa/sysusers?access_token=ACCESS_TOKEN
-
-**参数说明**
-
-|:-------------:|:-------------:|:-------------:|
-|参数名          |必填           |描述           |
-|  access_token    |         是      |        用户授权凭证      |
-
 
 **返回字段JSON示例**
 
@@ -143,59 +91,290 @@ URL：http://.../uaa/sysusers?access_token=ACCESS_TOKEN
     }
 }    
 
-**返回data用户列表字段说明:**
 
-|:-------------:|:-------------:|:-------------:|
-|参数名          |类型           | 描述         |
-|     content          |    JSON结构           |        用户信息集合      |
-|      last         |       Boolean        |              |
-|     totalPages          |       Integer        |      总计页数        |
-|       totalElements        |      Integer         |       总计条数       |
-|      number         |       Integer        |      开始数        |
-|       size        |        Integer        |       每页最大展示数       |
-|       numberOfElements        |       Integer        |       基础数量       |
-|      sort         |        String       |              |
-|      first         |         Boolean      |              |
 
 ## 查看当前登录用户信息 ##
 
 HTTP请求方式:GET  
 URL：http://.../uaa/sysusers/user?access_token=ACCESS_TOKEN
 
+**返回数据示例**
 
-**参数说明**
-
-|:-------------:|:-------------:|:-------------:|
-|参数名          |必填           |描述           |
-|  access_token    |         是      |        用户授权凭证      |
-
+    {
+    "authorities": [
+    {
+    "authority": "order-order-defaultPostParkings"
+    },
+    {
+    "authority": "order-order-defaultPostSiblings"
+    },
+    {
+    "authority": "order-order-list"
+    },
+    {
+    "authority": "order-order-allParkingsByPost"
+    },
+    {
+    "authority": "order-order-driveOut"
+    },
+    {
+    "authority": "order-order-image"
+    },
+    {
+    "authority": "order-order-uploadImage"
+    },
+    {
+    "authority": "order-order-driveIn"
+    }
+    ],
+    "details": {
+    "remoteAddress": "192.168.1.22",
+    "sessionId": null,
+    "tokenValue": "bdfc82c8-8020-4f50-8c69-125b34594a46",
+    "tokenType": "Bearer",
+    "decodedDetails": null
+    },
+    "authenticated": true,
+    "userAuthentication": {
+    "authorities": [
+    {
+    "authority": "order-order-defaultPostParkings"
+    },
+    {
+    "authority": "order-order-defaultPostSiblings"
+    },
+    {
+    "authority": "order-order-list"
+    },
+    {
+    "authority": "order-order-allParkingsByPost"
+    },
+    {
+    "authority": "order-order-driveOut"
+    },
+    {
+    "authority": "order-order-image"
+    },
+    {
+    "authority": "order-order-uploadImage"
+    },
+    {
+    "authority": "order-order-driveIn"
+    }
+    ],
+    "details": {
+    "grant_type": "password",
+    "username": "maj"
+    },
+    "authenticated": true,
+    "principal": {
+    "id": 25,
+    "username": "maj",
+    "password": "$2a$10$bO4Kp5Y.7L9b2fmpVSO3suniCScmiPj47pk.7D/yifUgz8mhm79ba",
+    "employeeId": 1001,
+    "firstName": null,
+    "lastName": null,
+    "email": null,
+    "roles": [
+    {
+    "id": 5,
+    "name": "收费员",
+    "value": "ROLE_CHARGER",
+    "authorities": [
+    {
+    "id": 38,
+    "name": "查看订单列表",
+    "value": "order-order-list"
+    },
+    {
+    "id": 33,
+    "name": "查看属于岗位的泊位",
+    "value": "order-order-allParkingsByPost"
+    },
+    {
+    "id": 36,
+    "name": "上传车辆图片",
+    "value": "order-order-uploadImage"
+    },
+    {
+    "id": 35,
+    "name": "车辆驶出",
+    "value": "order-order-driveOut"
+    },
+    {
+    "id": 30,
+    "name": "查看员工默认岗位及泊位",
+    "value": "order-order-defaultPostParkings"
+    },
+    {
+    "id": 32,
+    "name": "查看同一路段的岗位",
+    "value": "order-order-defaultPostSiblings"
+    },
+    {
+    "id": 37,
+    "name": "查看车辆图片",
+    "value": "order-order-image"
+    },
+    {
+    "id": 34,
+    "name": "车辆驶入",
+    "value": "order-order-driveIn"
+    }
+    ]
+    }
+    ],
+    "authorities": [
+    {
+    "authority": "order-order-defaultPostParkings"
+    },
+    {
+    "authority": "order-order-defaultPostSiblings"
+    },
+    {
+    "authority": "order-order-list"
+    },
+    {
+    "authority": "order-order-allParkingsByPost"
+    },
+    {
+    "authority": "order-order-driveOut"
+    },
+    {
+    "authority": "order-order-image"
+    },
+    {
+    "authority": "order-order-uploadImage"
+    },
+    {
+    "authority": "order-order-driveIn"
+    }
+    ],
+    "enabled": true,
+    "accountNonExpired": true,
+    "accountNonLocked": true,
+    "credentialsNonExpired": true
+    },
+    "credentials": null,
+    "name": "maj"
+    },
+    "principal": {
+    "id": 25,
+    "username": "maj",
+    "password": "$2a$10$bO4Kp5Y.7L9b2fmpVSO3suniCScmiPj47pk.7D/yifUgz8mhm79ba",
+    "employeeId": 1001,
+    "firstName": null,
+    "lastName": null,
+    "email": null,
+    "roles": [
+    {
+    "id": 5,
+    "name": "收费员",
+    "value": "ROLE_CHARGER",
+    "authorities": [
+    {
+    "id": 38,
+    "name": "查看订单列表",
+    "value": "order-order-list"
+    },
+    {
+    "id": 33,
+    "name": "查看属于岗位的泊位",
+    "value": "order-order-allParkingsByPost"
+    },
+    {
+    "id": 36,
+    "name": "上传车辆图片",
+    "value": "order-order-uploadImage"
+    },
+    {
+    "id": 35,
+    "name": "车辆驶出",
+    "value": "order-order-driveOut"
+    },
+    {
+    "id": 30,
+    "name": "查看员工默认岗位及泊位",
+    "value": "order-order-defaultPostParkings"
+    },
+    {
+    "id": 32,
+    "name": "查看同一路段的岗位",
+    "value": "order-order-defaultPostSiblings"
+    },
+    {
+    "id": 37,
+    "name": "查看车辆图片",
+    "value": "order-order-image"
+    },
+    {
+    "id": 34,
+    "name": "车辆驶入",
+    "value": "order-order-driveIn"
+    }
+    ]
+    }
+    ],
+    "authorities": [
+    {
+    "authority": "order-order-defaultPostParkings"
+    },
+    {
+    "authority": "order-order-defaultPostSiblings"
+    },
+    {
+    "authority": "order-order-list"
+    },
+    {
+    "authority": "order-order-allParkingsByPost"
+    },
+    {
+    "authority": "order-order-driveOut"
+    },
+    {
+    "authority": "order-order-image"
+    },
+    {
+    "authority": "order-order-uploadImage"
+    },
+    {
+    "authority": "order-order-driveIn"
+    }
+    ],
+    "enabled": true,
+    "accountNonExpired": true,
+    "accountNonLocked": true,
+    "credentialsNonExpired": true
+    },
+    "oauth2Request": {
+    "clientId": "android",
+    "scope": [
+    "xx"
+    ],
+    "requestParameters": {
+    "grant_type": "password",
+    "username": "maj"
+    },
+    "resourceIds": [],
+    "authorities": [],
+    "approved": true,
+    "refresh": false,
+    "redirectUri": null,
+    "responseTypes": [],
+    "extensions": {},
+    "grantType": "password",
+    "refreshTokenRequest": null
+    },
+    "clientOnly": false,
+    "credentials": "",
+    "name": "maj"
+    }
 
 
 ## 添加新用户接口 ##
 
 HTTP请求方式:POST  
 URL：http://.../uaa/sysusers?access_token=ACCESS_TOKEN
-
-**参数说明**
-
-|:-------------:|:-------------:|:-------------:|
-|参数名          |必填           |描述           |
-|  access_token    |         是      |        用户授权凭证      |
-|    POST数据           |      是         |       JSON数据       |
-
-**POST数据说明**
-
-|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
-|参数名          |必填           |类型           |示例值       |       描述     |
-|        username       |      是         |      String        |    abc         |      用户名        |
-|       password         |      是         |     String         |     zzzzzz        |      用户密码         |
-|        email       |        否       |      String        |      abc@163.com       |       用户邮箱        |
-|       imageUrl        |      否         |       String       |        http://iamge.png     |       图片        |
-|       firstName         |     否          |       String       |       a      |       名        |
-|      lastName        |     否          |       String       |     c        |           姓    |
-|       roles        |       是        |       JSON结构      |       [    ]      |     角色集合，传空数组          |
-|       authorities       |       是        |       JSON结构       |      [    ]       |      权限集合， 传空数组       |
-
 
 **POST数据示例**
 
@@ -222,12 +401,16 @@ URL：http://.../uaa/sysusers?access_token=ACCESS_TOKEN
     		"id": 48,
     		"username": "abc",
     		"password": "$2a$10$DSCEnkU4IHunRN2OeO33B.PScGCftaE/0bMBgvqvDj4zb78E14sn2",
-    		"firstName": "z",
-    		"lastName": "j",
-    		"email": "abc@163.com",
-    		"imageUrl": "http:wdqe",
-    		"roles": [],
-    		"authorities": []
+    		"employeeId": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null,
+            "roles": [],
+            "authorities": [],
+            "credentialsNonExpired": true,
+            "accountNonExpired": true,
+            "accountNonLocked": true,
+            "enabled": true
     	}
     }
 
@@ -235,28 +418,6 @@ URL：http://.../uaa/sysusers?access_token=ACCESS_TOKEN
 
 HTTP请求方式:PUT  
 URL：http://.../uaa/sysusers/{id}?access_token=ACCESS_TOKEN
-
-**参数说明**
-
-|:-------------:|:-------------:|:-------------:|
-|参数名          |必填           |描述           |
-|  access_token    |         是      |        用户授权凭证      |
-|id               |是               |         更新用户的id|
-|    PUT数据           |      是         |       JSON数据       |
-
-**PUT数据说明**
-
-|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
-|参数名          |必填           |类型           |示例值       |       描述     |
-|        username       |      是         |      String        |    abc         |      用户名        |
-|       password         |      是         |     String         |     zzzzzz        |      用户密码         |
-|        email       |        否       |      String        |      abc@163.com       |       用户邮箱        |
-|       imageUrl        |      否         |       String       |        http://iamge.png     |       图片        |
-|       firstName         |     否          |       String       |       a      |       名        |
-|      lastName        |     否          |       String       |     c        |           姓    |
-|       roles        |       是        |       JSON结构      |       [    ]      |     角色集合，传空数组          |
-|       authorities       |       是        |       JSON结构       |      [    ]       |      权限集合， 传空数组       |
-
 
 **PUT数据示例**
 
@@ -298,11 +459,6 @@ URL：http://.../uaa/sysusers/{id}?access_token=ACCESS_TOKEN
 HTTP请求方式:GET  
 URL：http://.../uaa/sysroles/{id}?access_token=ACCESS_TOKEN
 
-|:-------------:|:-------------:|:-------------:|
-|参数名          |必填           |描述           |
-|  access_token    |         是      |        用户授权凭证      |
-|id               |是               |         查看的角色的id|
-
 **返回数据示例**
 
     {
@@ -320,11 +476,6 @@ URL：http://.../uaa/sysroles/{id}?access_token=ACCESS_TOKEN
 
 HTTP请求方式:GET  
 URL：http://.../uaa/sysroles?access_token=ACCESS_TOKEN
-
-|:-------------:|:-------------:|:-------------:|
-|参数名          |必填           |描述           |
-|  access_token    |         是      |        用户授权凭证      |
-
 
 **返回数据示例**
 
@@ -373,17 +524,6 @@ URL：http://.../uaa/sysroles?access_token=ACCESS_TOKEN
 HTTP请求方式:POST  
 URL：http://.../uaa/sysroles?access_token=ACCESS_TOKEN
 
-|:-------------:|:-------------:|:-------------:|
-|参数名          |必填           |描述           |
-|  access_token    |         是      |        用户授权凭证      |
-|    POST数据           |      是         |       JSON数据       |
-
-
-|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
-|参数名          |必填           |类型           |示例值       |       描述     |
-|       name        |        是       |    String          |       "观察员"      |      角色名         |
-|        value       |       是        |       String       |      ROLE_OBSERVE      |       角色描述        |
-
 **POST数据示例**
 
     {
@@ -407,12 +547,6 @@ URL：http://.../uaa/sysroles?access_token=ACCESS_TOKEN
 
 HTTP请求方式:PUT  
 URL：http://.../uaa/sysroles/{id}?access_token=ACCESS_TOKEN
-
-|:-------------:|:-------------:|:-------------:|
-|参数名          |必填           |描述           |
-|  access_token    |         是      |        用户授权凭证      |
-|    PUT数据           |      是         |       JSON数据       |
-
 
 **PUT数据示例**
 
@@ -438,11 +572,6 @@ URL：http://.../uaa/sysroles/{id}?access_token=ACCESS_TOKEN
 
 HTTP请求方式:GET  
 URL：http://.../uaa/sysroles/query?name=NAME&access_token=ACCESS_TOKEN
-
-|:-------------:|:-------------:|:-------------:|
-|参数名          |必填           |描述           |
-|  access_token    |         是      |        用户授权凭证      |
-|name|否|条件字段，为null时查询所有|
 
 **返回数据示例**
 
@@ -474,11 +603,6 @@ URL：http://.../uaa/sysroles/query?name=NAME&access_token=ACCESS_TOKEN
 HTTP请求方式:GET  
 URL：http://.../uaa/sysauthorities/{id}?access_token=ACCESS_TOKEN
 
-|:-------------:|:-------------:|:-------------:|
-|参数名          |必填           |描述           |
-|  access_token    |         是      |        用户授权凭证      |
-|id|是|权限id|
-
 **返回数据示例**
 
     {
@@ -495,11 +619,6 @@ URL：http://.../uaa/sysauthorities/{id}?access_token=ACCESS_TOKEN
 
 HTTP请求方式:GET  
 URL：http://.../uaa/sysauthorities?access_token=ACCESS_TOKEN
-
-|:-------------:|:-------------:|:-------------:|
-|参数名          |必填           |描述           |
-|  access_token    |         是      |        用户授权凭证      |
-
 
 **返回数据示例**
 
@@ -533,11 +652,6 @@ URL：http://.../uaa/sysauthorities?access_token=ACCESS_TOKEN
 
 HTTP请求方式:GET  
 URL：http://.../uaa/sysauthorities/query?name=NAME&access_token=ACCESS_TOKEN
-
-|:-------------:|:-------------:|:-------------:|
-|参数名          |必填           |描述           |
-|  access_token    |         是      |        用户授权凭证      |
-|name|否|条件字段，为null时查询所有|
 
 **返回数据示例**
 
