@@ -401,6 +401,7 @@ URL：http://.../uaa/sysusers?access_token=ACCESS_TOKEN
     		"id": 48,
     		"username": "abc",
     		"password": "$2a$10$DSCEnkU4IHunRN2OeO33B.PScGCftaE/0bMBgvqvDj4zb78E14sn2",
+    		"employeeId": null,
     		"firstName": "z",
     		"lastName": "j",
     		"email": "abc@163.com",
