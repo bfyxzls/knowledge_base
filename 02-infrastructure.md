@@ -1,4 +1,4 @@
-# 2.1 BusinessParkingAreaController测试用例
+# 2.1 商业停车场信息访问接口
 PS:需要用admin用户获得access_token
 ### 2.1.1 get接口
 - 功能描述: 根据id查找商业停车场的信息
@@ -425,7 +425,7 @@ PS:需要用admin用户获得access_token
     ]
 }
 ```
-# 2.2 CodeTypeController测试用例
+# 2.2 编码类型信息访问接口
 ### 2.2.1 get接口
 - 功能描述: 根据id查找编码类型
 - 请求地址: `http://localhost:8080/infras/codetypes/{id}?access_token`
@@ -918,7 +918,7 @@ PS:需要用admin用户获得access_token
 }
 
 ```
-# 2.3 RoadSectionController测试用例
+# 2.3 路段信息访问接口
 ### 2.3.1 get接口
 - 功能描述: 根据id，查找路段信息
 - 请求地址: `http://localhost:8080/infras/roadSections/{id}?access_token`
@@ -1203,7 +1203,7 @@ PS:需要用admin用户获得access_token
 }
 }
 ```
-# 2.4 ParkingController测试用例
+# 2.4 泊位信息访问接口
 ### 2.4.1 get接口
 - 功能描述: 根据id查询泊位信息
 - 请求地址: `http://localhost:8080/infras/parkings/{id}?access_token`
@@ -1649,7 +1649,7 @@ PS:需要用admin用户获得access_token
 }
 
 ```
-# 2.5 EnterpriseController测试用例
+# 2.5 企业信息访问接口
 ### 2.5.1 get接口
 - 功能描述: 根据id查询企业信息
 - 请求地址: `http://localhost:8080/infras/enterprises/{id}?access_token`
@@ -2024,7 +2024,7 @@ PS:需要用admin用户获得access_token
 }
 
 ```
-# 2.6 ParkingAreasController测试用例
+# 2.6 停车场信息访问接口
 ### 2.6.1 get接口
 - 功能描述: 根据id查找停车场信息
 - 请求地址: `http://localhost:8080/infras/parkingAreas/{id}?access_token`
@@ -2376,7 +2376,7 @@ PS:需要用admin用户获得access_token
     ]
 }
 ```
-# 2.7 PostController测试用例
+# 2.7 泊位信息访问接口
 ### 2.7.1 get接口
 - 功能描述: 根据id查询岗位信息
 - 请求地址: `http://localhost:8080/infras/posts/{id}?access_token`
@@ -2875,7 +2875,7 @@ PS:需要用admin用户获得access_token
 }
 
 ```
-# 2.8 DeptController测试用例
+# 2.8 部门信息访问接口
 ### 2.8.1 get接口
 - 功能描述: 根据id查询部门信息
 - 请求地址: `http://localhost:8080/infras/depts/{id}?access_token`
@@ -3438,7 +3438,7 @@ PS:需要用admin用户获得access_token
 }
 
 ```
-# 2.9 DictionaryController测试用例
+# 2.9 编码信息访问接口
 ### 2.9.1 get接口
 - 功能描述: 根据id查找编码与编码类型名
 - 请求地址: `http://localhost:8080/infras/dictionaries/getCodes?access_token&codeTypeId`
@@ -3464,7 +3464,7 @@ PS:需要用admin用户获得access_token
     ]
 }
 ```
-# 2.10 EmployeeController测试用例
+# 2.10 雇员信息访问接口
 ### 2.10.1 get接口
 - 功能描述: 根据id查找雇员信息
 - 请求地址: `http://localhost:8080/infras/employees/{id}?access_token`
@@ -3860,7 +3860,7 @@ PS:需要用admin用户获得access_token
 }
 ```
 ### 2.10.5 queryByNameAndPhoneNum接口
-- 功能描述: 根据姓名或电话查询员工信息
+- 功能描述: 根据姓名或电话查询雇员信息
 - 请求地址: `http://localhost:8080/infras/employees/query?access_token`
          或 `http://localhost:8080/infras/employees/query?access_token&name`
          或 `http://localhost:8080/infras/employees/query?access_token&name&phoneNum`
