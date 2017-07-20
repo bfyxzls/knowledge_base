@@ -402,12 +402,15 @@ URL：http://.../uaa/sysusers?access_token=ACCESS_TOKEN
     		"username": "abc",
     		"password": "$2a$10$DSCEnkU4IHunRN2OeO33B.PScGCftaE/0bMBgvqvDj4zb78E14sn2",
     		"employeeId": null,
-    		"firstName": "z",
-    		"lastName": "j",
-    		"email": "abc@163.com",
-    		"imageUrl": "http:wdqe",
-    		"roles": [],
-    		"authorities": []
+            "firstName": null,
+            "lastName": null,
+            "email": null,
+            "roles": [],
+            "authorities": [],
+            "credentialsNonExpired": true,
+            "accountNonExpired": true,
+            "accountNonLocked": true,
+            "enabled": true
     	}
     }
 
