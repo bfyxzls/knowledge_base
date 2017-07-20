@@ -98,6 +98,279 @@ URL：http://.../uaa/sysusers?access_token=ACCESS_TOKEN
 HTTP请求方式:GET  
 URL：http://.../uaa/sysusers/user?access_token=ACCESS_TOKEN
 
+**返回数据示例**
+
+    {
+    "authorities": [
+    {
+    "authority": "order-order-defaultPostParkings"
+    },
+    {
+    "authority": "order-order-defaultPostSiblings"
+    },
+    {
+    "authority": "order-order-list"
+    },
+    {
+    "authority": "order-order-allParkingsByPost"
+    },
+    {
+    "authority": "order-order-driveOut"
+    },
+    {
+    "authority": "order-order-image"
+    },
+    {
+    "authority": "order-order-uploadImage"
+    },
+    {
+    "authority": "order-order-driveIn"
+    }
+    ],
+    "details": {
+    "remoteAddress": "192.168.1.22",
+    "sessionId": null,
+    "tokenValue": "bdfc82c8-8020-4f50-8c69-125b34594a46",
+    "tokenType": "Bearer",
+    "decodedDetails": null
+    },
+    "authenticated": true,
+    "userAuthentication": {
+    "authorities": [
+    {
+    "authority": "order-order-defaultPostParkings"
+    },
+    {
+    "authority": "order-order-defaultPostSiblings"
+    },
+    {
+    "authority": "order-order-list"
+    },
+    {
+    "authority": "order-order-allParkingsByPost"
+    },
+    {
+    "authority": "order-order-driveOut"
+    },
+    {
+    "authority": "order-order-image"
+    },
+    {
+    "authority": "order-order-uploadImage"
+    },
+    {
+    "authority": "order-order-driveIn"
+    }
+    ],
+    "details": {
+    "grant_type": "password",
+    "username": "maj"
+    },
+    "authenticated": true,
+    "principal": {
+    "id": 25,
+    "username": "maj",
+    "password": "$2a$10$bO4Kp5Y.7L9b2fmpVSO3suniCScmiPj47pk.7D/yifUgz8mhm79ba",
+    "employeeId": 1001,
+    "firstName": null,
+    "lastName": null,
+    "email": null,
+    "roles": [
+    {
+    "id": 5,
+    "name": "收费员",
+    "value": "ROLE_CHARGER",
+    "authorities": [
+    {
+    "id": 38,
+    "name": "查看订单列表",
+    "value": "order-order-list"
+    },
+    {
+    "id": 33,
+    "name": "查看属于岗位的泊位",
+    "value": "order-order-allParkingsByPost"
+    },
+    {
+    "id": 36,
+    "name": "上传车辆图片",
+    "value": "order-order-uploadImage"
+    },
+    {
+    "id": 35,
+    "name": "车辆驶出",
+    "value": "order-order-driveOut"
+    },
+    {
+    "id": 30,
+    "name": "查看员工默认岗位及泊位",
+    "value": "order-order-defaultPostParkings"
+    },
+    {
+    "id": 32,
+    "name": "查看同一路段的岗位",
+    "value": "order-order-defaultPostSiblings"
+    },
+    {
+    "id": 37,
+    "name": "查看车辆图片",
+    "value": "order-order-image"
+    },
+    {
+    "id": 34,
+    "name": "车辆驶入",
+    "value": "order-order-driveIn"
+    }
+    ]
+    }
+    ],
+    "authorities": [
+    {
+    "authority": "order-order-defaultPostParkings"
+    },
+    {
+    "authority": "order-order-defaultPostSiblings"
+    },
+    {
+    "authority": "order-order-list"
+    },
+    {
+    "authority": "order-order-allParkingsByPost"
+    },
+    {
+    "authority": "order-order-driveOut"
+    },
+    {
+    "authority": "order-order-image"
+    },
+    {
+    "authority": "order-order-uploadImage"
+    },
+    {
+    "authority": "order-order-driveIn"
+    }
+    ],
+    "enabled": true,
+    "accountNonExpired": true,
+    "accountNonLocked": true,
+    "credentialsNonExpired": true
+    },
+    "credentials": null,
+    "name": "maj"
+    },
+    "principal": {
+    "id": 25,
+    "username": "maj",
+    "password": "$2a$10$bO4Kp5Y.7L9b2fmpVSO3suniCScmiPj47pk.7D/yifUgz8mhm79ba",
+    "employeeId": 1001,
+    "firstName": null,
+    "lastName": null,
+    "email": null,
+    "roles": [
+    {
+    "id": 5,
+    "name": "收费员",
+    "value": "ROLE_CHARGER",
+    "authorities": [
+    {
+    "id": 38,
+    "name": "查看订单列表",
+    "value": "order-order-list"
+    },
+    {
+    "id": 33,
+    "name": "查看属于岗位的泊位",
+    "value": "order-order-allParkingsByPost"
+    },
+    {
+    "id": 36,
+    "name": "上传车辆图片",
+    "value": "order-order-uploadImage"
+    },
+    {
+    "id": 35,
+    "name": "车辆驶出",
+    "value": "order-order-driveOut"
+    },
+    {
+    "id": 30,
+    "name": "查看员工默认岗位及泊位",
+    "value": "order-order-defaultPostParkings"
+    },
+    {
+    "id": 32,
+    "name": "查看同一路段的岗位",
+    "value": "order-order-defaultPostSiblings"
+    },
+    {
+    "id": 37,
+    "name": "查看车辆图片",
+    "value": "order-order-image"
+    },
+    {
+    "id": 34,
+    "name": "车辆驶入",
+    "value": "order-order-driveIn"
+    }
+    ]
+    }
+    ],
+    "authorities": [
+    {
+    "authority": "order-order-defaultPostParkings"
+    },
+    {
+    "authority": "order-order-defaultPostSiblings"
+    },
+    {
+    "authority": "order-order-list"
+    },
+    {
+    "authority": "order-order-allParkingsByPost"
+    },
+    {
+    "authority": "order-order-driveOut"
+    },
+    {
+    "authority": "order-order-image"
+    },
+    {
+    "authority": "order-order-uploadImage"
+    },
+    {
+    "authority": "order-order-driveIn"
+    }
+    ],
+    "enabled": true,
+    "accountNonExpired": true,
+    "accountNonLocked": true,
+    "credentialsNonExpired": true
+    },
+    "oauth2Request": {
+    "clientId": "android",
+    "scope": [
+    "xx"
+    ],
+    "requestParameters": {
+    "grant_type": "password",
+    "username": "maj"
+    },
+    "resourceIds": [],
+    "authorities": [],
+    "approved": true,
+    "refresh": false,
+    "redirectUri": null,
+    "responseTypes": [],
+    "extensions": {},
+    "grantType": "password",
+    "refreshTokenRequest": null
+    },
+    "clientOnly": false,
+    "credentials": "",
+    "name": "maj"
+    }
+
+
 ## 添加新用户接口 ##
 
 HTTP请求方式:POST  
