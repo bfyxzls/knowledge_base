@@ -37,14 +37,6 @@
         ],
         "orderSummaries": [
             {
-                "id": 10000105,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
                 "id": 10000106,
                 "status": 1,
                 "carPlate": "皖A12345",
@@ -54,14 +46,6 @@
             },
             {
                 "id": 10000107,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000108,
                 "status": 1,
                 "carPlate": "皖A12345",
                 "chargingStrategy": 1,
@@ -86,118 +70,6 @@
             },
             {
                 "id": 10000089,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000090,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000124,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000088,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000091,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000113,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000092,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000114,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000093,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000095,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000116,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000117,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000118,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000119,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000097,
                 "status": 1,
                 "carPlate": "皖A12345",
                 "chargingStrategy": 1,
@@ -319,126 +191,6 @@
             },
             {
                 "id": 10000111,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000089,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000090,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000124,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000088,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000091,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000113,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000092,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000114,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000093,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000095,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000116,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000117,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000118,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000119,
-                "status": 1,
-                "carPlate": "皖A12345",
-                "chargingStrategy": 1,
-                "parkingCode": "154140",
-                "parkingId": 1017
-            },
-            {
-                "id": 10000097,
                 "status": 1,
                 "carPlate": "皖A12345",
                 "chargingStrategy": 1,
@@ -571,6 +323,15 @@
     ![Markdown](http://i2.kiimg.com/1949/7c84a20ddd1f1eaa.png)
 
 
+### 4.8 查询全部订单信息接口
+- 功能描述: `查询全部订单信息`
 
+- 请求地址: `http://domain/order/orders`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://domain/order/orders?access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
+
+- 返回示例: 
 
 
