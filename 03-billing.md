@@ -1,4 +1,4 @@
-# 3.1 MonthBillController测试用例
+## 3.1 月票（MonthBill）
 PS:需要用admin用户获得access_token
 ### 3.1.1 get接口
 - 功能描述: 根据id查找该MonthBill的详细信息
@@ -162,7 +162,16 @@ PS:需要用admin用户获得access_token
     }
 }
 ```
-# 3.2 ChargingStrategyController测试用例
+### 3.1.5 check接口
+- 功能描述: 传入车牌号和路段Id，查看该车在该路段是否具有月票
+- 请求地址: `http://domain/billing/monthBills/?access_token=token&customerCarPlate=_customerCarPlate&roadSectionId=_roadSectionId`
+- 请求动作: `PUT`
+- 请求示例: `http://localhost:8080/billing/monthBills/isMonthBill?access_token=54d39cae-57d5-4219-bfc1-37ab7609490a&customerCarPlate=皖A54321&roadSectionId=1020`
+- 返回示例
+```
+true
+```
+## 3.2 收费策略（ChargingStrategy）
 ### 3.1.1 save接口
 - 功能描述: 新增一个收费策略，并保存进数据库
 - 请求地址: `http://domain/billing/chargingStrategies?access_token=token`
