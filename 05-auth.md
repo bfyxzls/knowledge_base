@@ -521,6 +521,7 @@
   {
   	"username":"zhang",
   	"password":"zzzzzz",
+  	"employeeId": 1002,
   	"roles": [
              
           ],
@@ -537,7 +538,7 @@
            "id": 55,
            "username": "zhang",
            "password": "$2a$10$oYyIksVkT98Sl7uezWqB2uPbNhm6qnrqQmR0gnF7VhmJ.ru.NEPHq",
-           "employeeId": null,
+           "employeeId": 1002,
            "firstName": null,
            "lastName": null,
            "email": null,
