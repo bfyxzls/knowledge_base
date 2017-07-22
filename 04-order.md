@@ -1,11 +1,11 @@
 ### 4.1 findDefaultPostWithParkings接口
-- 功能描述: `通过雇员id查询他所在的默认岗位以及他所负责的泊位和订单。`
+- 功能描述: `查询当前登录用户所在的默认岗位以及他所负责的泊位和订单。`
 
 - 请求地址: `http://domain/order/orders/findDefaultPostWithParkings`
 
 - 请求动作: `GET`
 
-- 请求示例: `http://domain/order/orders/findDefaultPostWithParkings?employeeId=1002&access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
+- 请求示例: `http://domain/order/orders/findDefaultPostWithParkings?access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
 
 - 返回示例
 ```
