@@ -61,6 +61,14 @@
     "data": "注销失败"
 }
 ```
+
+- 请求失败返回示例：  
+```
+{
+  "error": "access_denied",
+  "error_description": "不允许访问"
+} 
+``` 
 # 5.1 UserController测试用例
 
 ### 5.1.1 查询单个用户信息
@@ -191,48 +199,6 @@
                   "accountNonLocked": true,
                   "accountNonExpired": true
               },
-              {
-                  "id": 25,
-                  "username": "maj",
-                  "password": "$2a$10$bO4Kp5Y.7L9b2fmpVSO3suniCScmiPj47pk.7D/yifUgz8mhm79ba",
-                  "employeeId": 1001,
-                  "firstName": null,
-                  "lastName": null,
-                  "email": null,
-                  "roles": [
-                      {
-                          "id": 5,
-                          "name": "收费员",
-                          "value": "ROLE_CHARGER",
-                          "authorities": [
-                              {
-                                  "id": 38,
-                                  "name": "查看订单列表",
-                                  "value": "order-order-list"
-                              },
-                              ...
-                              {
-                                  "id": 34,
-                                  "name": "车辆驶入",
-                                  "value": "order-order-driveIn"
-                              }
-                          ]
-                      }
-                  ],
-                  "authorities": [
-                      {
-                          "authority": "order-order-defaultPostParkings"
-                      },
-                       ...
-                      {
-                          "authority": "order-order-driveIn"
-                      }
-                  ],
-                  "enabled": true,
-                  "credentialsNonExpired": true,
-                  "accountNonLocked": true,
-                  "accountNonExpired": true
-              }
           ],
           "last": true,
           "totalPages": 1,
@@ -247,288 +213,7 @@
 
   ```
 
-### 5.1.3 查看当前登录用户信息接口
-
-- 功能描述: 查看当前登录用户所有信息
-- 请求地址: `http://domain/uaa/sysusers/user?access_token=ACCESS_TOKEN`
-- 请求动作: `GET`
-- 请求示例: `http://domain/uaa/sysusers/user?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
-
-- 返回示例
-  ```
-  {
-      "authorities": [
-          {
-              "authority": "order-order-defaultPostParkings"
-          },
-          {
-              "authority": "order-order-defaultPostSiblings"
-          },
-          {
-              "authority": "order-order-list"
-          },
-          {
-              "authority": "order-order-allParkingsByPost"
-          },
-          {
-              "authority": "order-order-driveOut"
-          },
-          {
-              "authority": "order-order-image"
-          },
-          {
-              "authority": "order-order-uploadImage"
-          },
-          {
-              "authority": "order-order-driveIn"
-          }
-      ],
-      "details": {
-          "remoteAddress": "192.168.1.22",
-          "sessionId": null,
-          "tokenValue": "c0b6f744-a6de-4b6a-afc9-a4704ba9cc13",
-          "tokenType": "Bearer",
-          "decodedDetails": null
-      },
-      "authenticated": true,
-      "userAuthentication": {
-          "authorities": [
-              {
-                  "authority": "order-order-defaultPostParkings"
-              },
-              {
-                  "authority": "order-order-defaultPostSiblings"
-              },
-              {
-                  "authority": "order-order-list"
-              },
-              {
-                  "authority": "order-order-allParkingsByPost"
-              },
-              {
-                  "authority": "order-order-driveOut"
-              },
-              {
-                  "authority": "order-order-image"
-              },
-              {
-                  "authority": "order-order-uploadImage"
-              },
-              {
-                  "authority": "order-order-driveIn"
-              }
-          ],
-          "details": {
-              "grant_type": "password",
-              "username": "maj"
-          },
-          "authenticated": true,
-          "principal": {
-              "id": 25,
-              "username": "maj",
-              "password": "$2a$10$bO4Kp5Y.7L9b2fmpVSO3suniCScmiPj47pk.7D/yifUgz8mhm79ba",
-              "employeeId": 1001,
-              "firstName": null,
-              "lastName": null,
-              "email": null,
-              "roles": [
-                  {
-                      "id": 5,
-                      "name": "收费员",
-                      "value": "ROLE_CHARGER",
-                      "authorities": [
-                          {
-                              "id": 38,
-                              "name": "查看订单列表",
-                              "value": "order-order-list"
-                          },
-                          {
-                              "id": 33,
-                              "name": "查看属于岗位的泊位",
-                              "value": "order-order-allParkingsByPost"
-                          },
-                          {
-                              "id": 36,
-                              "name": "上传车辆图片",
-                              "value": "order-order-uploadImage"
-                          },
-                          {
-                              "id": 35,
-                              "name": "车辆驶出",
-                              "value": "order-order-driveOut"
-                          },
-                          {
-                              "id": 30,
-                              "name": "查看员工默认岗位及泊位",
-                              "value": "order-order-defaultPostParkings"
-                          },
-                          {
-                              "id": 32,
-                              "name": "查看同一路段的岗位",
-                              "value": "order-order-defaultPostSiblings"
-                          },
-                          {
-                              "id": 37,
-                              "name": "查看车辆图片",
-                              "value": "order-order-image"
-                          },
-                          {
-                              "id": 34,
-                              "name": "车辆驶入",
-                              "value": "order-order-driveIn"
-                          }
-                      ]
-                  }
-              ],
-              "authorities": [
-                  {
-                      "authority": "order-order-defaultPostParkings"
-                  },
-                  {
-                      "authority": "order-order-defaultPostSiblings"
-                  },
-                  {
-                      "authority": "order-order-list"
-                  },
-                  {
-                      "authority": "order-order-allParkingsByPost"
-                  },
-                  {
-                      "authority": "order-order-driveOut"
-                  },
-                  {
-                      "authority": "order-order-image"
-                  },
-                  {
-                      "authority": "order-order-uploadImage"
-                  },
-                  {
-                      "authority": "order-order-driveIn"
-                  }
-              ],
-              "enabled": true,
-              "accountNonLocked": true,
-              "accountNonExpired": true,
-              "credentialsNonExpired": true
-          },
-          "credentials": null,
-          "name": "maj"
-      },
-      "principal": {
-          "id": 25,
-          "username": "maj",
-          "password": "$2a$10$bO4Kp5Y.7L9b2fmpVSO3suniCScmiPj47pk.7D/yifUgz8mhm79ba",
-          "employeeId": 1001,
-          "firstName": null,
-          "lastName": null,
-          "email": null,
-          "roles": [
-              {
-                  "id": 5,
-                  "name": "收费员",
-                  "value": "ROLE_CHARGER",
-                  "authorities": [
-                      {
-                          "id": 38,
-                          "name": "查看订单列表",
-                          "value": "order-order-list"
-                      },
-                      {
-                          "id": 33,
-                          "name": "查看属于岗位的泊位",
-                          "value": "order-order-allParkingsByPost"
-                      },
-                      {
-                          "id": 36,
-                          "name": "上传车辆图片",
-                          "value": "order-order-uploadImage"
-                      },
-                      {
-                          "id": 35,
-                          "name": "车辆驶出",
-                          "value": "order-order-driveOut"
-                      },
-                      {
-                          "id": 30,
-                          "name": "查看员工默认岗位及泊位",
-                          "value": "order-order-defaultPostParkings"
-                      },
-                      {
-                          "id": 32,
-                          "name": "查看同一路段的岗位",
-                          "value": "order-order-defaultPostSiblings"
-                      },
-                      {
-                          "id": 37,
-                          "name": "查看车辆图片",
-                          "value": "order-order-image"
-                      },
-                      {
-                          "id": 34,
-                          "name": "车辆驶入",
-                          "value": "order-order-driveIn"
-                      }
-                  ]
-              }
-          ],
-          "authorities": [
-              {
-                  "authority": "order-order-defaultPostParkings"
-              },
-              {
-                  "authority": "order-order-defaultPostSiblings"
-              },
-              {
-                  "authority": "order-order-list"
-              },
-              {
-                  "authority": "order-order-allParkingsByPost"
-              },
-              {
-                  "authority": "order-order-driveOut"
-              },
-              {
-                  "authority": "order-order-image"
-              },
-              {
-                  "authority": "order-order-uploadImage"
-              },
-              {
-                  "authority": "order-order-driveIn"
-              }
-          ],
-          "enabled": true,
-          "accountNonLocked": true,
-          "accountNonExpired": true,
-          "credentialsNonExpired": true
-      },
-      "oauth2Request": {
-          "clientId": "android",
-          "scope": [
-              "xx"
-          ],
-          "requestParameters": {
-              "grant_type": "password",
-              "username": "maj"
-          },
-          "resourceIds": [],
-          "authorities": [],
-          "approved": true,
-          "refresh": false,
-          "redirectUri": null,
-          "responseTypes": [],
-          "extensions": {},
-          "grantType": "password",
-          "refreshTokenRequest": null
-      },
-      "clientOnly": false,
-      "credentials": "",
-      "name": "maj"
-  }
-  ```  
-
-
-### 5.1.4 添加新用户接口
+### 5.1.3 添加新用户接口
 
 - 功能描述:  添加新用户
 - 请求地址: `http://domain/uaa/sysusers?access_token=ACCESS_TOKEN`
@@ -549,29 +234,9 @@
           ]
   }
   ```
-- 返回数据示例
-  ```
-   {
-       "status": "SUCCESS",
-       "data": {
-           "id": 55,
-           "username": "zhang",
-           "password": "$2a$10$oYyIksVkT98Sl7uezWqB2uPbNhm6qnrqQmR0gnF7VhmJ.ru.NEPHq",
-           "employeeId": 1002,
-           "firstName": null,
-           "lastName": null,
-           "email": null,
-           "roles": [],
-           "authorities": [],
-           "enabled": true,
-           "credentialsNonExpired": true,
-           "accountNonLocked": true,
-           "accountNonExpired": true
-       }
-   }
-  ```
+
   
-### 5.1.5 更新用户信息接口
+### 5.1.4 更新用户信息接口
 
 - 功能描述:  根据id更新用户信息
 - 请求地址: `http://domain/uaa/sysusers/{id}?access_token=ACCESS_TOKEN`
@@ -591,27 +256,118 @@
           ]
   }
   ```
+### 5.1.5 根据用户名查找用户信息接口
+
+- 功能描述:  根据用户名查找用户信息
+- 请求地址: `http://domain/uaa/sysusers/query?username=USERNAME&access_token=ACCESS_TOKEN`
+- 请求动作: `GET`
+- 请求示例: `http://domain/uaa/sysusers/query?username=maj&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
 
 - 返回数据示例
   ```
-   {
-       "status": "SUCCESS",
-       "data": {
-           "id": 55,
-           "username": "zhang",
-           "password": "$2a$10$bY4c8rMT8JqIfd2izz.BH.Sx7t8MjHprkl3T3TRjhC633YMm/A9y6",
-           "employeeId": null,
-           "firstName": null,
-           "lastName": null,
-           "email": null,
-           "roles": [],
-           "authorities": [],
-           "enabled": true,
-           "accountNonExpired": true,
-           "accountNonLocked": true,
-           "credentialsNonExpired": true
-       }
-   }
+  {
+      "status": "SUCCESS",
+      "data": {
+          "content": [
+              {
+                  "id": 25,
+                  "username": "maj",
+                  "password": "$2a$10$bO4Kp5Y.7L9b2fmpVSO3suniCScmiPj47pk.7D/yifUgz8mhm79ba",
+                  "employeeId": 1001,
+                  "firstName": null,
+                  "lastName": null,
+                  "email": null,
+                  "roles": [
+                      {
+                          "id": 5,
+                          "name": "收费员",
+                          "value": "ROLE_CHARGER",
+                          "authorities": [
+                              {
+                                  "id": 38,
+                                  "name": "查看订单列表",
+                                  "value": "order-order-list"
+                              },
+                              {
+                                  "id": 33,
+                                  "name": "查看属于岗位的泊位",
+                                  "value": "order-order-allParkingsByPost"
+                              },
+                              {
+                                  "id": 36,
+                                  "name": "上传车辆图片",
+                                  "value": "order-order-uploadImage"
+                              },
+                              {
+                                  "id": 35,
+                                  "name": "车辆驶出",
+                                  "value": "order-order-driveOut"
+                              },
+                              {
+                                  "id": 30,
+                                  "name": "查看员工默认岗位及泊位",
+                                  "value": "order-order-defaultPostParkings"
+                              },
+                              {
+                                  "id": 32,
+                                  "name": "查看同一路段的岗位",
+                                  "value": "order-order-defaultPostSiblings"
+                              },
+                              {
+                                  "id": 37,
+                                  "name": "查看车辆图片",
+                                  "value": "order-order-image"
+                              },
+                              {
+                                  "id": 34,
+                                  "name": "车辆驶入",
+                                  "value": "order-order-driveIn"
+                              }
+                          ]
+                      }
+                  ],
+                  "authorities": [
+                      {
+                          "authority": "order-order-defaultPostParkings"
+                      },
+                      {
+                          "authority": "order-order-defaultPostSiblings"
+                      },
+                      {
+                          "authority": "order-order-list"
+                      },
+                      {
+                          "authority": "order-order-allParkingsByPost"
+                      },
+                      {
+                          "authority": "order-order-driveOut"
+                      },
+                      {
+                          "authority": "order-order-image"
+                      },
+                      {
+                          "authority": "order-order-uploadImage"
+                      },
+                      {
+                          "authority": "order-order-driveIn"
+                      }
+                  ],
+                  "enabled": true,
+                  "accountNonExpired": true,
+                  "credentialsNonExpired": true,
+                  "accountNonLocked": true
+              }
+          ],
+          "last": true,
+          "totalPages": 1,
+          "totalElements": 1,
+          "number": 0,
+          "size": 20,
+          "numberOfElements": 1,
+          "sort": null,
+          "first": true
+      }
+  }
   ```
   
 # 5.2 RoleController测试用例
@@ -700,18 +456,7 @@
 		"value":"ROLE_OBSERVE"
     }
   ```
-- 返回数据示例
-  ```
-    {
-    	"status": "SUCCESS",
-    	"data": {
-        	"id": 49,
-        	"name": "观察员",
-        	"value": "ROLE_OBSERVE",
-        	"authorities": null
-    	}
-    }
-  ```
+
 ### 5.2.4 更新角色信息接口
 
 - 功能描述:  根据id更新角色信息
@@ -724,50 +469,6 @@
     {
     	"name":"收费员2",
 		"value":"ROLE_CHARGER2"
-    }
-  ```
-- 返回数据示例
-  ```
-    {
-    	"status": "SUCCESS",
-    	"data": {
-        	"id": 49,
-        	"name": "收费员2",
-        	"value": "ROLE_CHARGER2",
-        	"authorities": []
-    	}
-    }
-  ```
-
-### 5.2.5 条件查询角色信息接口
-
-- 功能描述:  根据name条件模糊查询角色信息
-- 请求地址: `http://domain/uaa/sysroles/query?name=NAME&access_token=ACCESS_TOKEN`
-- 请求动作: `GET`
-- 请求示例: `http://domain/uaa/sysroles/query?name=用户&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
-
-- 返回数据示例
-  ```
-    {
-    	"status": "SUCCESS",
-    	"data": {
-        	"content": [
-            	{
-                	"id": 4,
-                	"name": "普通用户",
-                	"value": "ROLE_USER",
-                	"authorities": []
-            	}
-        	],
-        	"last": true,
-        	"totalPages": 1,
-        	"totalElements": 1,
-        	"number": 0,
-        	"size": 20,
-        	"numberOfElements": 1,
-        	"sort": null,
-        	"first": true
-    	}
     }
   ```
   
@@ -827,51 +528,3 @@
     	}
     }
   ```
-  
-### 5.3.3 条件查询权限信息接口
-
-- 功能描述:  根据name条件模糊查询权限信息
-- 请求地址: `http://domain/uaa/sysauthorities/query?name=NAME&access_token=ACCESS_TOKEN`
-- 请求动作: `GET`
-- 请求示例: `http://domain/uaa/sysauthorities/query?name=收费&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
-- 返回数据示例
-  ```
-    {
-    	"status": "SUCCESS",
-    	"data": {
-        	"content": [
-            	{
-                	"id": 53,
-                	"name": "保存收费策略",
-                	"value": "billing-chargingStrategy-save"
-            	},
-            	{
-                	"id": 55,
-                	"name": "获取收费策略列表",
-                	"value": "billing-chargingStrategy-list"
-            	},
-            	{
-                	"id": 56,
-                	"name": "查看单个收费策略",
-                	"value": "billing-chargingStrategy-one"
-            	}
-        	],
-        	"last": true,
-        	"totalPages": 1,
-        	"totalElements": 3,
-        	"number": 0,
-        	"size": 20,
-        	"numberOfElements": 3,
-        	"sort": null,
-        	"first": true
-    	}
-    }
-  ```
-  
-  - 请求失败返回示例：  
-   ```
-  {
-      "error": "access_denied",
-      "error_description": "不允许访问"
-  } 
-   ``` 
