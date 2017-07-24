@@ -2,9 +2,9 @@
 ## 初始获取access_token接口
 
 - 功能描述: 获取access_token
-- 请求地址: `http://localhost:8080/uaa/oauth/token`
+- 请求地址: `http://domain/uaa/oauth/token`
 - 请求动作: `POST`
-- 请求示例: `http://localhost:8080/uaa/oauth/token?grant_type=password&username=maj&password=maj`  
+- 请求示例: `http://domain/uaa/oauth/token?grant_type=password&username=maj&password=maj`  
       Authorization：  
       &emsp;&emsp;Type:Base Auth  
       &emsp;&emsp;Username:android  
@@ -23,9 +23,9 @@
 ## 获取refresh_token接口
 
 - 功能描述: 获取refresh_token
-- 请求地址: `http://localhost:8080/uaa/oauth/token`
+- 请求地址: `http://domain/uaa/oauth/token`
 - 请求动作: `POST`
-- 请求示例: `http://localhost:8080/uaa/oauth/token?grant_type=refresh_token&refresh_token=6fcec503-ead9-414c-87ee-9af13a855e03`  
+- 请求示例: `http://domain/uaa/oauth/token?grant_type=refresh_token&refresh_token=6fcec503-ead9-414c-87ee-9af13a855e03`  
       Authorization：  
       &emsp;&emsp;Type:Base Auth  
       &emsp;&emsp;Username:android  
@@ -41,15 +41,34 @@
     "scope": "xx"
 }
 ```
+## 注销接口
 
+- 功能描述: 注销access_token和refresh_token的授权
+- 请求地址: `http://domain/uaa/oauth/token`
+- 请求动作: `DELETE`
+- 请求示例: `http://domain/uaa/oauth/token?access_token=5c0b6d1c-94e3-4e82-8acb-e4a266e5ddf3`             
+- 成功返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": "注销成功"
+}
+```
+- 失败返回示例
+```
+{
+    "status": "FAILURE",
+    "data": "注销失败"
+}
+```
 # 5.1 UserController测试用例
 
 ### 5.1.1 查询单个用户信息
 
 - 功能描述: 根据id查询单个用户信息
-- 请求地址: `http://localhost:8080/uaa/sysusers/{id}?access_token=ACCESS_TOKEN`
+- 请求地址: `http://domain/uaa/sysusers/{id}?access_token=ACCESS_TOKEN`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/uaa/sysusers/6?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
+- 请求示例: `http://domain/uaa/sysusers/6?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
 
 - 返回示例  
 ```
@@ -83,9 +102,9 @@
 ### 5.1.2 查询用户列表接口
 
 - 功能描述: 查询用户信息列表
-- 请求地址: `http://localhost:8080/uaa/sysusers?access_token=ACCESS_TOKEN`
+- 请求地址: `http://domain/uaa/sysusers?access_token=ACCESS_TOKEN`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/uaa/sysusers?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
+- 请求示例: `http://domain/uaa/sysusers?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
 
 - 返回示例
   ```
@@ -231,9 +250,9 @@
 ### 5.1.3 查看当前登录用户信息接口
 
 - 功能描述: 查看当前登录用户所有信息
-- 请求地址: `http://localhost:8080/uaa/sysusers/user?access_token=ACCESS_TOKEN`
+- 请求地址: `http://domain/uaa/sysusers/user?access_token=ACCESS_TOKEN`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/uaa/sysusers/user?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
+- 请求示例: `http://domain/uaa/sysusers/user?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
 
 - 返回示例
   ```
@@ -512,9 +531,9 @@
 ### 5.1.4 添加新用户接口
 
 - 功能描述:  添加新用户
-- 请求地址: `http://localhost:8080/uaa/sysusers?access_token=ACCESS_TOKEN`
+- 请求地址: `http://domain/uaa/sysusers?access_token=ACCESS_TOKEN`
 - 请求动作: `POST`
-- 请求示例: `http://localhost:8080/uaa/sysusers?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
+- 请求示例: `http://domain/uaa/sysusers?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
 
 - POST数据示例
   ```
@@ -555,9 +574,9 @@
 ### 5.1.5 更新用户信息接口
 
 - 功能描述:  根据id更新用户信息
-- 请求地址: `http://localhost:8080/uaa/sysusers/{id}?access_token=ACCESS_TOKEN`
+- 请求地址: `http://domain/uaa/sysusers/{id}?access_token=ACCESS_TOKEN`
 - 请求动作: `PUT`
-- 请求示例: `http://localhost:8080/uaa/sysusers/55?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
+- 请求示例: `http://domain/uaa/sysusers/55?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
 
 - PUT数据示例
   ```
@@ -600,9 +619,9 @@
 ### 5.2.1 查看角色信息接口
 
 - 功能描述:  根据id查看角色信息
-- 请求地址: `http://localhost:8080/uaa/sysroles/{id}?access_token=ACCESS_TOKEN`
+- 请求地址: `http://domain/uaa/sysroles/{id}?access_token=ACCESS_TOKEN`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/uaa/sysroles/4?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
+- 请求示例: `http://domain/uaa/sysroles/4?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
 
 - 返回数据示例
   ```
@@ -620,9 +639,9 @@
 ###  5.2.2 查看角色信息列表接口
 
 - 功能描述:  查看角色信息列表
-- 请求地址: `http://localhost:8080/uaa/sysroles?access_token=ACCESS_TOKEN`
+- 请求地址: `http://domain/uaa/sysroles?access_token=ACCESS_TOKEN`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/uaa/sysroles?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
+- 请求示例: `http://domain/uaa/sysroles?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
 
 
 - 返回数据示例
@@ -670,9 +689,9 @@
 ### 5.2.3 新建角色接口
 
 - 功能描述:  新建角色
-- 请求地址: `http://localhost:8080/uaa/sysroles?access_token=ACCESS_TOKEN`
+- 请求地址: `http://domain/uaa/sysroles?access_token=ACCESS_TOKEN`
 - 请求动作: `POST`
-- 请求示例: `http://localhost:8080/uaa/sysroles?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
+- 请求示例: `http://domain/uaa/sysroles?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
 
 - POST数据示例
   ```
@@ -696,9 +715,9 @@
 ### 5.2.4 更新角色信息接口
 
 - 功能描述:  根据id更新角色信息
-- 请求地址: `http://localhost:8080/uaa/sysroles/{id}?access_token=ACCESS_TOKEN`
+- 请求地址: `http://domain/uaa/sysroles/{id}?access_token=ACCESS_TOKEN`
 - 请求动作: `PUT`
-- 请求示例: `http://localhost:8080/uaa/sysroles/49?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
+- 请求示例: `http://domain/uaa/sysroles/49?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
 
 - PUT数据示例
   ```
@@ -723,9 +742,9 @@
 ### 5.2.5 条件查询角色信息接口
 
 - 功能描述:  根据name条件模糊查询角色信息
-- 请求地址: `http://localhost:8080/uaa/sysroles/query?name=NAME&access_token=ACCESS_TOKEN`
+- 请求地址: `http://domain/uaa/sysroles/query?name=NAME&access_token=ACCESS_TOKEN`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/uaa/sysroles/query?name=用户&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
+- 请求示例: `http://domain/uaa/sysroles/query?name=用户&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
 
 - 返回数据示例
   ```
@@ -757,9 +776,9 @@
 ### 5.3.1 查询权限信息接口
 
 - 功能描述:  根据id查询权限信息
-- 请求地址: `http://localhost:8080/uaa/sysauthorities/{id}?access_token=ACCESS_TOKEN`
+- 请求地址: `http://domain/uaa/sysauthorities/{id}?access_token=ACCESS_TOKEN`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/uaa/sysauthorities/18?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
+- 请求示例: `http://domain/uaa/sysauthorities/18?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
 
 - 返回数据示例
   ```
@@ -776,9 +795,9 @@
 ### 5.3.2 查询权限信息列表接口
 
 - 功能描述:  查询权限信息列表
-- 请求地址: `http://localhost:8080/uaa/sysauthorities?access_token=ACCESS_TOKEN`
+- 请求地址: `http://domain/uaa/sysauthorities?access_token=ACCESS_TOKEN`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/uaa/sysauthorities?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
+- 请求示例: `http://domain/uaa/sysauthorities?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
 
 - 返回数据示例
   ```
@@ -812,9 +831,9 @@
 ### 5.3.3 条件查询权限信息接口
 
 - 功能描述:  根据name条件模糊查询权限信息
-- 请求地址: `http://localhost:8080/uaa/sysauthorities/query?name=NAME&access_token=ACCESS_TOKEN`
+- 请求地址: `http://domain/uaa/sysauthorities/query?name=NAME&access_token=ACCESS_TOKEN`
 - 请求动作: `GET`
-
+- 请求示例: `http://domain/uaa/sysauthorities/query?name=收费&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
 - 返回数据示例
   ```
     {
@@ -855,4 +874,4 @@
       "error": "access_denied",
       "error_description": "不允许访问"
   } 
-   ```
+   ``` 
