@@ -1,6 +1,10 @@
 
 
 # 1 准备工作
+- wget安装: 一个下载工具，`yum install wget`
+
+- git安装: `yum install git`
+
 - jdk安装及配置:
     * Step1: 从官方网站下载你需要的jdk,[jdk下载地址](http://download.oracle.com/otn-pub/java/jdk/8u141-b15/336fa29ff2bb4ef291e347e091f7f4a7/jdk-8u141-linux-x64.rpm?AuthParam=1500866848_2b53dd92b4aa8f5fe7dc45eb42584033)
     * Step2: 安装命令:`yum localinstall jdk-8u141-linux-x64.rpm`,安装目录为：`/usr/java/jdk1.8.0_141`
@@ -17,6 +21,7 @@
         ![maven环境变量配置](images/aliyun-deploy/maven-config.png)
     
     * Step3: 修改目录`/usr/share/maven/conf`下的`settings.xml`文件，里面配置aliyun docker镜像服务的账号密码。
+
 
 # 2 部署
 
@@ -38,3 +43,12 @@
     * Step6: 进入目录`/root/feitian`，执行`docker-compose up -d --no-recreate`更新为最新镜像并运行。
     
     * Step7: 执行`docker logs [CONTAINER ID]`查看容器日志。
+    
+    
+# 3 在aliyun服务器上完成部署
+- 需要修改的文件
+    * 将pom文件里的服务器访问地址由外网地址改为内网地址
+    ```
+    <docker.registry>registry-vpc.cn-shanghai.aliyuncs.com</docker.registry>
+    ```
+- 其他的和步骤2相同。
