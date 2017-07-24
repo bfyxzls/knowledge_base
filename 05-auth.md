@@ -848,3 +848,11 @@
     	}
     }
   ```
+  
+  - 请求失败返回示例：  
+   ```
+  {
+      "error": "access_denied",
+      "error_description": "不允许访问"
+  } 
+   ```
