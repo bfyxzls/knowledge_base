@@ -38,7 +38,7 @@
     
     * Step4: 执行`docker ps`查看当前运行中的容器列表，执行命令`docker stop [CONTAINER ID]`停止正在运行的`xxx-service`容器，接着执行`docker rm [CONTAINER ID]`删除该容器。
    
-    * Step5: 执行`docker images`查看镜像列表，执行`docker rmi [IMAGE ID]`删除当前镜像。
+    * Step5: 执行`docker images`查看镜像列表，执行`docker rmi [IMAGE ID]`删除旧版本镜像。
     
     * Step6: 进入目录`/root/feitian`，执行`docker-compose up -d --no-recreate`更新为最新镜像并运行。
     
@@ -52,3 +52,28 @@
     <docker.registry>registry-vpc.cn-shanghai.aliyuncs.com</docker.registry>
     ```
 - 其他的和步骤2相同。
+
+
+# 4 自动化部署
+
+```
+#!/bin/bash
+
+echo "input project name:"
+
+read name
+
+cd ~/source_code/$name
+
+git pull https://username:password@github.com/hfcb/$name
+
+mvn clean package docker:build -DskipTests
+
+docker stop $(docker ps -aqf "name=$name") && docker rm $(docker ps -aqf "name=$name")
+
+docker rmi $(docker images -f "dangling=true" -q)
+
+cd ~/feitian
+
+docker-compose up -d --no-recreate
+```
