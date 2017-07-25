@@ -2376,7 +2376,7 @@ PS:需要用admin用户获得access_token
     ]
 }
 ```
-# 2.7 泊位信息访问接口
+# 2.7 岗位信息访问接口
 ### 2.7.1 get接口
 - 功能描述: 根据id查询岗位信息
 - 请求地址: `http://localhost:8080/infras/posts/{id}?access_token`
