@@ -183,14 +183,7 @@
   ```
   {
   	"username":"zhang",
-  	"password":"zzzzzz",
-  	"employeeId": 1002,
-  	"roles": [
-             
-          ],
-      "authorities": [
-              
-          ]
+  	"password":"zzzzzz"
   }
   ```
 
@@ -207,12 +200,7 @@
   {
   	"username":"zhang",
   	"password":"abcd",
-  	"roles": [
-             
-          ],
-      "authorities": [
-              
-          ]
+
   }
   ```
 ### 5.1.5 根据用户名查找用户信息接口

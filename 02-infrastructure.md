@@ -428,9 +428,9 @@ PS:需要用admin用户获得access_token
 # 2.2 编码类型信息访问接口
 ### 2.2.1 get接口
 - 功能描述: 根据id查找编码类型
-- 请求地址: `http://localhost:8080/infras/codetypes/{id}?access_token`
+- 请求地址: `http://localhost:8080/infras/codeTypes/{id}?access_token`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/codetypes/1009?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+- 请求示例: `http://localhost:8080/infras/codeTypes/1009?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - 返回示例
 ```
 {
