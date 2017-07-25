@@ -289,19 +289,130 @@ InParkingRoadSectionId=1008
 - 功能描述: 根据Id查找收费策略
 - 请求地址: `http://domain/billing/chargingStrategies/{id}?access_token=token`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/billing/chargingStrategies/1008?access_token=b20ba53d-0e30-4007-a8b3-ba5598fc25ea`
+- 请求示例: `http://localhost:8080/billing/chargingStrategies/1000?access_token=b20ba53d-0e30-4007-a8b3-ba5598fc25ea`
 - 返回示例
 ```
 {
     "status": "SUCCESS",
     "data": {
-        "id": 1008,
-        "name": "肥西C级全日收费策略",
-        "freePeriod": null,
+        "id": 1000,
+        "name": "肥西A级全日收费策略",
+        "freePeriod": 15,
         "chargingType": "time",
-        "freePeriodChargeable": null,
+        "freePeriodChargeable": true,
         "description": null,
-        "chargingStandards": []
+        "chargingStandards": [
+            {
+                "chargingStartTime": "07:30:00",
+                "chargingEndTime": "19:00:00",
+                "maxFee": 5000,
+                "chargingRules": [
+                    {
+                        "id": 1000,
+                        "interval": 30,
+                        "unit": 30,
+                        "unitCost": 300,
+                        "sort": 1
+                    },
+                    {
+                        "id": 1001,
+                        "interval": 60,
+                        "unit": 30,
+                        "unitCost": 200,
+                        "sort": 2
+                    },
+                    {
+                        "id": 1002,
+                        "interval": 0,
+                        "unit": 30,
+                        "unitCost": 100,
+                        "sort": 3
+                    }
+                ],
+                "id": 1000,
+                "dateType": 1,
+                "vehicleType": 1
+            },
+            {
+                "chargingStartTime": "07:30:00",
+                "chargingEndTime": "19:00:00",
+                "maxFee": 5000,
+                "chargingRules": [
+                    {
+                        "id": 1003,
+                        "interval": 60,
+                        "unit": 30,
+                        "unitCost": 400,
+                        "sort": 1
+                    },
+                    {
+                        "id": 1004,
+                        "interval": 60,
+                        "unit": 30,
+                        "unitCost": 300,
+                        "sort": 2
+                    },
+                    {
+                        "id": 1005,
+                        "interval": 0,
+                        "unit": 30,
+                        "unitCost": 200,
+                        "sort": 3
+                    }
+                ],
+                "id": 1001,
+                "dateType": 1,
+                "vehicleType": 2
+            },
+            {
+                "chargingStartTime": "07:30:00",
+                "chargingEndTime": "19:00:00",
+                "maxFee": 5000,
+                "chargingRules": [
+                    {
+                        "id": 1006,
+                        "interval": 60,
+                        "unit": 30,
+                        "unitCost": 400,
+                        "sort": 1
+                    },
+                    {
+                        "id": 1007,
+                        "interval": 0,
+                        "unit": 30,
+                        "unitCost": 300,
+                        "sort": 2
+                    }
+                ],
+                "id": 1002,
+                "dateType": 2,
+                "vehicleType": 1
+            },
+            {
+                "chargingStartTime": "07:30:00",
+                "chargingEndTime": "19:00:00",
+                "maxFee": 5000,
+                "chargingRules": [
+                    {
+                        "id": 1008,
+                        "interval": 60,
+                        "unit": 30,
+                        "unitCost": 500,
+                        "sort": 1
+                    },
+                    {
+                        "id": 1009,
+                        "interval": 0,
+                        "unit": 30,
+                        "unitCost": 400,
+                        "sort": 2
+                    }
+                ],
+                "id": 1003,
+                "dateType": 2,
+                "vehicleType": 2
+            }
+        ]
     }
 }
 ```
