@@ -65,7 +65,7 @@ read name
 
 cd ~/source_code/$name
 
-git pull https://mengajin:shaozongjishi95@github.com/hfcb/$name
+git pull https://username:password@github.com/hfcb/$name
 
 mvn clean package docker:build -DskipTests
 
