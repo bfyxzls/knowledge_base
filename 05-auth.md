@@ -1,14 +1,14 @@
 
 ## 初始获取access_token接口
 
-- 功能描述: 获取access_token
+- 功能描述: 获取`access_token`
 - 请求地址: `http://domain/uaa/oauth/token`
 - 请求动作: `POST`
 - 请求示例: `http://domain/uaa/oauth/token?grant_type=password&username=maj&password=maj`  
       Authorization：  
-      &emsp;&emsp;Type:Base Auth  
-      &emsp;&emsp;Username:android  
-      &emsp;&emsp;Password:android
+         - Type:Base Auth  
+         - Username:android  
+         - Password:android
             
 - 返回示例
 ```
@@ -27,9 +27,9 @@
 - 请求动作: `POST`
 - 请求示例: `http://domain/uaa/oauth/token?grant_type=refresh_token&refresh_token=6fcec503-ead9-414c-87ee-9af13a855e03`  
       Authorization：  
-      &emsp;&emsp;Type:Base Auth  
-      &emsp;&emsp;Username:android  
-      &emsp;&emsp;Password:android
+      - Type:Base Auth  
+      - Username:android  
+      - Password:android
             
 - 返回示例
 ```
@@ -46,7 +46,13 @@
 - 功能描述: 注销access_token和refresh_token的授权
 - 请求地址: `http://domain/uaa/oauth/token`
 - 请求动作: `DELETE`
-- 请求示例: `http://domain/uaa/oauth/token?access_token=5c0b6d1c-94e3-4e82-8acb-e4a266e5ddf3`             
+- 请求示例: `http://domain/uaa/oauth/token?access_token=5c0b6d1c-94e3-4e82-8acb-e4a266e5ddf3` 
+            
+    Authorization：  
+      - Type:Base Auth  
+      - Username:android  
+      - Password:android
+
 - 成功返回示例
 ```
 {
@@ -118,42 +124,52 @@
   ```
   {
       "status": "SUCCESS",
-      "data": [
-          {
-              "id": 26,
-              "username": "lunx",
-              "password": "$2a$10$dZFlEj9zxQX3/2Ju15FUQeJV8wSrAltnqLlTGuQH5or8Jv3vmObQK",
-              "employeeId": 1003,
-              "firstName": null,
-              "lastName": null,
-              "email": null,
-              "roles": [
-                  {
-                      "id": 5,
-                      "name": "收费员",
-                      "value": "ROLE_CHARGER",
-                      "authorities": [
-                          {
-                              "id": 34,
-                              "name": "车辆驶入",
-                              "value": "order-order-driveIn"
-                          }
-                      ]
-                  }
-              ],
-              "authorities": [
-                  {
-                      "authority": "order-order-driveIn"
-                  }
-              ],
-              "enabled": true,
-              "accountNonExpired": true,
-              "credentialsNonExpired": true,
-              "accountNonLocked": true
-          }
-      ]
-  }
+      "data": {
+          "content": [
+              {
+                  "id": 26,
+                  "username": "lunx",
+                  "password": "$2a$10$dZFlEj9zxQX3/2Ju15FUQeJV8wSrAltnqLlTGuQH5or8Jv3vmObQK",
+                  "employeeId": 1003,
+                  "firstName": null,
+                  "lastName": null,
+                  "email": null,
+                  "roles": [
+                      {
+                          "id": 5,
+                          "name": "收费员",
+                          "value": "ROLE_CHARGER",
+                          "authorities": [
+                              {
+                                  "id": 34,
+                                  "name": "车辆驶入",
+                                  "value": "order-order-driveIn"
+                              }
+                          ]
+                      }
+                  ],
+                  "authorities": [
 
+                      {
+                          "authority": "order-order-driveIn"
+                      }
+                  ],
+                  "enabled": true,
+                  "accountNonLocked": true,
+                  "credentialsNonExpired": true,
+                  "accountNonExpired": true
+              }
+          ],
+          "last": true,
+          "totalElements": 4,
+          "totalPages": 1,
+          "number": 0,
+          "size": 20,
+          "sort": null,
+          "first": true,
+          "numberOfElements": 4
+      }
+  }
   ```
 
 ### 5.1.3 添加新用户接口
@@ -227,41 +243,6 @@
                           "value": "ROLE_CHARGER",
                           "authorities": [
                               {
-                                  "id": 38,
-                                  "name": "查看订单列表",
-                                  "value": "order-order-list"
-                              },
-                              {
-                                  "id": 33,
-                                  "name": "查看属于岗位的泊位",
-                                  "value": "order-order-allParkingsByPost"
-                              },
-                              {
-                                  "id": 36,
-                                  "name": "上传车辆图片",
-                                  "value": "order-order-uploadImage"
-                              },
-                              {
-                                  "id": 35,
-                                  "name": "车辆驶出",
-                                  "value": "order-order-driveOut"
-                              },
-                              {
-                                  "id": 30,
-                                  "name": "查看员工默认岗位及泊位",
-                                  "value": "order-order-defaultPostParkings"
-                              },
-                              {
-                                  "id": 32,
-                                  "name": "查看同一路段的岗位",
-                                  "value": "order-order-defaultPostSiblings"
-                              },
-                              {
-                                  "id": 37,
-                                  "name": "查看车辆图片",
-                                  "value": "order-order-image"
-                              },
-                              {
                                   "id": 34,
                                   "name": "车辆驶入",
                                   "value": "order-order-driveIn"
@@ -270,27 +251,7 @@
                       }
                   ],
                   "authorities": [
-                      {
-                          "authority": "order-order-defaultPostParkings"
-                      },
-                      {
-                          "authority": "order-order-defaultPostSiblings"
-                      },
-                      {
-                          "authority": "order-order-list"
-                      },
-                      {
-                          "authority": "order-order-allParkingsByPost"
-                      },
-                      {
-                          "authority": "order-order-driveOut"
-                      },
-                      {
-                          "authority": "order-order-image"
-                      },
-                      {
-                          "authority": "order-order-uploadImage"
-                      },
+
                       {
                           "authority": "order-order-driveIn"
                       }
