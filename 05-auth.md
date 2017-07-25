@@ -118,97 +118,40 @@
   ```
   {
       "status": "SUCCESS",
-      "data": {
-          "content": [
-              {
-                  "id": 5,
-                  "username": "admin",
-                  "password": "$2a$10$XOVs4Z1YtPKqKwQVywG9j.xLAqXYRQLGZMGMrZDNbtl6pUC0Weteq",
-                  "employeeId": null,
-                  "firstName": null,
-                  "lastName": null,
-                  "email": null,
-                  "roles": [
-                      {
-                          "id": 3,
-                          "name": "管理员",
-                          "value": "ROLE_ADMIN",
-                          "authorities": [
-                              {
-                                  "id": 23,
-                                  "name": "查看角色列表",
-                                  "value": "auth-role-list"
-                              },
-                              ...
-                              {
-                                  "id": 29,
-                                  "name": "权限信息查询",
-                                  "value": "auth-authority-query"
-                              }
-                          ]
-                      }
-                  ],
-                  "authorities": [
-                      {
-                          "authority": "infras-dept-top10"
-                      },
-                      ...
-                      {
-                          "authority": "infras-parkingarea-one"
-                      }
-                  ],
-                  "enabled": true,
-                  "credentialsNonExpired": true,
-                  "accountNonLocked": true,
-                  "accountNonExpired": true
-              },
-              {
-                  "id": 6,
-                  "username": "wyf",
-                  "password": "$2a$10$WjApX3bMw1KfzckGCCOB.eXRNY61ZcwsqpNzc2yiHtjsqnS3LmXAS",
-                  "employeeId": null,
-                  "firstName": null,
-                  "lastName": null,
-                  "email": null,
-                  "roles": [
-                      {
-                          "id": 4,
-                          "name": "普通用户",
-                          "value": "ROLE_USER",
-                          "authorities": []
-                      }
-                  ],
-                  "authorities": [],
-                  "enabled": true,
-                  "credentialsNonExpired": true,
-                  "accountNonLocked": true,
-                  "accountNonExpired": true
-              },
-              {
-                  "id": 26,
-                  "username": "lunx",
-                  "password": "$2a$10$dZFlEj9zxQX3/2Ju15FUQeJV8wSrAltnqLlTGuQH5or8Jv3vmObQK",
-                  "employeeId": null,
-                  "firstName": null,
-                  "lastName": null,
-                  "email": null,
-                  "roles": [],
-                  "authorities": [],
-                  "enabled": true,
-                  "credentialsNonExpired": true,
-                  "accountNonLocked": true,
-                  "accountNonExpired": true
-              },
-          ],
-          "last": true,
-          "totalPages": 1,
-          "totalElements": 4,
-          "number": 0,
-          "size": 20,
-          "sort": null,
-          "first": true,
-          "numberOfElements": 4
-      }
+      "data": [
+          {
+              "id": 26,
+              "username": "lunx",
+              "password": "$2a$10$dZFlEj9zxQX3/2Ju15FUQeJV8wSrAltnqLlTGuQH5or8Jv3vmObQK",
+              "employeeId": 1003,
+              "firstName": null,
+              "lastName": null,
+              "email": null,
+              "roles": [
+                  {
+                      "id": 5,
+                      "name": "收费员",
+                      "value": "ROLE_CHARGER",
+                      "authorities": [
+                          {
+                              "id": 34,
+                              "name": "车辆驶入",
+                              "value": "order-order-driveIn"
+                          }
+                      ]
+                  }
+              ],
+              "authorities": [
+                  {
+                      "authority": "order-order-driveIn"
+                  }
+              ],
+              "enabled": true,
+              "accountNonExpired": true,
+              "credentialsNonExpired": true,
+              "accountNonLocked": true
+          }
+      ]
   }
 
   ```
@@ -403,42 +346,21 @@
 - 返回数据示例
   ```
     {
-    	"status": "SUCCESS",
-    	"data": {
-        "content": [
+        "status": "SUCCESS",
+        "data": [
             {
                 "id": 3,
                 "name": "管理员",
                 "value": "ROLE_ADMIN",
                 "authorities": [
                     {
-                        "id": 23,
-                        "name": "查看角色列表",
-                        "value": "auth-role-list"
-                    },
-                    {
                         "id": 29,
                         "name": "权限信息查询",
                         "value": "auth-authority-query"
                     }
                 ]
-            },
-            {
-                "id": 4,
-                "name": "普通用户",
-                "value": "ROLE_USER",
-                "authorities": []
             }
-        ],
-        "last": true,
-        "totalPages": 1,
-        "totalElements": 3,
-        "number": 0,
-        "size": 20,
-        "numberOfElements": 3,
-        "sort": null,
-        "first": true
-    }
+        ]
     }
   ```
 
@@ -503,28 +425,13 @@
 - 返回数据示例
   ```
     {
-    	"status": "SUCCESS",
-    	"data": {
-        	"content": [
-            	{
-                	"id": 38,
-                	"name": "查看订单列表",
-                	"value": "order-order-list"
-            	},
-            	{
-                	"id": 30,
-                	"name": "查看员工默认岗位及泊位",
-                	"value": "order-order-defaultPostParkings"
-            	}
-        	],
-        	"last": false,
-        	"totalPages": 4,
-        	"totalElements": 80,
-        	"number": 0,
-        	"size": 20,
-        	"numberOfElements": 20,
-        	"sort": null,
-        	"first": true
-    	}
+        "status": "SUCCESS",
+        "data": [   
+            {
+                "id": 99,
+                "name": "根据姓名查找用户",
+                "value": "auth-user-query"
+            }
+        ]
     }
   ```
