@@ -261,6 +261,47 @@
       }
   }
   ```
+### 5.1.6 角色信息自动提示查询接口
+
+- 功能描述: 根据用户名自动提示查询用户信息
+
+- 请求地址: http://domain/uaa/sysusers/autoTop?username=USERNAME&access_token=ACCESS_TOKEN
+
+- 请求动作: GET
+
+- 请求示例: http://domain/uaa/sysusers/autoTop?username=maj&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca
+
+- 返回数据示例  
+  ```
+  {
+      "status": "SUCCESS",
+      "data": [
+          {
+              "id": 25,
+              "username": "maj",
+              "password": "$2a$10$bO4Kp5Y.7L9b2fmpVSO3suniCScmiPj47pk.7D/yifUgz8mhm79ba",
+              "employeeId": 1001,
+              "firstName": null,
+              "lastName": null,
+              "email": null,
+              "authorities": [
+                  {
+                      "authority": "billing-monthBill-save"
+                  },
+                  {
+                      "authority": "billing-chargingStrategy-save"
+                  }
+              ],
+              "enabled": true,
+              "credentialsNonExpired": true,
+              "accountNonLocked": true,
+              "accountNonExpired": true
+          }
+      ]
+  }
+  
+  ```
+  
   
 # 5.2 RoleController测试用例
 

@@ -464,9 +464,9 @@ PS:需要用admin用户获得access_token
 ```
 ### 2.2.2 List接口
 - 功能描述: 查询编码类型列表信息
-- 请求地址: `http://localhost:8080/infras/codetypes?access_token`
+- 请求地址: `http://localhost:8080/infras/codeTypes?access_token`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+- 请求示例: `http://localhost:8080/infras/codeTypes?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - 返回示例
 ```
 {
@@ -664,9 +664,9 @@ PS:需要用admin用户获得access_token
 ```
 ### 2.2.3 save接口
 - 功能描述: 添加新的编码类型
-- 请求地址: `http://localhost:8080/infras/codetypes?access_token`
+- 请求地址: `http://localhost:8080/infras/codeTypes?access_token`
 - 请求动作: `POST`
-- 请求示例: `http://localhost:8080/infras/codetypes?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+- 请求示例: `http://localhost:8080/infras/codeTypes?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body:
 ```
 {
@@ -724,9 +724,9 @@ PS:需要用admin用户获得access_token
 ```
 ### 2.2.4 update接口
 - 功能描述: 根据id更新编码类型信息
-- 请求地址: `http://localhost:8080/infras/codetypes/{id}?access_token`
+- 请求地址: `http://localhost:8080/infras/codeTypes/{id}?access_token`
 - 请求动作: `put`
-- 请求示例: `http://localhost:8080/infras/codetypes/1018?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+- 请求示例: `http://localhost:8080/infras/codeTypes/1018?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body
 ```
 { 
@@ -784,9 +784,9 @@ PS:需要用admin用户获得access_token
 ```
 ### 2.2.5 queryByName接口
 - 功能描述: 根据名字查询编码类型信息
-- 请求地址: `http://localhost:8080/infras/codetypes/query?access_token&name`
+- 请求地址: `http://localhost:8080/infras/codeTypes/query?access_token&name`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/codetypes/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=单位`
+- 请求示例: `http://localhost:8080/infras/codeTypes/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=单位`
 - 返回示例
 ```
 {
