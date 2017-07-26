@@ -164,9 +164,9 @@ PS:需要用admin用户获得access_token
 ```
 ### 3.1.5 check接口
 - 功能描述: 传入车牌号和路段Id，查看该车在该路段是否具有月票
-- 请求地址: `http://domain/billing/monthBills/?access_token=token&customerCarPlate=_customerCarPlate&roadSectionId=_roadSectionId`
-- 请求动作: `PUT`
-- 请求示例: `http://localhost:8080/billing/monthBills/isMonthBill?access_token=54d39cae-57d5-4219-bfc1-37ab7609490a&customerCarPlate=皖A54321&roadSectionId=1020`
+- 请求地址: `http://domain/billing/monthBills/checkMonthBill?access_token=token&customerCarPlate=_customerCarPlate&roadSectionId=_roadSectionId`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/billing/monthBills/checkMonthBill?access_token=54d39cae-57d5-4219-bfc1-37ab7609490a&customerCarPlate=皖A54321&roadSectionId=1020`
 - 返回示例
 ```
 true
