@@ -199,7 +199,7 @@
   ```
   {
   	"username":"zhang",
-  	"password":"abcd",
+  	"password":"abcd"
 
   }
   ```
