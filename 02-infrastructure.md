@@ -1256,7 +1256,7 @@ PS:需要用admin用户获得access_token
 ```
 ### 2.4.2 list接口
 - 功能描述: 查找泊位信息列表
-- 请求地址: `http://localhost:8080/infras/parkings?access_toke`
+- 请求地址: `http://localhost:8080/infras/parkings?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/parkings?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - 返回示例:
