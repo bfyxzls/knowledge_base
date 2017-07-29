@@ -184,6 +184,9 @@
   {
   	"username":"zhang",
   	"password":"zzzzzz"
+  	"roles":{
+  	    "id":1001;
+  	}
   }
   ```
 
@@ -196,12 +199,15 @@
 - 请求示例: `http://domain/uaa/sysusers/55?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`  
 
 - PUT数据示例
-  ```
-  {
-  	"username":"zhang",
-  	"password":"abcd"
-
-  }
+ ```
+ {
+       "employeeId": 1022,
+         "roles": [
+             {
+                 "id": 5
+             }
+         ]
+ }
   ```
 ### 5.1.5 根据用户名查找用户信息接口
 
