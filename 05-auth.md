@@ -307,7 +307,20 @@
   }
   
   ```
+ ### 5.1.7 重置密码接口
   
+ - 功能描述: 重置密码
+ - 请求地址: `http://domain/uaa/sysusers/reset/{id}?access_token=ACCESS_TOKEN`
+ - 请求动作: `PUT`
+ - 请求示例: `http://domain/uaa/sysusers/reset/1002?access_token=5d780ca8-fc23-4bfd-8513-d64b517e9d63`
+ - 返回示例：
+ ```
+ {
+     "status": "SUCCESS",
+     "data": "重置密码成功"
+ }
+ 
+ ```
   
 # 5.2 RoleController测试用例
 
