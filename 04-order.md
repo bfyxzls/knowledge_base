@@ -343,7 +343,7 @@
 
 - 请求动作: `GET`
 
-- 请求示例：`http://localhost:8080/order/orders/query?access_token=5d780ca8-fc23-4bfd-8513-d64b517e9d63&carPlate=皖A12375&id=10000181&parkingCode=133002`
+- 请求示例：`http://106.14.188.213:8080/order/orders/query?id=10000114&access_token=e10c62ae-3bc8-4938-bdbe-1465bf25c12a`
 
    - 备注：参数可以缺省。
 
