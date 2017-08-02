@@ -339,19 +339,109 @@
 
 - 功能描述：根据订单id、车牌号、泊位编号查询订单接口
 
-- 请求地址：`http://localhost:8080/order/orders/query?access_token&carPlate&id`
+- 请求地址：`http://localhost:8080/order/orders/query?access_token&carPlate&id&parkingCode`
 
-- 请求动作: `POST`
+- 请求动作: `GET`
 
-- 请求示例：`http://localhost:8080/order/orders/query?access_token=5d780ca8-fc23-4bfd-8513-d64b517e9d63&carPlate=皖A12375&id=10000181`
+- 请求示例：`http://localhost:8080/order/orders/query?access_token=5d780ca8-fc23-4bfd-8513-d64b517e9d63&carPlate=皖A12375&id=10000181&parkingCode=133002`
 
-    - Body:                
-```      
-     {
-     	"code":"154141"
-     }       
+   - 备注：参数可以缺省。
+
+- 返回示例：
+```aidl
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "id": 10000114,
+                "carPlate": "皖A59436",
+                "vehicleType": 1,
+                "parking": {
+                    "id": 1006,
+                    "code": "133002",
+                    "chargingStrategyId": 1000,
+                    "post": {
+                        "id": 1002,
+                        "name": "1号岗",
+                        "roadSection": {
+                            "id": 1002,
+                            "name": "金寨路-桐城路 南侧",
+                            "parkingArea": {
+                                "id": 1003,
+                                "code": "3401030001",
+                                "name": "庐江路",
+                                "district": "庐阳区"
+                            }
+                        }
+                    }
+                },
+                "driveInEmployee": {
+                    "id": 1002,
+                    "name": "张齐健",
+                    "phoneNum": "13999999999",
+                    "defaultPost": {
+                        "id": 1002,
+                        "name": "1号岗",
+                        "roadSection": {
+                            "id": 1002,
+                            "name": "金寨路-桐城路 南侧",
+                            "parkingArea": {
+                                "id": 1003,
+                                "code": "3401030001",
+                                "name": "庐江路",
+                                "district": "庐阳区"
+                            }
+                        }
+                    }
+                },
+                "driveOutEmployee": {
+                    "id": 1002,
+                    "name": "张齐健",
+                    "phoneNum": "13999999999",
+                    "defaultPost": {
+                        "id": 1002,
+                        "name": "1号岗",
+                        "roadSection": {
+                            "id": 1002,
+                            "name": "金寨路-桐城路 南侧",
+                            "parkingArea": {
+                                                            "id": 1003,
+                                                            "code": "3401030001",
+                                                            "name": "庐江路",
+                                                            "district": "庐阳区"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "driveInPosSn": "000000000000000",
+                                            "driveOutPosSn": "862401030000092",
+                                            "completeDate": "2017-08-02 09:59:50",
+                                            "fee": 2300,
+                                            "payType": 1,
+                                            "status": 3,
+                                            "createdBy": "wyf",
+                                            "createdDate": {
+                                                "epochSecond": 1501639190,
+                                                "nano": 758000000
+                                            },
+                                            "lastModifiedBy": "wyf",
+                                            "lastModifiedDate": {
+                                                "epochSecond": 1501660677,
+                                                "nano": 3000000
+                                            }
+                                        }
+                                    ],
+                                    "totalPages": 1,
+                                    "totalElements": 1,
+                                    "last": true,
+                                    "first": true,
+                                    "sort": null,
+                                    "numberOfElements": 1,
+                                    "size": 20,
+                                    "number": 0
+                                }
+                            }
 ```
-  ---  
-   - 备注：参数可以缺省，body可以不写。
      
         
