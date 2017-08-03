@@ -216,7 +216,7 @@
 {
     "carPlate":"皖A12345",
     "vehicleType":1,
-    "parking":{"id":1017},
+    "parkingId":1017,
     "driveInEmployeeId":"1002",
     "driveInPosSn":"123",
     "payType":3
