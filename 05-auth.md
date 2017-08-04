@@ -444,3 +444,67 @@
         ]
     }
   ```
+# 5.4 CustomerUserController 测试用例
+
+### 5.4.1 查询用户是否存在接口
+
+- 功能描述:  根据phoneNum查询用户是否存在
+- 请求地址: `http://domain/uaa/customerUsers/isCustomerExist`
+- 请求动作: `GET`
+- 请求示例: `http://domain/uaa/customerUsers/isCustomerExist?phoneNum=PHONENUM`
+
+- 返回用户示例  
+```
+{
+    "status": "SUCCESS",
+    "data": "用户未被注册"
+}
+```
+
+### 5.4.2 获取验证码接口  
+
+- 功能描述:  获取验证码
+- 请求地址: `http://domain/uaa/customerUsers/getCode`
+- 请求动作: `GET`
+- 请求示例: `http://domain/uaa/customerUsers/getCode?phoneNum=PHONENUM`
+  
+- 返回数据示例  
+```
+{
+    "status": "SUCCESS",
+    "data": "发送验证码成功"
+}
+
+```
+
+### 5.4.3 验证验证码接口  
+
+- 功能描述:  验证验证码
+- 请求地址: `http://domain/uaa/customerUsers/verifyCode`
+- 请求动作: `GET`
+- 请求示例: `http://domain/uaa/customerUsers/verifyCode?phoneNum=12345678910&verificationCode=402624`
+  
+- 返回数据示例  
+```
+{
+    "status": "SUCCESS",
+    "data": "验证码正确"
+}
+
+```
+
+### 5.4.4 用户注册接口  
+
+- 功能描述:  用户注册
+- 请求地址: `http://domain/uaa/customerUsers`
+- 请求动作: `POST`
+- 请求示例: `http://domain/uaa/customerUsers?phoneNum=12345678910&password=111111`
+  
+- 请求数据示例  
+```
+{
+	"phoneNum":"12345678910",
+	"password":"111111"
+}
+
+```
