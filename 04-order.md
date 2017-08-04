@@ -208,7 +208,7 @@
 
 - 功能描述: `车辆驶入，提交一个新的订单`
 
-- 请求地址: `http://domain/order/orders/driveIn`
+- 请求地址: `http://domain/order/orders/driveIn?access_token`
 
 - 请求动作: `POST`
 
@@ -220,7 +220,7 @@
     "parkingId":1017,
     "driveInEmployeeId":"1002",
     "driveInPosSn":"123",
-    "payType":3
+    "isMonthBill":false
 }
 ```
 - 返回示例:
