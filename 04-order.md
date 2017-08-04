@@ -1,4 +1,5 @@
-### 4.1 findDefaultPostWithParkings接口
+## 4.1 OrderController
+### 4.1.1 findDefaultPostWithParkings接口
 - 功能描述: `查询当前登录用户所在的默认岗位以及他所负责的泊位和订单。`
 
 - 请求地址: `http://domain/order/orders/findDefaultPostWithParkings`
@@ -82,7 +83,7 @@
 ```
 
 
-### 4.2 findDefaultPostSiblings接口
+### 4.1.2 findDefaultPostSiblings接口
 - 功能描述: `通过默认岗位id查询它所属路段的所有岗位`
 
 - 请求地址: `http://domain/order/orders/findDefaultPostSiblings`
@@ -111,7 +112,7 @@
 
 
 
-### 4.3 findAllParkingsByPost接口
+### 4.1.3 findAllParkingsByPost接口
 - 功能描述: `通过岗位id查询该岗位下的所有泊位和订单`
 
 - 请求地址: `http://domain/order/orders/findAllParkingsByPost`
@@ -203,7 +204,7 @@
 ```
 
 
-### 4.4 driveIn接口
+### 4.1.4 driveIn接口
 
 - 功能描述: `车辆驶入，提交一个新的订单`
 
@@ -241,7 +242,7 @@
 
 
 
-### 4.5 driveOut接口
+### 4.1.5 driveOut接口
 
 - 功能描述: `车辆驶出，通过订单id更新订单`
 
@@ -287,7 +288,7 @@
 
 
 
-### 4.6 uploadOrderVehicleImage接口
+### 4.1.6 uploadOrderVehicleImage接口
 
 - 功能描述: `上传车辆图片信息`
 
@@ -310,7 +311,7 @@
 
 
 
-### 4.7 /{id}/image接口
+### 4.1.7 /{id}/image接口
 - 功能描述: `获取车辆图片`
 
 - 请求地址: `http://domain/order/orders/{id}/image`
@@ -324,7 +325,7 @@
     ![Markdown](http://i2.kiimg.com/1949/7c84a20ddd1f1eaa.png)
 
 
-### 4.8 查询全部订单信息接口
+### 4.1.8 查询全部订单信息接口
 - 功能描述: `查询全部订单信息`
 
 - 请求地址: `http://domain/order/orders`
@@ -335,7 +336,7 @@
 
 - 返回示例: 
 
-### 4.9 根据订单id、车牌号、泊位编号查询订单接口
+### 4.1.9 根据订单id、车牌号、泊位编号查询订单接口
 
 - 功能描述：根据订单id、车牌号、泊位编号查询订单接口
 
@@ -443,5 +444,40 @@
                                 }
                             }
 ```
-     
+## 4.2 AppOrderController
+### 4.2.1 payToLeave接口
+    
+- 功能描述：用户对某个订单缴费驶离
+
+- 请求地址：`http://localhost:8080/order/appOrders/payToLeave?access_token&orderId`
+
+- 请求动作: `PUT`
+
+- 请求示例：`http://localhost:8080/order/appOrders/payToLeave?access_token=4abb5a74-a913-4c83-8de8-bdd074812507&orderId=10000215`
+
+    - Body：
+```aidl
+{
+	"payTime":"2017-08-03 17:26:49",
+	"payType":1,
+	"fee":222
+}
+```
+- 返回示例：    
+```aidl
+{
+    "status": "SUCCESS",
+    "data": {
+        "parkingCode": "154140",
+        "roadSectionName": "岳西路-长江西路",
+        "vehicleType": 1,
+        "createdDate": "2017-08-03 21:00:53",
+        "payTime": "2017-08-03 17:26:49",
+        "fee": 222,
+        "payType": 1,
+        "isMonthBill": null,
+        "arrears": null
+    }
+}
+```
         
