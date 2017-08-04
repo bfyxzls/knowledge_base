@@ -218,7 +218,7 @@
     "carPlate":"皖A12345",
     "vehicleType":1,
     "parkingId":1017,
-    "driveInEmployeeId":"1002",
+    "driveInEmployeeId":1002,
     "driveInPosSn":"123",
     "isMonthBill":false
 }
@@ -256,7 +256,7 @@
   "fee":4000,
   "payType":1,
   "completeDate":"2017-07-13 15:13:14",
-  "driveOutEmployeeId":"1002",
+  "driveOutEmployeeId":1002,
   "driveOutPosSn":"123",
   "status":3
 }  
@@ -264,7 +264,7 @@
 
 - 返回示例:
     - 当订单状态为进行中时
-    ```
+  ```
     {
     "status": "SUCCESS",
     "data": {
@@ -280,9 +280,10 @@
         "arrears": null
     }
 }
-    ```
-    - 当订单状态为待确认、完成或欠费时
-    ```
+   ```
+   
+ - 当订单状态为待确认、完成或欠费时
+     ```
     {
         "status": "FAILURE",
         "error": "车辆已驶出，订单已完成"
@@ -447,7 +448,7 @@
                                 }
                             }
 ```
-### 4.1.10  App端缴费并驶离，pos端确认驶离
+### 4.1.10  appDriveOutConfirmed接口
 - 功能描述: `App端缴费并驶离，pos端确认驶离`
 
 - 请求地址: `http://192.168.1.95:8080/order/orders/appDriveOutConfirmed?id&access_token`
@@ -479,6 +480,59 @@
         "isMonthBill": false,
         "arrears": null
     }
+}
+```
+### 4.1.11 appDriveOutWithFeeConfirmed
+- 功能描述: App端缴费未驶离，pos端缴费后驶离确认
+
+- 请求地址: `http://192.168.1.95:8080/order/orders/appDriveOutWithFeeConfirmed?id&access_token`
+
+- 请求动作: `PUT`
+
+- 请求示例: `http://192.168.1.95:8080/order/orders/appDriveOutWithFeeConfirmed?id=10000261&access_token=09b890b3-1685-4cd4-a084-af6ac51d115e`
+    - body:
+```aidl
+{
+  "fee":333,
+  "payType":1,
+  "completeDate":"2017-07-13 15:13:14",
+  "driveOutEmployeeId":1002,
+  "driveOutPosSn":"123",
+  "status":3
+} 
+```
+- 返回示例: 
+```aidl
+{
+    "status": "SUCCESS",
+    "data": {
+        "driveOutEmployeeId": 1002,
+        "parkingCode": "154140",
+        "roadSectionName": "岳西路-长江西路",
+        "vehicleType": 1,
+        "createdDate": "2017-08-04 21:16:16",
+        "completeDate": "2017-07-13 15:13:14",
+        "fee": 333,
+        "payType": 1,
+        "isMonthBill": false,
+        "arrears": null
+    }
+}
+```
+### 4.1.12 getHistoryFeeRecord接口
+- 功能描述: 待确认状态下二次缴费计算应缴费用
+
+- 请求地址: `http://192.168.1.95:8080/order/orders/getHistoryFeeRecord?id&access_token&totalFee`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://192.168.1.95:8080/order/orders/getHistoryFeeRecord?id=10000261&access_token=09b890b3-1685-4cd4-a084-af6ac51d115e&totalFee=333`
+
+- 返回示例: 
+```aidl
+{
+    "status": "SUCCESS",
+    "data": 111
 }
 ```
 ## 4.2 APP驶出接口
