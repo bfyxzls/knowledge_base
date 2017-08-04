@@ -1,4 +1,4 @@
-## 4.1 OrderController
+## 4.1 订单信息访问接口
 ### 4.1.1 findDefaultPostWithParkings接口
 - 功能描述: `查询当前登录用户所在的默认岗位以及他所负责的泊位和订单。`
 
@@ -444,7 +444,7 @@
                                 }
                             }
 ```
-## 4.2 AppOrderController
+## 4.2 APP驶出接口
 ### 4.2.1 payToLeave接口
     
 - 功能描述：用户对某个订单缴费驶离
