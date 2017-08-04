@@ -259,24 +259,27 @@
   "driveOutEmployeeId":"1002",
   "driveOutPosSn":"123",
   "status":3
-} 
+}  
 ```
 
 - 返回示例:
     - 当订单状态为进行中时
     ```
     {
-        "status": "SUCCESS",
-        "data": {
-            "driveOutEmployeeId": 1002,
-            "parkingCode": "154140",
-            "roadSectionName": "潜山路-怀宁路",
-            "vehicleType": 1,
-            "completeDate": "2017-07-13 15:13:14",
-            "fee": 4000,
-            "payType": 1
-        }
+    "status": "SUCCESS",
+    "data": {
+        "driveOutEmployeeId": 1002,
+        "parkingCode": "154140",
+        "roadSectionName": "岳西路-长江西路",
+        "vehicleType": 1,
+        "createdDate": "2017-08-04 08:41:43",
+        "completeDate": "2017-07-13 15:13:14",
+        "fee": 4000,
+        "payType": 1,
+        "isMonthBill": false,
+        "arrears": null
     }
+}
     ```
     - 当订单状态为待确认、完成或欠费时
     ```
