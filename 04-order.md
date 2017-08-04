@@ -474,11 +474,11 @@
         "parkingCode": "154140",
         "roadSectionName": "岳西路-长江西路",
         "vehicleType": 1,
-        "createdDate": "2017-08-03 21:00:53",
+        "createdDate": "2017-08-04 09:01:36",
         "payTime": "2017-08-03 17:26:49",
         "fee": 222,
         "payType": 1,
-        "isMonthBill": null,
+        "isMonthBill": false,
         "arrears": null
     }
 }
