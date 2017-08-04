@@ -447,16 +447,50 @@
                                 }
                             }
 ```
-## 4.2 APP驶出接口
-### 4.2.1 payToLeave接口
-    
-- 功能描述：用户对某个订单缴费驶离
+### 4.1.10  App端缴费并驶离，pos端确认驶离
+- 功能描述: `App端缴费并驶离，pos端确认驶离`
 
-- 请求地址：`http://localhost:8080/order/appOrders/payToLeave?access_token&orderId`
+- 请求地址: `http://192.168.1.95:8080/order/orders/appDriveOutConfirmed?id&access_token`
 
 - 请求动作: `PUT`
 
-- 请求示例：`http://localhost:8080/order/appOrders/payToLeave?access_token=4abb5a74-a913-4c83-8de8-bdd074812507&orderId=10000215`
+- 请求示例: `http://192.168.1.95:8080/order/orders/appDriveOutConfirmed?id=10000260&access_token=325019f8-9b62-499b-b392-7624ca30a00e`
+    - body:
+```aidl
+{
+	"driveOutEmployeeId":1002,
+	"driveOutPosSn":"123",
+	 "status":3
+}
+```
+- 返回示例: 
+```aidl
+{
+    "status": "SUCCESS",
+    "data": {
+        "driveOutEmployeeId": 1002,
+        "parkingCode": "154140",
+        "roadSectionName": "岳西路-长江西路",
+        "vehicleType": 1,
+        "createdDate": "2017-08-04 20:01:45",
+        "completeDate": "2017-08-03 17:26:49",
+        "fee": 222,
+        "payType": 1,
+        "isMonthBill": false,
+        "arrears": null
+    }
+}
+```
+## 4.2 APP驶出接口
+### 4.2.1 appDriveOut接口
+    
+- 功能描述：用户对某个订单缴费驶离
+
+- 请求地址：`http://localhost:8080/order/app/orders/driveOut?access_token&orderId`
+
+- 请求动作: `PUT`
+
+- 请求示例：`http://localhost:8080/order/app/orders/driveOut?access_token=4abb5a74-a913-4c83-8de8-bdd074812507&orderId=10000215`
 
     - Body：
 ```aidl
