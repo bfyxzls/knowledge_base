@@ -345,11 +345,11 @@
 
 - 功能描述：根据订单id、车牌号、泊位编号查询订单接口
 
-- 请求地址：`http://localhost:8080/order/orders/query?access_token&carPlate&id&parkingCode`
+- 请求地址：`http://domain/order/orders/query?access_token&carPlate&id&parkingCode`
 
 - 请求动作: `GET`
 
-- 请求示例：`http://106.14.188.213:8080/order/orders/query?id=10000114&access_token=e10c62ae-3bc8-4938-bdbe-1465bf25c12a`
+- 请求示例：`http://domain/order/orders/query?id=10000114&access_token=e10c62ae-3bc8-4938-bdbe-1465bf25c12a`
 
    - 备注：参数可以缺省。
 
@@ -452,11 +452,11 @@
 ### 4.1.10  appDriveOutConfirmed接口
 - 功能描述: App端缴费并驶离，pos端确认驶离
 
-- 请求地址: `http://192.168.1.95:8080/order/orders/appDriveOutConfirmed?id&access_token`
+- 请求地址: `http://domain/order/orders/appDriveOutConfirmed?id&access_token`
 
 - 请求动作: `PUT`
 
-- 请求示例: `http://192.168.1.95:8080/order/orders/appDriveOutConfirmed?id=10000260&access_token=325019f8-9b62-499b-b392-7624ca30a00e`
+- 请求示例: `http://domain/order/orders/appDriveOutConfirmed?id=10000260&access_token=325019f8-9b62-499b-b392-7624ca30a00e`
     - body:
 ```
 {
@@ -486,11 +486,11 @@
 ### 4.1.11 appDriveOutWithFeeConfirmed
 - 功能描述: App端缴费未驶离，pos端缴费后驶离确认
 
-- 请求地址: `http://192.168.1.95:8080/order/orders/appDriveOutWithFeeConfirmed?id&access_token`
+- 请求地址: `http://domain/order/orders/appDriveOutWithFeeConfirmed?id&access_token`
 
 - 请求动作: `PUT`
 
-- 请求示例: `http://192.168.1.95:8080/order/orders/appDriveOutWithFeeConfirmed?id=10000261&access_token=09b890b3-1685-4cd4-a084-af6ac51d115e`
+- 请求示例: `http://domain/order/orders/appDriveOutWithFeeConfirmed?id=10000261&access_token=09b890b3-1685-4cd4-a084-af6ac51d115e`
     - body:
 ```
 {
@@ -523,11 +523,11 @@
 ### 4.1.12 getHistoryFeeRecord接口
 - 功能描述: 待确认状态下二次缴费计算应缴费用
 
-- 请求地址: `http://192.168.1.95:8080/order/orders/getHistoryFeeRecord?id&access_token&totalFee`
+- 请求地址: `http://domian/order/orders/getHistoryFeeRecord?id&access_token&totalFee`
 
 - 请求动作: `GET`
 
-- 请求示例: `http://192.168.1.95:8080/order/orders/getHistoryFeeRecord?id=10000261&access_token=09b890b3-1685-4cd4-a084-af6ac51d115e&totalFee=333`
+- 请求示例: `http://domain/order/orders/getHistoryFeeRecord?id=10000261&access_token=09b890b3-1685-4cd4-a084-af6ac51d115e&totalFee=333`
 
 - 返回示例: 
 ```
@@ -541,11 +541,11 @@
     
 - 功能描述：用户对某个订单缴费驶离
 
-- 请求地址：`http://localhost:8080/order/app/orders/driveOut?access_token&orderId`
+- 请求地址：`http://domain/order/app/orders/driveOut?access_token&orderId`
 
 - 请求动作: `PUT`
 
-- 请求示例：`http://localhost:8080/order/app/orders/driveOut?access_token=4abb5a74-a913-4c83-8de8-bdd074812507&orderId=10000215`
+- 请求示例：`http://domain/order/app/orders/driveOut?access_token=4abb5a74-a913-4c83-8de8-bdd074812507&orderId=10000215`
 
     - Body：
 ```
