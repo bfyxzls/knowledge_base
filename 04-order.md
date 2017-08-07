@@ -1,6 +1,6 @@
 ## 4.1 订单信息访问接口
 ### 4.1.1 findDefaultPostWithParkings接口
-- 功能描述: `查询当前登录用户所在的默认岗位以及他所负责的泊位和订单。`
+- 功能描述: 查询当前登录用户所在的默认岗位以及他所负责的泊位和订单。
 
 - 请求地址: `http://domain/order/orders/findDefaultPostWithParkings`
 
@@ -84,7 +84,7 @@
 
 
 ### 4.1.2 findDefaultPostSiblings接口
-- 功能描述: `通过默认岗位id查询它所属路段的所有岗位`
+- 功能描述: 通过默认岗位id查询它所属路段的所有岗位
 
 - 请求地址: `http://domain/order/orders/findDefaultPostSiblings`
 
@@ -113,7 +113,7 @@
 
 
 ### 4.1.3 findAllParkingsByPost接口
-- 功能描述: `通过岗位id查询该岗位下的所有泊位和订单`
+- 功能描述: 通过岗位id查询该岗位下的所有泊位和订单
 
 - 请求地址: `http://domain/order/orders/findAllParkingsByPost`
 
@@ -206,7 +206,7 @@
 
 ### 4.1.4 driveIn接口
 
-- 功能描述: `车辆驶入，提交一个新的订单`
+- 功能描述: 车辆驶入，提交一个新的订单
 
 - 请求地址: `http://domain/order/orders/driveIn?access_token`
 
@@ -244,7 +244,7 @@
 
 ### 4.1.5 driveOut接口
 
-- 功能描述: `车辆驶出，通过订单id更新订单`
+- 功能描述: 车辆驶出，通过订单id更新订单
 
 - 请求地址: `http://domain/order/orders/driveOut`
 
@@ -278,9 +278,9 @@
         "payType": 1,
         "isMonthBill": false,
         "arrears": null
+        }
     }
-}
-   ```
+  ```
    
  - 当订单状态为待确认、完成或欠费时
      ```
@@ -294,7 +294,7 @@
 
 ### 4.1.6 uploadOrderVehicleImage接口
 
-- 功能描述: `上传车辆图片信息`
+- 功能描述: 上传车辆图片信息
 
 - 请求地址: `http://domain/zuul/order/orders/uploadOrderVehicleImage`
 
@@ -310,13 +310,13 @@
 }
 ```
 
-- 注意: `当MultipartFile file接收上传的文件时，如果文件太大，file为空。解决方法：在访问地址中添加/zuul/*，让请求越过DispatcherServlet,从而避免对MultipartFile文件进行处理。但是我们在测试的过程中用大小为4KB的图片上传仍然出现了该问题，因此建议在上传任何MultipartFile在url中加上/zuul/*`
+- 注意: 当MultipartFile file接收上传的文件时，如果文件太大，file为空。解决方法：在访问地址中添加`/zuul/*`，让请求越过DispatcherServlet,从而避免对MultipartFile文件进行处理。但是我们在测试的过程中用大小为4KB的图片上传仍然出现了该问题，因此建议在上传任何MultipartFile在url中加上`/zuul/*`
 
 
 
 
 ### 4.1.7 /{id}/image接口
-- 功能描述: `获取车辆图片`
+- 功能描述: 获取车辆图片
 
 - 请求地址: `http://domain/order/orders/{id}/image`
 
@@ -330,7 +330,7 @@
 
 
 ### 4.1.8 查询全部订单信息接口
-- 功能描述: `查询全部订单信息`
+- 功能描述: 查询全部订单信息
 
 - 请求地址: `http://domain/order/orders`
 
@@ -353,7 +353,7 @@
    - 备注：参数可以缺省。
 
 - 返回示例：
-```aidl
+```
 {
     "status": "SUCCESS",
     "data": {
@@ -449,7 +449,7 @@
                             }
 ```
 ### 4.1.10  appDriveOutConfirmed接口
-- 功能描述: `App端缴费并驶离，pos端确认驶离`
+- 功能描述: App端缴费并驶离，pos端确认驶离
 
 - 请求地址: `http://192.168.1.95:8080/order/orders/appDriveOutConfirmed?id&access_token`
 
@@ -457,7 +457,7 @@
 
 - 请求示例: `http://192.168.1.95:8080/order/orders/appDriveOutConfirmed?id=10000260&access_token=325019f8-9b62-499b-b392-7624ca30a00e`
     - body:
-```aidl
+```
 {
 	"driveOutEmployeeId":1002,
 	"driveOutPosSn":"123",
@@ -465,7 +465,7 @@
 }
 ```
 - 返回示例: 
-```aidl
+```
 {
     "status": "SUCCESS",
     "data": {
@@ -491,7 +491,7 @@
 
 - 请求示例: `http://192.168.1.95:8080/order/orders/appDriveOutWithFeeConfirmed?id=10000261&access_token=09b890b3-1685-4cd4-a084-af6ac51d115e`
     - body:
-```aidl
+```
 {
   "fee":333,
   "payType":1,
@@ -502,7 +502,7 @@
 } 
 ```
 - 返回示例: 
-```aidl
+```
 {
     "status": "SUCCESS",
     "data": {
@@ -529,7 +529,7 @@
 - 请求示例: `http://192.168.1.95:8080/order/orders/getHistoryFeeRecord?id=10000261&access_token=09b890b3-1685-4cd4-a084-af6ac51d115e&totalFee=333`
 
 - 返回示例: 
-```aidl
+```
 {
     "status": "SUCCESS",
     "data": 111
@@ -547,7 +547,7 @@
 - 请求示例：`http://localhost:8080/order/app/orders/driveOut?access_token=4abb5a74-a913-4c83-8de8-bdd074812507&orderId=10000215`
 
     - Body：
-```aidl
+```
 {
 	"payTime":"2017-08-03 17:26:49",
 	"payType":1,
@@ -555,7 +555,7 @@
 }
 ```
 - 返回示例：    
-```aidl
+```
 {
     "status": "SUCCESS",
     "data": {
