@@ -451,7 +451,7 @@
 - 功能描述:  根据phoneNum查询用户是否存在
 - 请求地址: `http://domain/uaa/customerUsers/isCustomerExist`
 - 请求动作: `GET`
-- 请求示例: `http://domain/uaa/customerUsers/isCustomerExist?phoneNum=PHONENUM`
+- 请求示例: `http://domain/uaa/customerUsers/isCustomerExist?phoneNum=12345678910`
 
 - 返回用户示例  
 ```
@@ -466,7 +466,7 @@
 - 功能描述:  获取验证码
 - 请求地址: `http://domain/uaa/customerUsers/getCode`
 - 请求动作: `GET`
-- 请求示例: `http://domain/uaa/customerUsers/getCode?phoneNum=PHONENUM`
+- 请求示例: `http://domain/uaa/customerUsers/getCode?phoneNum=12345678910`
   
 - 返回数据示例  
 ```
@@ -498,7 +498,7 @@
 - 功能描述:  用户注册
 - 请求地址: `http://domain/uaa/customerUsers`
 - 请求动作: `POST`
-- 请求示例: `http://domain/uaa/customerUsers?phoneNum=12345678910&password=111111`
+- 请求示例: `http://domain/uaa/customerUsers`
   
 - 请求数据示例  
 ```
