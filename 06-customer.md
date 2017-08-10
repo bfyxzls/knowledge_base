@@ -74,7 +74,7 @@
 - 功能描述:  绑定车辆
 - 请求地址: `http://domain/customer/customers/vehicleBinding`
 - 请求动作: `PUT`
-- 请求示例: `http://domain/customer/customers/vehicleBind?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 请求示例: `http://domain/customer/customers/vehicleBinding?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
 - 请求数据示例  
 ```
@@ -91,7 +91,7 @@
 - 功能描述:  解绑车辆
 - 请求地址: `http://domain/customer/customers/vehicleUnbinding`
 - 请求动作: `PUT`
-- 请求示例: `http://domain/customer/customers/vehicleUnbind?customerId=1004&vehicleId=1001&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 请求示例: `http://domain/customer/customers/vehicleUnbinding?customerId=1004&vehicleId=1001&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
 - 请求数据示例  
 ```
