@@ -20,9 +20,9 @@
 ### 6.1.2 查询用户信息接口
 
 - 功能描述:  查询用户基本信息
-- 请求地址: `http://domain/customer/customers/{id}`
+- 请求地址: `http://domain/customer/customers/myInfo`
 - 请求动作: `GET`
-- 请求示例: `http://domain/customer/customers/1004?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 请求示例: `http://domain/customer/customers/myInfo?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
 - 返回数据示例  
 ```
@@ -72,21 +72,24 @@
 ### 6.1.5 绑定车辆接口
 
 - 功能描述:  绑定车辆
-- 请求地址: `http://domain/customer/customers/vehicleBind`
+- 请求地址: `http://domain/customer/customers/vehicleBinding`
 - 请求动作: `PUT`
-- 请求示例: `http://domain/customer/customers/vehicleBind?id=1004&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 请求示例: `http://domain/customer/customers/vehicleBind?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
 - 请求数据示例  
 ```
 {
-    "id":1001
+   "customerId":1004,
+   "vehicleType":1,
+   "carPlate":"皖A12345"，
+   "vin":"123456"
 }
 ```
 
 ### 6.1.5 解绑车辆接口
 
 - 功能描述:  解绑车辆
-- 请求地址: `http://domain/customer/customers/vehicleUnbind`
+- 请求地址: `http://domain/customer/customers/vehicleUnbinding`
 - 请求动作: `PUT`
 - 请求示例: `http://domain/customer/customers/vehicleUnbind?customerId=1004&vehicleId=1001&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
