@@ -523,11 +523,11 @@
 ### 4.1.12 getHistoryFeeRecord接口
 - 功能描述: 待确认状态下二次缴费计算应缴费用
 
-- 请求地址: `http://domian/order/orders/getHistoryFeeRecord?id&access_token&totalFee`
+- 请求地址: `http://domian/order/orders/getHistoryFeeRecord?id&access_token`
 
 - 请求动作: `GET`
 
-- 请求示例: `http://domain/order/orders/getHistoryFeeRecord?id=10000261&access_token=09b890b3-1685-4cd4-a084-af6ac51d115e&totalFee=333`
+- 请求示例: `http://domain/order/orders/getHistoryFeeRecord?id=10000261&access_token=09b890b3-1685-4cd4-a084-af6ac51d115e`
 
 - 返回示例: 
 ```
