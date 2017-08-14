@@ -3984,179 +3984,14 @@ PS:需要用admin用户获得access_token
 }
 ```
 
-# 2.11 bluetooth信息访问接口
+# 2.11 SIM卡信息访问接口
 
-### 2.11.1 根据id查询bluetooth信息接口
-
-- 功能描述: 根据id查询bluetooth信息
-- 请求地址: `http://localhost:8080/infras/bluetoothes/{id}?access_token`
-- 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/bluetoothes/1000?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&name=佘能斌`
-- 返回示例:
-```
-{
-    "status": "SUCCESS",
-    "data": {
-        "id": 1000,
-        "code": "12397183091",
-        "bluetooth_type": 1084,
-        "type": "SP-T12",
-        "producer": "肥西厂家",
-        "dept": {
-            "id": 1003,
-            "name": "人力资源部",
-            "abbr": "人力",
-            "enterprise": null,
-            "personInCharge": "zz",
-            "parentDept": null,
-            "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500963836,
-                "nano": 183000000
-            },
-            "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500963836,
-                "nano": 324000000
-            }
-        },
-        "status": 1072,
-        "statusText": "使用中",
-        "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1502350174,
-            "nano": 876000000
-        },
-        "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1502350174,
-            "nano": 895000000
-        }
-    }
-}
-```
-
-### 2.11.2 查询所有bluetooth信息接口
-
-- 功能描述: 查询所有bluetooth信息
-- 请求地址: `http://localhost:8080/infras/bluetoothes?access_token`
-- 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/bluetoothes?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&name=佘能斌`
-- 返回示例:
-```
-{
-    "status": "SUCCESS",
-    "data": {
-        "content": [
-            {
-                "id": 1000,
-                "code": "12397183091",
-                "bluetooth_type": 1084,
-                "type": "SP-T12",
-                "producer": "肥西厂家",
-                "dept": {
-                    "id": 1007,
-                    "name": "合肥城泊技术部",
-                    "abbr": "技术部",
-                    "enterprise": null,
-                    "personInCharge": "黄欢",
-                    "parentDept": {
-                        "id": 1003,
-                        "name": "人力资源部",
-                        "abbr": "人力",
-                        "enterprise": null,
-                        "personInCharge": "zz",
-                        "parentDept": null,
-                        "createdBy": "wyf",
-                        "createdDate": {
-                            "epochSecond": 1500963836,
-                            "nano": 183000000
-                        },
-                        "lastModifiedBy": "wyf",
-                        "lastModifiedDate": {
-                            "epochSecond": 1500963836,
-                            "nano": 324000000
-                        }
-                    },
-                    "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1500963836,
-                        "nano": 183000000
-                    },
-                    "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1500963836,
-                        "nano": 320000000
-                    }
-                },
-                "status": 1072,
-                "statusText": "使用中",
-                "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1502350141,
-                    "nano": 20000000
-                },
-                "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1502350141,
-                    "nano": 20000000
-                }
-            }
-        ],
-        "last": true,
-        "totalElements": 1,
-        "totalPages": 1,
-        "number": 0,
-        "size": 20,
-        "sort": null,
-        "first": true,
-        "numberOfElements": 1
-    }
-}
-```
-
-### 2.11.3 新增bluetooth接口
-
-- 功能描述: 新增bluetooth
-- 请求地址: `http://localhost:8080/infras/bluetoothes?access_token`
-- 请求动作: `POST`
-- 请求示例: `http://localhost:8080/infras/bluetoothes?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&name=佘能斌`
-- 请求示例:
-```
-{
-	"code":"12397183091",
-	"bluetooth_type":1084,
-	"producer":"肥西厂家",
-	"dept":{
-		"id":1007
-	},
-	"status":1072
-}
-```
-
-### 2.11.4 更新bluetooth接口
-
-- 功能描述: 更新bluetooth信息
-- 请求地址: `http://localhost:8080/infras/bluetoothes/{id}?access_token`
-- 请求动作: `PUT`
-- 请求示例: `http://localhost:8080/infras/bluetoothes/1000?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&name=佘能斌`
-- 请求示例:
-```
-{	
-	"dept":{
-		"id":1003
-	}
-}
-```
-
-# 2.12 SIM卡信息访问接口
-
-### 2.12.1 根据id查询SIM卡信息接口
+### 2.11.1 根据id查询SIM卡信息接口
 
 - 功能描述: 根据id查询SIM卡信息
 - 请求地址: `http://localhost:8080/infras/sims/{id}?access_token`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/sims/1000?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&name=佘能斌`
+- 请求示例: `http://localhost:8080/infras/sims/1000?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
 - 返回示例:
 ```
 {
@@ -4206,12 +4041,12 @@ PS:需要用admin用户获得access_token
 }
 ```
 
-### 2.12.2 查询所有SIM卡信息接口
+### 2.11.2 查询所有SIM卡信息接口
 
 - 功能描述: 查询所有SIM卡信息
 - 请求地址: `http://localhost:8080/infras/sims?access_token`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/sims?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&name=佘能斌`
+- 请求示例: `http://localhost:8080/infras/sims?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
 - 返回示例:
 ```
 {
@@ -4273,12 +4108,12 @@ PS:需要用admin用户获得access_token
 }
 ```
 
-### 2.12.3 新增SIM卡接口
+### 2.11.3 新增SIM卡接口
 
 - 功能描述: 新增SIM卡
 - 请求地址: `http://localhost:8080/infras/sims?access_token`
 - 请求动作: `POST`
-- 请求示例: `http://localhost:8080/infras/sims?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&name=佘能斌`
+- 请求示例: `http://localhost:8080/infras/sims?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
 - 请求示例:
 ```
 {
@@ -4292,12 +4127,12 @@ PS:需要用admin用户获得access_token
 }
 ```
 
-### 2.12.4 更新SIM卡接口
+### 2.11.4 更新SIM卡接口
 
 - 功能描述: 更新SIM卡信息
 - 请求地址: `http://localhost:8080/infras/sims/{id}?access_token`
 - 请求动作: `PUT`
-- 请求示例: `http://localhost:8080/infras/sims/1000?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&name=佘能斌`
+- 请求示例: `http://localhost:8080/infras/sims/1000?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
 - 请求示例:
 ```
 {	
@@ -4307,15 +4142,84 @@ PS:需要用admin用户获得access_token
 }
 ```
 
+### 2.11.5 条件查询SIM卡接口
 
-# 2.13 POS机信息访问接口
+- 功能描述: 按iccid和SN码查询SIM卡信息
+- 请求地址: `http://localhost:8080/infras/sims/query?iccid=123&snCode=456?access_token2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
+- 请求动作: `PUT`
+- 请求示例: `http://localhost:8080/infras/sims/query?iccid=123&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
+          或`http://localhost:8080/infras/sims/query?snCode=456&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
+          或`http://localhost:8080/infras/sims/query?iccid=123&snCode=456&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
+- 请求示例:
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "id": 1000,
+                "iccid": "123971830",
+                "operator_type": 1079,
+                "operator": "中国电信",
+                "phoneNum": null,
+                "snCode": "999",
+                "equipment_type": 1080,
+                "equipmentText": "POS机",
+                "equipmentCode": null,
+                "dept": {
+                    "id": 1003,
+                    "name": "人力资源部",
+                    "abbr": "人力",
+                    "enterprise": null,
+                    "personInCharge": "zz",
+                    "parentDept": null,
+                    "createdBy": "wyf",
+                    "createdDate": {
+                        "epochSecond": 1500963836,
+                        "nano": 183000000
+                    },
+                    "lastModifiedBy": "wyf",
+                    "lastModifiedDate": {
+                        "epochSecond": 1500963836,
+                        "nano": 324000000
+                    }
+                },
+                "status": 1072,
+                "statusText": "使用中",
+                "remark": null,
+                "createdBy": "wyf",
+                "createdDate": {
+                    "epochSecond": 1502349987,
+                    "nano": 979000000
+                },
+                "lastModifiedBy": "wyf",
+                "lastModifiedDate": {
+                    "epochSecond": 1502349988,
+                    "nano": 53000000
+                }
+            }
+        ],
+        "last": true,
+        "totalElements": 1,
+        "totalPages": 1,
+        "number": 0,
+        "size": 20,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 1
+    }
+}
+```
 
-### 2.13.1 根据id查询POS机信息接口
+
+# 2.12 POS机信息访问接口
+
+### 2.12.1 根据id查询POS机信息接口
 
 - 功能描述: 根据id查询POS机信息
 - 请求地址: `http://localhost:8080/infras/poses/{id}?access_token`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/poses/1001?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&name=佘能斌`
+- 请求示例: `http://localhost:8080/infras/poses/1001?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
 - 返回示例:
 ```
 {
@@ -4401,12 +4305,12 @@ PS:需要用admin用户获得access_token
 }
 ```
 
-### 2.13.2 查询所有POS机信息接口
+### 2.12.2 查询所有POS机信息接口
 
 - 功能描述: 查询所有POS机信息
 - 请求地址: `http://localhost:8080/infras/poses?access_token`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/poses?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&name=佘能斌`
+- 请求示例: `http://localhost:8080/infras/poses?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
 - 返回示例:
 ```
 {
@@ -4504,12 +4408,12 @@ PS:需要用admin用户获得access_token
 }
 ```
 
-### 2.13.3 新增POS机接口
+### 2.12.3 新增POS机接口
 
 - 功能描述: 新增POS机
 - 请求地址: `http://localhost:8080/infras/poses?access_token`
 - 请求动作: `POST`
-- 请求示例: `http://localhost:8080/infras/poses?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&name=佘能斌`
+- 请求示例: `http://localhost:8080/infras/poses?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
 - 请求示例:
 ```
 {
@@ -4521,12 +4425,12 @@ PS:需要用admin用户获得access_token
 }
 ```
 
-### 2.13.4 更新POS机接口
+### 2.12.4 更新POS机接口
 
 - 功能描述: 更新POS机信息
 - 请求地址: `http://localhost:8080/infras/poses/{id}?access_token`
 - 请求动作: `PUT`
-- 请求示例: `http://localhost:8080/infras/poses/1000?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&name=佘能斌`
+- 请求示例: `http://localhost:8080/infras/poses/1000?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
 - 请求示例:
 ```
 {
@@ -4534,3 +4438,107 @@ PS:需要用admin用户获得access_token
 }
 ```
 
+### 2.12.5 条件查询POS机接口
+
+- 功能描述: 按Pos机编号和使用者姓名查询Pos机信息
+- 请求地址: `http://localhost:8080/infras/poses/query?code=123&employName=456?access_token2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
+- 请求动作: `PUT`
+- 请求示例: `http://localhost:8080/infras/poses/query?code=123&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
+          或`http://localhost:8080/infras/poses/query?employName=456&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
+          或`http://localhost:8080/infras/poses/query?code=123&employName=456&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
+- 请求示例:
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "id": 1001,
+                "code": "123456",
+                "imei": "ada21",
+                "version_type": 1070,
+                "version": "4G",
+                "producer_id": null,
+                "producer": null,
+                "dept": {
+                    "id": 1007,
+                    "name": "合肥城泊技术部",
+                    "abbr": "技术部",
+                    "enterprise": null,
+                    "personInCharge": "黄欢",
+                    "parentDept": {
+                        "id": 1003,
+                        "name": "人力资源部",
+                        "abbr": "人力",
+                        "enterprise": null,
+                        "personInCharge": "zz",
+                        "parentDept": null,
+                        "createdBy": "wyf",
+                        "createdDate": {
+                            "epochSecond": 1500963836,
+                            "nano": 183000000
+                        },
+                        "lastModifiedBy": "wyf",
+                        "lastModifiedDate": {
+                            "epochSecond": 1500963836,
+                            "nano": 324000000
+                        }
+                    },
+                    "createdBy": "wyf",
+                    "createdDate": {
+                        "epochSecond": 1500963836,
+                        "nano": 183000000
+                    },
+                    "lastModifiedBy": "wyf",
+                    "lastModifiedDate": {
+                        "epochSecond": 1500963836,
+                        "nano": 320000000
+                    }
+                },
+                "status": 1072,
+                "statusText": "使用中",
+                "remark": null,
+                "employee": {
+                    "id": 1004,
+                    "name": "刘鹏飞",
+                    "gender": 2,
+                    "dept": null,
+                    "position": null,
+                    "positionText": null,
+                    "phoneNum": null,
+                    "sort": null,
+                    "defaultPost": null,
+                    "createdBy": "wyf",
+                    "createdDate": {
+                        "epochSecond": 1500430839,
+                        "nano": 704000000
+                    },
+                    "lastModifiedBy": "wyf",
+                    "lastModifiedDate": {
+                        "epochSecond": 1500430839,
+                        "nano": 893000000
+                    }
+                },
+                "createdBy": "wyf",
+                "createdDate": {
+                    "epochSecond": 1502332965,
+                    "nano": 400000000
+                },
+                "lastModifiedBy": "wyf",
+                "lastModifiedDate": {
+                    "epochSecond": 1502332965,
+                    "nano": 688000000
+                }
+            }
+        ],
+        "last": true,
+        "totalElements": 1,
+        "totalPages": 1,
+        "number": 0,
+        "size": 20,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 1
+    }
+}
+```
