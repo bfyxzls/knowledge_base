@@ -533,7 +533,9 @@
 ```
 {
     "status": "SUCCESS",
-    "data": 111
+    "data": {
+        "feeAlreadyPaid": 200
+    }
 }
 ```
 ### 4.1.13 getParkingState接口
