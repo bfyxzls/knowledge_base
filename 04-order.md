@@ -536,6 +536,100 @@
     "data": 111
 }
 ```
+### 4.1.13 getParkingState接口
+- 功能描述: 通过Pos机查询当前泊位的停车状态信息
+
+- 请求地址: `http://domian/order/orders/getParkingState?parkingCode&access_token`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://domain/order/orders/getParkingState?access_token=82dae454-5c86-404f-93d1-4cdae1775cff&parkingCode=133000`
+
+- 返回示例: 
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "parkingCode": "133000",
+        "status": "空闲",
+        "carPlate": null,
+        "roadSectionName": null,
+        "vehicleType": null,
+        "driveInEmployeeName": null,
+        "driveInPosSn": null,
+        "createdDate": null
+    }
+}
+```
+### 4.1.14 AppPayArrearsFee接口
+- 功能描述: 补缴欠费订单
+
+- 请求地址: `http://domian/order/orders/appPayArrearsFee?appPayArrearsOrderCommands&access_token`
+
+- 请求动作: `PUT`
+
+- 请求示例: `http://domain/order/orders/appPayArrearsFee?access_token=82dae454-5c86-404f-93d1-4cdae1775cff`
+
+- 请求实体：
+'''
+[
+      {
+                "orderId": 10000272,
+                "payType":4,
+                "payTime": "2017-08-13 19:21:21",
+                "arrearsFee": 200
+            },
+            {
+                "orderId": 10000281,
+                "payType":4,
+                "payTime": "2017-08-13 15:13:14",
+                "arrearsFee": 199
+            }
+]
+'''
+- 返回示例:
+'''
+{
+    "status": "SUCCESS",
+    "data": "补缴欠费成功"
+}
+'''
+ ### 4.1.15 PosPayArrearsFee接口
+ - 功能描述: 补缴欠费订单
+ 
+ - 请求地址: `http://domian/order/orders/posPayArrearsFee?appPayArrearsOrderCommands&access_token`
+ 
+ - 请求动作: `PUT`
+ 
+ - 请求示例: `http://domain/order/orders/posPayArrearsFee?access_token=82dae454-5c86-404f-93d1-4cdae1775cff`
+ 
+ - 请求实体：
+ '''
+ [
+       {
+                 "orderId": 10000272,
+                 "payType":4,
+                 "payTime": "2017-08-13 19:21:21",
+                 "arrearsFee": 200
+             },
+             {
+                 "orderId": 10000281,
+                 "payType":4,
+                 "payTime": "2017-08-13 15:13:14",
+                 "arrearsFee": 199
+             }
+ ]
+ '''
+ - 返回示例:
+ '''
+ {
+     "status": "SUCCESS",
+     "data": {
+         "numOfArrearsOrder": 2,
+         "totalFee": 399
+     }
+ }
+ '''
 ## 4.2 APP驶出接口
 ### 4.2.1 appDriveOut接口
     
