@@ -437,7 +437,22 @@ PS:需要用admin用户获得access_token
 - 返回示例：
 
   ```json
-
+  {
+      "status": "SUCCESS",
+      "data": [
+          {
+              "id": 1028,
+              "coordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                      117.28652499621376,
+                      31.864361826772665
+                  ]
+              }
+          },
+          ...
+      ]
+  }
   ```
 
   ​
@@ -455,7 +470,22 @@ PS:需要用admin用户获得access_token
 - 返回示例：
 
   ```json
-
+  {
+      "status": "SUCCESS",
+      "data": [
+          {
+              "id": 1028,
+              "coordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                      117.28652499621376,
+                      31.864361826772665
+                  ]
+              }
+          },
+          ...
+      ]
+  }
   ```
 
 ### 2.1.9 queryCoordinatesByName接口
@@ -471,7 +501,21 @@ PS:需要用admin用户获得access_token
 - 返回示例：
 
   ```json
-
+  {
+      "status": "SUCCESS",
+      "data": [
+          {
+              "id": 1028,
+              "coordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                      117.28652499621376,
+                      31.864361826772665
+                  ]
+              }
+          }
+      ]
+  }
   ```
 
   ​
@@ -489,7 +533,21 @@ PS:需要用admin用户获得access_token
 - 返回示例：
 
   ```json
-
+  {
+      "status": "SUCCESS",
+      "data": [
+          {
+              "id": 1028,
+              "coordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                      117.28652499621376,
+                      31.864361826772665
+                  ]
+              }
+          }
+      ]
+  }
   ```
 
 
@@ -1286,7 +1344,42 @@ PS:需要用admin用户获得access_token
 - 返回示例:
 
   ```json
-
+  {
+      "status": "SUCCESS",
+      "data": [
+          {
+              "id": 1022,
+              "coordinates": {
+                  "type": "MultiLineString",
+                  "coordinates": [
+                      [
+                          [
+                              117.19933306810447,
+                              31.85425372612921
+                          ],
+                          [
+                              117.20415567991324,
+                              31.85509211848664
+                          ]
+                      ],
+                      [
+                          [
+                              117.20410740015097,
+                              31.855206029903528
+                          ],
+                          [
+                              117.1993223392684,
+                              31.854381308066642
+                          ]
+                      ]
+                  ]
+              },
+              "usedParkingNum": 0,
+              "totalParkingNum": 0
+          },
+        	...
+      ]
+  }
   ```
 
 ### 2.3.8 app queryAllRoadSectionInfo接口
@@ -1302,7 +1395,42 @@ PS:需要用admin用户获得access_token
 - 返回示例:
 
   ```json
-
+  {
+      "status": "SUCCESS",
+      "data": [
+          {
+              "id": 1022,
+              "coordinates": {
+                  "type": "MultiLineString",
+                  "coordinates": [
+                      [
+                          [
+                              117.19933306810447,
+                              31.85425372612921
+                          ],
+                          [
+                              117.20415567991324,
+                              31.85509211848664
+                          ]
+                      ],
+                      [
+                          [
+                              117.20410740015097,
+                              31.855206029903528
+                          ],
+                          [
+                              117.1993223392684,
+                              31.854381308066642
+                          ]
+                      ]
+                  ]
+              },
+              "usedParkingNum": 0,
+              "totalParkingNum": 0
+          },
+        	...
+      ]
+  }
   ```
 
 ### 2.3.9 queryRoadSectionByName接口
@@ -1318,7 +1446,41 @@ PS:需要用admin用户获得access_token
 - 返回示例:
 
   ```json
-
+  {
+      "status": "SUCCESS",
+      "data": [
+          {
+              "id": 1022,
+              "coordinates": {
+                  "type": "MultiLineString",
+                  "coordinates": [
+                      [
+                          [
+                              117.19933306810447,
+                              31.85425372612921
+                          ],
+                          [
+                              117.20415567991324,
+                              31.85509211848664
+                          ]
+                      ],
+                      [
+                          [
+                              117.20410740015097,
+                              31.855206029903528
+                          ],
+                          [
+                              117.1993223392684,
+                              31.854381308066642
+                          ]
+                      ]
+                  ]
+              },
+              "parkingNum": 0
+          },
+          ...
+      ]
+  }
   ```
 
 ### 2.3.10 app queryRoadSectionByName接口
@@ -1334,7 +1496,41 @@ PS:需要用admin用户获得access_token
 - 返回示例:
 
   ```json
-
+  {
+      "status": "SUCCESS",
+      "data": [
+          {
+              "id": 1022,
+              "coordinates": {
+                  "type": "MultiLineString",
+                  "coordinates": [
+                      [
+                          [
+                              117.19933306810447,
+                              31.85425372612921
+                          ],
+                          [
+                              117.20415567991324,
+                              31.85509211848664
+                          ]
+                      ],
+                      [
+                          [
+                              117.20410740015097,
+                              31.855206029903528
+                          ],
+                          [
+                              117.1993223392684,
+                              31.854381308066642
+                          ]
+                      ]
+                  ]
+              },
+              "parkingNum": 0
+          },
+          ...
+      ]
+  }
   ```
 
 # 2.4 泊位信息访问接口
