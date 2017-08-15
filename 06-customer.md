@@ -86,7 +86,7 @@
 }
 ```
 
-### 6.1.5 解绑车辆接口
+### 6.1.6 解绑车辆接口
 
 - 功能描述:  解绑车辆
 - 请求地址: `http://domain/customer/customers/vehicleUnbinding`
@@ -100,4 +100,24 @@
     "data":"车辆解绑成功"
 }
 ```
+### 6.1.7 getVehicleFeeStats接口
+- 功能描述:  获取当前客户的待支付和待补缴的订单
+- 请求地址: `http://localhost:8080/customer/customers/getVehicleFeeStats`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/customer/customers/getVehicleFeeStats?access_token`
+
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "carPlate": "皖AYN056",
+            "numOfArrears": 0,
+            "numOfCurrentFee": 0
+        }
+    ]
+}
+```
+
 
