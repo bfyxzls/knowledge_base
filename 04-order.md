@@ -952,3 +952,67 @@
     }
 }
 ```
+### 4.5.2 getParkingRecord接口
+- 功能描述：获得车辆停车记录
+
+- 请求地址：`http://domain/order/app/vehicles/{carPlate}/parkingRecords`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/order/app/vehicles/%e7%9a%96A12345/parkingRecords?access_token`
+
+- 返回示例：
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "createdDate": "2017-08-03 17:26:49",
+                "completeDate": "2017-08-03 17:26:49",
+                "period": 0,
+                "roadSectionName": "岳西路-长江西路",
+                "parkingAreaName": "岳西路停车场",
+                "fee": 222,
+                "status": 3
+            },
+            {
+                "createdDate": "2017-08-03 17:26:49",
+                "completeDate": "2017-08-03 17:26:49",
+                "period": 0,
+                "roadSectionName": "岳西路-长江西路",
+                "parkingAreaName": "岳西路停车场",
+                "fee": 0,
+                "status": 3
+            },
+            {
+                "createdDate": "2017-07-13 15:13:14",
+                "completeDate": "2017-07-13 15:13:14",
+                "period": 0,
+                "roadSectionName": "岳西路-长江西路",
+                "parkingAreaName": "岳西路停车场",
+                "fee": 300,
+                "status": 3
+            },
+            {
+                "createdDate": "2017-07-13 15:13:14",
+                "completeDate": "2017-07-13 15:13:14",
+                "period": 0,
+                "roadSectionName": "岳西路-长江西路",
+                "parkingAreaName": "岳西路停车场",
+                "fee": 0,
+                "status": 3
+            }
+        ],
+        "totalElements": 40,
+        "last": false,
+        "totalPages": 2,
+        "number": 0,
+        "size": 20,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 20
+    }
+}
+```
+
