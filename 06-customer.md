@@ -80,7 +80,7 @@
 ```
 {
    "customerId":1004,
-   "vehicleType":"02",
+   "vehicleType":"02git ",
    "carPlate":"皖A12345"，
    "vin":"123456"
 }
