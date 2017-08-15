@@ -4314,6 +4314,152 @@ PS:需要用admin用户获得access_token
 }
 ```
 
+### 2.10.6 autoTop接口
+- 功能描述: 根据员工名字自动提示匹配的员工信息
+- 请求地址: `http://localhost:8080/infras/employees/autoTop?name=123&access_token`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/infras/employees/autoTop?name=飞&access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`  
+- 返回示例:
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 1002,
+            "name": "赵朋飞",
+            "gender": 2,
+            "dept": null,
+            "position": 1024,
+            "positionText": "技术员",
+            "phoneNum": "66666",
+            "sort": null,
+            "defaultPost": {
+                "id": 1021,
+                "name": "岗位3",
+                "direction": 1,
+                "coordinates": null,
+                "parkingType": 2,
+                "parkingDistribution": 1,
+                "roadSection": {
+                    "id": 1020,
+                    "name": "潜山路-怀宁路",
+                    "level": 1023,
+                    "levelText": "B级路段",
+                    "coordinates": {
+                        "type": "MultiLineString",
+                        "coordinates": [
+                            [
+                                [
+                                    117.19933306810447,
+                                    31.85425372612921
+                                ],
+                                [
+                                    117.20415567991324,
+                                    31.85509211848664
+                                ]
+                            ],
+                            [
+                                [
+                                    117.20410740015097,
+                                    31.855206029903528
+                                ],
+                                [
+                                    117.1993223392684,
+                                    31.854381308066642
+                                ]
+                            ]
+                        ]
+                    },
+                    "parkingArea": {
+                        "id": 1037,
+                        "code": "700000",
+                        "name": "岳西路停车场",
+                        "coordinates": {
+                            "type": "MultiLineString",
+                            "coordinates": [
+                                [
+                                    [
+                                        117.19933306810447,
+                                        31.85425372612921
+                                    ],
+                                    [
+                                        117.20415567991324,
+                                        31.85509211848664
+                                    ]
+                                ],
+                                [
+                                    [
+                                        117.20410740015097,
+                                        31.855206029903528
+                                    ],
+                                    [
+                                        117.1993223392684,
+                                        31.854381308066642
+                                    ]
+                                ]
+                            ]
+                        },
+                        "parkingPositionQuantity": 600,
+                        "maintainEnterprise": null,
+                        "province": "安徽省",
+                        "city": null,
+                        "district": "蜀山区",
+                        "createdBy": "wyf",
+                        "createdDate": 1501771500000,
+                        "lastModifiedBy": "wyf",
+                        "lastModifiedDate": 1501771487000
+                    },
+                    "parkingNum": 5,
+                    "createdBy": "wyf",
+                    "createdDate": 1501809923000,
+                    "lastModifiedBy": "wyf",
+                    "lastModifiedDate": 1502111609414
+                },
+                "createdBy": "wyf",
+                "createdDate": 1502706613000,
+                "lastModifiedBy": "wyf",
+                "lastModifiedDate": 1502706619000
+            },
+            "createdBy": "wyf",
+            "createdDate": 1502704527000,
+            "lastModifiedBy": "wyf",
+            "lastModifiedDate": 1502706438000
+        },
+        {
+            "id": 1003,
+            "name": "赵朋飞",
+            "gender": 2,
+            "dept": null,
+            "position": null,
+            "positionText": null,
+            "phoneNum": null,
+            "sort": null,
+            "defaultPost": null,
+            "createdBy": "wyf",
+            "createdDate": 1502703840000,
+            "lastModifiedBy": "wyf",
+            "lastModifiedDate": 1502706446000
+        },
+        {
+            "id": 1004,
+            "name": "刘鹏飞",
+            "gender": 2,
+            "dept": null,
+            "position": null,
+            "positionText": null,
+            "phoneNum": null,
+            "sort": null,
+            "defaultPost": null,
+            "createdBy": "wyf",
+            "createdDate": 1502704503000,
+            "lastModifiedBy": "wyf",
+            "lastModifiedDate": 1502706448000
+        }
+    ]
+}
+
+```
+
 # 2.11 SIM卡信息访问接口
 
 ### 2.11.1 根据id查询SIM卡信息接口
