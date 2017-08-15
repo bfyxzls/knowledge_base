@@ -216,7 +216,7 @@
 ```
 {
     "carPlate":"皖A12345",
-    "vehicleType":1,
+    "vehicleType":"01",
     "parkingId":1017,
     "driveInEmployeeId":1002,
     "driveInPosSn":"123",
@@ -232,7 +232,7 @@
         "parkingCode": "154140",
         "driveInPosSn": "123",
         "roadSectionName": "潜山路-怀宁路",
-        "vehicleType": 1,
+        "vehicleType": "01",
         "driveInEmployeeId": 1002,
         "createDate": "2017-07-19 09:26:08",
         "arrears": 7000
@@ -281,14 +281,16 @@
         }
     }
   ```
-   
- - 当订单状态为待确认、完成或欠费时
+
+-  当订单状态为待确认、完成或欠费时
+     ```
+
      ```
     {
         "status": "FAILURE",
         "error": "车辆已驶出，订单已完成"
     }
-    ```
+    ​```
 
 
 
@@ -538,9 +540,151 @@
     }
 }
 ```
+### 4.1.13 getParkingState接口
+- 功能描述: 通过Pos机查询当前泊位的停车状态信息
+
+- 请求地址: `http://domian/order/orders/getParkingState?parkingCode&access_token`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://domain/order/orders/getParkingState?access_token=82dae454-5c86-404f-93d1-4cdae1775cff&parkingCode=133000`
+
+- 返回示例: 
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "parkingCode": "133000",
+        "status": "空闲",
+        "carPlate": null,
+        "roadSectionName": null,
+        "vehicleType": null,
+        "driveInEmployeeName": null,
+        "driveInPosSn": null,
+        "createdDate": null
+    }
+}
+```
+### 4.1.14 AppPayArrearsFee接口
+- 功能描述: 补缴欠费订单
+
+- 请求地址: `http://domian/order/orders/appPayArrearsFee?appPayArrearsOrderCommands&access_token`
+
+- 请求动作: `PUT`
+
+- 请求示例: `http://domain/order/orders/appPayArrearsFee?access_token=82dae454-5c86-404f-93d1-4cdae1775cff`
+
+- 请求实体：
+```
+  [
+      {
+                "orderId": 10000272,
+                "payType":4,
+                "payTime": "2017-08-13 19:21:21",
+                "arrearsFee": 200
+            },
+            {
+                "orderId": 10000281,
+                "payType":4,
+                "payTime": "2017-08-13 15:13:14",
+                "arrearsFee": 199
+            }
+  ]
+```
+- 返回示例:
+```
+  {
+    "status": "SUCCESS",
+    "data": "补缴欠费成功"
+  }
+```
+### 4.1.15 PosPayArrearsFee接口
+-  功能描述: 补缴欠费订单
+
+- 请求地址: `http://domian/order/orders/posPayArrearsFee?appPayArrearsOrderCommands&access_token`
+
+- 请求动作: `PUT`
+
+- 请求示例: `http://domain/order/orders/posPayArrearsFee?access_token=82dae454-5c86-404f-93d1-4cdae1775cff`
+
+- 请求实体：
+```
+    [
+       {
+                 "orderId": 10000272,
+                 "payType":4,
+                 "payTime": "2017-08-13 19:21:21",
+                 "arrearsFee": 200
+             },
+             {
+                 "orderId": 10000281,
+                 "payType":4,
+                 "payTime": "2017-08-13 15:13:14",
+                 "arrearsFee": 199
+             }
+    ]
+```
+
+- 返回示例:
+```
+    {
+     "status": "SUCCESS",
+     "data": {
+         "numOfArrearsOrder": 2,
+         "totalFee": 399
+     }
+    }
+```
+    
+### 4.1.16 obtainParkingOrderDetails接口
+- 功能描述：管理员查看某个订单的详细信息
+
+- 请求地址：http://localhost:8080/order/orders/{}/obtainParkingOrderDetails?access_token
+
+- 请求动作：GET
+
+- 请求示例：http://localhost:8080/order/orders/10000313/obtainParkingOrderDetails?access_token=a57c7550-8538-47ac-9056-ac5c0f71b80d
+
+- 返回示例：
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": 10000313,
+        "parkingCode": "154140",
+        "period": -40448,
+        "vehicleType": "1",
+        "status": 3,
+        "carPlateNum": "皖A12345",
+        "district": "蜀山区",
+        "roadSectionName": "岳西路-长江西路",
+        "description": "小型车-收费标准",
+        "driveInEmpDto": {
+            "name": "赵朋飞",
+            "id": 1002,
+            "phoneNum": "7777777",
+            "posSn": "123",
+            "operationDate": "2017-08-10 17:22:04"
+        },
+        "driveOutEmpDto": {
+            "name": "赵朋飞",
+            "id": 1002,
+            "phoneNum": "7777777",
+            "posSn": "123",
+            "operationDate": "2017-07-13 15:13:14"
+        },
+        "feeShouldPay": 200,
+        "feeActuallyPay": 200,
+        "arrearsFee": null,
+        "arrearsPaidDate": null,
+        "arrearsOrderGeneratedDate": null
+    }
+}
+```
+ 
 ## 4.2 APP驶出接口
 ### 4.2.1 appDriveOut接口
-    
+
 - 功能描述：用户对某个订单缴费驶离
 
 - 请求地址：`http://domain/order/app/orders/driveOut?access_token&orderId`
@@ -574,4 +718,171 @@
     }
 }
 ```
-        
+
+
+
+## 4.3 统计接口
+
+### 4.3.1 countEmployeeTodayStats接口
+
+- 功能描述：查询员工当日收费统计
+
+- 请求地址：`http://domain/order/stats/{employeeId}/today?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://domain/order/stats/11/today?access_token=4abb5a74-a913-4c83-8de8-bdd074812507`
+
+- 返回示例：
+
+  ```json
+  {
+      "status": "SUCCESS",
+      "data": {
+          "employeeId": 1001,
+          "employeeName": "佘能斌",
+          "incomeStats": {
+              "num": 0,
+              "sum": 0
+          },
+          "arrearsStats": {
+              "num": 0,
+              "sum": 0
+          },
+          "arrearsPaidStats": {
+              "num": 0,
+              "sum": 0
+          },
+          "printTime": "2017-08-15 09:08:27"
+      }
+  }
+  ```
+
+## 4.4 车辆信息接口
+
+### 4.4.1 getParkingRecords接口
+
+- 功能描述：根据车牌号查询停车记录
+
+- 请求地址：`http://domain/order/vehicles/{carPlate}/parkingRecords?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://domain/order/vehicles/皖A12345/parkingRecords?access_token=4abb5a74-a913-4c83-8de8-bdd074812507`
+
+- 返回示例：
+
+  ```json
+  {
+      "status": "SUCCESS",
+      "data": {
+          "employeeId": 1001,
+          "employeeName": "佘能斌",
+          "incomeStats": {
+              "num": 0,
+              "sum": 0
+          },
+          "arrearsStats": {
+              "num": 0,
+              "sum": 0
+          },
+          "arrearsPaidStats": {
+              "num": 0,
+              "sum": 0
+          },
+          "printTime": "2017-08-15 08:34:15"
+      }
+  }
+  ```
+
+### 4.4.2 countArrears接口
+
+- 功能描述：按车牌计算欠费笔数和金额
+
+- 请求地址：`http://domain/order/vehicles/{carPlate}/countArrears?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://domain/order/vehicles/皖A12345/countArrears?access_token=4abb5a74-a913-4c83-8de8-bdd074812507`
+
+- 返回示例：
+
+  ```json
+  {
+      "status": "SUCCESS",
+      "data": {
+          "carPlate": "皖A12345",
+          "sumOfArrears": 0,
+          "numOfArrears": 0
+      }
+  }
+  ```
+
+  ​
+
+### 4.4.3 getArrears接口
+
+- 功能描述：按车牌计算欠费笔数和金额
+
+- 请求地址：`http://domain/order/vehicles/{carPlate}/arrears?access_token&page&size`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://domain/order/vehicles/皖A12345/arrears?access_token=4abb5a74-a913-4c83-8de8-bdd074812507&page=1&size=10`
+
+- 返回示例：
+
+  ```json
+  {
+      "status": "SUCCESS",
+      "data": {
+          "content": [
+              {
+                  "id": 10000269,
+                  "createdDate": "2017-08-09 19:11:15",
+                  "completeDate": "2017-07-13 15:13:14",
+                  "arrearsFee": 0,
+                  "roadSectionName": "岳西路-长江西路"
+              },
+              {
+                  "id": 10000270,
+                  "createdDate": "2017-08-09 19:13:29",
+                  "completeDate": "2017-07-13 15:13:14",
+                  "arrearsFee": 0,
+                  "roadSectionName": "岳西路-长江西路"
+              },
+              {
+                  "id": 10000271,
+                  "createdDate": "2017-08-09 19:15:00",
+                  "completeDate": "2017-07-13 15:13:14",
+                  "arrearsFee": 0,
+                  "roadSectionName": "岳西路-长江西路"
+              },
+              {
+                  "id": 10000305,
+                  "createdDate": "2017-08-10 16:51:56",
+                  "completeDate": "2017-07-13 15:13:14",
+                  "arrearsFee": null,
+                  "roadSectionName": "岳西路-长江西路"
+              },
+              {
+                  "id": 10000314,
+                  "createdDate": "2017-08-10 17:23:49",
+                  "completeDate": "2017-07-13 15:13:14",
+                  "arrearsFee": 200,
+                  "roadSectionName": "岳西路-长江西路"
+              }
+          ],
+          "totalElements": 5,
+          "last": true,
+          "totalPages": 1,
+          "size": 20,
+          "number": 0,
+          "first": true,
+          "sort": null,
+          "numberOfElements": 5
+      }
+  }
+  ```
+
+  ​
