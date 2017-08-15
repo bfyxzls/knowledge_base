@@ -549,6 +549,38 @@ PS:需要用admin用户获得access_token
       ]
   }
   ```
+  
+  
+### 2.1.11 app queryBusinessParkingAreaInfoById接口
+
+- 功能描述: 通过商业停车场id查询商业停车场信息
+
+- 请求地址: `http://localhost:8080/infras/app/businessParkingAreas/{id}?access_token&name`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://localhost:8080/infras/app/businessParkingAreas/1030?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=长江路`
+
+- 返回示例：
+
+ ```
+ {
+     "status": "SUCCESS",
+     "data": {
+         "name": "万达广场",
+         "id": 1030,
+         "coordinate": {
+             "type": "Point",
+             "coordinates": [
+                 12,
+                 77
+             ]
+         },
+         "district": "庐阳区",
+         "parkingPositionQuantity": 3000
+     }
+ }
+  ```
 
 
 
@@ -1532,6 +1564,55 @@ PS:需要用admin用户获得access_token
       ]
   }
   ```
+  
+  ### 2.3.11 app queryRoadSectionInfoById接口
+  
+  - 功能描述: app端根据路段id查询路段泊位信息
+  
+  - 请求地址: `http://localhost:8080/infras/app/roadSections/{id}?access_token&name`
+  
+  - 请求动作: `GET`
+  
+  - 请求示例: `http://localhost:8080/infras/app/roadSections/1021?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=长江路`
+  
+  - 返回示例:
+  
+ ```
+ {
+     "status": "SUCCESS",
+     "data": {
+         "id": 1021,
+         "name": "岳西路-长江西路",
+         "coordinates": {
+             "type": "MultiLineString",
+             "coordinates": [
+                 [
+                     [
+                         117.19933306810447,
+                         31.85425372612921
+                     ],
+                     [
+                         117.20415567991324,
+                         31.85509211848664
+                     ]
+                 ],
+                 [
+                     [
+                         117.20410740015097,
+                         31.855206029903528
+                     ],
+                     [
+                         117.1993223392684,
+                         31.854381308066642
+                     ]
+                 ]
+             ]
+         },
+         "usedParkingNum": 12,
+         "parkingNum": 11
+     }
+ }
+ ```
 
 # 2.4 泊位信息访问接口
 
