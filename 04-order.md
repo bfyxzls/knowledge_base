@@ -884,5 +884,71 @@
       }
   }
   ```
+## 4.5 APP端获取车辆信息接口
+### 4.5.1 getArrearsParkingOrder接口
+- 功能描述：获取车辆的欠费订单
 
-  ​
+- 请求地址：`http://domain/order/app/vehicles/{carPlate}/arrears`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/order/app/vehicles/%e7%9a%96A12345/arrears?access_token`
+
+- 返回示例：
+ ```
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "orderId": 10000271,
+                "roadSectionName": "岳西路-长江西路",
+                "parkingAreaName": "岳西路停车场",
+                "createdDate": "2017-08-09 19:15:00",
+                "completeDate": "2017-07-13 15:13:14",
+                "arrearsFee": 0
+            },
+            {
+                "orderId": 10000270,
+                "roadSectionName": "岳西路-长江西路",
+                "parkingAreaName": "岳西路停车场",
+                "createdDate": "2017-08-09 19:13:29",
+                "completeDate": "2017-07-13 15:13:14",
+                "arrearsFee": 0
+            },
+            {
+                "orderId": 10000269,
+                "roadSectionName": "岳西路-长江西路",
+                "parkingAreaName": "岳西路停车场",
+                "createdDate": "2017-08-09 19:11:15",
+                "completeDate": "2017-07-13 15:13:14",
+                "arrearsFee": 0
+            },
+            {
+                "orderId": 10000305,
+                "roadSectionName": "岳西路-长江西路",
+                "parkingAreaName": "岳西路停车场",
+                "createdDate": "2017-08-10 16:51:56",
+                "completeDate": "2017-07-13 15:13:14",
+                "arrearsFee": null
+            },
+            {
+                "orderId": 10000314,
+                "roadSectionName": "岳西路-长江西路",
+                "parkingAreaName": "岳西路停车场",
+                "createdDate": "2017-08-10 17:23:49",
+                "completeDate": "2017-07-13 15:13:14",
+                "arrearsFee": 200
+            }
+        ],
+        "totalElements": 5,
+        "last": true,
+        "totalPages": 1,
+        "number": 0,
+        "size": 20,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 5
+    }
+}
+```
