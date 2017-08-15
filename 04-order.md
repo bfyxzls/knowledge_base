@@ -601,15 +601,15 @@
  ### 4.1.15 PosPayArrearsFee接口
 -  功能描述: 补缴欠费订单
 
--  请求地址: `http://domian/order/orders/posPayArrearsFee?appPayArrearsOrderCommands&access_token`
+- 请求地址: `http://domian/order/orders/posPayArrearsFee?appPayArrearsOrderCommands&access_token`
 
--  ​
+- ​
 
--  请求动作: `PUT`
+- 请求动作: `PUT`
 
--  请求示例: `http://domain/order/orders/posPayArrearsFee?access_token=82dae454-5c86-404f-93d1-4cdae1775cff`
+- 请求示例: `http://domain/order/orders/posPayArrearsFee?access_token=82dae454-5c86-404f-93d1-4cdae1775cff`
 
--  请求实体：
+- 请求实体：
    '''
     [
        {
@@ -627,7 +627,7 @@
     ]
     '''
 
--  返回示例:
+- 返回示例:
    '''
     {
      "status": "SUCCESS",
@@ -709,7 +709,26 @@
 - 返回示例：
 
   ```json
-
+  {
+      "status": "SUCCESS",
+      "data": {
+          "employeeId": 1001,
+          "employeeName": "佘能斌",
+          "incomeStats": {
+              "num": 0,
+              "sum": 0
+          },
+          "arrearsStats": {
+              "num": 0,
+              "sum": 0
+          },
+          "arrearsPaidStats": {
+              "num": 0,
+              "sum": 0
+          },
+          "printTime": "2017-08-15 08:34:15"
+      }
+  }
   ```
 
 ### 4.4.2 countArrears接口
@@ -725,7 +744,14 @@
 - 返回示例：
 
   ```json
-
+  {
+      "status": "SUCCESS",
+      "data": {
+          "carPlate": "皖A12345",
+          "sumOfArrears": 0,
+          "numOfArrears": 0
+      }
+  }
   ```
 
   ​
@@ -743,7 +769,56 @@
 - 返回示例：
 
   ```json
-
+  {
+      "status": "SUCCESS",
+      "data": {
+          "content": [
+              {
+                  "id": 10000269,
+                  "createdDate": "2017-08-09 19:11:15",
+                  "completeDate": "2017-07-13 15:13:14",
+                  "arrearsFee": 0,
+                  "roadSectionName": "岳西路-长江西路"
+              },
+              {
+                  "id": 10000270,
+                  "createdDate": "2017-08-09 19:13:29",
+                  "completeDate": "2017-07-13 15:13:14",
+                  "arrearsFee": 0,
+                  "roadSectionName": "岳西路-长江西路"
+              },
+              {
+                  "id": 10000271,
+                  "createdDate": "2017-08-09 19:15:00",
+                  "completeDate": "2017-07-13 15:13:14",
+                  "arrearsFee": 0,
+                  "roadSectionName": "岳西路-长江西路"
+              },
+              {
+                  "id": 10000305,
+                  "createdDate": "2017-08-10 16:51:56",
+                  "completeDate": "2017-07-13 15:13:14",
+                  "arrearsFee": null,
+                  "roadSectionName": "岳西路-长江西路"
+              },
+              {
+                  "id": 10000314,
+                  "createdDate": "2017-08-10 17:23:49",
+                  "completeDate": "2017-07-13 15:13:14",
+                  "arrearsFee": 200,
+                  "roadSectionName": "岳西路-长江西路"
+              }
+          ],
+          "totalElements": 5,
+          "last": true,
+          "totalPages": 1,
+          "size": 20,
+          "number": 0,
+          "first": true,
+          "sort": null,
+          "numberOfElements": 5
+      }
+  }
   ```
 
   ​
