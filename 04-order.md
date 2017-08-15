@@ -1016,3 +1016,40 @@
 }
 ```
 
+### 4.5.3 getPaymentRecord接口
+- 功能描述：获得车辆收费记录
+
+- 请求地址：`http://domain/order/app/vehicles/{carPlate}/paymentRecords`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/order/app/vehicles/%e7%9a%96A12345/paymentRecords?access_token`
+
+- 返回示例：
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "carPlate": "皖A12345",
+                "category": "路边停车",
+                "completeDate": "2017-08-03 17:26:49",
+                "fee": 222,
+                "period": -8770,
+                "appPaymentModes": [
+                    1
+                ]
+            }
+        ],
+        "totalElements": 40,
+        "last": false,
+        "totalPages": 2,
+        "number": 0,
+        "size": 20,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 20
+    }
+}
+```
