@@ -691,7 +691,26 @@
 - 返回示例：
 
   ```json
-
+  {
+      "status": "SUCCESS",
+      "data": {
+          "employeeId": 1001,
+          "employeeName": "佘能斌",
+          "incomeStats": {
+              "num": 0,
+              "sum": 0
+          },
+          "arrearsStats": {
+              "num": 0,
+              "sum": 0
+          },
+          "arrearsPaidStats": {
+              "num": 0,
+              "sum": 0
+          },
+          "printTime": "2017-08-15 09:08:27"
+      }
+  }
   ```
 
 ## 4.4 车辆信息接口
