@@ -681,7 +681,121 @@
     }
 }
 ```
+ ### 4.1.17 changeCarPlate接口
+ - 功能描述：修改订单的车牌
  
+ - 请求地址：http://localhost:8080/order/orders/{id}/changeCarPlate?access_token&carPlate
+ 
+ - 请求动作：put
+ 
+ - 请求示例：http://localhost:8080/order/orders/10000283/changeCarPlate?access_token=8f3a8e76-fd86-49c6-9bf2-5f42563c2486&carPlate=皖B12345
+ 
+ - 返回示例：
+ ```
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": 10000283,
+        "carPlate": "皖B12345",
+        "vehicleType": "1",
+        "parking": {
+            "id": 1017,
+            "code": "154140",
+            "chargingStrategyId": 1000,
+            "post": {
+                "id": 1014,
+                "name": "岗位1",
+                "roadSection": {
+                    "id": 1021,
+                    "name": "岳西路-长江西路",
+                    "parkingArea": {
+                        "id": 1037,
+                        "code": "700000",
+                        "name": "岳西路停车场",
+                        "district": "蜀山区"
+                    }
+                }
+            }
+        },
+        "driveInEmployee": {
+            "id": 1002,
+            "name": "赵朋飞",
+            "phoneNum": "7777777",
+            "defaultPost": {
+                "id": 1014,
+                "name": "岗位1",
+                "roadSection": {
+                    "id": 1021,
+                    "name": "岳西路-长江西路",
+                    "parkingArea": {
+                        "id": 1037,
+                        "code": "700000",
+                        "name": "岳西路停车场",
+                        "district": "蜀山区"
+                    }
+                }
+            }
+        },
+        "driveOutEmployee": {
+            "id": 1002,
+            "name": "赵朋飞",
+            "phoneNum": "7777777",
+            "defaultPost": {
+                "id": 1014,
+                "name": "岗位1",
+                "roadSection": {
+                    "id": 1021,
+                    "name": "岳西路-长江西路",
+                    "parkingArea": {
+                        "id": 1037,
+                        "code": "700000",
+                        "name": "岳西路停车场",
+                        "district": "蜀山区"
+                    }
+                }
+            }
+        },
+        "driveInPosSn": "123",
+        "driveOutPosSn": "123",
+        "completeDate": 1499929994000,
+        "arrearsPaidDate": null,
+        "fee": 0,
+        "arrearsFee": 0,
+        "isMonthBill": true,
+        "status": 3,
+        "parkingOrderFeeRecords": [
+            {
+                "id": 10000092,
+                "payType": 1,
+                "fee": 0,
+                "payTime": "2017-07-13 15:13:14",
+                "isInvoiceIssued": false,
+                "employeeId": 1002,
+                "employeeName": "赵朋飞",
+                "phoneNum": "7777777",
+                "district": "蜀山区"
+            }
+        ],
+        "createdBy": "wyf",
+        "createdDate": 1502281079717,
+        "lastModifiedBy": "wyf",
+        "lastModifiedDate": 1502845810595,
+        "onParking": false,
+        "toBeConfirmed": false,
+        "lastFeeRecord": {
+            "id": 10000092,
+            "payType": 1,
+            "fee": 0,
+            "payTime": "2017-07-13 15:13:14",
+            "isInvoiceIssued": false,
+            "employeeId": 1002,
+            "employeeName": "赵朋飞",
+            "phoneNum": "7777777",
+            "district": "蜀山区"
+        }
+    }
+}
+```
 ## 4.2 APP驶出接口
 ### 4.2.1 appDriveOut接口
 
@@ -734,9 +848,8 @@
 - 请求示例：`http://domain/order/stats/11/today?access_token=4abb5a74-a913-4c83-8de8-bdd074812507`
 
 - 返回示例：
-
-  ```json
-  {
+```$xslt
+{
       "status": "SUCCESS",
       "data": {
           "employeeId": 1001,
@@ -756,7 +869,7 @@
           "printTime": "2017-08-15 09:08:27"
       }
   }
-  ```
+```
 
 ## 4.4 车辆信息接口
 
@@ -772,8 +885,8 @@
 
 - 返回示例：
 
-  ```json
-  {
+```$xslt
+{
       "status": "SUCCESS",
       "data": {
           "employeeId": 1001,
@@ -793,7 +906,7 @@
           "printTime": "2017-08-15 08:34:15"
       }
   }
-  ```
+```
 
 ### 4.4.2 countArrears接口
 
@@ -806,8 +919,7 @@
 - 请求示例：`http://domain/order/vehicles/皖A12345/countArrears?access_token=4abb5a74-a913-4c83-8de8-bdd074812507`
 
 - 返回示例：
-
-  ```json
+```
   {
       "status": "SUCCESS",
       "data": {
@@ -816,10 +928,7 @@
           "numOfArrears": 0
       }
   }
-  ```
-
-  ​
-
+```
 ### 4.4.3 getArrears接口
 
 - 功能描述：按车牌计算欠费笔数和金额
