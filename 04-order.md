@@ -1013,6 +1013,7 @@
                 "orderId": 10000271,
                 "roadSectionName": "岳西路-长江西路",
                 "parkingAreaName": "岳西路停车场",
+                "category": "路边停车",
                 "createdDate": "2017-08-09 19:15:00",
                 "completeDate": "2017-07-13 15:13:14",
                 "arrearsFee": 0
@@ -1039,7 +1040,7 @@
                 "parkingAreaName": "岳西路停车场",
                 "createdDate": "2017-08-10 16:51:56",
                 "completeDate": "2017-07-13 15:13:14",
-                "arrearsFee": null
+                "arrearsFee": 0
             },
             {
                 "orderId": 10000314,
@@ -1146,7 +1147,7 @@
                 "completeDate": "2017-08-03 17:26:49",
                 "fee": 222,
                 "period": -8770,
-                "appPaymentModes": [
+                "appPayType": [
                     1
                 ]
             }
