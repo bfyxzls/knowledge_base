@@ -321,6 +321,22 @@
  }
  
  ```
+ 
+ ### 5.1.8 修改密码接口
+   
+  - 功能描述: 修改密码
+  - 请求地址: `http://domain/uaa/sysusers/modifyPwd?access_token=ACCESS_TOKEN`
+  - 请求动作: `PUT`
+  - 请求示例: `http://domain/uaa/sysusers/modifyPwd?access_token=5d780ca8-fc23-4bfd-8513-d64b517e9d63`
+  - 请求数据示例：
+  ```
+  {
+      "id":1001,
+      "oldPassword":"123123",
+      "newPassword":"123456"
+  }
+  
+  ```
   
 # 5.2 RoleController测试用例
 
