@@ -1002,7 +1002,8 @@
 - 请求动作: `GET`
 
 - 请求示例：`http://localhost:8080/order/app/vehicles/%e7%9a%96A12345/arrears?access_token`
-
+    - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
+    
 - 返回示例：
  ```
 {
