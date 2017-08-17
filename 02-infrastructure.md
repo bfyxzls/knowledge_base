@@ -1565,15 +1565,15 @@ PS:需要用admin用户获得access_token
   }
   ```
   
-  ### 2.3.11 app queryRoadSectionInfoById接口
+### 2.3.11 app queryRoadSectionInfoById接口
   
   - 功能描述: app端根据路段id查询路段泊位信息
   
-  - 请求地址: `http://localhost:8080/infras/app/roadSections/{id}?access_token&name`
+  - 请求地址: `http://localhost:8080/infras/app/roadSections/queryRoadSectionInfo?roadSectionId=1021&access_token`
   
   - 请求动作: `GET`
   
-  - 请求示例: `http://localhost:8080/infras/app/roadSections/1021?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=长江路`
+  - 请求示例: `http://localhost:8080/infras/app/roadSections/queryRoadSectionInfo?roadSectionId=1021&access_token=9d3af5fd-3e33-4d18-bafd-1317302bf826`
   
   - 返回示例:
   
@@ -1581,7 +1581,7 @@ PS:需要用admin用户获得access_token
  {
      "status": "SUCCESS",
      "data": {
-         "id": 1021,
+         "id": 1030,
          "name": "岳西路-长江西路",
          "coordinates": {
              "type": "MultiLineString",

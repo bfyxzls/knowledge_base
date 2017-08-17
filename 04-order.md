@@ -213,8 +213,8 @@
 - 请求动作: `POST`
 
 - 请求示例: `http://domain/order/orders/driveIn?access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
-```
-{
+ ```
+ {
     "carPlate":"皖A12345",
     "vehicleType":"01",
     "parkingId":1017,
