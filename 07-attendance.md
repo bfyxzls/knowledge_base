@@ -96,3 +96,44 @@
 }
 
 '''
+### 7.1.3 queryEmployeesAttendanceByRoadSection接口
+- 功能描述: 获取指定路段下员工当天签到信息
+- 请求地址: `http://domain/attendance/attendanceRecords/queryEmployeesAttendanceByRoadSection?roadSectionId&access_toke`
+- 请求动作: `Get`
+- 请求示例: `http://localhost:8080/attendance/attendanceRecords/queryEmployeesAttendanceByRoadSection?roadSectionId&access_token`
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 1003,
+            "name": "赵朋飞",
+            "code": null,
+            "postName": "岗位3",
+            "phoneNum": null,
+            "status": true,
+            "checkTime": "2017-08-17 08:32:11"
+        },
+        {
+            "id": 1002,
+            "name": "赵朋飞",
+            "code": null,
+            "postName": "岗位3",
+            "phoneNum": "66666",
+            "status": false,
+            "checkTime": null
+        },
+        {
+            "id": 1009,
+            "name": "佘能斌",
+            "code": null,
+            "postName": "岗位3",
+            "phoneNum": "",
+            "status": false,
+            "checkTime": null
+        }
+    ]
+}
+
+```
