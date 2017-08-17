@@ -882,6 +882,7 @@
 - 请求动作: `GET`
 
 - 请求示例：`http://domain/order/vehicles/皖A12345/parkingRecords?access_token=4abb5a74-a913-4c83-8de8-bdd074812507`
+    - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
 
 - 返回示例：
 
@@ -917,6 +918,7 @@
 - 请求动作: `GET`
 
 - 请求示例：`http://domain/order/vehicles/皖A12345/countArrears?access_token=4abb5a74-a913-4c83-8de8-bdd074812507`
+    - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
 
 - 返回示例：
 ```
@@ -938,6 +940,7 @@
 - 请求动作: `GET`
 
 - 请求示例：`http://domain/order/vehicles/皖A12345/arrears?access_token=4abb5a74-a913-4c83-8de8-bdd074812507&page=1&size=10`
+    - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
 
 - 返回示例：
 
