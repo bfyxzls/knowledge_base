@@ -1,4 +1,4 @@
-## 4.1 订单信息访问接口
+## 4.1 订单信息访问接口（OrderController）
 ### 4.1.1 findDefaultPostWithParkings接口
 - 功能描述: 查询当前登录用户所在的默认岗位以及他所负责的泊位和订单。
 
@@ -435,7 +435,7 @@
     }
 }
 ```
-### 4.1.11 appDriveOutWithFeeConfirmed
+### 4.1.11 appDriveOutWithFeeConfirmed接口
 - 功能描述: App端缴费未驶离，pos端缴费后驶离确认
 
 - 请求地址: `http://domain/order/orders/appDriveOutWithFeeConfirmed?id&access_token`
@@ -515,39 +515,7 @@
     }
 }
 ```
-### 4.1.14 AppPayArrearsFee接口
-- 功能描述: 补缴欠费订单
 
-- 请求地址: `http://domain/order/app/orders/payArrearsFee`
-
-- 请求动作: `PUT`
-
-- 请求示例: `http://192.168.1.18:8080/order/app/orders/payArrearsFee?access_token`
-
-- 请求实体：
-```
-  [
-      {
-        "orderId": 10000272,
-        "payType":4,
-        "payTime": "2017-08-13 19:21:21",
-        "arrearsFee": 200
-    },
-    {
-        "orderId": 10000281,
-        "payType":4,
-        "payTime": "2017-08-13 15:13:14",
-        "arrearsFee": 199
-    }
-  ]
-```
-- 返回示例:
-```
-  {
-    "status": "SUCCESS",
-    "data": "补缴欠费成功"
-  }
-```
 ### 4.1.15 PosPayArrearsFee接口
 -  功能描述: 补缴欠费订单
 
@@ -746,7 +714,7 @@
     }
 }
  ```
-## 4.2 APP驶出接口
+## 4.2 APP端操作订单接口（AppOrderController）
 ### 4.2.1 appDriveOut接口
 
 - 功能描述：用户对某个订单缴费驶离
@@ -782,8 +750,63 @@
     }
 }
 ```
+### 4.2.2 AppPayArrearsFee接口
+- 功能描述: 补缴欠费订单
 
+- 请求地址: `http://domain/order/app/orders/payArrearsFee`
 
+- 请求动作: `PUT`
+
+- 请求示例: `http://192.168.1.18:8080/order/app/orders/payArrearsFee?access_token`
+
+- 请求实体：
+```
+  [
+      {
+        "orderId": 10000272,
+        "payType":4,
+        "payTime": "2017-08-13 19:21:21",
+        "arrearsFee": 200
+    },
+    {
+        "orderId": 10000281,
+        "payType":4,
+        "payTime": "2017-08-13 15:13:14",
+        "arrearsFee": 199
+    }
+  ]
+```
+- 返回示例:
+```
+  {
+    "status": "SUCCESS",
+    "data": "补缴欠费成功"
+  }
+```
+
+### 4.2.3 getVehicleFeeStats接口
+
+- 功能描述：按车牌统计当前客户的待支付和待补缴订单数量
+
+- 请求地址：`http://192.168.1.18:8080/order/app/orders/getVehicleFeeStats`
+
+- 请求动作：`GET`
+
+- 请求示例：`http://192.168.1.18:8080/order/app/orders/getVehicleFeeStats?access_token=1398a422-504a-4e95-8531-52cc0f5ebcc4&carPlates=皖A12345`
+
+- 返回示例：
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "carPlate": "皖A12345",
+            "numOfArrears": 3,
+            "numOfCurrentFee": 16
+        }
+    ]
+}
+```
 
 ## 4.3 统计接口
 
@@ -820,6 +843,29 @@
       }
   }
 ```
+### 4.3.2 countParkingOrders接口
+
+- 功能描述：统计当日订单信息
+
+- 请求地址：`http://domain/order/stats/countParkingOrders?access_token=1398a422-504a-4e95-8531-52cc0f5ebcc4&roadSectionId=1021`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://domain/order/stats/countParkingOrders?access_token=1398a422-504a-4e95-8531-52cc0f5ebcc4&roadSectionId=1021`
+
+- 返回示例：
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "allParkingOrdersCount": 24,
+        "completeParkingOrdersCount": 5,
+        "arrearsParkingOrdersCount": 1,
+        "freeParkingOrdersCount": 2
+    }
+}
+```
+
 
 ## 4.4 车辆信息接口
 
