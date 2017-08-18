@@ -658,7 +658,7 @@
         "carPlateNum": "皖A12345",
         "district": "蜀山区",
         "roadSectionName": "岳西路-长江西路",
-        "description": "小型车-收费标准",
+        "chargingStrategyDescription": "前15分钟免费，00:00-07:30 免费；07:30-21:30 按时收费（0-30分钟6.0元/30分钟；30分钟以后4.0元/30分钟）；21:30-23:59 免费。",
         "driveInEmpDto": {
             "name": "赵朋飞",
             "id": 1002,
