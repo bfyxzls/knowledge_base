@@ -52,7 +52,7 @@
 - 请求示例: `http://localhost:8080/employee/attendanceRecords/query?access_token=a57c7550-8538-47ac-9056-ac5c0f71b80d&name=赵朋飞&username=000565&status=2&district=蜀山区&roadSetcionName=潜山路-怀宁路&postName=岗位3&signInOrUpTime.startDate=2017-8-15&signInOrUpTime.endDate=2017-8-16`
          ps：查询属性可以缺省
 - 返回示例
-     '''
+```
      {
        "status": "SUCCESS",
        "data": {
@@ -95,7 +95,7 @@
        }
      }
 
-'''
+```
 
 ### 7.1.3 queryEmployeeAttendanceByPost接口
 - 功能描述: 获取指定岗位下员工当天签到信息
