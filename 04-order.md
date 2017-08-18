@@ -222,7 +222,7 @@
     "driveInPosSn":"123",
     "isMonthBill":false
 }
-```
+ ```
 - 返回示例:
 ```
 {
@@ -334,123 +334,73 @@
 
 ### 4.1.8 查询全部订单信息接口
 - 功能描述: 查询全部订单信息
-
 - 请求地址: `http://domain/order/orders`
-
 - 请求动作: `GET`
-
 - 请求示例: `http://domain/order/orders?access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
-
 - 返回示例: 
 
-### 4.1.9 根据订单id、车牌号、泊位编号查询订单接口
+### 4.1.9 查询订单接口
 
-- 功能描述：根据订单id、车牌号、泊位编号查询订单接口
-
-- 请求地址：`http://domain/order/orders/query?access_token&carPlate&id&parkingCode`
-
+- 功能描述：查询订单
 - 请求动作: `GET`
-
-- 请求示例：`http://domain/order/orders/query?id=10000114&access_token=e10c62ae-3bc8-4938-bdbe-1465bf25c12a`
-
-   - 备注：参数可以缺省。
-
+- 请求地址：`http://domain/order/orders/query?access_token`
+- 参数位置：`Request Parameter`
+- 请求参数：
+  - `id`：`订单id`
+  - `carPlate`：`车牌号`
+  - `parkingCode`：`泊位编码`
+  - `statuses`：`订单状态（可多个，逗号隔开）`
+  - `parkingStartTime`：`停车开始时间`
+  - `parkingEndTime`：`停车结束时间`
+  - `roadSectionId`：`路段id`
+  - `district`：`区`
+  - `driveInEmployeeId`：`驶入员工id`
+  - `driveInPosSn`：`驶入pos机`
+  - `driveInEmployeeName`：`驶入员工姓名`
+  - `driveOutEmployeeId`：`驶出员工id`
+  - `driveOutPosSn`：`驶出pos机`
+  - `driveOutEmployeeName`：`驶出员工姓名`
+  - `page`：`当前页码，从0开始`
+  - `size`：`条数`
+- 请求示例：`localhost:8080/order/orders/query?access_token=9d3af5fd-3e33-4d18-bafd-1317302bf826&parkingStartTime=2017-08-01 22:22:22&parkingEndTime=2018-08-08 08:08:08`
+  - 备注：参数可以缺省。
 - 返回示例：
+
 ```
 {
     "status": "SUCCESS",
     "data": {
         "content": [
             {
-                "id": 10000114,
-                "carPlate": "皖A59436",
-                "vehicleType": 1,
-                "parking": {
-                    "id": 1006,
-                    "code": "133002",
-                    "chargingStrategyId": 1000,
-                    "post": {
-                        "id": 1002,
-                        "name": "1号岗",
-                        "roadSection": {
-                            "id": 1002,
-                            "name": "金寨路-桐城路 南侧",
-                            "parkingArea": {
-                                "id": 1003,
-                                "code": "3401030001",
-                                "name": "庐江路",
-                                "district": "庐阳区"
-                            }
-                        }
-                    }
-                },
-                "driveInEmployee": {
-                    "id": 1002,
-                    "name": "张齐健",
-                    "phoneNum": "13999999999",
-                    "defaultPost": {
-                        "id": 1002,
-                        "name": "1号岗",
-                        "roadSection": {
-                            "id": 1002,
-                            "name": "金寨路-桐城路 南侧",
-                            "parkingArea": {
-                                "id": 1003,
-                                "code": "3401030001",
-                                "name": "庐江路",
-                                "district": "庐阳区"
-                            }
-                        }
-                    }
-                },
-                "driveOutEmployee": {
-                    "id": 1002,
-                    "name": "张齐健",
-                    "phoneNum": "13999999999",
-                    "defaultPost": {
-                        "id": 1002,
-                        "name": "1号岗",
-                        "roadSection": {
-                            "id": 1002,
-                            "name": "金寨路-桐城路 南侧",
-                            "parkingArea": {
-                                                            "id": 1003,
-                                                            "code": "3401030001",
-                                                            "name": "庐江路",
-                                                            "district": "庐阳区"
-                                                        }
-                                                    }
-                                                }
-                                            },
-                                            "driveInPosSn": "000000000000000",
-                                            "driveOutPosSn": "862401030000092",
-                                            "completeDate": "2017-08-02 09:59:50",
-                                            "fee": 2300,
-                                            "payType": 1,
-                                            "status": 3,
-                                            "createdBy": "wyf",
-                                            "createdDate": {
-                                                "epochSecond": 1501639190,
-                                                "nano": 758000000
-                                            },
-                                            "lastModifiedBy": "wyf",
-                                            "lastModifiedDate": {
-                                                "epochSecond": 1501660677,
-                                                "nano": 3000000
-                                            }
-                                        }
-                                    ],
-                                    "totalPages": 1,
-                                    "totalElements": 1,
-                                    "last": true,
-                                    "first": true,
-                                    "sort": null,
-                                    "numberOfElements": 1,
-                                    "size": 20,
-                                    "number": 0
-                                }
-                            }
+                "id": 10000273,
+                "carPlate": "皖A12345",
+                "parkingCode": "154140",
+                "roadSectionName": "岳西路-长江西路",
+                "district": "蜀山区",
+                "driveInTime": "2017-08-01 19:23:01",
+                "driveOutTime": "2017-08-02 15:13:14",
+                "driveOutEmployeeName": "赵朋飞",
+                "driveOutEmployeePhoneNum": "7777777",
+                "driveOutPosSn": "123",
+                "fee": 0,
+                "arrearsFee": 0,
+                "status": 3,
+                "arrearsPaidTime": null
+            },
+            ...
+        ],
+        "totalElements": 64,
+        "last": false,
+        "totalPages": 4,
+        "size": 20,
+        "number": 0,
+        "first": true,
+        "sort": null,
+        "numberOfElements": 20
+    }
+}
 ```
+
 ### 4.1.10  appDriveOutConfirmed接口
 - 功能描述: App端缴费并驶离，pos端确认驶离
 
@@ -568,27 +518,27 @@
 ### 4.1.14 AppPayArrearsFee接口
 - 功能描述: 补缴欠费订单
 
-- 请求地址: `http://domian/order/orders/appPayArrearsFee?appPayArrearsOrderCommands&access_token`
+- 请求地址: `http://domain/order/app/orders/payArrearsFee`
 
 - 请求动作: `PUT`
 
-- 请求示例: `http://domain/order/orders/appPayArrearsFee?access_token=82dae454-5c86-404f-93d1-4cdae1775cff`
+- 请求示例: `http://192.168.1.18:8080/order/app/orders/payArrearsFee?access_token`
 
 - 请求实体：
 ```
   [
       {
-                "orderId": 10000272,
-                "payType":4,
-                "payTime": "2017-08-13 19:21:21",
-                "arrearsFee": 200
-            },
-            {
-                "orderId": 10000281,
-                "payType":4,
-                "payTime": "2017-08-13 15:13:14",
-                "arrearsFee": 199
-            }
+        "orderId": 10000272,
+        "payType":4,
+        "payTime": "2017-08-13 19:21:21",
+        "arrearsFee": 200
+    },
+    {
+        "orderId": 10000281,
+        "payType":4,
+        "payTime": "2017-08-13 15:13:14",
+        "arrearsFee": 199
+    }
   ]
 ```
 - 返回示例:
@@ -601,13 +551,13 @@
 ### 4.1.15 PosPayArrearsFee接口
 -  功能描述: 补缴欠费订单
 
-- 请求地址: `http://domian/order/orders/posPayArrearsFee?appPayArrearsOrderCommands&access_token`
+-  请求地址: `http://domian/order/orders/posPayArrearsFee?appPayArrearsOrderCommands&access_token`
 
-- 请求动作: `PUT`
+-  请求动作: `PUT`
 
-- 请求示例: `http://domain/order/orders/posPayArrearsFee?access_token=82dae454-5c86-404f-93d1-4cdae1775cff`
+-  请求示例: `http://domain/order/orders/posPayArrearsFee?access_token=82dae454-5c86-404f-93d1-4cdae1775cff`
 
-- 请求实体：
+-  请求实体：
 ```
     [
        {
@@ -635,13 +585,13 @@
      }
     }
 ```
-    
+
 ### 4.1.16 obtainParkingOrderDetails接口
 - 功能描述：管理员查看某个订单的详细信息
 
 - 请求地址：http://localhost:8080/order/orders/{}/obtainParkingOrderDetails?access_token
 
-- 请求动作：GET
+- 请求动作：GETid
 
 - 请求示例：http://localhost:8080/order/orders/10000313/obtainParkingOrderDetails?access_token=a57c7550-8538-47ac-9056-ac5c0f71b80d
 
@@ -658,7 +608,7 @@
         "carPlateNum": "皖A12345",
         "district": "蜀山区",
         "roadSectionName": "岳西路-长江西路",
-        "description": "小型车-收费标准",
+        "chargingStrategyDescription": "前15分钟免费，00:00-07:30 免费；07:30-21:30 按时收费（0-30分钟6.0元/30分钟；30分钟以后4.0元/30分钟）；21:30-23:59 免费。",
         "driveInEmpDto": {
             "name": "赵朋飞",
             "id": 1002,
@@ -682,15 +632,15 @@
 }
 ```
  ### 4.1.17 changeCarPlate接口
- - 功能描述：修改订单的车牌
- 
- - 请求地址：http://localhost:8080/order/orders/{id}/changeCarPlate?access_token&carPlate
- 
- - 请求动作：put
- 
- - 请求示例：http://localhost:8080/order/orders/10000283/changeCarPlate?access_token=8f3a8e76-fd86-49c6-9bf2-5f42563c2486&carPlate=皖B12345
- 
- - 返回示例：
+- 功能描述：修改订单的车牌
+
+- 请求地址：http://localhost:8080/order/orders/{id}/changeCarPlate?access_token&carPlate
+
+- 请求动作：put
+
+- 请求示例：http://localhost:8080/order/orders/10000283/changeCarPlate?access_token=8f3a8e76-fd86-49c6-9bf2-5f42563c2486&carPlate=皖B12345
+
+- 返回示例：
  ```
 {
     "status": "SUCCESS",
@@ -795,7 +745,7 @@
         }
     }
 }
-```
+ ```
 ## 4.2 APP驶出接口
 ### 4.2.1 appDriveOut接口
 
@@ -1029,7 +979,7 @@
 
 - 请求示例：`http://localhost:8080/order/app/vehicles/%e7%9a%96A12345/arrears?access_token`
     - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
-    
+
 - 返回示例：
  ```
 {
@@ -1088,7 +1038,7 @@
         "numberOfElements": 5
     }
 }
-```
+ ```
 ### 4.5.2 getParkingRecord接口
 - 功能描述：获得车辆停车记录
 
