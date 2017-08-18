@@ -518,27 +518,27 @@
 ### 4.1.14 AppPayArrearsFee接口
 - 功能描述: 补缴欠费订单
 
-- 请求地址: `http://domian/order/orders/appPayArrearsFee?appPayArrearsOrderCommands&access_token`
+- 请求地址: `http://domain/order/app/orders/payArrearsFee`
 
 - 请求动作: `PUT`
 
-- 请求示例: `http://domain/order/orders/appPayArrearsFee?access_token=82dae454-5c86-404f-93d1-4cdae1775cff`
+- 请求示例: `http://192.168.1.18:8080/order/app/orders/payArrearsFee?access_token`
 
 - 请求实体：
 ```
   [
       {
-                "orderId": 10000272,
-                "payType":4,
-                "payTime": "2017-08-13 19:21:21",
-                "arrearsFee": 200
-            },
-            {
-                "orderId": 10000281,
-                "payType":4,
-                "payTime": "2017-08-13 15:13:14",
-                "arrearsFee": 199
-            }
+        "orderId": 10000272,
+        "payType":4,
+        "payTime": "2017-08-13 19:21:21",
+        "arrearsFee": 200
+    },
+    {
+        "orderId": 10000281,
+        "payType":4,
+        "payTime": "2017-08-13 15:13:14",
+        "arrearsFee": 199
+    }
   ]
 ```
 - 返回示例:
