@@ -1638,6 +1638,8 @@ PS:需要用admin用户获得access_token
 
 # 2.4 泊位信息访问接口
 
+
+
 ### 2.4.1 get接口
 - 功能描述: 根据id查询泊位信息
 - 请求地址: `http://localhost:8080/infras/parkings/{id}?access_token`
@@ -2082,7 +2084,25 @@ PS:需要用admin用户获得access_token
 }
 
 ```
+### 2.4.6 根据泊位编码查询所属岗位id
+
+- 功能描述: 根据泊位编码查询所属岗位id
+- 请求地址: `http://localhost:8080/infras/parkings/{code}/post?access_token`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/infras/parkings/154142/post?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+- 返回示例:
+
+```json
+{
+    "status": "SUCCESS",
+    "data": 1014
+}
+```
+
+
+
 # 2.5 企业信息访问接口
+
 ### 2.5.1 get接口
 - 功能描述: 根据id查询企业信息
 - 请求地址: `http://localhost:8080/infras/enterprises/{id}?access_token`
