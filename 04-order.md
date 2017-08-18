@@ -14,7 +14,13 @@
     "status": "SUCCESS",
     "data": {
         "postId": 1014,
+        "postName": "岗位1",
         "roadSectionId": 1021,
+        "roadSectionName": "岳西路-长江西路",
+        "district": "蜀山区",
+        "employeeId": 1001,
+        "employeeName": "佘能斌",
+        "employeePhoneNum": "18621061991",
         "parkings": [
             {
                 "id": 1017,
