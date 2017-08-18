@@ -1634,6 +1634,26 @@ PS:需要用admin用户获得access_token
 }
 ```
 
+### 2.3.13 根据路段查询所有岗位
+
+- 功能描述：根据路段查询所有岗位
+- 请求地址：`http://domain/infras/roadSections/{id}/posts?access_token`
+- 请求动作: `GET`
+- 请求示例：`http://domain/infras/roadSections/1021/posts?access_token=e10c62ae-3bc8-4938-bdbe-1465bf25c12a`
+- 返回示例：
+
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 1014,
+            "name": "岗位11"
+        }
+    ]
+}
+```
+
 
 
 # 2.4 泊位信息访问接口
