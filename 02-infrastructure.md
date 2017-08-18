@@ -2095,7 +2095,9 @@ PS:需要用admin用户获得access_token
 ```json
 {
     "status": "SUCCESS",
-    "data": 1014
+    "data": {
+        "postId": 1014
+    }
 }
 ```
 
