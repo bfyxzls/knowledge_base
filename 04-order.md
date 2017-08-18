@@ -14,6 +14,7 @@
     "status": "SUCCESS",
     "data": {
         "postId": 1014,
+        "roadSectionId": 1021,
         "parkings": [
             {
                 "id": 1017,
