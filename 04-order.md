@@ -870,6 +870,29 @@
       }
   }
 ```
+### 4.3.1 countParkingOrders接口
+
+- 功能描述：统计当日订单信息
+
+- 请求地址：`http://domain/order/stats/countParkingOrders?access_token=1398a422-504a-4e95-8531-52cc0f5ebcc4&roadSectionId=1021`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://domain/order/stats/countParkingOrders?access_token=1398a422-504a-4e95-8531-52cc0f5ebcc4&roadSectionId=1021`
+
+- 返回示例：
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "allParkingOrdersCount": 24,
+        "completeParkingOrdersCount": 5,
+        "arrearsParkingOrdersCount": 1,
+        "freeParkingOrdersCount": 2
+    }
+}
+```
+
 
 ## 4.4 车辆信息接口
 
