@@ -549,8 +549,8 @@ PS:需要用admin用户获得access_token
       ]
   }
   ```
-  
-  
+
+  ​
 ### 2.1.11 app queryBusinessParkingAreaInfoById接口
 
 - 功能描述: 通过商业停车场id查询商业停车场信息
@@ -580,7 +580,7 @@ PS:需要用admin用户获得access_token
          "parkingPositionQuantity": 3000
      }
  }
-  ```
+ ```
 
 
 
@@ -1564,19 +1564,19 @@ PS:需要用admin用户获得access_token
       ]
   }
   ```
-  
+
 ### 2.3.11 app queryRoadSectionInfoById接口
-  
-  - 功能描述: app端根据路段id查询路段泊位信息
-  
+
+- 功能描述: app端根据路段id查询路段泊位信息
+
   - 请求地址: `http://localhost:8080/infras/app/roadSections/queryRoadSectionInfo?roadSectionId=1021&access_token`
-  
+
   - 请求动作: `GET`
-  
+
   - 请求示例: `http://localhost:8080/infras/app/roadSections/queryRoadSectionInfo?roadSectionId=1021&access_token=9d3af5fd-3e33-4d18-bafd-1317302bf826`
-  
+
   - 返回示例:
-  
+
  ```
  {
      "status": "SUCCESS",
@@ -1614,7 +1614,31 @@ PS:需要用admin用户获得access_token
  }
  ```
 
+### 2.3.12 通过id查询匹配的路段概要信息
+
+- 功能描述：通过id查询匹配的路段概要信息
+- 请求地址：`http://domain/infras/roadSections/{id}/generalInfo?access_token`
+- 请求动作: `GET`
+- 请求示例：`http://domain/infras/roadSections/1021/generalInfo?access_token=e10c62ae-3bc8-4938-bdbe-1465bf25c12a`
+- 返回示例：
+
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": 1021,
+        "district": "蜀山区",
+        "name": "岳西路-长江西路",
+        "chargeStrategyDescription": "收费策略"
+    }
+}
+```
+
+
+
 # 2.4 泊位信息访问接口
+
+
 
 ### 2.4.1 get接口
 - 功能描述: 根据id查询泊位信息
@@ -1664,7 +1688,6 @@ PS:需要用admin用户获得access_token
         }
     }
 }
-
 ```
 ### 2.4.2 list接口
 - 功能描述: 查找泊位信息列表
@@ -2061,7 +2084,27 @@ PS:需要用admin用户获得access_token
 }
 
 ```
+### 2.4.6 根据泊位编码查询所属岗位id
+
+- 功能描述: 根据泊位编码查询所属岗位id
+- 请求地址: `http://localhost:8080/infras/parkings/{code}/post?access_token`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/infras/parkings/154142/post?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+- 返回示例:
+
+```json
+{
+    "status": "SUCCESS",
+    "data": {
+        "postId": 1014
+    }
+}
+```
+
+
+
 # 2.5 企业信息访问接口
+
 ### 2.5.1 get接口
 - 功能描述: 根据id查询企业信息
 - 请求地址: `http://localhost:8080/infras/enterprises/{id}?access_token`
@@ -3287,7 +3330,32 @@ PS:需要用admin用户获得access_token
 }
 
 ```
+### 2.7.7 获取指定岗位下的所有员工信息
+
+- 功能描述：获取指定岗位下的所有员工信息
+- 请求地址：`http://domain/infras/posts/{id}/employees?access_token`
+- 请求动作: `GET`
+- 请求示例：`http://domain/infras/posts/1014/employees?access_token=e10c62ae-3bc8-4938-bdbe-1465bf25c12a`
+- 返回示例：
+
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 1001,
+            "name": "佘能斌",
+            "postName": "岗位11",
+            "phoneNum": "18621061991"
+        }
+    ]
+}
+```
+
+
+
 # 2.8 部门信息访问接口
+
 ### 2.8.1 get接口
 - 功能描述: 根据id查询部门信息
 - 请求地址: `http://localhost:8080/infras/depts/{id}?access_token`
