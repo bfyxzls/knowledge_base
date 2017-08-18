@@ -591,7 +591,7 @@
 
 - 请求地址：http://localhost:8080/order/orders/{}/obtainParkingOrderDetails?access_token
 
-- 请求动作：GET
+- 请求动作：GETid
 
 - 请求示例：http://localhost:8080/order/orders/10000313/obtainParkingOrderDetails?access_token=a57c7550-8538-47ac-9056-ac5c0f71b80d
 
