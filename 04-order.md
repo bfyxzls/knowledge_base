@@ -48,6 +48,7 @@
                 "id": 10000106,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -56,6 +57,7 @@
                 "id": 10000107,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -64,6 +66,7 @@
                 "id": 10000109,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -72,6 +75,7 @@
                 "id": 10000111,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -80,6 +84,7 @@
                 "id": 10000089,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -161,6 +166,7 @@
                 "id": 10000105,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -169,6 +175,7 @@
                 "id": 10000106,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -177,6 +184,7 @@
                 "id": 10000107,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -185,6 +193,7 @@
                 "id": 10000108,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -193,6 +202,7 @@
                 "id": 10000109,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -201,6 +211,7 @@
                 "id": 10000111,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
