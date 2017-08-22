@@ -449,8 +449,7 @@ PS:需要用admin用户获得access_token
                       31.864361826772665
                   ]
               }
-          },
-          ...
+          }
       ]
   }
   ```
@@ -482,8 +481,7 @@ PS:需要用admin用户获得access_token
                       31.864361826772665
                   ]
               }
-          },
-          ...
+          }
       ]
   }
   ```
@@ -1408,8 +1406,8 @@ PS:需要用admin用户获得access_token
               },
               "usedParkingNum": 0,
               "totalParkingNum": 0
-          },
-        	...
+          }
+        
       ]
   }
   ```
@@ -1459,8 +1457,7 @@ PS:需要用admin用户获得access_token
               },
               "usedParkingNum": 0,
               "totalParkingNum": 0
-          },
-        	...
+          }
       ]
   }
   ```
@@ -1559,8 +1556,7 @@ PS:需要用admin用户获得access_token
                   ]
               },
               "parkingNum": 0
-          },
-          ...
+          }
       ]
   }
   ```

@@ -14,6 +14,13 @@
     "status": "SUCCESS",
     "data": {
         "postId": 1014,
+        "postName": "岗位1",
+        "roadSectionId": 1021,
+        "roadSectionName": "岳西路-长江西路",
+        "district": "蜀山区",
+        "employeeId": 1001,
+        "employeeName": "佘能斌",
+        "employeePhoneNum": "18621061991",
         "parkings": [
             {
                 "id": 1017,
@@ -41,6 +48,7 @@
                 "id": 10000106,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -49,6 +57,7 @@
                 "id": 10000107,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -57,6 +66,7 @@
                 "id": 10000109,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -65,6 +75,7 @@
                 "id": 10000111,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -73,6 +84,7 @@
                 "id": 10000089,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -154,6 +166,7 @@
                 "id": 10000105,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -162,6 +175,7 @@
                 "id": 10000106,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -170,6 +184,7 @@
                 "id": 10000107,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -178,6 +193,7 @@
                 "id": 10000108,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -186,6 +202,7 @@
                 "id": 10000109,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -194,6 +211,7 @@
                 "id": 10000111,
                 "status": 1,
                 "carPlate": "皖A12345",
+                “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
                 "parkingId": 1017
@@ -516,7 +534,7 @@
 }
 ```
 
-### 4.1.15 PosPayArrearsFee接口
+### 4.1.14 PosPayArrearsFee接口
 -  功能描述: 补缴欠费订单
 
 -  请求地址: `http://domian/order/orders/posPayArrearsFee?appPayArrearsOrderCommands&access_token`
@@ -554,7 +572,7 @@
     }
 ```
 
-### 4.1.16 obtainParkingOrderDetails接口
+### 4.1.15 obtainParkingOrderDetails接口
 - 功能描述：管理员查看某个订单的详细信息
 
 - 请求地址：http://localhost:8080/order/orders/{}/obtainParkingOrderDetails?access_token
@@ -599,7 +617,7 @@
     }
 }
 ```
- ### 4.1.17 changeCarPlate接口
+ ### 4.1.16 changeCarPlate接口
 - 功能描述：修改订单的车牌
 
 - 请求地址：http://localhost:8080/order/orders/{id}/changeCarPlate?access_token&carPlate
@@ -808,7 +826,7 @@
 }
 ```
 
-## 4.3 统计接口
+## 4.3 统计接口（StatsController）
 
 ### 4.3.1 countEmployeeTodayStats接口
 
@@ -867,7 +885,7 @@
 ```
 
 
-## 4.4 车辆信息接口
+## 4.4 车辆信息接口（VehicleController）
 
 ### 4.4.1 getParkingRecords接口
 
@@ -992,7 +1010,7 @@
       }
   }
   ```
-## 4.5 APP端获取车辆信息接口
+## 4.5 APP端获取车辆信息接口（AppVehicleController）
 ### 4.5.1 getArrearsParkingOrder接口
 - 功能描述：获取车辆的欠费订单
 
@@ -1161,5 +1179,47 @@
         "first": true,
         "numberOfElements": 20
     }
+}
+```
+## 4.6 APP端访问地图信息接口（AppMapController）
+### 4.6.1 obtainUsedParkingCountGroupByRoadSection接口
+
+- 功能描述：分组统计各个路段已使用的泊位数
+
+- 请求地址：http://domain/order/app/map/usedParkingCountGroupByRoadSection
+
+- 请求动作：`GET`
+
+- 请求示例：`http://192.168.1.18:8080/order/app/map/usedParkingCountGroupByRoadSection?access_token`
+
+- 返回示例：
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 1021,
+            "usedParkingNum": 31
+        }
+    ]
+}
+```
+
+
+### 4.6.2 obtainUsedParkingCountByRoadSection接口
+
+- 功能描述：根据路段统计路段已使用的泊位数
+
+- 请求地址：`http://domain/order/app/map/usedParkingCountByRoadSection`
+
+- 请求动作：`GET`
+
+- 请求示例：`http://192.168.1.18:8080/order/app/map/usedParkingCountByRoadSection?access_token&roadSectionId=1021`
+
+- 返回示例：
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": 31
 }
 ```
