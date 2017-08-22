@@ -553,11 +553,11 @@ PS:需要用admin用户获得access_token
 
 - 功能描述: 通过商业停车场id查询商业停车场信息
 
-- 请求地址: `http://localhost:8080/infras/app/businessParkingAreas/{id}?access_token&name`
+- 请求地址: `http://localhost:8080/infras/app/businessParkingAreas/{id}?access_token`
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/infras/app/businessParkingAreas/1030?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=长江路`
+- 请求示例: `http://localhost:8080/infras/app/businessParkingAreas/1030?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 
 - 返回示例：
 
@@ -5082,11 +5082,11 @@ PS:需要用admin用户获得access_token
 ### 2.12.5 条件查询POS机接口
 
 - 功能描述: 按Pos机编号和使用者姓名查询Pos机信息
-- 请求地址: `http://localhost:8080/infras/poses/query?code=123&employName=456?access_token2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
+- 请求地址: `http://localhost:8080/infras/poses/query?code=123&employeeName=456?access_token2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
 - 请求动作: `PUT`
 - 请求示例: `http://localhost:8080/infras/poses/query?code=123&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
-         或`http://localhost:8080/infras/poses/query?employName=456&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
-         或`http://localhost:8080/infras/poses/query?code=123&employName=456&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
+         或`http://localhost:8080/infras/poses/query?employeeName=456&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
+         或`http://localhost:8080/infras/poses/query?code=123&employeeName=456&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
 - 请求示例:
 ```
 {
