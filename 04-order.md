@@ -1223,3 +1223,23 @@
     "data": 31
 }
 ```
+## 4.7 支付接口（AlipayController）
+
+### 4.7.1 生成App支付订单信息接口
+
+- 功能描述：生成订单信息接口
+- 请求地址：`http://doman/order/alipay/generateOrderInfo`
+- 请求动作：`POST`
+- 请求示例：`http://192.168.1.177:8080/order/alipay/generateOrderInfo?access_token&orderId&fee`
+- 返回示例：
+
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": [
+        
+    ]
+}
+```
+
+### 
