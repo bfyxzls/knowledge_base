@@ -27,10 +27,8 @@
 }
 ```
 
-}
-'''
 - 返回示例
-'''
+```$xslt
 {
     "status": "SUCCESS",
     "data": {
@@ -55,7 +53,7 @@
         "status": 1
     }
 }
-
+```
 ### 7.1.2 query()接口
  功能描述: 查询收费员签到签出记录
 - 请求地址: `http://domain/employee/attendanceRecords/query?access_token=token`
