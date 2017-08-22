@@ -5,7 +5,7 @@
 - 请求动作: `POST`
 - 请求示例: `http://localhost:8080/attendance/attendanceRecords?access_token=85221cc0-9837-45b9-bb72-29e7af104de1`
 - 请求实体：PS:除了checkTime，其余的属性都需要前台传过来
-'''
+```$xslt
 {
 	"district":"蜀山区",
 	 "posSn": "123",
@@ -24,6 +24,9 @@
         	}
         }
      }
+}
+```
+
 }
 '''
 - 返回示例
@@ -52,7 +55,6 @@
         "status": 1
     }
 }
-'''
 
 ### 7.1.2 query()接口
  功能描述: 查询收费员签到签出记录
@@ -61,7 +63,7 @@
 - 请求示例: `http://localhost:8080/employee/attendanceRecords/query?access_token=a57c7550-8538-47ac-9056-ac5c0f71b80d&name=赵朋飞&username=000565&status=2&district=蜀山区&roadSetcionName=潜山路-怀宁路&postName=岗位3&signInOrUpTime.startDate=2017-8-15&signInOrUpTime.endDate=2017-8-16`
            ps：查询属性可以缺省
 - 返回示例
-'''
+```$xslt
 {
     "status": "SUCCESS",
     "data": {
@@ -103,8 +105,7 @@
         "last": true
     }
 }
-
-'''
+```
 
 
 ### 7.1.3 queryEmployeeAttendanceByPost接口
