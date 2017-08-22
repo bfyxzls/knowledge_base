@@ -555,11 +555,11 @@ PS:需要用admin用户获得access_token
 
 - 功能描述: 通过商业停车场id查询商业停车场信息
 
-- 请求地址: `http://localhost:8080/infras/app/businessParkingAreas/{id}?access_token&name`
+- 请求地址: `http://localhost:8080/infras/app/businessParkingAreas/{id}?access_token`
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/infras/app/businessParkingAreas/1030?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=长江路`
+- 请求示例: `http://localhost:8080/infras/app/businessParkingAreas/1030?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 
 - 返回示例：
 
