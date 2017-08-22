@@ -56,9 +56,9 @@
 ```
 ### 7.1.2 query()接口
  功能描述: 查询收费员签到签出记录
-- 请求地址: `http://domain/employee/attendanceRecords/query?access_token=token`
+- 请求地址: `http://domain/attendance/attendanceRecords/query?access_token=token`
 - 请求动作: `Get`
-- 请求示例: `http://localhost:8080/employee/attendanceRecords/query?access_token=a57c7550-8538-47ac-9056-ac5c0f71b80d&name=赵朋飞&username=000565&status=2&district=蜀山区&roadSetcionName=潜山路-怀宁路&postName=岗位3&signInOrUpTime.startDate=2017-8-15&signInOrUpTime.endDate=2017-8-16`
+- 请求示例: `http://localhost:8080/attendanceattendance/attendanceRecords/query?access_token=a57c7550-8538-47ac-9056-ac5c0f71b80d&name=赵朋飞&username=000565&status=2&district=蜀山区&roadSetcionName=潜山路-怀宁路&postName=岗位3&signInOrUpTime.startDate=2017-8-15&signInOrUpTime.endDate=2017-8-16`
            ps：查询属性可以缺省
 - 返回示例
 ```$xslt
