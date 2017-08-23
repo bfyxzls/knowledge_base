@@ -460,22 +460,22 @@
         ]
     }
   ```
-# 5.4 CustomerUserController 测试用例
+# 5.4 app CustomerUserController 测试用例
 
-### 5.4.1 查询用户是否存在接口
+### 5.4.1 APP查询用户是否存在接口
 
 - 功能描述:  根据phoneNum查询用户是否存在
-- 请求地址: `http://domain/uaa/customerUsers/isCustomerExist`
+- 请求地址: `http://domain/uaa/customerUsers`
 - 请求动作: `HEAD`
-- 请求示例: `http://domain/uaa/customerUsers/isCustomerExist?phoneNum=12345678910`
+- 请求示例: `http://domain/uaa/customerUsers?phoneNum=12345678910`
 
 - 返回用户示例  
 用户不存在：200 OK
 用户已存在：404 NOT FOUND
 
-### 5.4.2 获取验证码接口  
+### 5.4.2 APP获取验证码接口  
 
-#### 5.4.2.1 注册时获取验证码接口 
+#### 5.4.2.1 APP注册时获取验证码接口 
 
 - 功能描述:  注册时获取验证码
 - 请求地址: `http://domain/uaa/customerUsers/getCodeForRegister`
@@ -491,7 +491,7 @@
 
 ```
 
-#### 5.4.2.1 忘记密码时获取验证码接口 
+#### 5.4.2.1 APP忘记密码时获取验证码接口 
 
 - 功能描述:  忘记密码时获取验证码
 - 请求地址: `http://domain/uaa/customerUsers/getCodeForPassword`
@@ -507,7 +507,7 @@
 
 ```
 
-### 5.4.3 验证验证码接口  
+### 5.4.3 APP验证验证码接口  
 
 - 功能描述:  验证验证码
 - 请求地址: `http://domain/uaa/customerUsers/verifyCode`
@@ -523,7 +523,7 @@
 
 ```
 
-### 5.4.4 用户注册接口  
+### 5.4.4 APP用户注册接口  
 
 - 功能描述:  用户注册
 - 请求地址: `http://domain/uaa/customerUsers`
@@ -539,7 +539,7 @@
 
 ```
 
-### 5.4.5 用户忘记密码接口  
+### 5.4.5 APP用户忘记密码接口  
 
 - 功能描述:  忘记密码
 - 请求地址: `http://domain/uaa/customerUsers/forgetPwd`
@@ -555,7 +555,7 @@
 
 ```
 
-### 5.4.6 用户修改密码接口  
+### 5.4.6 APP用户修改密码接口  
 
 - 功能描述:  修改密码
 - 请求地址: `http://domain/uaa/customerUsers/modifyPwd?access_token=dq12e1ed132ed23d232d2d32d23d`
