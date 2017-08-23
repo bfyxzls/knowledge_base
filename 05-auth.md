@@ -475,10 +475,28 @@
 
 ### 5.4.2 获取验证码接口  
 
-- 功能描述:  获取验证码
-- 请求地址: `http://domain/uaa/customerUsers/getCode`
+#### 5.4.2.1 注册时获取验证码接口 
+
+- 功能描述:  注册时获取验证码
+- 请求地址: `http://domain/uaa/customerUsers/getCodeForRegister`
 - 请求动作: `GET`
-- 请求示例: `http://domain/uaa/customerUsers/getCode?phoneNum=12345678910`
+- 请求示例: `http://domain/uaa/customerUsers/getCodeForRegister?phoneNum=12345678910`
+  
+- 返回数据示例  
+```
+{
+    "status": "SUCCESS",
+    "data": "发送验证码成功"
+}
+
+```
+
+#### 5.4.2.1 忘记密码时获取验证码接口 
+
+- 功能描述:  忘记密码时获取验证码
+- 请求地址: `http://domain/uaa/customerUsers/getCodeForPassword`
+- 请求动作: `GET`
+- 请求示例: `http://domain/uaa/customerUsers/getCodeForPassword?phoneNum=12345678910`
   
 - 返回数据示例  
 ```
