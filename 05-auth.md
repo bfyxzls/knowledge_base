@@ -466,16 +466,12 @@
 
 - 功能描述:  根据phoneNum查询用户是否存在
 - 请求地址: `http://domain/uaa/customerUsers/isCustomerExist`
-- 请求动作: `GET`
+- 请求动作: `HEAD`
 - 请求示例: `http://domain/uaa/customerUsers/isCustomerExist?phoneNum=12345678910`
 
 - 返回用户示例  
-```
-{
-    "status": "SUCCESS",
-    "data": "用户未被注册"
-}
-```
+用户不存在：200 OK
+用户已存在：404 NOT FOUND
 
 ### 5.4.2 获取验证码接口  
 
@@ -521,6 +517,39 @@
 {
 	"phoneNum":"12345678910",
 	"password":"111111"
+}
+
+```
+
+### 5.4.5 用户忘记密码接口  
+
+- 功能描述:  忘记密码
+- 请求地址: `http://domain/uaa/customerUsers/forgetPwd`
+- 请求动作: `PUT`
+- 请求示例: `http://domain/uaa/customerUsers/forgetPwd`
+  
+- 请求数据示例  
+```
+{
+	"phoneNum":"12345678910",
+	"password":"111111"
+}
+
+```
+
+### 5.4.6 用户修改密码接口  
+
+- 功能描述:  修改密码
+- 请求地址: `http://domain/uaa/customerUsers/modifyPwd?access_token=dq12e1ed132ed23d232d2d32d23d`
+- 请求动作: `PUT`
+- 请求示例: `http://domain/uaa/customerUsers/modifyPwd?access_token=dq12e1ed132ed23d232d2d32d23d`
+  
+- 请求数据示例  
+```
+{
+	"phoneNum":"12345678910",
+	"oldPassword":"111111",
+	"newPassword":"123456"
 }
 
 ```

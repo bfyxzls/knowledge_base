@@ -579,7 +579,15 @@ PS:需要用admin用户获得access_token
      }
  }
  ```
+### 2.1.12 商业停车场唯一性验证接口 
+- 功能描述:  根据code查询停车场是否存在
+- 请求地址: `http://localhost:8080/infras/businessParkingAreas?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
+- 请求动作: `HEAD`
+- 请求示例: `http://localhost:8080/infras/businessParkingAreas?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
 
+- 返回用户示例  
+停车场已存在：200 OK
+停车场不存在：404 NOT FOUND
 
 
 # 2.2 编码类型信息访问接口
@@ -2117,6 +2125,16 @@ PS:需要用admin用户获得access_token
 }
 ```
 
+### 2.4.7 泊位唯一性验证接口 
+- 功能描述:  根据code查询泊位是否存在
+- 请求地址: `http://localhost:8080/infras/parkings?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
+- 请求动作: `HEAD`
+- 请求示例: `http://localhost:8080/infras/parkings?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
+
+- 返回用户示例  
+泊位已存在：200 OK
+泊位不存在：404 NOT FOUND
+
 
 
 # 2.5 企业信息访问接口
@@ -2798,7 +2816,8 @@ PS:需要用admin用户获得access_token
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/parkingAreas/autoTop?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=岳东路停车场`
 - 返回示例:
-```
+
+ ```
 {
     "status": "SUCCESS",
     "data": [
@@ -2846,7 +2865,20 @@ PS:需要用admin用户获得access_token
         }
     ]
 }
-```
+ ```
+ 
+ ### 2.6.7 路边停车场唯一性验证接口 
+ - 功能描述:  根据code查询路边停车场是否存在
+ - 请求地址: `http://localhost:8080/infras/parkingAreas?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
+ - 请求动作: `HEAD`
+ - 请求示例: `http://localhost:8080/infras/parkingAreas?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
+ 
+ - 返回用户示例  
+ 路边停车场已存在：200 OK
+ 路边停车场不存在：404 NOT FOUND
+ 
+ 
+ 
 # 2.7 岗位信息访问接口
 ### 2.7.1 get接口
 - 功能描述: 根据id查询岗位信息
