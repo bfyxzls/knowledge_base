@@ -765,40 +765,29 @@
 
 ## 4.2 APP端操作订单接口（AppOrderController）
 
-### 4.2.1 appObtainParkingOrdersToBePaid接口
+### 4.2.1 appObtainParkingOrderToBePaid接口
 
-- 功能描述：App端根据车牌获取待支付订单信息
+- 功能描述：App端根据订单id获取待支付订单信息
 
-- 请求地址：`http://domain/order/app/orders/obtainParkingOrdersToBePaid/`
+- 请求地址：`http://domain/order/app/orders/obtainParkingOrderToBePaid/{id}`
 
 - 请求动作: `GET`
 
-- 请求示例：`http://localhost:8080/order/app/orders/obtainParkingOrdersToBePaid/%e7%9a%96A12348?access_token=99781806-157b-437c-8c30-f710bfa74d18`
-    - 车牌号需要先进行URL编码
+- 请求示例：`http://localhost:8080/order/app/orders/obtainParkingOrderToBePaid/10000300?access_token=99781806-157b-437c-8c30-f710bfa74d18`
+   
 - 返回示例：    
 ```
 {
     "status": "SUCCESS",
-    "data": [
-        {
-            "carPlate": "皖A12348",
-            "category": "路边停车",
-            "roadSectionName": "岳西路-长江西路",
-            "parkingAreaName": "岳西路停车场",
-            "vehicleType": "02",
-            "chargingStrategyId": 1000,
-            "createdDate": "2017-08-16 11:44:19"
-        },
-        {
-            "carPlate": "皖A12348",
-            "category": "路边停车",
-            "roadSectionName": "岳西路-长江西路",
-            "parkingAreaName": "岳西路停车场",
-            "vehicleType": "02",
-            "chargingStrategyId": 1000,
-            "createdDate": "2017-08-17 09:12:37"
-        }
-    ]
+    "data": {
+        "carPlate": "皖A12345",
+        "category": "路边停车",
+        "roadSectionName": "岳西路-长江西路",
+        "parkingAreaName": "岳西路停车场",
+        "vehicleType": "02",
+        "chargingStrategyId": 1000,
+        "createdDate": "2017-08-10 14:50:32"
+    }
 }
 ```
 ### 4.2.2 AppPayArrearsFee接口
@@ -837,13 +826,13 @@
 
 ### 4.2.3 getVehicleFeeStats接口
 
-- 功能描述：按车牌统计当前客户的待支付和待补缴订单数量
+- 功能描述：按车牌统计当前客户的待支付和待补缴订单数量,并返回待支付订单id列表
 
-- 请求地址：`http://192.168.1.18:8080/order/app/orders/getVehicleFeeStats`
+- 请求地址：`http://domain/order/app/orders/getVehicleParkingOrderStats`
 
 - 请求动作：`GET`
 
-- 请求示例：`http://192.168.1.18:8080/order/app/orders/getVehicleFeeStats?access_token=1398a422-504a-4e95-8531-52cc0f5ebcc4&carPlates=皖A12345`
+- 请求示例：`http://192.168.1.18:8080/order/app/orders/getVehicleParkingOrderStats?access_token=1398a422-504a-4e95-8531-52cc0f5ebcc4&carPlates=皖A12345`
 
 - 返回示例：
 ```$xslt
@@ -852,8 +841,42 @@
     "data": [
         {
             "carPlate": "皖A12345",
-            "numOfArrears": 3,
-            "numOfCurrentFee": 16
+            "numOfArrears": 4,
+            "numOfOnParking": 32,
+            "parkingOrderIdsToBePaid": [
+                10000330,
+                10000399,
+                10000400,
+                10000401,
+                10000403,
+                10000404,
+                10000405,
+                10000406,
+                10000407,
+                10000421,
+                10000428,
+                10000429,
+                10000430,
+                10000431,
+                10000432,
+                10000433,
+                10000434,
+                10000435,
+                10000277,
+                10000282,
+                10000284,
+                10000286,
+                10000298,
+                10000299,
+                10000306,
+                10000419,
+                10000422,
+                10000423,
+                10000424,
+                10000425,
+                10000426,
+                10000427
+            ]
         }
     ]
 }
