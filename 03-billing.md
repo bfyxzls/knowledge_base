@@ -32,22 +32,18 @@
 - 请求地址: 
 ```
 http://domain/billing/chargingStrategies/fee?access_token=token&
-customerCarPlate=_customerCarPlate&
 chargingStrategyId=_chargingStrategyId&
 startTime=_startTime&
 vehicleType=_vehicleType&
-InParkingRoadSectionId=_InParkingRoadSectionId
 ```
 - 请求动作: `GET`
 - 请求示例: 
 ```
 http://localhost:8080/billing/chargingStrategies/fee?
 access_token=b20ba53d-0e30-4007-a8b3-ba5598fc25ea&
-customerCarPlate=皖A12346&
 chargingStrategyId=1000&
 startTime=2017-07-19 8:00:00&
 vehicleType=1&
-InParkingRoadSectionId=1008
 ```
 - 返回示例
 ```

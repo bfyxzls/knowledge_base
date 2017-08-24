@@ -534,50 +534,60 @@
 }
 ```
 
-### 4.1.14 PosPayArrearsFee接口
+### 4.1.14 posPayArrearsFee接口
 -  功能描述: 补缴欠费订单
 
--  请求地址: `http://domian/order/orders/posPayArrearsFee?appPayArrearsOrderCommands&access_token`
+-  请求地址: `http://domian/order/orders/posPayArrearsFee`
 
 -  请求动作: `PUT`
 
--  请求示例: `http://domain/order/orders/posPayArrearsFee?access_token=82dae454-5c86-404f-93d1-4cdae1775cff`
+-  请求示例: `http://domain/order/orders/posPayArrearsFee?access_token`
 
 -  请求实体：
 ```
-    [
+   [
+      {
+            "orderId": 10000269,
+            "payType":4,
+            "payTime": "2017-08-23 19:21:21",
+            "arrearsFee": 10,
+            "tollStaffId":1001,
+            "tollStaffName":"佘能斌",
+            "tollStaffPhoneNum":"18621061991",
+            "district":"庐阳区"
+       },
        {
-                 "orderId": 10000272,
-                 "payType":4,
-                 "payTime": "2017-08-13 19:21:21",
-                 "arrearsFee": 200
-             },
-             {
-                 "orderId": 10000281,
-                 "payType":4,
-                 "payTime": "2017-08-13 15:13:14",
-                 "arrearsFee": 199
-             }
-    ]
+            "orderId": 10000280,
+            "payType":4,
+            "payTime": "2017-08-23 19:21:21",
+            "arrearsFee": 20,
+            "tollStaffId":1001,
+            "tollStaffName":"佘能斌",
+            "tollStaffPhoneNum":"18621061991",
+            "district":"庐阳区"
+       }
+   ]
 ```
 
 - 返回示例:
 ```
-    {
-     "status": "SUCCESS",
-     "data": {
-         "numOfArrearsOrder": 2,
-         "totalFee": 399
-     }
+{
+    "status": "SUCCESS",
+    "data": {
+        "numOfArrearsOrder": 2,
+        "totalFee": 30,
+        "vehicleType": "02",
+        "carPlate": "皖A12345"
     }
+}
 ```
 
 ### 4.1.15 obtainParkingOrderDetails接口
 - 功能描述：管理员查看某个订单的详细信息
 
-- 请求地址：http://localhost:8080/order/orders/{}/obtainParkingOrderDetails?access_token
+- 请求地址：http://localhost:8080/order/orders/{id}/obtainParkingOrderDetails
 
-- 请求动作：GETid
+- 请求动作：GET
 
 - 请求示例：http://localhost:8080/order/orders/10000313/obtainParkingOrderDetails?access_token=a57c7550-8538-47ac-9056-ac5c0f71b80d
 
@@ -732,7 +742,29 @@
     }
 }
  ```
+### 4.1.17 obtainLastAppPayTime接口
+
+- 功能描述：获取指定订单的最新手机支付时间
+
+- 请求地址：http://localhost:8080/order/orders/{id}/lastAppPayTime?access_token
+
+- 请求动作：`GET`
+
+- 请求示例：http://localhost:8080/order/orders/10000283/lastAppPayTime?access_token=8f3a8e76-fd86-49c6-9bf2-5f42563c2486
+
+- 返回示例：
+
+  ```json
+  {
+      "status": "SUCCESS",
+      "data": 1502441887000
+  }
+  ```
+
+  ​
+
 ## 4.2 APP端操作订单接口（AppOrderController）
+
 ### 4.2.1 appDriveOut接口
 
 - 功能描述：用户对某个订单缴费驶离
