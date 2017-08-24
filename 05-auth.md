@@ -331,7 +331,7 @@
   - 请求数据示例：
   ```
   {
-      "username":999,
+      "username":"999",
       "oldPassword":"123123",
       "newPassword":"123456"
   }
