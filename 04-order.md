@@ -765,39 +765,40 @@
 
 ## 4.2 APP端操作订单接口（AppOrderController）
 
-### 4.2.1 appDriveOut接口
+### 4.2.1 appObtainParkingOrdersToBePaid接口
 
-- 功能描述：用户对某个订单缴费驶离
+- 功能描述：App端根据车牌获取待支付订单信息
 
-- 请求地址：`http://domain/order/app/orders/driveOut?access_token&orderId`
+- 请求地址：`http://domain/order/app/orders/obtainParkingOrdersToBePaid/`
 
-- 请求动作: `PUT`
+- 请求动作: `GET`
 
-- 请求示例：`http://domain/order/app/orders/driveOut?access_token=4abb5a74-a913-4c83-8de8-bdd074812507&orderId=10000215`
-
-    - Body：
-```
-{
-	"payTime":"2017-08-03 17:26:49",
-	"payType":1,
-	"fee":222
-}
-```
+- 请求示例：`http://localhost:8080/order/app/orders/obtainParkingOrdersToBePaid/%e7%9a%96A12348?access_token=99781806-157b-437c-8c30-f710bfa74d18`
+    - 车牌号需要先进行URL编码
 - 返回示例：    
 ```
 {
     "status": "SUCCESS",
-    "data": {
-        "parkingCode": "154140",
-        "roadSectionName": "岳西路-长江西路",
-        "vehicleType": 1,
-        "createdDate": "2017-08-04 09:01:36",
-        "payTime": "2017-08-03 17:26:49",
-        "fee": 222,
-        "payType": 1,
-        "isMonthBill": false,
-        "arrears": null
-    }
+    "data": [
+        {
+            "carPlate": "皖A12348",
+            "category": "路边停车",
+            "roadSectionName": "岳西路-长江西路",
+            "parkingAreaName": "岳西路停车场",
+            "vehicleType": "02",
+            "chargingStrategyId": 1000,
+            "createdDate": "2017-08-16 11:44:19"
+        },
+        {
+            "carPlate": "皖A12348",
+            "category": "路边停车",
+            "roadSectionName": "岳西路-长江西路",
+            "parkingAreaName": "岳西路停车场",
+            "vehicleType": "02",
+            "chargingStrategyId": 1000,
+            "createdDate": "2017-08-17 09:12:37"
+        }
+    ]
 }
 ```
 ### 4.2.2 AppPayArrearsFee接口
