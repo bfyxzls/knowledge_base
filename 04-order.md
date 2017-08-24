@@ -732,7 +732,29 @@
     }
 }
  ```
+### 4.1.17 obtainLastAppPayTime接口
+
+- 功能描述：获取指定订单的最新手机支付时间
+
+- 请求地址：http://localhost:8080/order/orders/{id}/lastAppPayTime?access_token
+
+- 请求动作：`GET`
+
+- 请求示例：http://localhost:8080/order/orders/10000283/lastAppPayTime?access_token=8f3a8e76-fd86-49c6-9bf2-5f42563c2486
+
+- 返回示例：
+
+  ```json
+  {
+      "status": "SUCCESS",
+      "data": 1502441887000
+  }
+  ```
+
+  ​
+
 ## 4.2 APP端操作订单接口（AppOrderController）
+
 ### 4.2.1 appDriveOut接口
 
 - 功能描述：用户对某个订单缴费驶离
