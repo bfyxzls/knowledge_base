@@ -44,9 +44,9 @@
 ### 6.1.3 上传用户头像接口
 
 - 功能描述:  上传用户头像
-- 请求地址: `http://domain/zuul/customer/customers/uploadAvatar/`
+- 请求地址: `http://domain/zuul/customer/customers/uploadAvator`
 - 请求动作: `PUT`
-- 请求示例: `http://domain/zuul/customer/customers/uploadAvatar?id=1004&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 请求示例: `http://domain/zuul/customer/customers/uploadAvator?id=1004&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 ![Markdown](http://i1.buimg.com/1949/84c15df0a215c259.png)
 
 - 请求数据示例  
@@ -59,9 +59,9 @@
 ### 6.1.4 获取用户头像接口
 
 - 功能描述:  获取用户头像
-- 请求地址: `http://domain/customer/customers/{id}/avatar`
+- 请求地址: `http://domain/customer/customers/{id}/avator`
 - 请求动作: `GET`
-- 请求示例: `http://domain/customer/customers/1004/avatar?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 请求示例: `http://domain/customer/customers/1004/avator?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
 - 返回数据示例  
 
