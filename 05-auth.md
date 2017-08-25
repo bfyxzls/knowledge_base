@@ -9,7 +9,7 @@
          - Type:Base Auth  
          - Username:android  
          - Password:android
-            
+
 - 返回示例
 ```
 {
@@ -30,7 +30,7 @@
       - Type:Base Auth  
       - Username:android  
       - Password:android
-            
+
 - 返回示例
 ```
 {
@@ -47,9 +47,9 @@
 - 请求地址: `http://domain/uaa/oauth/token`
 - 请求动作: `DELETE`
 - 请求示例: `http://domain/uaa/oauth/token?access_token=5c0b6d1c-94e3-4e82-8acb-e4a266e5ddf3` 
-            
+    ​          
     Authorization：  
-      - Type:Base Auth  
+    - Type:Base Auth  
       - Username:android  
       - Password:android
 
@@ -74,7 +74,7 @@
   "error": "access_denied",
   "error_description": "不允许访问"
 } 
-``` 
+```
 # 5.1 UserController测试用例
 
 ### 5.1.1 查询单个用户信息
@@ -190,7 +190,7 @@
   }
   ```
 
-  
+
 ### 5.1.4 更新用户信息接口
 
 - 功能描述:  根据id更新用户信息
@@ -208,7 +208,7 @@
              }
          ]
  }
-  ```
+ ```
 ### 5.1.5 根据用户名查找用户信息接口
 
 - 功能描述:  根据用户名查找用户信息
@@ -305,15 +305,15 @@
           }
       ]
   }
-  
+
   ```
  ### 5.1.7 重置密码接口
-  
- - 功能描述: 重置密码
- - 请求地址: `http://domain/uaa/sysusers/reset/{id}?access_token=ACCESS_TOKEN`
- - 请求动作: `PUT`
- - 请求示例: `http://domain/uaa/sysusers/reset/1002?access_token=5d780ca8-fc23-4bfd-8513-d64b517e9d63`
- - 返回示例：
+
+- 功能描述: 重置密码
+- 请求地址: `http://domain/uaa/sysusers/reset/{id}?access_token=ACCESS_TOKEN`
+- 请求动作: `PUT`
+- 请求示例: `http://domain/uaa/sysusers/reset/1002?access_token=5d780ca8-fc23-4bfd-8513-d64b517e9d63`
+- 返回示例：
  ```
  {
      "status": "SUCCESS",
@@ -321,10 +321,10 @@
  }
  
  ```
- 
+
  ### 5.1.8 修改密码接口
-   
-  - 功能描述: 修改密码
+
+-   功能描述: 修改密码
   - 请求地址: `http://domain/uaa/sysusers/modifyPwd?access_token=ACCESS_TOKEN`
   - 请求动作: `PUT`
   - 请求示例: `http://domain/uaa/sysusers/modifyPwd?access_token=5d780ca8-fc23-4bfd-8513-d64b517e9d63`
@@ -335,9 +335,31 @@
       "oldPassword":"123123",
       "newPassword":"123456"
   }
-  
+
   ```
-  
+
+### 5.1.9 判断员工是否被绑定
+
+- 功能描述: 判断员工是否被绑定
+
+- 请求地址: `http://domain/uaa/sysusers/employees/{id}?access_token=ACCESS_TOKEN`
+
+- 请求动作: `HEAD`
+
+- 请求示例: `http://domain/uaa/sysusers/employees/1001?access_token=5d780ca8-fc23-4bfd-8513-d64b517e9d63`
+
+- 出参位置：`Headers`
+
+- 返回示例：
+
+  ```JSON
+  {
+    "hasBinding":true
+  }
+  ```
+
+  ​
+
 # 5.2 RoleController测试用例
 
 ### 5.2.1 查看角色信息接口
@@ -400,7 +422,7 @@
   ```
     {
     	"name":"观察员",
-		"value":"ROLE_OBSERVE"
+  	"value":"ROLE_OBSERVE"
     }
   ```
 
@@ -415,10 +437,10 @@
   ```
     {
     	"name":"收费员2",
-		"value":"ROLE_CHARGER2"
+  	"value":"ROLE_CHARGER2"
     }
   ```
-  
+
 # 5.3 AuthorityController测试用例
 
 ### 5.3.1 查询权限信息接口
@@ -470,8 +492,8 @@
 - 请求示例: `http://domain/uaa/customerUsers?phoneNum=12345678910`
 
 - 返回用户示例  
-用户不存在：200 OK
-用户已存在：404 NOT FOUND
+  用户不存在：200 OK
+  用户已存在：404 NOT FOUND
 
 ### 5.4.2 APP获取验证码接口  
 
@@ -481,7 +503,7 @@
 - 请求地址: `http://domain/uaa/customerUsers/getCodeForRegister`
 - 请求动作: `GET`
 - 请求示例: `http://domain/uaa/customerUsers/getCodeForRegister?phoneNum=12345678910`
-  
+
 - 返回数据示例  
 ```
 {
@@ -497,7 +519,7 @@
 - 请求地址: `http://domain/uaa/customerUsers/getCodeForPassword`
 - 请求动作: `GET`
 - 请求示例: `http://domain/uaa/customerUsers/getCodeForPassword?phoneNum=12345678910`
-  
+
 - 返回数据示例  
 ```
 {
@@ -513,7 +535,7 @@
 - 请求地址: `http://domain/uaa/customerUsers/verifyCode`
 - 请求动作: `GET`
 - 请求示例: `http://domain/uaa/customerUsers/verifyCode?phoneNum=12345678910&verificationCode=402624`
-  
+
 - 返回数据示例  
 ```
 {
@@ -529,7 +551,7 @@
 - 请求地址: `http://domain/uaa/customerUsers`
 - 请求动作: `POST`
 - 请求示例: `http://domain/uaa/customerUsers`
-  
+
 - 请求数据示例  
 ```
 {
@@ -545,7 +567,7 @@
 - 请求地址: `http://domain/uaa/customerUsers/forgetPwd`
 - 请求动作: `PUT`
 - 请求示例: `http://domain/uaa/customerUsers/forgetPwd`
-  
+
 - 请求数据示例  
 ```
 {
@@ -561,7 +583,7 @@
 - 请求地址: `http://domain/uaa/customerUsers/modifyPwd?access_token=dq12e1ed132ed23d232d2d32d23d`
 - 请求动作: `PUT`
 - 请求示例: `http://domain/uaa/customerUsers/modifyPwd?access_token=dq12e1ed132ed23d232d2d32d23d`
-  
+
 - 请求数据示例  
 ```
 {
