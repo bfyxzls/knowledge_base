@@ -348,15 +348,17 @@
 
 - 请求示例: `http://domain/uaa/sysusers/employees/1001?access_token=5d780ca8-fc23-4bfd-8513-d64b517e9d63`
 
-- 出参位置：`Headers`
 
-- 返回示例：
+### 5.1.10 
 
-  ```JSON
-  {
-    "hasBinding":true
-  }
-  ```
+- 功能描述: 判断用户是否已注册
+
+- 请求地址: `http://domain/uaa/sysusers/?username=a&?access_token=ACCESS_TOKEN`
+
+- 请求动作: `HEAD`
+
+- 请求示例: `http://domain/uaa/sysusers?username=a&access_token=5d780ca8-fc23-4bfd-8513-d64b517e9d63`
+
 
   ​
 
