@@ -1286,7 +1286,7 @@
 - 功能描述：生成订单信息接口
 - 请求地址：`http://doman/order/alipay/generateOrderInfo`
 - 请求动作：`POST`
-- 请求示例：`http://192.168.1.177:8080/order/alipay/generateOrderInfo?access_token&orderId&fee`
+- 请求示例：`http://192.168.1.177:8080/order/alipay/generateOrderInfo?access_token&orderId&fee&appPaymentBusinessType`
 - 返回示例：
 
 ```$xslt
