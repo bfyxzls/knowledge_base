@@ -110,7 +110,7 @@
 - 功能描述: 获取指定岗位下员工当天签到信息
 - 请求地址: `http://domain/attendance/attendanceRecords/queryEmployeeAttendanceByPostId?PostId&access_token`
 - 请求动作: `Get`
-- 请求示例: `http://localhost:8080/attendance/attendanceRecords/queryEmployeeAttendanceByPostId?PostId=1021&access_token`
+- 请求示例: `http://localhost:8080/attendance/attendanceRecords/queryEmployeeAttendanceByPostId?postId=1021&access_token`
 - 返回示例
 ```
 {
