@@ -774,7 +774,7 @@
 - 请求动作: `GET`
 
 - 请求示例：`http://localhost:8080/order/app/orders/obtainParkingOrderToBePaid/10000300?access_token=99781806-157b-437c-8c30-f710bfa74d18`
-   
+
 - 返回示例：    
 ```
 {
@@ -1290,12 +1290,71 @@
 - 返回示例：
 
 ```$xslt
-{
-    "status": "SUCCESS",
-    "data": [
-        
-    ]
-}
+
 ```
 
-### 
+
+
+### 4.7.2 生成APP欠费补缴订单信息
+
+- 功能描述：生成APP欠费补缴订单信息
+
+- 请求地址：`http://doman/order/alipay/generateAppArrearsPaidOrderInfo`
+
+- 请求动作：`POST`
+
+- 请求示例：`http://192.168.1.177:8080/order/alipay/generateAppArrearsPaidOrderInfo?access_token`
+
+- 请求实体
+
+  ```
+  [
+        {
+          "orderId": 10000272,
+          "payType":4,
+          "payTime": "2017-08-13 19:21:21",
+          "arrearsFee": 200
+      },
+      {
+          "orderId": 10000281,
+          "payType":4,
+          "payTime": "2017-08-13 15:13:14",
+          "arrearsFee": 199
+      }
+    ]
+  ```
+
+- 返回示例：
+
+```$xslt
+
+```
+
+### 4.7.3 生成pos二维码支付信息
+
+- 功能描述：生成pos二维码支付信息
+
+- 请求地址：`http://doman/order/alipay/generateQRCodePayInfo`
+
+- 请求动作：`POST`
+
+- 请求示例：`http://192.168.1.177:8080/order/alipay/generateQRCodePayInfo?access_token`
+
+- 请求实体
+
+  ```
+  {
+          "orderId": 10000272,
+          "fee":4,
+          "employeeId": 1000,
+          "posSn": "1889773"
+      }
+  ```
+
+- 返回示例：
+
+```$xslt
+
+```
+
+###  
