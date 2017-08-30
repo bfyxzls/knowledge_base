@@ -882,6 +882,26 @@
 }
 ```
 
+### 4.2.4 用户驶离
+
+- 功能描述：用户驶离
+
+- 请求地址：`http://domain/order/app/orders/{id}/freeDriveOut`
+
+- 请求动作：`PUT`
+
+- 请求示例：`http://192.168.1.18:8080/order/app/orders/1000023/freeDriveOut?access_token=1398a422-504a-4e95-8531-52cc0f5ebcc4`
+
+- 返回示例：
+
+  ```json
+  {
+      "status": "SUCCESS"
+    }
+  ```
+
+  ​
+
 ## 4.3 统计接口（StatsController）
 
 ### 4.3.1 countEmployeeTodayStats接口
