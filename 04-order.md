@@ -981,7 +981,29 @@
     }
 }
 ```
+### 4.3.4 countTodayIncomeGroupByDistrict接口
 
+- 功能描述：按区统计今日收入
+
+- 请求地址：`http://domain/order/stats/countTodayIncomeGroupByDistrict?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://domain/order/stats/countTodayIncomeGroupByDistrict?access_token=1398a422-504a-4e95-8531-52cc0f5ebcc4`
+
+- 返回示例：
+
+  ```JSON
+  {
+      "status": "SUCCESS",
+      "data": [
+          {
+              "district": "庐阳区",
+              "income": 87600
+          }
+      ]
+  }
+  ```
 
 
 
