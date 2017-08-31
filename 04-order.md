@@ -959,6 +959,30 @@
     }
 }
 ```
+### 4.3.3 countTodayPay接口
+
+- 功能描述：统计近日缴费
+
+- 请求地址：`http://domain/order/stats/countTodayPay?access_token=1398a422-504a-4e95-8531-52cc0f5ebcc4&roadSectionId=1021`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/order/stats/countTodayPay?access_token=4d04bb9b-6941-4db0-a52f-a74e4f3b8219`
+
+- 返回示例：
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "numOfCashPay": 0,
+        "numOfQRPay": 0,
+        "numOfAppPay": 0,
+        "totalNum": 0
+    }
+}
+```
+
+
 
 
 ## 4.4 车辆信息接口（VehicleController）
@@ -1377,4 +1401,146 @@
 
 ```
 
-###  
+### 
+ 
+#4.8 订单数量访问接口（OrderQuantityController）
+
+### 4.8.1 getLast30DaysOrderQuantities（）接口
+
+- 功能描述：统计近30天的订单量
+
+- 请求地址：`http://domain/order/orderQuantities/getLast30DaysOrderQuantities`
+
+- 请求动作：`GET`
+
+- 请求示例：`http://localhost:8080/order/orderQuantities/getLast30DaysOrderQuantities?access_token=4d04bb9b-6941-4db0-a52f-a74e4f3b8219`
+
+
+- 返回示例：
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "date": "2017-08-30 00:00:00",
+            "num": 2
+        },
+        {
+            "date": "2017-08-28 00:00:00",
+            "num": 2
+        },
+        {
+            "date": "2017-08-28 00:00:00",
+            "num": 2
+        },
+        {
+            "date": "2017-08-28 00:00:00",
+            "num": 2
+        },
+        {
+            "date": "2017-08-28 00:00:00",
+            "num": 2
+        },
+        {
+            "date": "2017-08-28 00:00:00",
+            "num": 2
+        },
+        {
+            "date": "2017-08-28 00:00:00",
+            "num": 2
+        },
+        {
+            "date": "2017-08-28 00:00:00",
+            "num": 2
+        },
+        {
+            "date": "2017-08-28 00:00:00",
+            "num": 2
+        },
+        {
+            "date": "2017-08-28 00:00:00",
+            "num": 2
+        },
+        {
+            "date": "2017-08-28 00:00:00",
+            "num": 2
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        },
+        {
+            "date": "2017-08-29 00:00:00",
+            "num": 0
+        }
+    ]
+}
+```
