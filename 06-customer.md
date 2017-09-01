@@ -301,9 +301,9 @@ PS:需要用admin用户获得access_token
 ### 6.3.1 统计最近一周用户注册量
 
 - 功能描述: 统计最近一周用户注册量
-- 请求地址: `localhost:8080/customer/stats/todayRegisterNumByHour?access_token=4d04bb9b-6941-4db0-a52f-a74e4f3b8219`
+- 请求地址: `localhost:8080/customer/stats/todayRegisterNumByWeek?access_token=4d04bb9b-6941-4db0-a52f-a74e4f3b8219`
 - 请求动作: `GET`
-- 请求示例: `localhost:8080/customer/stats/todayRegisterNumByHour?access_token=4d04bb9b-6941-4db0-a52f-a74e4f3b8219`
+- 请求示例: `localhost:8080/customer/stats/todayRegisterNumByWeek?access_token=4d04bb9b-6941-4db0-a52f-a74e4f3b8219`
 - 返回示例
 
 ```json
