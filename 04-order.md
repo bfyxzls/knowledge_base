@@ -1004,7 +1004,30 @@
       ]
   }
   ```
+### 4.3.5 countTodayOrders接口
 
+- 功能描述：统计今日订单量
+
+- 请求地址：`http://domain/order/stats/countTodayOrders?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/order/stats/countTodayOrders?access_token=35b95947-6e0c-4291-964c-75af974fcd44`
+
+- 返回示例：
+
+  ```JSON
+  {
+      "status": "SUCCESS",
+      "data": {
+          "numOfFreeOrders": 0,
+          "numOfChargedOrders": 0,
+          "numOfArrearsOrders": 0,
+          "numOfOnParkingOrders": 103,
+          "sumOfTodayOrders": 0
+      }
+  }
+  ```
 
 
 ## 4.4 车辆信息接口（VehicleController）
