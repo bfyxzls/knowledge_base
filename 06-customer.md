@@ -119,6 +119,29 @@
     ]
 }
 ```
+### 6.1.8 查询用户信息接口
+
+- 功能描述:  查询用户车辆信息
+- 请求地址: `http://domain/customer/customers/obtainVehicles`
+- 请求动作: `GET`
+- 请求示例: `http://domain/customer/customers/obtainVehicles?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+
+- 返回数据示例  
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 1034,
+            "carPlate": "皖AYN056",
+            "vehicleType": "02",
+            "vin": "191433"
+        }
+    ]
+}
+```
+
+
 ## 6.2 月票（MonthBill）
 PS:需要用admin用户获得access_token
 ### 6.2.1 get接口
