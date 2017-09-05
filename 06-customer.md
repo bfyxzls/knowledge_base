@@ -47,7 +47,7 @@
 - 请求地址: `http://domain/zuul/customer/customers/uploadAvator`
 - 请求动作: `PUT`
 - 请求示例: `http://domain/zuul/customer/customers/uploadAvator?id=1004&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
-![Markdown](http://i1.buimg.com/1949/84c15df0a215c259.png)
+  ![Markdown](http://i1.buimg.com/1949/84c15df0a215c259.png)
 
 - 请求数据示例  
 ```
@@ -66,9 +66,9 @@
 - 返回数据示例  
 
     ![Markdown](http://i2.kiimg.com/1949/7c84a20ddd1f1eaa.png)
-    
-    
-    
+
+    ​
+
 ### 6.1.5 绑定车辆接口
 
 - 功能描述:  绑定车辆
@@ -293,6 +293,39 @@ PS:需要用admin用户获得access_token
 {
     "status": "SUCCESS",
     "data": true
+}
+```
+
+## 6.3 统计（Stats）
+
+### 6.3.1 统计最近一周用户注册量
+
+- 功能描述: 统计最近一周用户注册量
+- 请求地址: `localhost:8080/customer/stats/todayRegisterNumByWeek?access_token=4d04bb9b-6941-4db0-a52f-a74e4f3b8219`
+- 请求动作: `GET`
+- 请求示例: `localhost:8080/customer/stats/todayRegisterNumByWeek?access_token=4d04bb9b-6941-4db0-a52f-a74e4f3b8219`
+- 返回示例
+
+```json
+{
+    "status": "SUCCESS",
+    "data": {
+        "totalNum": 3,
+        "registerNumStatsGroupByDays": [
+            {
+                "day": "2017-08-25",
+                "num": 1
+            },
+            {
+                "day": "2017-08-28",
+                "num": 1
+            },
+            {
+                "day": "2017-08-29",
+                "num": 1
+            }
+        ]
+    }
 }
 ```
 

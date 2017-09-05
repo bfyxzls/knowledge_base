@@ -586,11 +586,8 @@ PS:需要用admin用户获得access_token
 - 请求示例: `http://localhost:8080/infras/businessParkingAreas?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
 
 - 返回用户示例  
-```
-返回信息包含在Response Header中：
-isExist:true    已存在
-isExist:false   不存在
-```
+停车场已存在：200 OK
+停车场不存在：404 NOT FOUND
 
 
 # 2.2 编码类型信息访问接口
@@ -1661,7 +1658,32 @@ isExist:false   不存在
 }
 ```
 
+### 2.3.14 按区统计泊位数
 
+- 功能描述：根据路段查询所有岗位
+
+- 请求地址：`http://domain/infras/roadSections/obtainParkingNumGroupByDistrict?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://domain/infras/roadSections/obtainParkingNumGroupByDistrict?access_token=e10c62ae-3bc8-4938-bdbe-1465bf25c12a`
+
+- 返回示例：
+
+  ```json
+  {
+      "status": "SUCCESS",
+      "data": {
+      	"totalNum":0,
+        	"parkingNumStats":[{
+            "district":"蜀山区",
+            "parkingNum":0
+        	}]
+      }
+  }
+  ```
+
+  ​
 
 # 2.4 泊位信息访问接口
 
@@ -2135,11 +2157,9 @@ isExist:false   不存在
 - 请求示例: `http://localhost:8080/infras/parkings?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
 
 - 返回用户示例  
-```
-返回信息包含在Response Header中：
-isExist:true    已存在
-isExist:false   不存在
-```
+泊位已存在：200 OK
+泊位不存在：404 NOT FOUND
+
 
 
 # 2.5 企业信息访问接口
@@ -2879,11 +2899,9 @@ isExist:false   不存在
  - 请求示例: `http://localhost:8080/infras/parkingAreas?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
  
  - 返回用户示例  
-```
-返回信息包含在Response Header中：
-isExist:true    已存在
-isExist:false   不存在
- ```
+ 路边停车场已存在：200 OK
+ 路边停车场不存在：404 NOT FOUND
+ 
  
  
 # 2.7 岗位信息访问接口
