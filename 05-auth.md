@@ -349,11 +349,13 @@
 - 请求示例: `http://domain/uaa/sysusers/employees/1001?access_token=5d780ca8-fc23-4bfd-8513-d64b517e9d63`
 
 - 返回示例
- 
-员工已绑定：200 OK
-员工未绑定：404 NOT FOUND
+ ```
+返回信息包含在Response Header中：
+hasBinding:true    已绑定
+hasBinding:false   未绑定
+```
 
-### 5.1.10 
+### 5.1.10  判断用户是否已注册
 
 - 功能描述: 判断用户是否已注册
 
@@ -364,10 +366,11 @@
 - 请求示例: `http://domain/uaa/sysusers?username=a&access_token=5d780ca8-fc23-4bfd-8513-d64b517e9d63`
 
 - 返回示例  
-
-用户已存在：200 OK
-用户不存在：404 NOT FOUND
-
+```
+返回信息包含在Response Header中：
+isExist:true    已存在
+isExist:false   不存在
+```
   ​
 
 # 5.2 RoleController测试用例
@@ -502,8 +505,11 @@
 - 请求示例: `http://domain/uaa/customerUsers?phoneNum=12345678910`
 
 - 返回用户示例  
-  用户不存在：200 OK
-  用户已存在：404 NOT FOUND
+```
+返回信息包含在Response Header中：
+isExist:true    已存在
+isExist:false   不存在
+```
 
 ### 5.4.2 APP获取验证码接口  
 
