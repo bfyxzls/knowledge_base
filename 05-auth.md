@@ -183,11 +183,13 @@
   ```
   {
   	"username":"zhang",
-  	"password":"zzzzzz"
-  	"roles":{
-  	    "id":1001;
-  	}
-  }
+  	"password":"zzzzzz",
+  	"roles":[
+  		{
+  	    "id":4
+  		}
+  	]
+    }
   ```
 
 
@@ -271,11 +273,11 @@
 
 - 功能描述: 根据用户名自动提示查询用户信息
 
-- 请求地址: http://domain/uaa/sysusers/autoTop?username=USERNAME&access_token=ACCESS_TOKEN
+- 请求地址: `http://domain/uaa/sysusers/autoTop?username=USERNAME&access_token=ACCESS_TOKEN`
 
-- 请求动作: GET
+- 请求动作: `GET`
 
-- 请求示例: http://domain/uaa/sysusers/autoTop?username=maj&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca
+- 请求示例:`http://domain/uaa/sysusers/autoTop?username=maj&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
 
 - 返回数据示例  
   ```
@@ -290,6 +292,20 @@
               "firstName": null,
               "lastName": null,
               "email": null,
+              "roles": [
+                  {
+                     "id": 3,
+                      "name": "管理员",
+                      "value": "ROLE_ADMIN",
+                      "authorities": [
+                           {
+                            "id": 23,
+                            "name": "查看角色列表",
+                            "value": "auth-role-list"
+                             }
+                      ]
+                  }
+               ],
               "authorities": [
                   {
                       "authority": "billing-monthBill-save"
@@ -329,6 +345,7 @@
   - 请求动作: `PUT`
   - 请求示例: `http://domain/uaa/sysusers/modifyPwd?access_token=5d780ca8-fc23-4bfd-8513-d64b517e9d63`
   - 请求数据示例：
+  
   ```
   {
       "username":"999",
@@ -337,6 +354,26 @@
   }
 
   ```
+  - 返回数据示例：  
+  
+  修改成功返回：
+   ```
+    {
+     "status": "SUCCESS",
+     "data": "修改密码成功"
+    }
+   ```
+ 
+ 修改失败返回：
+ 
+    ```
+     {
+         "status": "FAILURE",
+         "error": "原密码错误"
+     }
+    
+    ```
+
 
 ### 5.1.9 判断员工是否被绑定
 
@@ -433,10 +470,10 @@ isExist:false   不存在
 
 - POST数据示例
   ```
-    {
+   {
     	"name":"观察员",
   	"value":"ROLE_OBSERVE"
-    }
+   }
   ```
 
 ### 5.2.4 更新角色信息接口
@@ -553,10 +590,21 @@ isExist:false   不存在
 - 请求示例: `http://domain/uaa/customerUsers/verifyCode?phoneNum=12345678910&verificationCode=402624`
 
 - 返回数据示例  
+
+验证成功返回：
 ```
 {
     "status": "SUCCESS",
     "data": "验证码正确"
+}
+
+```
+
+验证失败返回：
+```
+{
+    "status": "FAILURE",
+    "error": "验证码错误"
 }
 
 ```
@@ -609,3 +657,23 @@ isExist:false   不存在
 }
 
 ```
+
+  - 返回数据示例：  
+  
+  修改成功返回：
+   ```
+    {
+     "status": "SUCCESS",
+     "data": "修改密码成功"
+    }
+   ```
+ 
+ 修改失败返回：
+ 
+    ```
+     {
+         "status": "FAILURE",
+         "error": "原密码错误"
+     }
+    
+    ```
