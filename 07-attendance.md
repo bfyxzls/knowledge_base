@@ -58,7 +58,7 @@
  功能描述: 查询收费员签到签出记录
 - 请求地址: `http://domain/attendance/attendanceRecords/query?access_token=token`
 - 请求动作: `Get`
-- 请求示例: `http://localhost:8080/attendanceattendance/attendanceRecords/query?access_token=a57c7550-8538-47ac-9056-ac5c0f71b80d&name=赵朋飞&username=000565&status=2&district=蜀山区&roadSetcionName=潜山路-怀宁路&postName=岗位3&signInOrUpTime.startDate=2017-8-15&signInOrUpTime.endDate=2017-8-16`
+- 请求示例: `http://localhost:8080/attendance/attendanceRecords/query?access_token=b3f332ee-c61d-4837-8465-996158f21319&name=赵朋飞&status=2&district=蜀山区&roadSetcionName=潜山路-怀宁路&postName=岗位3&checkTimeRange.startDate=2017-8-15&checkTimeRange.endDate=2017-9-16`
            ps：查询属性可以缺省
 - 返回示例
 ```$xslt
@@ -67,25 +67,66 @@
     "data": {
         "content": [
             {
-                "infrastructureService": null,
-                "id": "AV3lQjJ-fv5dWwCbJ7GA",
+                "id": "AV3tmC3V_Htmjsu8j-q-",
                 "employee": {
                     "id": 1002,
                     "name": "赵朋飞",
-                    "username": "000565",
-                    "phoneNum": "66666",
+                    "username": "000039",
+                    "phoneNum": "18621061900",
                     "defaultPost": {
-                        "id": 1021,
-                        "name": "岗位3",
+                        "id": 1014,
+                        "name": "岗位1",
                         "roadSection": {
-                            "id": 1020,
-                            "name": "潜山路-怀宁路"
+                            "id": 1021,
+                            "name": "岳西路-长江西路"
                         }
                     }
                 },
                 "district": "蜀山区",
-                "posSn": "864536020785687",
-                "signInOrUpTime": 1502789933121,
+                "posSn": "123",
+                "checkTime": 1502929786119,
+                "status": 2
+            },
+            {
+                "id": "AV4eLyr-_Htmjsu8j-sh",
+                "employee": {
+                    "id": 1002,
+                    "name": "赵朋飞",
+                    "username": "000039",
+                    "phoneNum": "18621061900",
+                    "defaultPost": {
+                        "id": 1014,
+                        "name": "岗位1",
+                        "roadSection": {
+                            "id": 1021,
+                            "name": "岳西路-长江西路"
+                        }
+                    }
+                },
+                "district": "蜀山区",
+                "posSn": "123",
+                "checkTime": 1503744995219,
+                "status": 2
+            },
+            {
+                "id": "AV4nHT8Z_Htmjsu8j-sx",
+                "employee": {
+                    "id": 1002,
+                    "name": "赵朋飞",
+                    "username": "000039",
+                    "phoneNum": "18621061900",
+                    "defaultPost": {
+                        "id": 1014,
+                        "name": "岗位1",
+                        "roadSection": {
+                            "id": 1021,
+                            "name": "岳西路-长江西路"
+                        }
+                    }
+                },
+                "district": "蜀山区",
+                "posSn": "123",
+                "checkTime": 1503894817691,
                 "status": 2
             }
         ],
@@ -93,14 +134,14 @@
         "aggregations": {
             "asMap": {}
         },
-        "totalElements": 1,
+        "totalElements": 3,
         "totalPages": 1,
         "size": 20,
         "number": 0,
         "sort": null,
         "first": true,
-        "numberOfElements": 1,
-        "last": true
+        "last": true,
+        "numberOfElements": 3
     }
 }
 ```
@@ -121,7 +162,7 @@
             "name": "赵朋飞",
             "postName": "岗位3",
             "phoneNum": null,
-            "hasCheckIn": false,
+            "checkStatus": 2,
             "checkTime": null
         },
         {
@@ -129,7 +170,15 @@
             "name": "小V",
             "postName": "岗位3",
             "phoneNum": null,
-            "hasCheckIn": false,
+            "checkStatus": 2,
+            "checkTime": null
+        },
+        {
+            "id": 1004,
+            "name": "刘鹏飞",
+            "postName": "岗位3",
+            "phoneNum": null,
+            "checkStatus": 2,
             "checkTime": null
         },
         {
@@ -137,7 +186,7 @@
             "name": "佘能斌",
             "postName": "岗位3",
             "phoneNum": "",
-            "hasCheckIn": false,
+            "checkStatus": 2,
             "checkTime": null
         }
     ]
@@ -159,15 +208,23 @@
             "name": "赵朋飞",
             "postName": "岗位3",
             "phoneNum": null,
-            "hasCheckIn": true,
-            "checkTime": "2017-08-17 08:32:11"
+            "checkStatus": 2,
+            "checkTime": null
         },
         {
-            "id": 1002,
-            "name": "赵朋飞",
+            "id": 1006,
+            "name": "小V",
             "postName": "岗位3",
-            "phoneNum": "66666",
-            "hasCheckIn": false,
+            "phoneNum": null,
+            "checkStatus": 2,
+            "checkTime": null
+        },
+        {
+            "id": 1004,
+            "name": "刘鹏飞",
+            "postName": "岗位3",
+            "phoneNum": null,
+            "checkStatus": 2,
             "checkTime": null
         },
         {
@@ -175,7 +232,7 @@
             "name": "佘能斌",
             "postName": "岗位3",
             "phoneNum": "",
-            "hasCheckIn": false,
+            "checkStatus": 2,
             "checkTime": null
         }
     ]
