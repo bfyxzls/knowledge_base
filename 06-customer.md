@@ -16,6 +16,13 @@
     "nickname":"zz"
 }
 ```
+- 返回数据示例  
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": "更新客户成功"
+}
+```
 
 ### 6.1.2 查询用户信息接口
 
@@ -29,13 +36,63 @@
 {
     "status": "SUCCESS",
     "data": {
-        "id": 1004,
+        "id": 1001,
         "realName": "张三",
         "nickname": "zz",
-        "phoneNum": "12345678910",
+        "phoneNum": "15555417041",
         "email": "1221434@qq.com",
         "gender": 1,
-        "vehicles": []
+        "vehicles": [
+            {
+                "id": 1035,
+                "carPlate": "皖A12345",
+                "vehicleType": "02",
+                "vin": "999999"
+            },
+            {
+                "id": 1053,
+                "carPlate": "赣HHHUHH",
+                "vehicleType": "02",
+                "vin": "586869"
+            },
+            {
+                "id": 1054,
+                "carPlate": "闽YYJVVU",
+                "vehicleType": "02",
+                "vin": "786686"
+            },
+            {
+                "id": 1055,
+                "carPlate": "青GGHUHJ",
+                "vehicleType": "02",
+                "vin": "568869"
+            },
+            {
+                "id": 1057,
+                "carPlate": "辽RYYYYU",
+                "vehicleType": "02",
+                "vin": "258585"
+            },
+            {
+                "id": 1058,
+                "carPlate": "闽HHKHGH",
+                "vehicleType": "02",
+                "vin": "883868"
+            },
+            {
+                "id": 1059,
+                "carPlate": "皖A58881",
+                "vehicleType": "02",
+                "vin": "888858"
+            },
+            {
+                "id": 1061,
+                "carPlate": "皖A58883",
+                "vehicleType": "02",
+                "vin": "888888"
+            }
+        ],
+        "createdTime": 1503945908000
     }
 }
 ```
@@ -85,6 +142,13 @@
    "vin":"123456"
 }
 ```
+- 返回数据示例 
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": "车辆绑定成功"
+}
+```
 
 ### 6.1.6 解绑车辆接口
 
@@ -93,7 +157,7 @@
 - 请求动作: `PUT`
 - 请求示例: `http://domain/customer/customers/vehicleUnbinding?customerId=1004&vehicleId=1001&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
-- 请求数据示例  
+- 返回数据示例  
 ```
 {
     "status":true,
