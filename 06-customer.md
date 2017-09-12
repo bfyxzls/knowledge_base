@@ -1,4 +1,4 @@
-# 6.1 Customer Controller接口
+## 6.1 Customer Controller接口
 
 ### 6.1.1 更新用户接口
 
@@ -464,6 +464,62 @@ PS:需要用admin用户获得access_token
 }
 ```
 
+### 6.2.6 query接口
+- 功能描述: 根据车牌，用户姓名，或者手机号码查询月票信息
+- 请求地址: `http://domain/customer/monthBills/query?access_token`
+         或 `http://domain/customer/monthBills/query?access_token&customerCarPlate`
+         或 `http://domain/customer/monthBills/query?access_token&customerCarPlate&customerName`
+         或 `http://domain/customer/monthBills/query?access_token&customerCarPlate&customerName&customerPhoneNum`
+- 请求动作: `GET`
+- 请求示例: `http://domain/customer/monthBills/query?access_token=662b6404-298e-4194-812e-3d64bc551173&customerCarPlate=皖A95276&customerName=张三&customerPhoneNum=18622031202&page=0&size=10&sort=id,ASC`
+- 返回示例:
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "id": 1000,
+                "customerCarPlate": "皖A95276",
+                "customerName": "张三",
+                "customerPhoneNum": "18622031202",
+                "customerCardNum": "342501199111231023",
+                "startMonth": "2017-09-01 00:00:00",
+                "endMonth": "2017-12-31 23:59:59",
+                "roadSectionIds": [
+                    1000
+                ],
+                "shouldPay": 1000,
+                "actualPay": 100,
+                "valid": true,
+                "description": "赊账900",
+                "createdBy": "wyf",
+                "createdDate": 1504804324159,
+                "lastModifiedBy": "wyf",
+                "lastModifiedDate": 1504804324159
+            }
+        ],
+        "last": true,
+        "totalPages": 1,
+        "totalElements": 1,
+        "sort": [
+            {
+                "direction": "ASC",
+                "property": "id",
+                "ignoreCase": false,
+                "nullHandling": "NATIVE",
+                "ascending": true,
+                "descending": false
+            }
+        ],
+        "first": true,
+        "numberOfElements": 1,
+        "size": 10,
+        "number": 0
+    }
+}
+```
+
 ## 6.3 统计（Stats）
 
 ### 6.3.1 统计最近一周用户注册量
@@ -496,4 +552,6 @@ PS:需要用admin用户获得access_token
     }
 }
 ```
+
+
 
