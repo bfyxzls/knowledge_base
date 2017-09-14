@@ -1416,6 +1416,7 @@ isExist:false   不存在
      "data": {
          "id": 1030,
          "name": "岳西路-长江西路",
+         "parkingAreaName": "潜山路-长江西路",
          "coordinates": {
              "type": "MultiLineString",
              "coordinates": [
