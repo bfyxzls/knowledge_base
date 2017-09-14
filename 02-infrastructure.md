@@ -525,7 +525,8 @@ PS:需要用admin用户获得access_token
              ]
          },
          "district": "庐阳区",
-         "totalParkingNum": 3000
+         "totalParkingNum": 3000,
+         "usedParkingNum": 0
      }
  }
  ```
