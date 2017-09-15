@@ -23,19 +23,13 @@ PS:需要用admin用户获得access_token
         "parkingPositionQuantity": 3000,
         "maintainEnterprise": null,
         "province": "安徽省",
-        "city": "合肥市",
+        "city": null,
         "district": "庐阳区",
         "isOwnBusiness": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1499733691,
-            "nano": 936000000
-        },
+        "createdDate": 1501771401000,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1499733692,
-            "nano": 13000000
-        }
+        "lastModifiedDate": 1501771404000
     }
 }
 ```
@@ -116,10 +110,7 @@ PS:需要用admin用户获得access_token
     "maintainEnterprise": null,
     "province": "安徽省",
     "city": "合肥市",
-    "district": "庐阳区",
-    "isOwnBusiness": null,
-    "createdBy": "wyf"
-               
+    "district": "庐阳区"          
 }        
 ```
 - 返回示例
@@ -144,15 +135,9 @@ PS:需要用admin用户获得access_token
         "district": "庐阳区",
         "isOwnBusiness": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500435991,
-            "nano": 878000000
-        },
+        "createdDate": 1501771401000,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500435991,
-            "nano": 878000000
-        }
+        "lastModifiedDate": 1501771404000
     }
 }
 
@@ -178,10 +163,7 @@ PS:需要用admin用户获得access_token
     "maintainEnterprise": null,
     "province": "安徽省",
     "city": "合肥市",
-    "district": "庐阳区",
-    "isOwnBusiness": null,
-    "createdBy": "wyf"
-               
+    "district": "庐阳区"              
 }
 ```
 - 返回示例
@@ -206,15 +188,9 @@ PS:需要用admin用户获得access_token
         "district": "庐阳区",
         "isOwnBusiness": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500436148,
-            "nano": 476000000
-        },
+        "createdDate": 1501771401000,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500436148,
-            "nano": 499000000
-        }
+        "lastModifiedDate": 1501771404000
     }
 }
 
@@ -223,7 +199,7 @@ PS:需要用admin用户获得access_token
 - 功能描述: 根据名字查询商业停车场信息
 - 请求地址: `http://localhost:8080/infras/businessParkingAreas/query?access_token&name`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/businessParkingAreas/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=广场`
+- 请求示例: `http://localhost:8080/infras/businessParkingAreas/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=广场&page=0&size=20&sort=createdDate,DESC`
 - 返回示例：
 ```
 {
@@ -248,15 +224,9 @@ PS:需要用admin用户获得access_token
                 "district": "庐阳区",
                 "isOwnBusiness": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499733691,
-                    "nano": 936000000
-                },
+                "createdDate": 1501771401000,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499733692,
-                    "nano": 13000000
-                }
+                "lastModifiedDate": 1501771404000
             },
             {
                 "id": 1029,
@@ -276,15 +246,9 @@ PS:需要用admin用户获得access_token
                 "district": "庐阳区",
                 "isOwnBusiness": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500425298,
-                    "nano": 448000000
-                },
+                "createdDate": 1501771401000,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500425298,
-                    "nano": 525000000
-                }
+                "lastModifiedDate": 1501771404000
             },
             {
                 "id": 1030,
@@ -304,15 +268,9 @@ PS:需要用admin用户获得access_token
                 "district": "庐阳区",
                 "isOwnBusiness": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500436148,
-                    "nano": 476000000
-                },
+                "createdDate": 1501771401000,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500436148,
-                    "nano": 499000000
-                }
+                "lastModifiedDate": 1501771404000
             }
         ],
         "last": true,
@@ -320,7 +278,16 @@ PS:需要用admin用户获得access_token
         "totalElements": 3,
         "number": 0,
         "size": 20,
-        "sort": null,
+        "sort": [
+                            {
+                                "direction": "DESC",
+                                "property": "createdDate",
+                                "ignoreCase": false,
+                                "nullHandling": "NATIVE",
+                                "ascending": false,
+                                "descending": true
+                            }
+                        ],
         "first": true,
         "numberOfElements": 3
     }
@@ -351,47 +318,13 @@ PS:需要用admin用户获得access_token
             "parkingPositionQuantity": 3000,
             "maintainEnterprise": null,
             "province": "安徽省",
-            "city": "合肥市",
+            "city": null,
             "district": "庐阳区",
             "isOwnBusiness": null,
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1499733691,
-                "nano": 936000000
-            },
+            "createdDate": 1501771401000,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1499733692,
-                "nano": 13000000
-            }
-        },
-        {
-            "id": 1029,
-            "code": "999999",
-            "name": "世界广场",
-            "coordinate": {
-                "type": "Point",
-                "coordinates": [
-                    100,
-                    100
-                ]
-            },
-            "parkingPositionQuantity": 3000,
-            "maintainEnterprise": null,
-            "province": "安徽省",
-            "city": "合肥市",
-            "district": "庐阳区",
-            "isOwnBusiness": null,
-            "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500425298,
-                "nano": 448000000
-            },
-            "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500425298,
-                "nano": 525000000
-            }
+            "lastModifiedDate": 1501771404000
         },
         {
             "id": 1030,
@@ -400,26 +333,42 @@ PS:需要用admin用户获得access_token
             "coordinate": {
                 "type": "Point",
                 "coordinates": [
-                    12,
-                    77
+                    117.25815110034199,
+                    31.85328017017079
                 ]
             },
             "parkingPositionQuantity": 3000,
             "maintainEnterprise": null,
             "province": "安徽省",
-            "city": "合肥市",
+            "city": "",
             "district": "庐阳区",
             "isOwnBusiness": null,
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500436148,
-                "nano": 476000000
-            },
+            "createdDate": 1502886038323,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500436148,
-                "nano": 499000000
-            }
+            "lastModifiedDate": 1502886038329
+        },
+        {
+            "id": 1029,
+            "code": "9999991",
+            "name": "世界广场",
+            "coordinate": {
+                "type": "Point",
+                "coordinates": [
+                    117.26381592578127,
+                    31.84701014558232
+                ]
+            },
+            "parkingPositionQuantity": 3000,
+            "maintainEnterprise": null,
+            "province": "安徽省",
+            "city": "",
+            "district": "庐阳区",
+            "isOwnBusiness": null,
+            "createdBy": "wyf",
+            "createdDate": 1502886018656,
+            "lastModifiedBy": "wyf",
+            "lastModifiedDate": 1504517002229
         }
     ]
 }
@@ -436,7 +385,8 @@ PS:需要用admin用户获得access_token
 
 - 返回示例：
 
-  ```json
+```
+  
   {
       "status": "SUCCESS",
       "data": [
@@ -498,7 +448,7 @@ PS:需要用admin用户获得access_token
 
 - 返回示例：
 
-  ```json
+  ```
   {
       "status": "SUCCESS",
       "data": [
@@ -575,7 +525,8 @@ PS:需要用admin用户获得access_token
              ]
          },
          "district": "庐阳区",
-         "parkingPositionQuantity": 3000
+         "totalParkingNum": 3000,
+         "usedParkingNum": 0
      }
  }
  ```
@@ -618,15 +569,9 @@ isExist:false   不存在
             }
         ],
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1499157791,
-            "nano": 979000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1499157791,
-            "nano": 994000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 
@@ -660,15 +605,9 @@ isExist:false   不存在
                     }
                 ],
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499137903,
-                    "nano": 781000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499137903,
-                    "nano": 781000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1008,
@@ -684,15 +623,9 @@ isExist:false   不存在
                     }
                 ],
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499138088,
-                    "nano": 881000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499138088,
-                    "nano": 881000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1009,
@@ -708,15 +641,9 @@ isExist:false   不存在
                     }
                 ],
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499157791,
-                    "nano": 979000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499157791,
-                    "nano": 994000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1010,
@@ -732,15 +659,9 @@ isExist:false   不存在
                     }
                 ],
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499248586,
-                    "nano": 804000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499248586,
-                    "nano": 817000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1013,
@@ -760,15 +681,9 @@ isExist:false   不存在
                     }
                 ],
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499303990,
-                    "nano": 17000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499303990,
-                    "nano": 37000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1014,
@@ -780,15 +695,9 @@ isExist:false   不存在
                     }
                 ],
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499740113,
-                    "nano": 321000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499740113,
-                    "nano": 321000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1015,
@@ -808,15 +717,9 @@ isExist:false   不存在
                     }
                 ],
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500426755,
-                    "nano": 959000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500426755,
-                    "nano": 998000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -878,15 +781,9 @@ isExist:false   不存在
              }
          ],
          "createdBy": "wyf",
-         "createdDate": {
-             "epochSecond": 1500438436,
-             "nano": 544000000
-         },
+         "createdDate": 1502886018656,
          "lastModifiedBy": "wyf",
-         "lastModifiedDate": {
-             "epochSecond": 1500438436,
-             "nano": 544000000
-         }
+         "lastModifiedDate": 1504517002229
      }
  }
    
@@ -937,16 +834,10 @@ isExist:false   不存在
                 "value": "公斤"
             }
         ],
-        "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500438529,
-            "nano": 447000000
-        },
-        "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500438529,
-            "nano": 458000000
-        }
+         "createdBy": "wyf",
+         "createdDate": 1502886018656,
+         "lastModifiedBy": "wyf",
+         "lastModifiedDate": 1504517002229
     }
 }
 
@@ -955,7 +846,7 @@ isExist:false   不存在
 - 功能描述: 根据名字查询编码类型信息
 - 请求地址: `http://localhost:8080/infras/codeTypes/query?access_token&name`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/codeTypes/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=单位`
+- 请求示例: `http://localhost:8080/infras/codeTypes/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=单位&page=0&size=20&sort=id,DESC`
 - 返回示例
 ```
 {
@@ -980,15 +871,9 @@ isExist:false   不存在
                     }
                 ],
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500426755,
-                    "nano": 959000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500426755,
-                    "nano": 998000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1013,
@@ -1008,15 +893,9 @@ isExist:false   不存在
                     }
                 ],
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500438332,
-                    "nano": 305000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500438332,
-                    "nano": 329000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1017,
@@ -1036,15 +915,9 @@ isExist:false   不存在
                     }
                 ],
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500438376,
-                    "nano": 865000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500438376,
-                    "nano": 865000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1018,
@@ -1064,15 +937,9 @@ isExist:false   不存在
                     }
                 ],
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500438529,
-                    "nano": 447000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500438529,
-                    "nano": 458000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -1080,7 +947,16 @@ isExist:false   不存在
         "totalElements": 4,
         "number": 0,
         "size": 20,
-        "sort": null,
+        "sort": [
+                    {
+                        "direction": "DESC",
+                        "property": "id",
+                        "ignoreCase": false,
+                        "nullHandling": "NATIVE",
+                        "ascending": false,
+                        "descending": true
+                    }
+                ],
         "first": true,
         "numberOfElements": 4
     }
@@ -1105,15 +981,9 @@ isExist:false   不存在
         "coordinates": null,
         "parkingArea": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1499741709,
-            "nano": 108000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1499741709,
-            "nano": 214000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 
@@ -1137,15 +1007,9 @@ isExist:false   不存在
                 "coordinates": null,
                 "parkingArea": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499741709,
-                    "nano": 108000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499741709,
-                    "nano": 214000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1021,
@@ -1155,15 +1019,9 @@ isExist:false   不存在
                 "coordinates": null,
                 "parkingArea": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499742628,
-                    "nano": 516000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499742628,
-                    "nano": 535000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -1188,10 +1046,7 @@ isExist:false   不存在
 {               
     "name": "望江西路-创新大道",
     "level": 1023,
-    "levelText": "B级路段",
-    "coordinates": null,
-    "parkingArea": null,
-    "createdBy": "wyf"               
+    "levelText": "B级路段"            
 }
        
 ```
@@ -1207,15 +1062,9 @@ isExist:false   不存在
         "coordinates": null,
         "parkingArea": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500434020,
-            "nano": 79000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500434020,
-            "nano": 79000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 
@@ -1231,11 +1080,7 @@ isExist:false   不存在
                 
     "name": "望江西路-创新大道",
     "level": 1023,
-    "levelText": "SSS级路段",
-    "coordinates": null,
-    "parkingArea": null,
-    "createdBy": "wyf"
-               
+    "levelText": "SSS级路段"              
 }
 
 ```
@@ -1251,15 +1096,9 @@ isExist:false   不存在
         "coordinates": null,
         "parkingArea": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500434109,
-            "nano": 113000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500434109,
-            "nano": 179000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 ```
@@ -1267,7 +1106,7 @@ isExist:false   不存在
 - 功能描述: 根据名字查询路段信息
 - 请求地址: `http://localhost:8080/infras/roadSections/query?access_token`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/roadSections/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=望江西路-创新大道`
+- 请求示例: `http://localhost:8080/infras/roadSections/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=望江西路-创新大道&page=0&size=20&sort=id,ASC`
 - 返回示例:
 ```
 {
@@ -1282,15 +1121,9 @@ isExist:false   不存在
                 "coordinates": null,
                 "parkingArea": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500434109,
-                    "nano": 113000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500434109,
-                    "nano": 179000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -1298,7 +1131,16 @@ isExist:false   不存在
         "totalElements": 1,
         "number": 0,
         "size": 20,
-        "sort": null,
+        "sort": [
+                    {
+                        "direction": "DESC",
+                        "property": "id",
+                        "ignoreCase": false,
+                        "nullHandling": "NATIVE",
+                        "ascending": false,
+                        "descending": true
+                    }
+                ],
         "first": true,
         "numberOfElements": 1
     }
@@ -1322,15 +1164,9 @@ isExist:false   不存在
             "coordinates": null,
             "parkingArea": null,
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1499741709,
-                "nano": 108000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1499741709,
-                "nano": 214000000
-            }
+            "lastModifiedDate": 1504517002229
         },
         {
             "id": 1021,
@@ -1340,15 +1176,9 @@ isExist:false   不存在
             "coordinates": null,
             "parkingArea": null,
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1499742628,
-                "nano": 516000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1499742628,
-                "nano": 535000000
-            }
+            "lastModifiedDate": 1504517002229
         },
         {
             "id": 1022,
@@ -1358,15 +1188,9 @@ isExist:false   不存在
             "coordinates": null,
             "parkingArea": null,
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500434109,
-                "nano": 113000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500434109,
-                "nano": 179000000
-            }
+            "lastModifiedDate": 1504517002229
         }
     ]
 }
@@ -1441,6 +1265,7 @@ isExist:false   不存在
       "data": [
           {
               "id": 1022,
+              "name": "长江路",
               "coordinates": {
                   "type": "MultiLineString",
                   "coordinates": [
@@ -1516,7 +1341,8 @@ isExist:false   不存在
                       ]
                   ]
               },
-              "parkingNum": 0
+              "parkingNum": 0,
+              "name": "长江路"
           },
           ...
       ]
@@ -1566,7 +1392,8 @@ isExist:false   不存在
                       ]
                   ]
               },
-              "parkingNum": 0
+              "parkingNum": 0,
+              "name": "长江路"
           }
       ]
   }
@@ -1590,6 +1417,7 @@ isExist:false   不存在
      "data": {
          "id": 1030,
          "name": "岳西路-长江西路",
+         "parkingAreaName": "潜山路-长江西路",
          "coordinates": {
              "type": "MultiLineString",
              "coordinates": [
@@ -1616,7 +1444,7 @@ isExist:false   不存在
              ]
          },
          "usedParkingNum": 12,
-         "parkingNum": 11
+         "totalParkingNum": 11
      }
  }
  ```
@@ -1635,8 +1463,7 @@ isExist:false   不存在
     "data": {
         "id": 1021,
         "district": "蜀山区",
-        "name": "岳西路-长江西路",
-        "chargeStrategyDescription": "收费策略"
+        "name": "岳西路-长江西路"
     }
 }
 ```
@@ -1654,8 +1481,12 @@ isExist:false   不存在
     "status": "SUCCESS",
     "data": [
         {
-            "id": 1014,
-            "name": "岗位11"
+            "id": 1020,
+            "name": "岗位4"
+        },
+        {
+            "id": 1021,
+            "name": "岗位3"
         }
     ]
 }
@@ -1678,10 +1509,12 @@ isExist:false   不存在
       "status": "SUCCESS",
       "data": {
       	"totalNum":0,
-        	"parkingNumStats":[{
-            "district":"蜀山区",
-            "parkingNum":0
-        	}]
+        "parkingNumStats":[
+      	    {
+                "district":"蜀山区",
+                "parkingNum":0
+        	}
+      	    ]
       }
   }
   ```
@@ -1714,30 +1547,19 @@ isExist:false   不存在
             "roadSection": null,
             "employees": [],
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1499741143,
-                "nano": 601000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1499741143,
-                "nano": 925000000
-            }
+            "lastModifiedDate": 1504517002229
         },
         "type": null,
         "typeText": null,
         "arrangementDirection": 1,
         "chargingStrategy": null,
+        "sortCode":151144,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1499243037,
-            "nano": 773000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1499243037,
-            "nano": 773000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 ```
@@ -1765,30 +1587,19 @@ isExist:false   不存在
                     "roadSection": null,
                     "employees": [],
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499741143,
-                        "nano": 601000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499741143,
-                        "nano": 925000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "type": null,
                 "typeText": null,
                 "arrangementDirection": 1,
                 "chargingStrategy": null,
+                "sortCode":151144,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499243037,
-                    "nano": 773000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499243037,
-                    "nano": 773000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1018,
@@ -1803,106 +1614,19 @@ isExist:false   不存在
                     "roadSection": null,
                     "employees": [],
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499741143,
-                        "nano": 601000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499741143,
-                        "nano": 925000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "type": null,
                 "typeText": null,
                 "arrangementDirection": 1,
                 "chargingStrategy": null,
+                "sortCode":151144,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499243053,
-                    "nano": 394000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499243053,
-                    "nano": 394000000
-                }
-            },
-            {
-                "id": 1020,
-                "code": "154142",
-                "post": {
-                    "id": 1014,
-                    "name": "岗位1",
-                    "direction": 1,
-                    "coordinates": null,
-                    "parkingType": 1,
-                    "parkingDistribution": 1,
-                    "roadSection": null,
-                    "employees": [],
-                    "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499741143,
-                        "nano": 601000000
-                    },
-                    "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499741143,
-                        "nano": 925000000
-                    }
-                },
-                "type": null,
-                "typeText": null,
-                "arrangementDirection": 1,
-                "chargingStrategy": null,
-                "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499243072,
-                    "nano": 762000000
-                },
-                "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499243072,
-                    "nano": 762000000
-                }
-            },
-            {
-                "id": 1021,
-                "code": "154144",
-                "post": {
-                    "id": 1014,
-                    "name": "岗位1",
-                    "direction": 1,
-                    "coordinates": null,
-                    "parkingType": 1,
-                    "parkingDistribution": 1,
-                    "roadSection": null,
-                    "employees": [],
-                    "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499741143,
-                        "nano": 601000000
-                    },
-                    "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499741143,
-                        "nano": 925000000
-                    }
-                },
-                "type": null,
-                "typeText": null,
-                "arrangementDirection": 1,
-                "chargingStrategy": null,
-                "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499243082,
-                    "nano": 293000000
-                },
-                "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499243082,
-                    "nano": 293000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -1934,11 +1658,8 @@ isExist:false   不存在
         "coordinates": null,
         "parkingType": 1,
         "parkingDistribution": 1,
-        "roadSection": null,
-        "employees": []
-       
-        }
-                  
+        "employees": []      
+        }                 
 }      
 ```
 - 返回示例:
@@ -1957,31 +1678,19 @@ isExist:false   不存在
             "parkingDistribution": 1,
             "roadSection": null,
             "employees": [],
-            "createdBy": null,
-            "createdDate": {
-                "epochSecond": 1500432402,
-                "nano": 649000000
-            },
-            "lastModifiedBy": null,
-            "lastModifiedDate": {
-                "epochSecond": 1500432402,
-                "nano": 649000000
-            }
+            "createdBy": "wyf",
+            "createdDate": 1502886018656,
+            "lastModifiedBy": "wyf",
+            "lastModifiedDate": 1504517002229
         },
         "type": null,
         "typeText": null,
         "arrangementDirection": null,
         "chargingStrategy": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500432402,
-            "nano": 651000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500432402,
-            "nano": 651000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 ```
@@ -1989,27 +1698,13 @@ isExist:false   不存在
 - 功能描述: 根据id更新泊位信息
 - 请求地址: `http://localhost:8080/infras/parkings/{id}?access_token`
 - 请求动作: `PUT`
-- 请求示例: `http://localhost:8080/infras/parkings/1021?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+- 请求示例: `http://localhost:8080/infras/parkings/1031?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body:
 ```
 {       
     "code": "22222",
     "post": {
-        "id": 1014,
-        "name": "岗位1",
-        "direction": 1,
-        "coordinates": null,
-        "parkingType": 1,
-        "parkingDistribution": 1,
-        "roadSection": {
-            "id": 1021,
-            "name": "岳西路-长江西路",
-            "level": 1022,
-            "levelText": "A级路段",
-            "coordinates": null,
-            "parkingArea": null
-          
-          }      
+        "id": 1014  
     }
  }
 ```
@@ -2018,59 +1713,30 @@ isExist:false   不存在
 {
     "status": "SUCCESS",
     "data": {
-        "id": 1021,
-        "code": "22222",
+        "id": 1031,
+        "code": "154151",
         "post": {
             "id": 1014,
-            "name": "岗位1",
+            "name": "岗位11",
             "direction": 1,
             "coordinates": null,
             "parkingType": 1,
             "parkingDistribution": 1,
-            "roadSection": {
-                "id": 1021,
-                "name": "岳西路-长江西路",
-                "level": 1022,
-                "levelText": "A级路段",
-                "coordinates": null,
-                "parkingArea": null,
-                "createdBy": null,
-                "createdDate": {
-                    "epochSecond": 1500511071,
-                    "nano": 805000000
-                },
-                "lastModifiedBy": null,
-                "lastModifiedDate": {
-                    "epochSecond": 1500511071,
-                    "nano": 805000000
-                }
-            },
-            "employees": null,
-            "createdBy": null,
-            "createdDate": {
-                "epochSecond": 1500511071,
-                "nano": 805000000
-            },
-            "lastModifiedBy": null,
-            "lastModifiedDate": {
-                "epochSecond": 1500511071,
-                "nano": 805000000
-            }
+            "roadSection": null,
+            "createdBy": "wyf",
+            "createdDate": 1502706611000,
+            "lastModifiedBy": "wyf",
+            "lastModifiedDate": 1502706617000
         },
         "type": null,
         "typeText": null,
-        "arrangementDirection": 1,
+        "arrangementDirection": null,
         "chargingStrategy": null,
+        "sortCode": 154151,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500511071,
-            "nano": 805000000
-        },
+        "createdDate": 1502114054000,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500511071,
-            "nano": 964000000
-        }
+        "lastModifiedDate": 1502114054000
     }
 }
 ```
@@ -2078,7 +1744,7 @@ isExist:false   不存在
 - 功能描述: 根据编码查询停车场信息
 - 请求地址: `http://localhost:8080/infras/parkings/query?access_token&code`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/parkings/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&code=154142`
+- 请求示例: `http://localhost:8080/infras/parkings/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&code=154155&page=0&size=20&sort=sortCode,DESC`
 - 返回示例:
 ```
 {
@@ -2086,50 +1752,145 @@ isExist:false   不存在
     "data": {
         "content": [
             {
-                "id": 1020,
-                "code": "154142",
+                "id": 1035,
+                "code": "154155",
                 "post": {
-                    "id": 1014,
-                    "name": "岗位1",
+                    "id": 1020,
+                    "name": "岗位4",
                     "direction": 1,
-                    "coordinates": null,
-                    "parkingType": 1,
-                    "parkingDistribution": 1,
-                    "roadSection": null,
-                    "employees": [],
-                    "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499741143,
-                        "nano": 601000000
+                    "coordinates": {
+                        "type": "MultiLineString",
+                        "coordinates": [
+                            [
+                                [
+                                    117.23114397386678,
+                                    31.847996220026925
+                                ],
+                                [
+                                    117.23119225362905,
+                                    31.846328412456177
+                                ]
+                            ],
+                            [
+                                [
+                                    117.23104741434224,
+                                    31.847968879162345
+                                ],
+                                [
+                                    117.23111715177663,
+                                    31.846314741777725
+                                ]
+                            ]
+                        ]
                     },
+                    "parkingType": 2,
+                    "parkingDistribution": 1,
+                    "roadSection": {
+                        "id": 1020,
+                        "name": "潜山路-怀宁路",
+                        "level": 1023,
+                        "levelText": "B级路段",
+                        "coordinates": {
+                            "type": "MultiLineString",
+                            "coordinates": [
+                                [
+                                    [
+                                        117.19933306810447,
+                                        31.85425372612921
+                                    ],
+                                    [
+                                        117.20415567991324,
+                                        31.85509211848664
+                                    ]
+                                ],
+                                [
+                                    [
+                                        117.20410740015097,
+                                        31.855206029903528
+                                    ],
+                                    [
+                                        117.1993223392684,
+                                        31.854381308066642
+                                    ]
+                                ]
+                            ]
+                        },
+                        "parkingArea": {
+                            "id": 1037,
+                            "code": "700000",
+                            "name": "岳西路停车场",
+                            "coordinates": {
+                                "type": "MultiLineString",
+                                "coordinates": [
+                                    [
+                                        [
+                                            117.19933306810447,
+                                            31.85425372612921
+                                        ],
+                                        [
+                                            117.20415567991324,
+                                            31.85509211848664
+                                        ]
+                                    ],
+                                    [
+                                        [
+                                            117.20410740015097,
+                                            31.855206029903528
+                                        ],
+                                        [
+                                            117.1993223392684,
+                                            31.854381308066642
+                                        ]
+                                    ]
+                                ]
+                            },
+                            "parkingPositionQuantity": 600,
+                            "maintainEnterprise": null,
+                            "province": "安徽省",
+                            "city": "",
+                            "district": "蜀山区",
+                            "createdBy": "wyf",
+                            "createdDate": 1501771500000,
+                            "lastModifiedBy": "wyf",
+                            "lastModifiedDate": 1504572445649
+                        },
+                        "parkingNum": 2,
+                        "createdBy": "wyf",
+                        "createdDate": 1501809923000,
+                        "lastModifiedBy": "wyf",
+                        "lastModifiedDate": 1503731330726
+                    },
+                    "createdBy": "wyf",
+                    "createdDate": 1502706609000,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499741143,
-                        "nano": 925000000
-                    }
+                    "lastModifiedDate": 1502706616000
                 },
                 "type": null,
                 "typeText": null,
-                "arrangementDirection": 1,
+                "arrangementDirection": 2,
                 "chargingStrategy": null,
+                "sortCode": 154155,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499243072,
-                    "nano": 762000000
-                },
+                "createdDate": 1503483640681,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499243072,
-                    "nano": 762000000
-                }
+                "lastModifiedDate": 1503483640728
             }
         ],
-        "last": true,
         "totalPages": 1,
         "totalElements": 1,
+        "last": true,
         "number": 0,
         "size": 20,
-        "sort": null,
+        "sort": [
+            {
+                "direction": "DESC",
+                "property": "sortCode",
+                "ignoreCase": false,
+                "nullHandling": "NATIVE",
+                "ascending": false,
+                "descending": true
+            }
+        ],
         "first": true,
         "numberOfElements": 1
     }
@@ -2194,15 +1955,9 @@ isExist:false   不存在
         "parentEnterprise": null,
         "sort": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1499241690,
-            "nano": 619000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1499241690,
-            "nano": 701000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 
@@ -2233,15 +1988,9 @@ isExist:false   不存在
                 "parentEnterprise": null,
                 "sort": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499241690,
-                    "nano": 619000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499241690,
-                    "nano": 701000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1004,
@@ -2258,15 +2007,9 @@ isExist:false   不存在
                 "parentEnterprise": null,
                 "sort": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499403260,
-                    "nano": 36000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499403260,
-                    "nano": 36000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1005,
@@ -2283,15 +2026,9 @@ isExist:false   不存在
                 "parentEnterprise": null,
                 "sort": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500431895,
-                    "nano": 519000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500431895,
-                    "nano": 532000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -2314,7 +2051,6 @@ isExist:false   不存在
 - Body:
 ```
 {
-
     "name": "合肥城市泊车投资管理有限公司全资子公司",
     "abbr": "合肥城泊分公司",
     "type": null,
@@ -2325,10 +2061,7 @@ isExist:false   不存在
     "city": "合肥市",
     "district": "庐阳区",
     "address": "劳动局10楼",
-    "parentEnterprise": null,
-    "sort": null,
-    "createdBy": "wyf"
-  
+    "parentEnterprise": null
 }
 ```
 - 返回示例：
@@ -2350,15 +2083,9 @@ isExist:false   不存在
         "parentEnterprise": null,
         "sort": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500434559,
-            "nano": 151000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500434559,
-            "nano": 151000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 
@@ -2393,15 +2120,9 @@ isExist:false   不存在
         "parentEnterprise": null,
         "sort": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500434635,
-            "nano": 658000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500434635,
-            "nano": 667000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 
@@ -2410,7 +2131,7 @@ isExist:false   不存在
 - 功能描述: 根据名字查询企业信息
 - 请求地址: `http://localhost:8080/infras/enterprises/query?access_token&name`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/enterprises/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=合肥城市泊车投资管理有限公司全资子公司`
+- 请求示例: `http://localhost:8080/infras/enterprises/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=合肥城市泊车投资管理有限公司全资子公司&page=0&size=20&sort=sort,DESC`
 - 返回示例:
 ```
 {
@@ -2432,15 +2153,9 @@ isExist:false   不存在
                 "parentEnterprise": null,
                 "sort": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500434559,
-                    "nano": 151000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500434559,
-                    "nano": 151000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1005,
@@ -2457,15 +2172,9 @@ isExist:false   不存在
                 "parentEnterprise": null,
                 "sort": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500434635,
-                    "nano": 658000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500434635,
-                    "nano": 667000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -2473,7 +2182,16 @@ isExist:false   不存在
         "totalPages": 1,
         "number": 0,
         "size": 20,
-        "sort": null,
+        "sort": [
+                    {
+                        "direction": "DESC",
+                        "property": "sort",
+                        "ignoreCase": false,
+                        "nullHandling": "NATIVE",
+                        "ascending": false,
+                        "descending": true
+                    }
+                ],
         "first": true,
         "numberOfElements": 2
     }
@@ -2505,15 +2223,9 @@ isExist:false   不存在
             "parentEnterprise": null,
             "sort": null,
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500434559,
-                "nano": 151000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500434559,
-                "nano": 151000000
-            }
+            "lastModifiedDate": 1504517002229
         },
         {
             "id": 1005,
@@ -2530,15 +2242,9 @@ isExist:false   不存在
             "parentEnterprise": null,
             "sort": null,
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500434635,
-                "nano": 658000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500434635,
-                "nano": 667000000
-            }
+            "lastModifiedDate": 1504517002229
         }
     ]
 }
@@ -2562,18 +2268,12 @@ isExist:false   不存在
         "parkingPositionQuantity": 600,
         "maintainEnterprise": null,
         "province": "安徽省",
-        "city": "北京市",
+        "city": "合肥市",
         "district": "蜀山区",
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500432359,
-            "nano": 165000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500432359,
-            "nano": 217000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 
@@ -2624,15 +2324,9 @@ isExist:false   不存在
                 "city": "合肥市",
                 "district": "蜀山区",
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499846577,
-                    "nano": 733000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499846578,
-                    "nano": 19000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1038,
@@ -2645,15 +2339,9 @@ isExist:false   不存在
                 "city": "合肥市",
                 "district": "蜀山区",
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500432213,
-                    "nano": 880000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500432213,
-                    "nano": 880000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1037,
@@ -2666,15 +2354,9 @@ isExist:false   不存在
                 "city": "北京市",
                 "district": "蜀山区",
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500432359,
-                    "nano": 165000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500432359,
-                    "nano": 217000000
-                }
+                "lastModifiedDate": 1504517002229}
             }
         ],
         "last": true,
@@ -2721,15 +2403,9 @@ isExist:false   不存在
         "city": "合肥市",
         "district": "蜀山区",
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500434958,
-            "nano": 219000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500434958,
-            "nano": 219000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 
@@ -2760,15 +2436,9 @@ isExist:false   不存在
         "city": "北京市",
         "district": "蜀山区",
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500435013,
-            "nano": 218000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500435013,
-            "nano": 228000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 
@@ -2777,7 +2447,7 @@ isExist:false   不存在
 - 功能描述: 根据名字查询停车场信息
 - 请求地址: `http://localhost:8080/infras/parkingAreas/query?access_token&name`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/parkingAreas/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=长江西路停车场`
+- 请求示例: `http://localhost:8080/infras/parkingAreas/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=长江西路停车场&page=0&size=20&sort=code,DESC`
 - 返回示例:
 ```
 {
@@ -2819,15 +2489,9 @@ isExist:false   不存在
                 "city": "合肥市",
                 "district": "蜀山区",
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499846577,
-                    "nano": 733000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499846578,
-                    "nano": 19000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -2835,7 +2499,16 @@ isExist:false   不存在
         "totalPages": 1,
         "number": 0,
         "size": 20,
-        "sort": null,
+        "sort": [
+                    {
+                        "direction": "DESC",
+                        "property": "code",
+                        "ignoreCase": false,
+                        "nullHandling": "NATIVE",
+                        "ascending": false,
+                        "descending": true
+                    }
+                ],
         "first": true,
         "numberOfElements": 1
     }
@@ -2863,15 +2536,9 @@ isExist:false   不存在
             "city": "合肥市",
             "district": "蜀山区",
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500432213,
-                "nano": 880000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500432213,
-                "nano": 880000000
-            }
+            "lastModifiedDate": 1504517002229
         },
         {
             "id": 1039,
@@ -2884,15 +2551,9 @@ isExist:false   不存在
             "city": "合肥市",
             "district": "蜀山区",
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500434958,
-                "nano": 219000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500434958,
-                "nano": 219000000
-            }
+            "lastModifiedDate": 1504517002229
         }
     ]
 }
@@ -2938,27 +2599,15 @@ isExist:false   不存在
             "coordinates": null,
             "parkingArea": null,
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1499742628,
-                "nano": 516000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1499742628,
-                "nano": 535000000
-            }
+            "lastModifiedDate": 1504517002229
         },
         "employees": [],
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1499741143,
-            "nano": 601000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1499741143,
-            "nano": 925000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 
@@ -2989,27 +2638,15 @@ isExist:false   不存在
                     "coordinates": null,
                     "parkingArea": null,
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499742628,
-                        "nano": 516000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499742628,
-                        "nano": 535000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "employees": [],
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499741143,
-                    "nano": 601000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499741143,
-                    "nano": 925000000
-                }
+                "lastModifiedDate": 1504517002229}
             },
             {
                 "id": 1015,
@@ -3026,27 +2663,15 @@ isExist:false   不存在
                     "coordinates": null,
                     "parkingArea": null,
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499741709,
-                        "nano": 108000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499741709,
-                        "nano": 214000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "employees": [],
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500433930,
-                    "nano": 602000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500433930,
-                    "nano": 703000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1020,
@@ -3063,27 +2688,15 @@ isExist:false   不存在
                     "coordinates": null,
                     "parkingArea": null,
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499741709,
-                        "nano": 108000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499741709,
-                        "nano": 214000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "employees": [],
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500434195,
-                    "nano": 434000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500434195,
-                    "nano": 434000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -3112,19 +2725,9 @@ isExist:false   不存在
     "parkingType": 2,
     "parkingDistribution": 1,
     "roadSection": {
-        "id": 1020,
-        "name": "潜山路-怀宁路",
-        "level": 1023,
-        "levelText": "B级路段",
-        "coordinates": null,
-        "parkingArea": null,
-        "createdBy": "wyf"
+        "id": 1020
     },
-    "employees": [],
-    "createdBy": "wyf",
-  
-    "lastModifiedBy": "wyf"
-
+    "employees": []
 }
 ```
 - 返回示例:
@@ -3146,27 +2749,15 @@ isExist:false   不存在
             "coordinates": null,
             "parkingArea": null,
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500435285,
-                "nano": 400000000
-            },
-            "lastModifiedBy": null,
-            "lastModifiedDate": {
-                "epochSecond": 1500435285,
-                "nano": 400000000
-            }
+            "createdDate": 1502886018656,
+            "lastModifiedBy": "wyf",
+            "lastModifiedDate": 1504517002229
         },
         "employees": [],
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500435285,
-            "nano": 403000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500435285,
-            "nano": 403000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 
@@ -3201,27 +2792,15 @@ isExist:false   不存在
             "coordinates": null,
             "parkingArea": null,
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1499741709,
-                "nano": 108000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1499741709,
-                "nano": 214000000
-            }
+            "lastModifiedDate": 1504517002229
         },
         "employees": [],
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500435357,
-            "nano": 199000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500435357,
-            "nano": 206000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 
@@ -3230,7 +2809,7 @@ isExist:false   不存在
 - 功能描述: 根据路段名查询岗位信息
 - 请求地址: `http://localhost:8080/infras/posts/query?access_token&roadSectionName`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/posts/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&roadSectionName=岳西路-长江西路`
+- 请求示例: `http://localhost:8080/infras/posts/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&roadSectionName=岳西路-长江西路&page=0&size=20&sort=id,DESC`
 - 返回示例:
 ```
 {
@@ -3252,27 +2831,15 @@ isExist:false   不存在
                     "coordinates": null,
                     "parkingArea": null,
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499742628,
-                        "nano": 516000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499742628,
-                        "nano": 535000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "employees": [],
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499741143,
-                    "nano": 601000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499741143,
-                    "nano": 925000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -3280,7 +2847,16 @@ isExist:false   不存在
         "totalPages": 1,
         "number": 0,
         "size": 20,
-        "sort": null,
+        "sort": [
+                    {
+                        "direction": "DESC",
+                        "property": "id",
+                        "ignoreCase": false,
+                        "nullHandling": "NATIVE",
+                        "ascending": false,
+                        "descending": true
+                    }
+                ],
         "first": true,
         "numberOfElements": 1
     }
@@ -3312,27 +2888,15 @@ isExist:false   不存在
                 "coordinates": null,
                 "parkingArea": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499741709,
-                    "nano": 108000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499741709,
-                    "nano": 214000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             "employees": [],
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500434195,
-                "nano": 434000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500434195,
-                "nano": 434000000
-            }
+            "lastModifiedDate": 1504517002229
         },
         {
             "id": 1021,
@@ -3349,27 +2913,15 @@ isExist:false   不存在
                 "coordinates": null,
                 "parkingArea": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499741709,
-                    "nano": 108000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499741709,
-                    "nano": 214000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             "employees": [],
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500435285,
-                "nano": 403000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500435285,
-                "nano": 403000000
-            }
+            "lastModifiedDate": 1504517002229
         },
         {
             "id": 1015,
@@ -3386,27 +2938,15 @@ isExist:false   不存在
                 "coordinates": null,
                 "parkingArea": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499741709,
-                    "nano": 108000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499741709,
-                    "nano": 214000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             "employees": [],
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500435357,
-                "nano": 199000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500435357,
-                "nano": 206000000
-            }
+            "lastModifiedDate": 1504517002229
         }
     }
 }
@@ -3466,28 +3006,16 @@ isExist:false   不存在
             "parentEnterprise": null,
             "sort": null,
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1499241690,
-                "nano": 619000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1499241690,
-                "nano": 701000000
-            }
+            "lastModifiedDate": 1504517002229
         },
         "personInCharge": "zz",
         "parentDept": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1499242699,
-            "nano": 339000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1499242699,
-            "nano": 420000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 ```
@@ -3521,28 +3049,16 @@ isExist:false   不存在
                     "parentEnterprise": null,
                     "sort": null,
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499241690,
-                        "nano": 619000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499241690,
-                        "nano": 701000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "personInCharge": "zz",
                 "parentDept": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499242699,
-                    "nano": 339000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499242699,
-                    "nano": 420000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1005,
@@ -3563,28 +3079,16 @@ isExist:false   不存在
                     "parentEnterprise": null,
                     "sort": null,
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499241690,
-                        "nano": 619000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499241690,
-                        "nano": 701000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "personInCharge": null,
                 "parentDept": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500427731,
-                    "nano": 799000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500427731,
-                    "nano": 799000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1004,
@@ -3605,28 +3109,16 @@ isExist:false   不存在
                     "parentEnterprise": null,
                     "sort": null,
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499241690,
-                        "nano": 619000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499241690,
-                        "nano": 701000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "personInCharge": null,
                 "parentDept": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500427828,
-                    "nano": 720000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500427828,
-                    "nano": 749000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -3651,19 +3143,7 @@ isExist:false   不存在
     "name": "情报部门",
     "abbr": "情报",
     "enterprise": {
-        "id": 1003,
-        "name": "合肥城市泊车投资管理有限公司",
-        "abbr": "合肥城泊",
-        "type": null,
-        "contactPerson": "",
-        "contactPersonPhoneNum": "",
-        "contactPersonEmail": "",
-        "province": "安徽省",
-        "city": "合肥市",
-        "district": "庐阳区",
-        "address": "劳动局5楼",
-        "parentEnterprise": null,
-        "sort": null    
+        "id": 1003 
      }
  }
 ```
@@ -3689,29 +3169,17 @@ isExist:false   不存在
             "address": "劳动局5楼",
             "parentEnterprise": null,
             "sort": null,
-            "createdBy": null,
-            "createdDate": {
-                "epochSecond": 1500444243,
-                "nano": 950000000
-            },
-            "lastModifiedBy": null,
-            "lastModifiedDate": {
-                "epochSecond": 1500444243,
-                "nano": 950000000
-            }
+            "createdBy": "wyf",
+            "createdDate": 1502886018656,
+            "lastModifiedBy": "wyf",
+            "lastModifiedDate": 1504517002229
         },
         "personInCharge": null,
         "parentDept": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500444243,
-            "nano": 965000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500444243,
-            "nano": 965000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 
@@ -3727,20 +3195,7 @@ isExist:false   不存在
     "name": "清洁部门",
     "abbr": "情报",
     "enterprise": {
-        "id": 1003,
-        "name": "合肥城市泊车投资管理有限公司",
-        "abbr": "合肥城泊",
-        "type": null,
-        "contactPerson": "",
-        "contactPersonPhoneNum": "",
-        "contactPersonEmail": "",
-        "province": "安徽省",
-        "city": "合肥市",
-        "district": "庐阳区",
-        "address": "劳动局5楼",
-        "parentEnterprise": null,
-        "sort": null
-       
+        "id": 1003
         }                                            
 }               
 ```
@@ -3766,29 +3221,17 @@ isExist:false   不存在
             "address": "劳动局5楼",
             "parentEnterprise": null,
             "sort": null,
-            "createdBy": null,
-            "createdDate": {
-                "epochSecond": 1500444346,
-                "nano": 367000000
-            },
-            "lastModifiedBy": null,
-            "lastModifiedDate": {
-                "epochSecond": 1500444346,
-                "nano": 367000000
-            }
+            "createdBy": "wyf",
+            "createdDate": 1502886018656,
+            "lastModifiedBy": "wyf",
+            "lastModifiedDate": 1504517002229
         },
         "personInCharge": null,
         "parentDept": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500444346,
-            "nano": 367000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500444346,
-            "nano": 386000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 
@@ -3797,7 +3240,7 @@ isExist:false   不存在
 - 功能描述: 根据部门名字查询匹配的所有部门信息
 - 请求地址: `http://localhost:8080/infras/depts/query?access_token&name`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/depts/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=清洁`      
+- 请求示例: `http://localhost:8080/infras/depts/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&name=清洁&page=0&size=20&sort=id,DESC`      
 - 返回示例:
 ```
 {
@@ -3823,28 +3266,16 @@ isExist:false   不存在
                     "parentEnterprise": null,
                     "sort": null,
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499241690,
-                        "nano": 619000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499241690,
-                        "nano": 701000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "personInCharge": null,
                 "parentDept": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500444346,
-                    "nano": 367000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500444346,
-                    "nano": 386000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -3852,7 +3283,16 @@ isExist:false   不存在
         "totalElements": 1,
         "number": 0,
         "size": 20,
-        "sort": null,
+        "sort": [
+                    {
+                        "direction": "DESC",
+                        "property": "id",
+                        "ignoreCase": false,
+                        "nullHandling": "NATIVE",
+                        "ascending": false,
+                        "descending": true
+                    }
+                ],
         "first": true,
         "numberOfElements": 1
     }
@@ -3888,28 +3328,16 @@ isExist:false   不存在
                 "parentEnterprise": null,
                 "sort": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499241690,
-                    "nano": 619000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499241690,
-                    "nano": 701000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             "personInCharge": null,
             "parentDept": null,
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500427731,
-                "nano": 799000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500427731,
-                "nano": 799000000
-            }
+            "lastModifiedDate": 1504517002229
         },
         {
             "id": 1006,
@@ -3930,28 +3358,16 @@ isExist:false   不存在
                 "parentEnterprise": null,
                 "sort": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499241690,
-                    "nano": 619000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499241690,
-                    "nano": 701000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             "personInCharge": null,
             "parentDept": null,
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500444243,
-                "nano": 965000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500444243,
-                "nano": 965000000
-            }
+            "lastModifiedDate": 1504517002229
         },
         {
             "id": 1004,
@@ -3972,28 +3388,16 @@ isExist:false   不存在
                 "parentEnterprise": null,
                 "sort": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499241690,
-                    "nano": 619000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499241690,
-                    "nano": 701000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             "personInCharge": null,
             "parentDept": null,
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500444346,
-                "nano": 367000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500444346,
-                "nano": 386000000
-            }
+            "lastModifiedDate": 1504517002229
         }
     ]
 }
@@ -4046,15 +3450,9 @@ isExist:false   不存在
         "sort": null,
         "defaultPost": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500448668,
-            "nano": 852000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500448669,
-            "nano": 57000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 ```
@@ -4091,29 +3489,17 @@ isExist:false   不存在
                         "address": "劳动局5楼",
                         "parentEnterprise": null,
                         "sort": null,
-                        "createdBy": "wyf",
-                        "createdDate": {
-                            "epochSecond": 1499241690,
-                            "nano": 619000000
-                        },
-                        "lastModifiedBy": "wyf",
-                        "lastModifiedDate": {
-                            "epochSecond": 1499241690,
-                            "nano": 701000000
-                        }
+                    "createdBy": "wyf",
+                    "createdDate": 1502886018656,
+                    "lastModifiedBy": "wyf",
+                    "lastModifiedDate": 1504517002229
                     },
                     "personInCharge": "zz",
                     "parentDept": null,
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499242699,
-                        "nano": 339000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499242699,
-                        "nano": 420000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "position": 1025,
                 "positionText": "收费员",
@@ -4134,38 +3520,20 @@ isExist:false   不存在
                         "coordinates": null,
                         "parkingArea": null,
                         "createdBy": "wyf",
-                        "createdDate": {
-                            "epochSecond": 1499742628,
-                            "nano": 516000000
-                        },
+                        "createdDate": 1502886018656,
                         "lastModifiedBy": "wyf",
-                        "lastModifiedDate": {
-                            "epochSecond": 1499742628,
-                            "nano": 535000000
-                        }
+                        "lastModifiedDate": 1504517002229
                     },
                     "employees": [],
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499741143,
-                        "nano": 601000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499741143,
-                        "nano": 925000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1499257071,
-                    "nano": 186000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1499257071,
-                    "nano": 196000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1002,
@@ -4178,15 +3546,9 @@ isExist:false   不存在
                 "sort": null,
                 "defaultPost": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500429196,
-                    "nano": 313000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500429196,
-                    "nano": 343000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1003,
@@ -4199,15 +3561,9 @@ isExist:false   不存在
                 "sort": null,
                 "defaultPost": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500429210,
-                    "nano": 195000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500429210,
-                    "nano": 195000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1004,
@@ -4232,28 +3588,16 @@ isExist:false   不存在
                         "parentEnterprise": null,
                         "sort": null,
                         "createdBy": "wyf",
-                        "createdDate": {
-                            "epochSecond": 1499241690,
-                            "nano": 619000000
-                        },
+                        "createdDate": 1502886018656,
                         "lastModifiedBy": "wyf",
-                        "lastModifiedDate": {
-                            "epochSecond": 1499241690,
-                            "nano": 701000000
-                        }
+                        "lastModifiedDate": 1504517002229
                     },
                     "personInCharge": "zz",
                     "parentDept": null,
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1499242699,
-                        "nano": 339000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1499242699,
-                        "nano": 420000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "position": null,
                 "positionText": null,
@@ -4261,15 +3605,9 @@ isExist:false   不存在
                 "sort": null,
                 "defaultPost": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500430839,
-                    "nano": 704000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500430839,
-                    "nano": 893000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1005,
@@ -4282,15 +3620,9 @@ isExist:false   不存在
                 "sort": null,
                 "defaultPost": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500448668,
-                    "nano": 852000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500448669,
-                    "nano": 57000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             {
                 "id": 1006,
@@ -4303,15 +3635,9 @@ isExist:false   不存在
                 "sort": null,
                 "defaultPost": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500449011,
-                    "nano": 503000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500449011,
-                    "nano": 517000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -4360,15 +3686,9 @@ isExist:false   不存在
         "sort": null,
         "defaultPost": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500460509,
-            "nano": 640000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500460509,
-            "nano": 702000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 
@@ -4383,13 +3703,7 @@ isExist:false   不存在
 {
     "id": 1005,
     "name": "小吧",
-    "gender": 2,
-    "dept": null,
-    "position": null,
-    "positionText": null,
-    "phoneNum": null,
-    "sort": null,
-    "defaultPost": null, 
+    "gender": 2
 }
 
 ```
@@ -4408,15 +3722,9 @@ isExist:false   不存在
         "sort": null,
         "defaultPost": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1500460602,
-            "nano": 552000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1500460602,
-            "nano": 731000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 ```
@@ -4426,7 +3734,7 @@ isExist:false   不存在
          或 `http://localhost:8080/infras/employees/query?access_token&name`
          或 `http://localhost:8080/infras/employees/query?access_token&name&phoneNum`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/employees/query?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&name=佘能斌`
+- 请求示例: `http://localhost:8080/infras/employees/query?access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&name=佘能斌&page=0&size=20&sort=sort,DESC`
 - 返回示例:
 ```
 {   
@@ -4455,29 +3763,17 @@ isExist:false   不存在
                        "address": "劳动局5楼",
                        "parentEnterprise": null,
                        "sort": null,
-                       "createdBy": "wyf",
-                       "createdDate": {
-                           "epochSecond": 1499241690,
-                           "nano": 619000000
-                       },
-                       "lastModifiedBy": "wyf",
-                       "lastModifiedDate": {
-                           "epochSecond": 1499241690,
-                           "nano": 701000000
-                       }
+                        "createdBy": "wyf",
+                        "createdDate": 1502886018656,
+                        "lastModifiedBy": "wyf",
+                        "lastModifiedDate": 1504517002229
                    },
                    "personInCharge": "zz",
                    "parentDept": null,
-                   "createdBy": "wyf",
-                   "createdDate": {
-                       "epochSecond": 1499242699,
-                       "nano": 339000000
-                   },
-                   "lastModifiedBy": "wyf",
-                   "lastModifiedDate": {
-                       "epochSecond": 1499242699,
-                       "nano": 420000000
-                   }
+                    "createdBy": "wyf",
+                    "createdDate": 1502886018656,
+                    "lastModifiedBy": "wyf",
+                    "lastModifiedDate": 1504517002229
                },
                "position": 1025,
                "positionText": "收费员",
@@ -4497,39 +3793,21 @@ isExist:false   不存在
                        "levelText": "A级路段",
                        "coordinates": null,
                        "parkingArea": null,
-                       "createdBy": "wyf",
-                       "createdDate": {
-                           "epochSecond": 1499742628,
-                           "nano": 516000000
-                       },
-                       "lastModifiedBy": "wyf",
-                       "lastModifiedDate": {
-                           "epochSecond": 1499742628,
-                           "nano": 535000000
-                       }
+                        "createdBy": "wyf",
+                        "createdDate": 1502886018656,
+                        "lastModifiedBy": "wyf",
+                        "lastModifiedDate": 1504517002229
                    },
                    "employees": [],
-                   "createdBy": "wyf",
-                   "createdDate": {
-                       "epochSecond": 1499741143,
-                       "nano": 601000000
-                   },
-                   "lastModifiedBy": "wyf",
-                   "lastModifiedDate": {
-                       "epochSecond": 1499741143,
-                       "nano": 925000000
-                   }
+                    "createdBy": "wyf",
+                    "createdDate": 1502886018656,
+                    "lastModifiedBy": "wyf",
+                    "lastModifiedDate": 1504517002229
                },
-               "createdBy": "wyf",
-               "createdDate": {
-                   "epochSecond": 1499257071,
-                   "nano": 186000000
-               },
-               "lastModifiedBy": "wyf",
-               "lastModifiedDate": {
-                   "epochSecond": 1499257071,
-                   "nano": 196000000
-               }
+                "createdBy": "wyf",
+                "createdDate": 1502886018656,
+                "lastModifiedBy": "wyf",
+                "lastModifiedDate": 1504517002229
            }
        ],
        "last": true,
@@ -4537,7 +3815,16 @@ isExist:false   不存在
        "totalElements": 1,
        "number": 0,
        "size": 20,
-       "sort": null,
+        "sort": [
+                    {
+                        "direction": "DESC",
+                        "property": "id",
+                        "ignoreCase": false,
+                        "nullHandling": "NATIVE",
+                        "ascending": false,
+                        "descending": true
+                    }
+                ],
        "first": true,
        "numberOfElements": 1
    }
@@ -4721,29 +4008,17 @@ isExist:false   不存在
             "personInCharge": "zz",
             "parentDept": null,
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500963836,
-                "nano": 183000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500963836,
-                "nano": 324000000
-            }
+            "lastModifiedDate": 1504517002229
         },
         "status": 1072,
         "statusText": "使用中",
         "remark": null,
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1502349987,
-            "nano": 979000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1502349988,
-            "nano": 53000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 ```
@@ -4778,29 +4053,17 @@ isExist:false   不存在
                     "personInCharge": "zz",
                     "parentDept": null,
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1500963836,
-                        "nano": 183000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1500963836,
-                        "nano": 324000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "status": 1072,
                 "statusText": "使用中",
                 "remark": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1502349987,
-                    "nano": 979000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1502349988,
-                    "nano": 53000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -4854,9 +4117,9 @@ isExist:false   不存在
 - 功能描述: 按iccid和SN码查询SIM卡信息
 - 请求地址: `http://localhost:8080/infras/sims/query?iccid=123&snCode=456?access_token2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
 - 请求动作: `PUT`
-- 请求示例: `http://localhost:8080/infras/sims/query?iccid=123&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
-         或`http://localhost:8080/infras/sims/query?snCode=456&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
-         或`http://localhost:8080/infras/sims/query?iccid=123&snCode=456&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
+- 请求示例: `http://localhost:8080/infras/sims/query?iccid=123&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&page=0&size=20&sort=id,DESC`
+         或`http://localhost:8080/infras/sims/query?snCode=456&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&page=0&size=20&sort=id,DESC`
+         或`http://localhost:8080/infras/sims/query?iccid=123&snCode=456&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&page=0&size=20&sort=id,DESC`
 - 请求示例:
 ```
 {
@@ -4881,29 +4144,17 @@ isExist:false   不存在
                     "personInCharge": "zz",
                     "parentDept": null,
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1500963836,
-                        "nano": 183000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1500963836,
-                        "nano": 324000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "status": 1072,
                 "statusText": "使用中",
                 "remark": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1502349987,
-                    "nano": 979000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1502349988,
-                    "nano": 53000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -4911,7 +4162,16 @@ isExist:false   不存在
         "totalPages": 1,
         "number": 0,
         "size": 20,
-        "sort": null,
+        "sort": [
+                    {
+                        "direction": "DESC",
+                        "property": "id",
+                        "ignoreCase": false,
+                        "nullHandling": "NATIVE",
+                        "ascending": false,
+                        "descending": true
+                    }
+                ],
         "first": true,
         "numberOfElements": 1
     }
@@ -4953,26 +4213,14 @@ isExist:false   不存在
                 "personInCharge": "zz",
                 "parentDept": null,
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1500963836,
-                    "nano": 183000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1500963836,
-                    "nano": 324000000
-                }
+                "lastModifiedDate": 1504517002229
             },
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500963836,
-                "nano": 183000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500963836,
-                "nano": 320000000
-            }
+            "lastModifiedDate": 1504517002229
         },
         "status": 1072,
         "statusText": "使用中",
@@ -4988,26 +4236,14 @@ isExist:false   不存在
             "sort": null,
             "defaultPost": null,
             "createdBy": "wyf",
-            "createdDate": {
-                "epochSecond": 1500430839,
-                "nano": 704000000
-            },
+            "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
-            "lastModifiedDate": {
-                "epochSecond": 1500430839,
-                "nano": 893000000
-            }
+            "lastModifiedDate": 1504517002229
         },
         "createdBy": "wyf",
-        "createdDate": {
-            "epochSecond": 1502332965,
-            "nano": 400000000
-        },
+        "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": {
-            "epochSecond": 1502332965,
-            "nano": 688000000
-        }
+        "lastModifiedDate": 1504517002229
     }
 }
 ```
@@ -5046,26 +4282,14 @@ isExist:false   不存在
                         "personInCharge": "zz",
                         "parentDept": null,
                         "createdBy": "wyf",
-                        "createdDate": {
-                            "epochSecond": 1500963836,
-                            "nano": 183000000
-                        },
+                        "createdDate": 1502886018656,
                         "lastModifiedBy": "wyf",
-                        "lastModifiedDate": {
-                            "epochSecond": 1500963836,
-                            "nano": 324000000
-                        }
+                        "lastModifiedDate": 1504517002229
                     },
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1500963836,
-                        "nano": 183000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1500963836,
-                        "nano": 320000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "status": 1072,
                 "statusText": "使用中",
@@ -5081,26 +4305,14 @@ isExist:false   不存在
                     "sort": null,
                     "defaultPost": null,
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1500430839,
-                        "nano": 704000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1500430839,
-                        "nano": 893000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1502332965,
-                    "nano": 400000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1502332965,
-                    "nano": 688000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -5150,9 +4362,9 @@ isExist:false   不存在
 - 功能描述: 按Pos机编号和使用者姓名查询Pos机信息
 - 请求地址: `http://localhost:8080/infras/poses/query?code=123&employeeName=456?access_token2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
 - 请求动作: `PUT`
-- 请求示例: `http://localhost:8080/infras/poses/query?code=123&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
-         或`http://localhost:8080/infras/poses/query?employeeName=456&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
-         或`http://localhost:8080/infras/poses/query?code=123&employeeName=456&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
+- 请求示例: `http://localhost:8080/infras/poses/query?code=123&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&page=0&size=20&sort=id,DESC`
+         或`http://localhost:8080/infras/poses/query?employeeName=456&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&page=0&size=20&sort=id,DESC`
+         或`http://localhost:8080/infras/poses/query?code=123&employeeName=456&access_token=2fbd327e-3fc9-43f9-8227-3c4f121d00ca&page=0&size=20&sort=id,DESC`
 - 请求示例:
 ```
 {
@@ -5181,26 +4393,14 @@ isExist:false   不存在
                         "personInCharge": "zz",
                         "parentDept": null,
                         "createdBy": "wyf",
-                        "createdDate": {
-                            "epochSecond": 1500963836,
-                            "nano": 183000000
-                        },
+                        "createdDate": 1502886018656,
                         "lastModifiedBy": "wyf",
-                        "lastModifiedDate": {
-                            "epochSecond": 1500963836,
-                            "nano": 324000000
-                        }
+                        "lastModifiedDate": 1504517002229
                     },
-                    "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1500963836,
-                        "nano": 183000000
-                    },
-                    "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1500963836,
-                        "nano": 320000000
-                    }
+                "createdBy": "wyf",
+                "createdDate": 1502886018656,
+                "lastModifiedBy": "wyf",
+                "lastModifiedDate": 1504517002229
                 },
                 "status": 1072,
                 "statusText": "使用中",
@@ -5216,26 +4416,14 @@ isExist:false   不存在
                     "sort": null,
                     "defaultPost": null,
                     "createdBy": "wyf",
-                    "createdDate": {
-                        "epochSecond": 1500430839,
-                        "nano": 704000000
-                    },
+                    "createdDate": 1502886018656,
                     "lastModifiedBy": "wyf",
-                    "lastModifiedDate": {
-                        "epochSecond": 1500430839,
-                        "nano": 893000000
-                    }
+                    "lastModifiedDate": 1504517002229
                 },
                 "createdBy": "wyf",
-                "createdDate": {
-                    "epochSecond": 1502332965,
-                    "nano": 400000000
-                },
+                "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": {
-                    "epochSecond": 1502332965,
-                    "nano": 688000000
-                }
+                "lastModifiedDate": 1504517002229
             }
         ],
         "last": true,
@@ -5243,7 +4431,16 @@ isExist:false   不存在
         "totalPages": 1,
         "number": 0,
         "size": 20,
-        "sort": null,
+        "sort": [
+                    {
+                        "direction": "DESC",
+                        "property": "id",
+                        "ignoreCase": false,
+                        "nullHandling": "NATIVE",
+                        "ascending": false,
+                        "descending": true
+                    }
+                ],
         "first": true,
         "numberOfElements": 1
     }

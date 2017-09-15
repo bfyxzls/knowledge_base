@@ -272,6 +272,7 @@
 ```
 {
   "fee":4000,
+  "calculatedFee":4000,
   "payType":1,
   "completeDate":"2017-07-13 15:13:14",
   "driveOutEmployeeId":1002,
@@ -446,6 +447,7 @@
 ```
 {
   "fee":333,
+  "calculatedFee":333,
   "payType":1,
   "completeDate":"2017-07-13 15:13:14",
   "driveOutEmployeeId":1002,
@@ -808,15 +810,15 @@
 }
 ```
 
-### 4.2.4 用户驶离
+### 4.2.4 freeDriveOut接口
 
-- 功能描述：用户驶离
+- 功能描述：app端用户免费驶离
 
 - 请求地址：`http://domain/order/app/orders/{id}/freeDriveOut`
 
 - 请求动作：`PUT`
 
-- 请求示例：`http://192.168.1.18:8080/order/app/orders/1000023/freeDriveOut?access_token=1398a422-504a-4e95-8531-52cc0f5ebcc4&payType=4`
+- 请求示例：`http://192.168.1.18:8080/order/app/orders/1000023/freeDriveOut?access_token=1398a422-504a-4e95-8531-52cc0f5ebcc4&payType=4&calculatedFee=100`
 
 - 返回示例：
 
