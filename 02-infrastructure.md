@@ -160,10 +160,11 @@ PS:需要用admin用户获得access_token
         ]
     },
     "parkingPositionQuantity": 3000,
-    "maintainEnterprise": null,
+    "maintainEnterpriseId": 123,
     "province": "安徽省",
     "city": "合肥市",
-    "district": "庐阳区"              
+    "district": "庐阳区",
+    "isOwnBusiness": true
 }
 ```
 - 返回示例
@@ -797,8 +798,7 @@ isExist:false   不存在
 ```
 { 
     "codes": [
-        {
-          
+        {        
             "value": "英磅"
         },
         {
@@ -1080,7 +1080,15 @@ isExist:false   不存在
                 
     "name": "望江西路-创新大道",
     "level": 1023,
-    "levelText": "SSS级路段"              
+    "coordinate": {
+            "type": "Point",
+            "coordinates": [
+                12,
+                77
+            ]
+        },
+    "parkingAreaId":123
+              
 }
 
 ```
@@ -1703,9 +1711,10 @@ isExist:false   不存在
 ```
 {       
     "code": "22222",
-    "post": {
-        "id": 1014  
-    }
+    "postId": 123,
+    "type":1,
+    "arrangementDirection":2,
+    "chargingStrategy":3
  }
 ```
 -返回示例
@@ -2098,7 +2107,18 @@ isExist:false   不存在
 - Body:
 ```
 {       
-        "abbr": "合肥城泊分公司1"        
+        "abbr": "合肥城泊分公司1" ,
+        "name":"zhang",
+         "type":1,
+         "contactPerson":"zhang",
+         "contactPersonPhoneNum":"zhang",
+         "contactPersonEmail":"1231@11.com",
+         "province":"hefei",
+         "city":"hefei",
+         "district":"qu",
+         "address":"zhang",
+         "parentEnterpriseId":112,
+         "sort":12
 }
 ```
 - 返回示例:
@@ -2382,7 +2402,7 @@ isExist:false   不存在
     "name": "岳东路停车场",
     "coordinates": null,
     "parkingPositionQuantity": 600,
-    "maintainEnterprise": null,
+    "maintainEnterpriseId": 123,
     "province": "安徽省",
     "city": "合肥市",
     "district": "蜀山区",              
@@ -2770,7 +2790,12 @@ isExist:false   不存在
 - Body:
 ```
 {  
-    "parkingType": 2   
+    "name": "123" ,  
+    "direction": 2 ,  
+    "coordinates": null ,  
+    "parkingType": 2 ,  
+    "parkingDistribution": 2 ,  
+    "roadSectionId": 2             
 }
 ```
 - 返回示例
@@ -3194,9 +3219,9 @@ isExist:false   不存在
 {
     "name": "清洁部门",
     "abbr": "情报",
-    "enterprise": {
-        "id": 1003
-        }                                            
+    "enterpriseId": 123,
+    "personInCharge": "123",
+    "parentDeptId": 123                                                                                         
 }               
 ```
 - 返回示例:
@@ -3701,9 +3726,13 @@ isExist:false   不存在
 - Body:
 ```
 {
-    "id": 1005,
-    "name": "小吧",
-    "gender": 2
+    "name": "123",
+    "gender": 1,
+    "deptId": 2,
+    "position": 1005,
+    "phoneNum": "小吧",
+    "sort": 2,
+    "defaultPostId": 2   
 }
 
 ```
@@ -4106,9 +4135,15 @@ isExist:false   不存在
 - 请求示例:
 ```
 {	
-	"dept":{
-		"id":1003
-	}
+    "iccid": "123",
+    "operator": 1,
+    "phoneNum": "1213",
+    "snCode": "1231",
+    "equipment": 1,
+    "equipmentCode": "123",
+    "deptId": 2 ,
+    "status": 2,
+    "remark": "2e213"     
 }
 ```
 
@@ -4353,7 +4388,14 @@ isExist:false   不存在
 - 请求示例:
 ```
 {
-	"code":"123456"
+    "code": "213123",
+    "imei": "1213",
+    "version": 1,
+    "producer": 1,
+    "deptId": 123,
+    "status": 2 ,
+    "remark": "q231",
+    "employeeId": 123  
 }
 ```
 
