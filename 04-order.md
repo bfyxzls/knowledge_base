@@ -656,6 +656,36 @@
   }
   ```
 
+
+### 4.1.17 obtainParkingOrderDetailsForInvoice接口
+
+- 功能描述：获取停车订单详细信息
+
+- 请求地址：`http://localhost:8080/order/orders/{id}/obtainParkingOrderDetailsForInvoice?access_token`
+
+- 请求动作：`GET`
+
+- 请求示例：`http://localhost:8080/order/orders/10000283/obtainParkingOrderDetailsForInvoice?access_token=8f3a8e76-fd86-49c6-9bf2-5f42563c2486`
+
+- 返回示例：
+
+  ```json
+  {
+      "status": "SUCCESS",
+      "data": {
+          "vehicleType": "01",
+          "carType": "皖B12345",
+          "roadSectionName": "岳西路-长江西路",
+          "parkingCode": "154140",
+          "createdDate": "2017-08-28 17:04:41",
+          "completeDate": "2017-08-28 17:13:14",
+          "fee": 0,
+          "payType": 1,
+          "parkingPeriod": 8
+      }
+  }
+  ```
+
   ​
 
 ## 4.2 APP端操作订单接口（AppOrderController）
