@@ -883,7 +883,9 @@
         "allParkingOrdersCount": 24,
         "completeParkingOrdersCount": 5,
         "arrearsParkingOrdersCount": 1,
-        "freeParkingOrdersCount": 2
+        "freeParkingOrdersCount": 2,
+        "arrearsPaidParkingOrdersCount": 0
+        
     }
 }
 ```
@@ -952,6 +954,7 @@
           "numOfChargedOrders": 0,
           "numOfArrearsOrders": 0,
           "numOfOnParkingOrders": 103,
+          "arrearsPaidParkingOrdersCount": 0,
           "sumOfTodayOrders": 0
       }
   }

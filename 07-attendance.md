@@ -162,6 +162,7 @@
             "name": "赵朋飞",
             "postName": "岗位3",
             "phoneNum": null,
+            "username":"000853",
             "checkStatus": 2,
             "checkTime": null
         },
