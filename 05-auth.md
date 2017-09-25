@@ -415,7 +415,7 @@ isExist:false   不存在
 
 - 请求地址: `http://domain/uaa/sysusers/obtainUsername/{employeeId}?access_token=ACCESS_TOKEN`
 
-- 请求动作: `HEAD`
+- 请求动作: `GET`
 
 - 请求示例: `http://domain/uaa/sysusers/obtainUsername/1003?access_token=5d780ca8-fc23-4bfd-8513-d64b517e9d63`
 
