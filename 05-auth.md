@@ -408,7 +408,28 @@ hasBinding:false   未绑定
 isExist:true    已存在
 isExist:false   不存在
 ```
-  ​
+
+### 5.1.11  根据employeeId查询用户登录名
+
+- 功能描述: 根据employeeId查询用户登录名
+
+- 请求地址: `http://domain/uaa/sysusers/obtainUsername/{employeeId}?access_token=ACCESS_TOKEN`
+
+- 请求动作: `HEAD`
+
+- 请求示例: `http://domain/uaa/sysusers/obtainUsername/1003?access_token=5d780ca8-fc23-4bfd-8513-d64b517e9d63`
+
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "username": "000"
+    }
+}
+
+```
+
 
 # 5.2 RoleController测试用例
 
