@@ -3805,6 +3805,7 @@ isExist:false   不存在
                     "lastModifiedDate": 1504517002229
                },
                "position": 1025,
+               "username": "zhang",
                "positionText": "收费员",
                "phoneNum": "18621061991",
                "sort": null,
