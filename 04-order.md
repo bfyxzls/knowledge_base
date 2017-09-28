@@ -1184,6 +1184,30 @@
     }
 }
 ```
+
+### 4.5.4 obtainArrearsStats接口
+
+- 功能描述：新增欠费订单总笔数与总金额的统计接口注释
+
+- 请求地址：`http://domain/order/app/vehicles/obtainArrearsStats`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://domain/order/app/vehicles/obtainArrearsStats?access_token=7d3e6db0-65d7-43ea-9b9f-59eb83744345`
+
+- 返回示例：
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "num": 16,
+        "sum": 30606
+    }
+}
+
+```
+
+
 ## 4.6 APP端访问地图信息接口（AppMapController）
 ### 4.6.1 obtainUsedParkingCountGroupByRoadSection接口
 
