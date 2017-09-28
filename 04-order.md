@@ -1187,7 +1187,7 @@
 
 ### 4.5.4 obtainArrearsStats接口
 
-- 功能描述：新增欠费订单总笔数与总金额的统计接口注释
+- 功能描述：新增欠费订单总笔数与总金额的统计接口
 
 - 请求地址：`http://domain/order/app/vehicles/obtainArrearsStats`
 
