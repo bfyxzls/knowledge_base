@@ -431,7 +431,10 @@ PS:需要用admin用户获得access_token
                       117.28652499621376,
                       31.864361826772665
                   ]
-              }
+              },
+              "code":"12313",
+              "name":"潜山路停车场",
+              "parkingPositionQuantity":234
           }
       ]
   }
