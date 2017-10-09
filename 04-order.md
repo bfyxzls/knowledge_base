@@ -1058,7 +1058,7 @@
                   "completeDate": "2017-07-13 15:13:14",
                   "arrearsFee": 0,
                   "roadSectionName": "岳西路-长江西路",
-                	"vehicleType"："02"
+                  "vehicleType": "02"
               }
           ],
           "totalElements": 5,
