@@ -52,18 +52,34 @@
       }
   }
   ```
-### 8.1.2 生成扎帐支付二维码信息
+### 8.1.2 生成扎帐支付宝支付二维码信息
 
 - 功能描述: 生成扎帐支付二维码信息
 
 
-- 请求地址: `http://domain/account/accounting/generateQRCode?access_token=token`
+- 请求地址: `http://domain/account/accounting/generateAlipayQRCode`
 - 请求动作: `Get`
-- 请求示例: `http://domain/account/accounting/generateQRCode?access_token=token`
+- 请求示例: `http://domain/account/accounting/generateAlipayQRCode?access_token=token&posSn=111`
 - 返回示例
 ```$xslt
 {
     "status": "SUCCESS",
     "data": "http://xx"
+}
+```
+
+### 8.1.3 生成扎帐微信支付二维码信息
+
+- 功能描述: 生成扎帐支付二维码信息
+
+
+- 请求地址: `http://domain/account/accounting/generateWeChatQRCode?access_token=token`
+- 请求动作: `Get`
+- 请求示例: `http://domain/account/accounting/generateWeChatQRCode?access_token=token&posSn=111&ip=192.168.1.177`
+- 返回示例
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": "weixin://wxpay/bizpayurl?pr=d1Rn0zD"
 }
 ```
