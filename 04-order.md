@@ -1058,7 +1058,7 @@
                   "completeDate": "2017-07-13 15:13:14",
                   "arrearsFee": 0,
                   "roadSectionName": "岳西路-长江西路",
-                	"vehicleType"："02"
+                  "vehicleType": "02"
               }
           ],
           "totalElements": 5,
@@ -1250,14 +1250,21 @@
     "data": 31
 }
 ```
-## 4.7 支付接口（AlipayController）
+## 4.7 支付接口
 
-### 4.7.1 生成App支付订单信息接口
+### 4.7.1 支付宝生成App支付订单信息接口
 
-- 功能描述：生成订单信息接口
+- 功能描述：支付宝生成订单信息接口
 - 请求地址：`http://doman/order/alipay/generateOrderInfo`
 - 请求动作：`POST`
-- 请求示例：`http://192.168.1.177:8080/order/alipay/generateOrderInfo?access_token&orderId&fee&appPaymentBusinessType`
+- 请求示例：`http://192.168.1.177:8080/order/alipay/generateOrderInfo?access_token`
+- 请求实体：
+```json
+  {
+    "orderId":1,
+    "fee":1
+  }
+```
 - 返回示例：
 
 ```$xslt
@@ -1269,9 +1276,9 @@
 
 
 
-### 4.7.2 生成APP欠费补缴订单信息
+### 4.7.2 支付宝生成APP欠费补缴订单信息
 
-- 功能描述：生成APP欠费补缴订单信息
+- 功能描述：支付宝生成APP欠费补缴订单信息
 
 - 请求地址：`http://doman/order/alipay/generateAppArrearsPaidOrderInfo`
 
@@ -1307,9 +1314,9 @@
 }
 ```
 
-### 4.7.3 生成pos二维码支付信息
+### 4.7.3 支付宝生成pos二维码支付信息
 
-- 功能描述：生成pos二维码支付信息
+- 功能描述：支付宝生成pos二维码支付信息
 
 - 请求地址：`http://doman/order/alipay/generateQRCodePayInfo`
 
@@ -1337,9 +1344,9 @@
 }
 ```
 
-### 4.7.4 生成POS欠费补缴二维码支付信息
+### 4.7.4 支付宝生成POS欠费补缴二维码支付信息
 
-- 功能描述：生成pos二维码支付信息
+- 功能描述：支付宝生成pos二维码支付信息
 
 - 请求地址：`http://doman/order/alipay/generatePosArrearsPaidOrderInfo`
 
@@ -1382,6 +1389,166 @@
   {
       "status": "SUCCESS",
       "data": "https://qr.alipay.com/bax08690lppetlzj4iof00c2"
+  }
+  ```
+
+### 4.7.5 微信生成App支付订单信息接口
+
+- 功能描述：微信生成订单信息接口
+- 请求地址：`http://doman/order/weChat/generateOrderInfo`
+- 请求动作：`POST`
+- 请求示例：`http://192.168.1.177:8080/order/weChat/generateOrderInfo?access_token`
+- 请求实体：
+```json
+  {
+    "orderId":1,
+    "fee":1,
+    "ip":"192.168.1.177"
+  }
+```
+- 返回示例：
+
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": {
+        "appId": "wxd5a553c228118fca",
+        "partnerId": "1489500492",
+        "prepayId": "wx201710091535436967022dde0414189076",
+        "pack": "Sign=WXPay",
+        "nonceStr": "9f5e808f26784a0fb6902fe389ec775d",
+        "timestamp": "20171009153542",
+        "sign": "F234F0AE95EC7ABC4314F5EB5400E7F4",
+        "codeUrl": null
+    }
+}
+```
+
+
+
+### 4.7.6 微信生成APP欠费补缴订单信息
+
+- 功能描述：微信生成APP欠费补缴订单信息
+
+- 请求地址：`http://doman/order/weChat/generateAppArrearsPaidOrderInfo`
+
+- 请求动作：`POST`
+
+- 请求示例：`http://192.168.1.177:8080/order/weChat/generateAppArrearsPaidOrderInfo?access_token&ip`
+
+- 请求实体
+
+  ```
+  [
+        {
+          "orderId": 10000272,
+          "payType":4,
+          "payTime": "2017-08-13 19:21:21",
+          "arrearsFee": 200
+      },
+      {
+          "orderId": 10000281,
+          "payType":4,
+          "payTime": "2017-08-13 15:13:14",
+          "arrearsFee": 199
+      }
+    ]
+  ```
+
+- 返回示例：
+
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": {
+        "appId": "wxd5a553c228118fca",
+        "partnerId": "1489500492",
+        "prepayId": "wx20171009154139020e8d05ef0005134656",
+        "pack": "Sign=WXPay",
+        "nonceStr": "ac70bc74307148bd885b340d8aa145e6",
+        "timestamp": "20171009154138",
+        "sign": "CB46E41C14E748A3323EAF2130C1AC92",
+        "codeUrl": null
+    }
+}
+```
+
+### 4.7.7 微信生成pos二维码支付信息
+
+- 功能描述：微信生成pos二维码支付信息
+
+- 请求地址：`http://doman/order/weChat/generateQRCodePayInfo`
+
+- 请求动作：`POST`
+
+- 请求示例：`http://192.168.1.177:8080/order/weChat/generateQRCodePayInfo?access_token`
+
+- 请求实体
+
+  ```
+  {
+          "orderId": 10000272,
+          "fee":4,
+          "employeeId": 1000,
+          "posSn": "1889773",
+          "ip": "192.168.1.177"
+      }
+  ```
+
+- 返回示例：
+
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": "weixin://wxpay/bizpayurl?pr=nIPVy3F"
+}
+```
+
+### 4.7.8 微信生成POS欠费补缴二维码支付信息
+
+- 功能描述：微信生成pos二维码支付信息
+
+- 请求地址：`http://doman/order/weChat/generatePosArrearsPaidOrderInfo`
+
+- 请求动作：`POST`
+
+- 请求示例：`http://192.168.1.177:8080/order/weChat/generatePosArrearsPaidOrderInfo?access_token`
+
+- 请求实体:
+
+  ```json
+  [
+        {
+          "orderId": 10000272,
+          "payType":4,
+          "payTime": "2017-08-13 19:21:21",
+          "arrearsFee": 200,
+          "tollStaffId": 1001,
+          "tollStaffName": "张三",
+          "tollStaffPhoneNum": "15523339872",
+          "district": "蜀山区",
+          "posSn": "1323232"
+      },
+      {
+          "orderId": 10000281,
+          "payType":4,
+          "payTime": "2017-08-13 15:13:14",
+          "arrearsFee": 199,
+          "tollStaffId": 1001,
+          "tollStaffName": "张三",
+          "tollStaffPhoneNum": "15523339872",
+          "district": "蜀山区",
+          "posSn": "1323232"
+      }
+    ]
+  ```
+
+- 返回示例：
+
+  ```
+  {
+      "status": "SUCCESS",
+      "data": "weixin://wxpay/bizpayurl?pr=9lPgO3H"
   }
   ```
 
