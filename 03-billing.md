@@ -43,7 +43,7 @@ http://localhost:8080/billing/chargingStrategies/fee?
 access_token=b20ba53d-0e30-4007-a8b3-ba5598fc25ea&
 chargingStrategyId=1000&
 startTime=2017-07-19 8:00:00&
-vehicleType=1&
+vehicleType=1
 ```
 - 返回示例
 ```
@@ -52,6 +52,7 @@ vehicleType=1&
     "data": {
         "fee": 11,
         "endTime": "2017-07-19 09:43:25"
+        "parkingPeriod": 134
     }
 }
 ```
