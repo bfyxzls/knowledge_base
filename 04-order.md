@@ -419,20 +419,7 @@
 ```
 {
     "status": "SUCCESS",
-    "data": {
-        "driveOutEmployeeId": 1002,
-        "parkingCode": "154140",
-        "roadSectionName": "岳西路-长江西路",
-        "vehicleType": 1,
-        "createdDate": "2017-08-04 20:01:45",
-        "completeDate": "2017-08-03 17:26:49",
-        "fee": 222,
-        "payType": 1,
-        "isMonthBill": false,
-        "arrears": null,
-        "carPlate": "皖A12345",
-        "parkingPeriod": 11
-    }
+    "data": "确认app端车辆驶出成功"
 }
 ```
 ### 4.1.10 appDriveOutWithFeeConfirmed接口
@@ -1187,7 +1174,7 @@
 
 ### 4.5.4 obtainArrearsStats接口
 
-- 功能描述：新增欠费订单总笔数与总金额的统计接口
+- 功能描述：获取欠费订单总笔数与总金额的统计接口
 
 - 请求地址：`http://domain/order/app/vehicles/obtainArrearsStats`
 

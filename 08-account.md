@@ -58,7 +58,7 @@
 
 
 - 请求地址: `http://domain/account/accounting/generateAlipayQRCode`
-- 请求动作: `Get`
+- 请求动作: `POST`
 - 请求示例: `http://domain/account/accounting/generateAlipayQRCode?access_token=token&posSn=111`
 - 返回示例
 ```$xslt
@@ -74,7 +74,7 @@
 
 
 - 请求地址: `http://domain/account/accounting/generateWeChatQRCode?access_token=token`
-- 请求动作: `Get`
+- 请求动作: `POST`
 - 请求示例: `http://domain/account/accounting/generateWeChatQRCode?access_token=token&posSn=111&ip=192.168.1.177`
 - 返回示例
 ```$xslt
