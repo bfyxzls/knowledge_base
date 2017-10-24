@@ -805,16 +805,18 @@ isExist:false   不存在
 - Body
 ```
 { 
+    "name":"saaaaa",
     "codes": [
         {        
+            "id":1005,
             "value": "英磅"
         },
         {
-           
+            "id":1006,
             "value": "斤"
         },
         {
-           
+            "id":1007,           
             "value": "公斤"
         }
     ]
