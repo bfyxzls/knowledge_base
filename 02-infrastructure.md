@@ -110,7 +110,8 @@ PS:需要用admin用户获得access_token
     "maintainEnterprise": null,
     "province": "安徽省",
     "city": "合肥市",
-    "district": "庐阳区"          
+    "district": "庐阳区",
+    "unitPrice": 300
 }        
 ```
 - 返回示例
@@ -134,13 +135,13 @@ PS:需要用admin用户获得access_token
         "city": "合肥市",
         "district": "庐阳区",
         "isOwnBusiness": null,
+        "unitPrice": 300
         "createdBy": "wyf",
         "createdDate": 1501771401000,
         "lastModifiedBy": "wyf",
         "lastModifiedDate": 1501771404000
     }
 }
-
 ```
 ### 2.1.4 update接口
 - 功能描述: 更新商业停车场信息
@@ -164,7 +165,8 @@ PS:需要用admin用户获得access_token
     "province": "安徽省",
     "city": "合肥市",
     "district": "庐阳区",
-    "isOwnBusiness": true
+    "isOwnBusiness": true,
+	"unitPrice": 300
 }
 ```
 - 返回示例
@@ -188,13 +190,13 @@ PS:需要用admin用户获得access_token
         "city": "合肥市",
         "district": "庐阳区",
         "isOwnBusiness": null,
+        "unitPrice": 300,
         "createdBy": "wyf",
         "createdDate": 1501771401000,
         "lastModifiedBy": "wyf",
         "lastModifiedDate": 1501771404000
     }
 }
-
 ```
 ### 2.1.5 queryByName接口
 - 功能描述: 根据名字查询商业停车场信息
@@ -403,7 +405,7 @@ PS:需要用admin用户获得access_token
           }
       ]
   }
-  ```
+```
 
   ​
 
@@ -424,17 +426,20 @@ PS:需要用admin用户获得access_token
       "status": "SUCCESS",
       "data": [
           {
-              "id": 1028,
+              "id": 1001,
+              "name": "之心城",
               "coordinate": {
                   "type": "Point",
                   "coordinates": [
-                      117.28652499621376,
-                      31.864361826772665
+                      117.257089,
+                      31.854264
                   ]
               },
-              "code":"12313",
-              "name":"潜山路停车场",
-              "parkingPositionQuantity":234
+              "totalParkingNum": 7000,
+              "district": null,
+              "usedParkingNum": 5657,
+              "unitPrice": null,
+              "code": "0000002"
           }
       ]
   }
@@ -1051,7 +1056,8 @@ isExist:false   不存在
 {               
     "name": "望江西路-创新大道",
     "level": 1023,
-    "levelText": "B级路段"            
+    "levelText": "B级路段",
+    "unitPrice": 300
 }
        
 ```
@@ -1066,13 +1072,13 @@ isExist:false   不存在
         "levelText": "B级路段",
         "coordinates": null,
         "parkingArea": null,
+        "unitPrice": 300,
         "createdBy": "wyf",
         "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
         "lastModifiedDate": 1504517002229
     }
 }
-
 ```
 ### 2.3.4 update接口
 - 功能描述: 根据id更新路段信息
@@ -1092,10 +1098,10 @@ isExist:false   不存在
                 77
             ]
         },
-    "parkingAreaId":123
+    "parkingAreaId":123,
+    "unitPrice": 300
               
 }
-
 ```
 - 返回示例:
 ```
@@ -1108,6 +1114,7 @@ isExist:false   不存在
         "levelText": "SSS级路段",
         "coordinates": null,
         "parkingArea": null,
+        "unitPrice": 300,
         "createdBy": "wyf",
         "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
@@ -1305,7 +1312,8 @@ isExist:false   不存在
                   ]
               },
               "usedParkingNum": 0,
-              "totalParkingNum": 0
+              "totalParkingNum": 0,
+            	"unitPrice": 300
           }
       ]
   }
@@ -2583,22 +2591,22 @@ isExist:false   不存在
     ]
 }
  ```
- 
+
  ### 2.6.7 路边停车场唯一性验证接口 
- - 功能描述:  根据code查询路边停车场是否存在
- - 请求地址: `http://localhost:8080/infras/parkingAreas?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
- - 请求动作: `HEAD`
- - 请求示例: `http://localhost:8080/infras/parkingAreas?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
- 
- - 返回用户示例  
+- 功能描述:  根据code查询路边停车场是否存在
+- 请求地址: `http://localhost:8080/infras/parkingAreas?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
+- 请求动作: `HEAD`
+- 请求示例: `http://localhost:8080/infras/parkingAreas?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
+
+- 返回用户示例  
 ```
 返回信息包含在Response Header中：
 isExist:true    已存在
 isExist:false   不存在
 ```
+
  
- 
- 
+
 # 2.7 岗位信息访问接口
 ### 2.7.1 get接口
 - 功能描述: 根据id查询岗位信息
