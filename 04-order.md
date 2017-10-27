@@ -655,41 +655,9 @@
     }
 }
 ```
-### 4.2.2 AppPayArrearsFee接口
-- 功能描述: 补缴欠费订单
 
-- 请求地址: `http://domain/order/app/orders/payArrearsFee`
 
-- 请求动作: `PUT`
-
-- 请求示例: `http://192.168.1.18:8080/order/app/orders/payArrearsFee?access_token`
-
-- 请求实体：
-```
-  [
-      {
-        "orderId": 10000272,
-        "payType":4,
-        "payTime": "2017-08-13 19:21:21",
-        "arrearsFee": 200
-    },
-    {
-        "orderId": 10000281,
-        "payType":4,
-        "payTime": "2017-08-13 15:13:14",
-        "arrearsFee": 199
-    }
-  ]
-```
-- 返回示例:
-```
-  {
-    "status": "SUCCESS",
-    "data": "补缴欠费成功"
-  }
-```
-
-### 4.2.3 getVehicleFeeStats接口
+### 4.2.2 getVehicleFeeStats接口
 
 - 功能描述：按车牌统计当前客户的待支付和待补缴订单数量,并返回待支付订单id列表
 
@@ -747,7 +715,7 @@
 }
 ```
 
-### 4.2.4 freeDriveOut接口
+### 4.2.3 freeDriveOut接口
 
 - 功能描述：app端用户免费驶离
 
