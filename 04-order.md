@@ -462,14 +462,14 @@
     }
 }
 ```
-### 4.1.11 getHistoryFeeRecord接口
-- 功能描述: 待确认状态下二次缴费计算应缴费用
+### 4.1.11 getAppPaidFee接口
+- 功能描述: pos机确认app支付时获取app支付的金额
 
-- 请求地址: `http://domian/order/orders/getHistoryFeeRecord?id&access_token`
+- 请求地址: `http://domian/order/orders/getAppPaidFee?id&access_token`
 
 - 请求动作: `GET`
 
-- 请求示例: `http://domain/order/orders/getHistoryFeeRecord?id=10000261&access_token=09b890b3-1685-4cd4-a084-af6ac51d115e`
+- 请求示例: `http://domain/order/orders/getAppPaidFee?id=10000261&access_token=09b890b3-1685-4cd4-a084-af6ac51d115e`
 
 - 返回示例: 
 ```
