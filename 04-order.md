@@ -506,58 +506,8 @@
 }
 ```
 
-### 4.1.13 posPayArrearsFee接口
--  功能描述: 补缴欠费订单
 
--  请求地址: `http://domian/order/orders/posPayArrearsFee`
-
--  请求动作: `PUT`
-
--  请求示例: `http://domain/order/orders/posPayArrearsFee?access_token`
-
--  请求实体：
-```
-   [
-      {
-            "orderId": 10000269,
-            "payType":4,
-            "payTime": "2017-08-23 19:21:21",
-            "arrearsFee": 10,
-            "tollStaffId":1001,
-            "tollStaffName":"佘能斌",
-            "tollStaffPhoneNum":"18621061991",
-            "district":"庐阳区",
-            "posSn":"2232323"
-       },
-       {
-            "orderId": 10000280,
-            "payType":4,
-            "payTime": "2017-08-23 19:21:21",
-            "arrearsFee": 20,
-            "tollStaffId":1001,
-            "tollStaffName":"佘能斌",
-            "tollStaffPhoneNum":"18621061991",
-            "district":"庐阳区",
-            "posSn":"2232323"
-       }
-   ]
-```
-
-- 返回示例:
-```
-{
-    "status": "SUCCESS",
-    "data": {
-        "numOfArrearsOrder": 2,
-        "totalFee": 30,
-        "vehicleType": "02",
-        "carPlate": "皖A12345",
-        "arrearsPaidDate": "2017-08-08 11:11:11"
-    }
-}
-```
-
-### 4.1.14 obtainParkingOrderDetails接口
+### 4.1.13 obtainParkingOrderDetails接口
 - 功能描述：管理员查看某个订单的详细信息
 
 - 请求地址：`http://localhost:8080/order/orders/{id}/obtainParkingOrderDetails`
@@ -610,7 +560,7 @@
     }
 }
 ```
- ### 4.1.15 changeCarPlate接口
+ ### 4.1.14 changeCarPlate接口
 - 功能描述：修改订单的车牌
 
 - 请求地址：`http://localhost:8080/order/orders/{id}/changeCarPlate?access_token&carPlate`
@@ -626,7 +576,7 @@
     "data": "车牌更新成功"
 }
  ```
-### 4.1.16 obtainLastAppPayTime接口
+### 4.1.15 obtainLastAppPayTime接口
 
 - 功能描述：获取指定订单的最新手机支付时间
 
@@ -646,7 +596,7 @@
   ```
 
 
-### 4.1.17 obtainParkingOrderDetailsForInvoice接口
+### 4.1.16 obtainParkingOrderDetailsForInvoice接口
 
 - 功能描述：获取停车订单详细信息
 
