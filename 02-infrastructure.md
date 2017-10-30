@@ -561,7 +561,7 @@ isExist:false   不存在
 
 - 返回用户示例  
 ```
-    "status": "OK";
+    "status": "SUCCESS";
     "data": "更新商业停车场信息成功"
 ```
 
