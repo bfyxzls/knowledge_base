@@ -26,6 +26,8 @@ PS:需要用admin用户获得access_token
         "city": null,
         "district": "庐阳区",
         "isOwnBusiness": null,
+        "unitPrice": 100,
+        "remainParkingNum": 365,
         "createdBy": "wyf",
         "createdDate": 1501771401000,
         "lastModifiedBy": "wyf",
@@ -45,46 +47,38 @@ PS:需要用admin用户获得access_token
     "data": {
         "content": [
             {
-                "id": 1009,
-                "customerCarPlate": "皖A54321",
-                "customerName": "孟阿瑾",
-                "customerPhoneNum": "133333333335",
-                "customerCardNum": "325452155845245262",
-                "startMonth": 1501545600000,
-                "endMonth": 1509408000000,
-                "roadSectionIds": [
-                    1020
-                ],
-                "shouldPay": 10000,
-                "actualPay": 10000,
-                "valid": true,
-                "description": null
-            },
-            {
-                "id": 1014,
-                "customerCarPlate": "皖A12346",
-                "customerName": "高颖",
-                "customerPhoneNum": "133333333333",
-                "customerCardNum": "325452155845245865",
-                "startMonth": 1501545600000,
-                "endMonth": 1509408000000,
-                "roadSectionIds": [
-                    1036
-                ],
-                "shouldPay": 10000,
-                "actualPay": 10000,
-                "valid": true,
-                "description": null
+                "id": 1037,
+                "code": "3401030099",
+                "name": "四十五中停车场",
+                "coordinate": {
+                    "type": "Point",
+                    "coordinates": [
+                        117.280767,
+                        31.855289
+                    ]
+                },
+                "parkingPositionQuantity": 200,
+                "maintainEnterprise": null,
+                "province": "安徽省",
+                "city": "合肥市",
+                "district": "庐阳区",
+                "isOwnBusiness": null,
+                "unitPrice": null,
+                "remainParkingNum": null,
+                "createdBy": "wyf",
+                "createdDate": 1505113599782,
+                "lastModifiedBy": "wyf",
+                "lastModifiedDate": 1505113599782
             }
         ],
-        "last": true,
-        "totalElements": 2,
-        "totalPages": 1,
+        "last": false,
+        "totalPages": 3,
+        "totalElements": 56,
         "number": 0,
         "size": 20,
         "sort": null,
         "first": true,
-        "numberOfElements": 2
+        "numberOfElements": 20
     }
 }
 ```
@@ -111,7 +105,8 @@ PS:需要用admin用户获得access_token
     "province": "安徽省",
     "city": "合肥市",
     "district": "庐阳区",
-    "unitPrice": 300
+    "unitPrice": 100,
+    "remainParkingNum": 365
 }        
 ```
 - 返回示例
@@ -135,7 +130,8 @@ PS:需要用admin用户获得access_token
         "city": "合肥市",
         "district": "庐阳区",
         "isOwnBusiness": null,
-        "unitPrice": 300
+        "unitPrice": 100,
+        "remainParkingNum": 365,
         "createdBy": "wyf",
         "createdDate": 1501771401000,
         "lastModifiedBy": "wyf",
@@ -166,7 +162,8 @@ PS:需要用admin用户获得access_token
     "city": "合肥市",
     "district": "庐阳区",
     "isOwnBusiness": true,
-	"unitPrice": 300
+    "unitPrice": 100,
+    "remainParkingNum": 365,
 }
 ```
 - 返回示例
@@ -190,7 +187,8 @@ PS:需要用admin用户获得access_token
         "city": "合肥市",
         "district": "庐阳区",
         "isOwnBusiness": null,
-        "unitPrice": 300,
+        "unitPrice": 100,
+        "remainParkingNum": 365,
         "createdBy": "wyf",
         "createdDate": 1501771401000,
         "lastModifiedBy": "wyf",
@@ -226,6 +224,8 @@ PS:需要用admin用户获得access_token
                 "city": "合肥市",
                 "district": "庐阳区",
                 "isOwnBusiness": null,
+                "unitPrice": 100,
+                "remainParkingNum": 365,
                 "createdBy": "wyf",
                 "createdDate": 1501771401000,
                 "lastModifiedBy": "wyf",
@@ -270,6 +270,8 @@ PS:需要用admin用户获得access_token
                 "city": "合肥市",
                 "district": "庐阳区",
                 "isOwnBusiness": null,
+                "unitPrice": 100,
+                "remainParkingNum": 365,
                 "createdBy": "wyf",
                 "createdDate": 1501771401000,
                 "lastModifiedBy": "wyf",
@@ -324,6 +326,8 @@ PS:需要用admin用户获得access_token
             "city": null,
             "district": "庐阳区",
             "isOwnBusiness": null,
+            "unitPrice": 100,
+            "remainParkingNum": 365,            
             "createdBy": "wyf",
             "createdDate": 1501771401000,
             "lastModifiedBy": "wyf",
@@ -346,6 +350,8 @@ PS:需要用admin用户获得access_token
             "city": "",
             "district": "庐阳区",
             "isOwnBusiness": null,
+            "unitPrice": 100,
+            "remainParkingNum": 365,            
             "createdBy": "wyf",
             "createdDate": 1502886038323,
             "lastModifiedBy": "wyf",
@@ -368,6 +374,8 @@ PS:需要用admin用户获得access_token
             "city": "",
             "district": "庐阳区",
             "isOwnBusiness": null,
+            "unitPrice": 100,
+            "remainParkingNum": 365,            
             "createdBy": "wyf",
             "createdDate": 1502886018656,
             "lastModifiedBy": "wyf",
