@@ -552,6 +552,18 @@ isExist:true    已存在
 isExist:false   不存在
 ```
 
+### 2.1.13 remainParkingNum接口
+
+- 功能描述:  更新商业停车场剩余车位
+- 请求地址: `http://localhost:8080/infras/businessParkingAreas/remainParkingNum?code=0000003&remainParkingNum=10`
+- 请求动作: `PUT`
+- 请求示例: `http://localhost:8080/infras/businessParkingAreas/remainParkingNum?code=0000003&remainParkingNum=10`
+
+- 返回用户示例  
+```
+    "status": "OK";
+    "data": "更新商业停车场信息成功"
+```
 
 # 2.2 编码类型信息访问接口
 
