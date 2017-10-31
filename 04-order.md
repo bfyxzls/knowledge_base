@@ -1001,6 +1001,7 @@
                 "category": "路边停车",
                 "createdDate": "2017-08-09 19:15:00",
                 "completeDate": "2017-07-13 15:13:14",
+                "parkingPeriod": 74,
                 "arrearsFee": 0
             }
         ],
