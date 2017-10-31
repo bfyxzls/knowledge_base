@@ -1073,9 +1073,12 @@
                 "category": "路边停车",
                 "completeDate": "2017-08-03 17:26:49",
                 "fee": 222,
-                "period": -8770,
+                "period": 8770,
                 "appPayTypes": [
-                    1
+                    {
+                        "fee": 222,
+                        "payType": 4
+                    }
                 ]
             }
         ],
