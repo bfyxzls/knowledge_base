@@ -979,7 +979,7 @@
   ```
 ## 4.5 APP端获取车辆信息接口（AppVehicleController）
 ### 4.5.1 getArrearsParkingOrder接口
-- 功能描述：获取车辆的欠费订单
+- 功能描述：分页获取车辆的欠费订单
 
 - 请求地址：`http://domain/order/app/vehicles/{carPlate}/arrears`
 
@@ -1077,7 +1077,8 @@
                 "appPayTypes": [
                     {
                         "fee": 222,
-                        "payType": 4
+                        "payType": 4,
+                        "payTime": "2017-08-03 17:16:14"
                     }
                 ]
             }
@@ -1116,8 +1117,39 @@
 
 ```
 
+### 4.5.5 getArrearsParkingOrderWithOutPage接口
+
+- 功能描述：获取车辆的欠费订单列表
+- 请求地址：`http://domain/order/app/vehicles/{carPlate}/arrearsWithOutPage`
+- 请求动作: `GET`
+- 请求示例：`http://localhost:8080/order/app/vehicles/%e7%9a%96A12345/arrears?access_token`
+  - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
+- 返回示例：
+
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "orderId": 10000202,
+            "roadSectionName": "潜山路-长江西路",
+            "parkingAreaName": "植保路",
+            "category": "路边停车",
+            "createdDate": "2017-10-26 15:33:46",
+            "completeDate": "2017-10-26 15:13:14",
+            "parkingPeriod": -20,
+            "arrearsFee": 1000
+        }
+    ]
+}
+```
+
+### 
+
+
 
 ## 4.6 APP端访问地图信息接口（AppMapController）
+
 ### 4.6.1 obtainUsedParkingCountGroupByRoadSection接口
 
 - 功能描述：分组统计各个路段已使用的泊位数
