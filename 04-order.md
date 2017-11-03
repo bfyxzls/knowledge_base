@@ -939,9 +939,9 @@
       }
   }
 ```
-### 4.4.3 getArrears接口
+### 4.4.3 obtainArrearsOrders接口
 
-- 功能描述：按车牌计算欠费笔数和金额
+- 功能描述：按车牌查询欠费订单分页列表
 
 - 请求地址：`http://domain/order/vehicles/{carPlate}/arrears?access_token&page&size`
 
@@ -976,6 +976,34 @@
           "numberOfElements": 5
       }
   }
+  ```
+  ### 4.4.4 obtainArrearsOrdersWithOutPage接口
+
+- 功能描述：按车牌查询欠费订单列表
+
+- 请求地址：`http://domain/order/vehicles/{carPlate}/arrearsWithOutPage?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/order/vehicles/%e7%9a%96A12345/arrearsWithOutPage?access_token=cb5d69d3-ab15-4774-9ab9-fcf1afafb75d`
+    - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
+
+- 返回示例：
+
+  ```json
+  {
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 10000202,
+            "createdDate": "2017-10-26 15:33:46",
+            "completeDate": "2017-10-26 15:13:14",
+            "arrearsFee": 1000,
+            "roadSectionName": "潜山路-长江西路",
+            "vehicleType": "01"
+        }
+    ]
+}
   ```
 ## 4.5 APP端获取车辆信息接口（AppVehicleController）
 ### 4.5.1 getArrearsParkingOrder接口
@@ -1608,3 +1636,4 @@
     ]
 }
 ```
+
