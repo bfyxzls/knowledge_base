@@ -1526,7 +1526,10 @@
 - 功能描述：小程序生成订单信息接口
 - 请求地址：`http://domain/order/weChat/generateMiniAppPaidOrderInfo`
 - 请求动作：`POST`
-- 请求示例：`http://192.168.1.177:8080/order/weChat/generateMiniAppPaidOrderInfo?access_token`
+- 参数位置：`Request Parameter`
+- 请求参数：
+    - openid: 用户标识
+- 请求示例：`http://192.168.1.177:8080/order/weChat/generateMiniAppPaidOrderInfo?access_token=&openid=`
 - 请求实体：
 ```json
   {
@@ -1561,8 +1564,11 @@
 - 请求地址：`http://domain/order/weChat/generateMiniAppArrearsPaidOrderInfo`
 
 - 请求动作：`POST`
+- 参数位置：`Request Parameter`
+- 请求参数：
+    - openid: 用户标识
 
-- 请求示例：`http://192.168.1.177:8080/order/weChat/generateMiniAppArrearsPaidOrderInfo?access_token&ip`
+- 请求示例：`http://192.168.1.177:8080/order/weChat/generateMiniAppArrearsPaidOrderInfo?access_token&ip=&openid=`
 
 - 请求实体
 
