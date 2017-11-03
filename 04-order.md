@@ -1528,8 +1528,8 @@
 - 请求动作：`POST`
 - 参数位置：`Request Parameter`
 - 请求参数：
-    - openid: 用户标识
-- 请求示例：`http://192.168.1.177:8080/order/weChat/generateMiniAppPaidOrderInfo?access_token=&openid=`
+    - code: code
+- 请求示例：`http://192.168.1.177:8080/order/weChat/generateMiniAppPaidOrderInfo?access_token=&code=`
 - 请求实体：
 ```json
   {
@@ -1566,9 +1566,9 @@
 - 请求动作：`POST`
 - 参数位置：`Request Parameter`
 - 请求参数：
-    - openid: 用户标识
+    - code: code
 
-- 请求示例：`http://192.168.1.177:8080/order/weChat/generateMiniAppArrearsPaidOrderInfo?access_token&ip=&openid=`
+- 请求示例：`http://192.168.1.177:8080/order/weChat/generateMiniAppArrearsPaidOrderInfo?access_token&ip=&code=`
 
 - 请求实体
 
