@@ -1493,6 +1493,94 @@
   }
   ```
 
+### 4.7.9 小程序生成App支付订单信息接口
+
+- 功能描述：小程序生成订单信息接口
+- 请求地址：`http://domain/order/weChat/generateMiniAppPaidOrderInfo`
+- 请求动作：`POST`
+- 请求示例：`http://192.168.1.177:8080/order/weChat/generateMiniAppPaidOrderInfo?access_token`
+- 请求实体：
+```json
+  {
+    "orderId":1,
+    "fee":1,
+    "ip":"192.168.1.177"
+  }
+```
+- 返回示例：
+
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": {
+        "appId": "wxd5a553c228118fca",
+        "partnerId": "1489500492",
+        "prepayId": "wx20171103083244b44a6be1650109385307",
+        "pack": "Sign=WXPay",
+        "nonceStr": "a2992f9f7429465490d74819dac268b7",
+        "timestamp": "1509669162",
+        "sign": "DDC4A71221459ED45A11AC0FABDCC9F2"
+    }
+}
+```
+
+
+
+### 4.7.10 小程序生成APP欠费补缴订单信息
+
+- 功能描述：小程序生成APP欠费补缴订单信息
+
+- 请求地址：`http://domain/order/weChat/generateMiniAppArrearsPaidOrderInfo`
+
+- 请求动作：`POST`
+
+- 请求示例：`http://192.168.1.177:8080/order/weChat/generateMiniAppArrearsPaidOrderInfo?access_token&ip`
+
+- 请求实体
+
+  ```
+    [
+        {
+            "orderId":10000272,
+            "arrearsFee":4,
+            "payType":8,
+            "payTime":"2017-10-10 12:23:23",
+            "tollStaffId":12,
+            "tollStaffName":"王五",
+            "tollStaffPhoneNum":"15009892222",
+            "district":"蜀山区",
+            "posSn":"863127038052954"
+        },
+        {
+            "orderId":10000281,
+            "arrearsFee":4,
+            "payType":8,
+            "payTime":"2017-10-10 12:23:23",
+            "tollStaffId":12,
+            "tollStaffName":"王五",
+            "tollStaffPhoneNum":"15009892222",
+            "district":"蜀山区",
+            "posSn":"863127038052954"
+        }
+    ]
+  ```
+
+- 返回示例：
+
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": {
+        "appId": "wxd5a553c228118fca",
+        "partnerId": "1489500492",
+        "prepayId": "wx201711030824212ec960f5fe0013390617",
+        "pack": "Sign=WXPay",
+        "nonceStr": "4427d68545ab4c639a05e8b664d7fc7a",
+        "timestamp": "1509668659",
+        "sign": "E6B37A304C97049A76DA821FF384F908"
+    }
+}
+```
   ​
 
 ## 4.8 订单数量访问接口(OrderQuantityController)
