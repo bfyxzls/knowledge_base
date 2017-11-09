@@ -10,11 +10,11 @@
         	"code":"V1.0",
         	"type":"1",
         	"description":"新版本",
-        	"apkFileName":"bb6abb6c-da9c-4dc1-9a87-5ee822056ac3.apk"
+        	"url":"bb6abb6c-da9c-4dc1-9a87-5ee822056ac3.apk"
     	
     }
     ```
-    - 备注：type为app类型，1为android，2为ios
+    - 备注：type为app类型，1为android，2为ios, 3为pos机
 - 返回示例
 
   ```
@@ -23,7 +23,7 @@
     }
   ```
   
-### 10.1.2 查询app历史版本分页列表(Web)
+### 10.1.2 查询客户端历史版本分页列表(Web)
 - 功能描述: 查询app历史版本分页列表
 - 请求地址: `http://domain/app/appVersions?access_token&pageSize&pageNum`
 - 请求动作: `GET`
@@ -72,7 +72,7 @@
 }
 ```
 
-### 10.1.3 获取最新的app版本信息(App)
+### 10.1.3 获取最新的app版本信息(App、Pos机)
 - 功能描述: 获取最新的app版本信息
 - 请求地址: `http://domain/app/appVersions/lastVersion?access_token&appType`
 - 请求动作: `GET`
@@ -102,19 +102,11 @@
 
 ```
 {
-    "status": "SUCCESS",
-    "data": {
-        "id": 1007,
-        "code": "V1.0",
-        "type": 1,
-        "description": "新版本",
-        "url": null,
-        "updateTime": 1510133309119
-    }
+    "status": "SUCCESS"
 }
 ```
 
-### 10.1.5 下载apk安装包(android)
+### 10.1.5 下载apk安装包(android/pos)
 - 功能描述: 下载apk安装包
 - 请求地址: `http://domain/app/appVersions/downloadApk?access_token&apkFileName`
 - 请求动作: `GET`
