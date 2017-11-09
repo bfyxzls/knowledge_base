@@ -652,7 +652,34 @@
     }
 }
   ```
+### 4.1.18 obtainTodayOrders接口
 
+- 功能描述：收费员获取今日订单流水
+
+- 请求地址：`http://domain/order/orders/obtainTodayOrders?access_token`
+
+- 请求动作：`GET`
+
+- 请求示例：`http://localhost:8080/order/orders/obtainTodayOrders?access_token=37c53656-1507-4cb8-a047-6bad018510c7`
+
+- 返回示例：
+
+  ```json
+ {
+    "status": "SUCCESS",
+    "data": {
+        "id": 10000227,
+        "carPlate": "皖A12345",
+        "parkingCode": "1000004",
+        "driveInPosSn": "123",
+        "roadSectionName": "潜山路-长江西路",
+        "vehicleType": "01",
+        "driveInEmployeeId": 1001,
+        "createdDate": "2017-11-09 09:21:23",
+        "arrears": 1000
+    }
+}
+  ```
   ​
 
 ## 4.2 APP端操作订单接口（AppOrderController）

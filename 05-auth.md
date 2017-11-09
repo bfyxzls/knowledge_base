@@ -430,6 +430,27 @@ isExist:false   不存在
 
 ```
 
+### 5.1.12  查询个人信息
+
+- 功能描述: 查询个人信息
+
+- 请求地址: `http://localhost:8080/uaa/sysusers/selfInfo?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://localhost:8080/uaa/sysusers/selfInfo?access_token=794ccb78-319d-486a-9d2b-39f3256ad2dc`
+
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "username": "admin",
+        "roleValue": "ROLE_ADMIN"
+    }
+}
+```
+
 
 # 5.2 RoleController测试用例
 
@@ -698,3 +719,4 @@ isExist:false   不存在
      }
     
     ```
+

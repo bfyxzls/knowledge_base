@@ -4041,6 +4041,29 @@ isExist:false   不存在
 
 ```
 
+### 2.10.7 员工获取个人信息
+- 功能描述: 员工获取个人信息
+- 请求地址: `http://localhost:8080/infras/employees/selfInfo?access_token`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/infras/employees/selfInfo?access_token=8fcc7df5-caf8-4ef8-a70f-1ee955c9f2b3`
+- 返回示例:
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "postId": 1000,
+        "postName": "1号岗",
+        "roadSectionId": 1003,
+        "roadSectionName": "潜山路",
+        "parkingAreaName": "植保路",
+        "district": "蜀山区",
+        "employeeId": 1003,
+        "employeeName": "张齐健",
+        "employeePhoneNum": "15555471960"
+    }
+}
+```
+
 # 2.11 SIM卡信息访问接口
 
 ### 2.11.1 根据id查询SIM卡信息接口
@@ -4522,3 +4545,4 @@ isExist:false   不存在
     }
 }
 ```
+
