@@ -624,6 +624,34 @@
       }
   }
   ```
+### 4.1.17 obtainLatestDriveInReceipt接口
+
+- 功能描述：pos机打印上一笔驶入凭证
+
+- 请求地址：`http://domain/order/orders/obtainLatestDriveInReceipt?access_token`
+
+- 请求动作：`GET`
+
+- 请求示例：`http://localhost:8080/order/orders/obtainLatestDriveInReceipt?access_token=37c53656-1507-4cb8-a047-6bad018510c7`
+
+- 返回示例：
+
+  ```json
+ {
+    "status": "SUCCESS",
+    "data": {
+        "id": 10000227,
+        "carPlate": "皖A12345",
+        "parkingCode": "1000004",
+        "driveInPosSn": "123",
+        "roadSectionName": "潜山路-长江西路",
+        "vehicleType": "01",
+        "driveInEmployeeId": 1001,
+        "createdDate": "2017-11-09 09:21:23",
+        "arrears": 1000
+    }
+}
+  ```
 
   ​
 
