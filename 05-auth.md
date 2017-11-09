@@ -434,7 +434,7 @@ isExist:false   不存在
 
 - 功能描述: 查询个人信息
 
-- 请求地址: `http://localhost:8080/uaa/sysusers/selfInfo?access_token`
+- 请求地址: `http://domain/uaa/sysusers/selfInfo?access_token`
 
 - 请求动作: `GET`
 
