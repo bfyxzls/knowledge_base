@@ -96,7 +96,7 @@
 ### 10.1.4 上传apk安装包(Web)
 - 功能描述: 上传apk安装包
 - 请求地址: `http://domain/zuul/app/appVersions/uploadApk?access_token`
-- 请求动作: `GET`
+- 请求动作: `PUT`
 - 请求示例: `http://localhost:8080/zuul/app/appVersions/uploadApk?access_token=df102429-f62d-461f-8a13-b4f08dce4c56`
 - 返回参数:
 
