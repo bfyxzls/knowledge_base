@@ -277,4 +277,56 @@
 - 请求动作: `GET`
 - 请求示例: `http://domain/pile/chargingStations/export?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07&name=&manufacturerName&status=`
 
+#### 10.1.9 获取所有站点列表
+- 功能描述:  获取所有站点列表
+- 请求地址: `http://domain/pile/chargingStations/findAll`
+- 请求动作: `GET`
+- 请求示例: `http://domain/pile/chargingStations/findAll?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
+- 返回数据示例 
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "code": "123",
+            "name": "123",
+            "coordinate": null,
+            "status": 2,
+            "manufacturerName": "123",
+            "manufacturerIco": "123",
+            "address": "123",
+            "dcNum": 12,
+            "acNum": 12
+        },
+        {
+            "code": "123",
+            "name": "123",
+            "coordinate": null,
+            "status": 2,
+            "manufacturerName": "123",
+            "manufacturerIco": "123",
+            "address": "123",
+            "dcNum": 12,
+            "acNum": 12
+        },
+        {
+            "code": "1",
+            "name": "测试",
+            "coordinate": {
+                "type": "Point",
+                "coordinates": [
+                    12,
+                    67
+                ]
+            },
+            "status": 1,
+            "manufacturerName": "厂商",
+            "manufacturerIco": null,
+            "address": "",
+            "dcNum": 12,
+            "acNum": 10
+        }
+    ]
+}
+```
