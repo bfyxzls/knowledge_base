@@ -249,7 +249,7 @@
 - 功能描述:  获取置顶资讯
 - 请求地址: `http://domain/cms/informations/queryTop`
 - 请求动作: `GET`
-- 请求示例: `http://domain/cms/informations/queryTop?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07&type=&page=&size=
+- 请求示例: `http://domain/cms/informations/queryTop?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
 - 返回数据示例  
 ```$xslt
