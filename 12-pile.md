@@ -18,7 +18,7 @@
             67
         ]
     },
-    "status":1,
+    "status":1, //站点状态:1.可用；2.停用
     "manufacturerName":"厂商",
     "manufacturerIco":null,
     "address":"",
@@ -284,11 +284,13 @@
 - 请求示例: `http://domain/pile/chargingStations/findAll?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
 - 返回数据示例 
+    - `status`:站点状态:1.可用；2.停用
 ```$xslt
 {
     "status": "SUCCESS",
     "data": [
         {
+            "id": 2,
             "code": "123",
             "name": "123",
             "coordinate": null,
@@ -300,6 +302,7 @@
             "acNum": 12
         },
         {
+            "id": 1,
             "code": "123",
             "name": "123",
             "coordinate": null,
@@ -311,6 +314,7 @@
             "acNum": 12
         },
         {
+            "id": 6,
             "code": "1",
             "name": "测试",
             "coordinate": {
