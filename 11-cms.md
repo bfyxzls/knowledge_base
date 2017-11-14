@@ -1,4 +1,4 @@
-## 9.1资讯访问接口（InformationController）
+## 11.1资讯访问接口（InformationController）
 ### 9.1.1 新增资讯接口
 
 - 功能描述:  新增资讯
