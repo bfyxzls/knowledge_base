@@ -235,7 +235,7 @@
 - 功能描述:  上传厂商图标
 - 请求地址: `http://domain/pile/uploadManufacturerIco`
 - 请求动作: `POST`
-- 请求示例: `http://domain/pile/uploadManufacturerIco?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07&name=&manufacturerName&status=`
+- 请求示例: `http://domain/pile/uploadManufacturerIco?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
   ![Markdown](http://i1.buimg.com/1949/84c15df0a215c259.png)
 
 - 返回数据示例 
