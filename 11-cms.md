@@ -310,3 +310,35 @@
 
 - 返回数据示例  
 ![Markdown](http://i2.kiimg.com/1949/7c84a20ddd1f1eaa.png)
+
+#### 9.1.10 通过资讯类型获取置顶资讯
+
+- 功能描述:  通过资讯类型获取置顶资讯
+- 请求地址: `http://domain/cms/informations/queryTopByType`
+- 请求动作: `GET`
+- 请求示例: `http://domain/cms/informations/queryTopByType?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07&type=`
+- 参数说明
+    - `type`:资讯类别：1.企业资讯；2.活动资讯；3.操作指南
+
+- 返回数据示例  
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 29,
+            "title": "测试新闻标题",
+            "subTitle": "测试新闻副标题",
+            "titleImagePath": null,
+            "type": 1
+        },
+        {
+            "id": 30,
+            "title": "测试新闻标题",
+            "subTitle": "测试新闻副标题",
+            "titleImagePath": null,
+            "type": 1
+        }
+    ]
+}
+```
