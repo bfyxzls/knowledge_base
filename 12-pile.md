@@ -233,9 +233,9 @@
 
 #### 10.1.5 上传厂商图标
 - 功能描述:  上传厂商图标
-- 请求地址: `http://domain/pile/uploadManufacturerIco`
+- 请求地址: `http://domain/pile/chargingStations/uploadManufacturerIco`
 - 请求动作: `POST`
-- 请求示例: `http://domain/pile/uploadManufacturerIco?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 请求示例: `http://domain/pile/chargingStations/uploadManufacturerIco?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
   ![Markdown](http://i1.buimg.com/1949/84c15df0a215c259.png)
 
 - 返回数据示例 
@@ -249,9 +249,9 @@
 #### 10.1.6 删除厂商图标
 
 - 功能描述:  删除厂商图标
-- 请求地址: `http://domain/pile/deleteManufacturerIco`
+- 请求地址: `http://domain/pile/chargingStations/deleteManufacturerIco`
 - 请求动作: `DELETE`
-- 请求示例: `http://domain/pile/deleteManufacturerIco?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07&name=
+- 请求示例: `http://domain/pile/chargingStations/deleteManufacturerIco?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07&name=
   ![Markdown](http://i1.buimg.com/1949/84c15df0a215c259.png)
   
 - 返回数据示例 
@@ -264,9 +264,9 @@
 
 #### 10.1.7 获取厂商图标
 - 功能描述:  根据图片名称获取厂商图标
-- 请求地址: `http://domain/pile/getManufacturerIco`
+- 请求地址: `http://domain/pile/chargingStations/getManufacturerIco`
 - 请求动作: `GET`
-- 请求示例: `http://domain/pile/getManufacturerIco?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07&name=
+- 请求示例: `http://domain/pile/chargingStations/getManufacturerIco?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07&name=
 
 - 返回数据示例  
 ![Markdown](http://i2.kiimg.com/1949/7c84a20ddd1f1eaa.png)
