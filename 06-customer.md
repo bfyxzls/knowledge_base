@@ -286,6 +286,21 @@
 }
 ```
 
+### 6.1.9 车辆超时未驶离推送提醒
+
+- 功能描述: 车辆超时未驶离推送提醒
+- 请求地址: `http://domain/customer/customers/vehicleNotLeaveNotify`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/customer/customers/vehicleNotLeaveNotify?carPlate=京A12346&access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+
+- 返回数据示例 
+
+```json
+{
+    "status": "SUCCESS"
+}
+```
+
 
 ## 6.2 月票（MonthBill）
 PS:需要用admin用户获得access_token
@@ -552,6 +567,5 @@ PS:需要用admin用户获得access_token
     }
 }
 ```
-
 
 
