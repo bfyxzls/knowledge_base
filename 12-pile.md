@@ -334,3 +334,20 @@
     ]
 }
 ```
+
+#### 10.1.10 判断充电桩编码是否已存在
+- 功能描述:  判断充电桩编码是否已存在
+- 请求地址: `localhost:8090/chargingStations/findCodeExist?access_token=f2ca8520-11a9-415b-9d15-21690acbb369&code=12`
+- 请求动作: `GET`
+- 请求示例: `localhost:8090/chargingStations/findCodeExist?access_token=f2ca8520-11a9-415b-9d15-21690acbb369&code=12`
+
+
+- 返回数据示例 
+    - `data`:true:已使用；false:未使用
+
+```$xslt  
+{
+    "status": "SUCCESS",
+    "data": false
+}
+```
