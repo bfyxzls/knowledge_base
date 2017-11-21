@@ -1,4 +1,4 @@
-## 9.1 优惠券信息访问接口
+## 9.1 优惠活动信息访问接口
 
 ### 9.1.1 isActivityExistAccordingName接口
 
