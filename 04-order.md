@@ -624,6 +624,63 @@
       }
   }
   ```
+### 4.1.17 obtainLatestDriveInReceipt接口
+
+- 功能描述：pos机打印上一笔驶入凭证
+
+- 请求地址：`http://domain/order/orders/obtainLatestDriveInReceipt?access_token`
+
+- 请求动作：`GET`
+
+- 请求示例：`http://localhost:8080/order/orders/obtainLatestDriveInReceipt?access_token=37c53656-1507-4cb8-a047-6bad018510c7`
+
+- 返回示例：
+
+  ```json
+ {
+    "status": "SUCCESS",
+    "data": {
+        "id": 10000227,
+        "carPlate": "皖A12345",
+        "parkingCode": "1000004",
+        "driveInPosSn": "123",
+        "roadSectionName": "潜山路-长江西路",
+        "vehicleType": "01",
+        "driveInEmployeeId": 1001,
+        "createdDate": "2017-11-09 09:21:23",
+        "arrears": 1000
+    }
+}
+  ```
+### 4.1.18 obtainTodayOrders接口
+
+- 功能描述：收费员获取今日订单流水
+
+- 请求地址：`http://domain/order/orders/obtainTodayOrders?access_token`
+
+- 请求动作：`GET`
+
+- 请求示例：`http://localhost:8080/order/orders/obtainTodayOrders?access_token=37c53656-1507-4cb8-a047-6bad018510c7`
+
+- 返回示例：
+
+  ```json
+ {
+    "status": "SUCCESS",
+    "data": {
+        "id": 10000227,
+        "carPlate": "皖A12345",
+        "parkingCode": "1000004",
+        "driveInPosSn": "123",
+        "roadSectionName": "潜山路-长江西路",
+        "vehicleType": "01",
+        "driveInEmployeeId": 1001,
+        "createdDate": "2017-11-09 09:21:23",
+        "arrears": 1000
+    }
+}
+  ```
+  
 
   ​
 
@@ -939,9 +996,9 @@
       }
   }
 ```
-### 4.4.3 getArrears接口
+### 4.4.3 obtainArrearsOrders接口
 
-- 功能描述：按车牌计算欠费笔数和金额
+- 功能描述：按车牌查询欠费订单分页列表
 
 - 请求地址：`http://domain/order/vehicles/{carPlate}/arrears?access_token&page&size`
 
@@ -977,9 +1034,37 @@
       }
   }
   ```
+  ### 4.4.4 obtainArrearsOrdersWithOutPage接口
+
+- 功能描述：按车牌查询欠费订单列表
+
+- 请求地址：`http://domain/order/vehicles/{carPlate}/arrearsWithOutPage?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/order/vehicles/%e7%9a%96A12345/arrearsWithOutPage?access_token=cb5d69d3-ab15-4774-9ab9-fcf1afafb75d`
+    - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
+
+- 返回示例：
+
+  ```json
+  {
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 10000202,
+            "createdDate": "2017-10-26 15:33:46",
+            "completeDate": "2017-10-26 15:13:14",
+            "arrearsFee": 1000,
+            "roadSectionName": "潜山路-长江西路",
+            "vehicleType": "01"
+        }
+    ]
+}
+  ```
 ## 4.5 APP端获取车辆信息接口（AppVehicleController）
 ### 4.5.1 getArrearsParkingOrder接口
-- 功能描述：获取车辆的欠费订单
+- 功能描述：分页获取车辆的欠费订单
 
 - 请求地址：`http://domain/order/app/vehicles/{carPlate}/arrears`
 
@@ -1077,7 +1162,8 @@
                 "appPayTypes": [
                     {
                         "fee": 222,
-                        "payType": 4
+                        "payType": 4,
+                        "payTime": "2017-08-03 17:16:14"
                     }
                 ]
             }
@@ -1116,8 +1202,39 @@
 
 ```
 
+### 4.5.5 getArrearsParkingOrderWithOutPage接口
+
+- 功能描述：获取车辆的欠费订单列表
+- 请求地址：`http://domain/order/app/vehicles/{carPlate}/arrearsWithOutPage`
+- 请求动作: `GET`
+- 请求示例：`http://localhost:8080/order/app/vehicles/%e7%9a%96A12345/arrears?access_token`
+  - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
+- 返回示例：
+
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "orderId": 10000202,
+            "roadSectionName": "潜山路-长江西路",
+            "parkingAreaName": "植保路",
+            "category": "路边停车",
+            "createdDate": "2017-10-26 15:33:46",
+            "completeDate": "2017-10-26 15:13:14",
+            "parkingPeriod": -20,
+            "arrearsFee": 1000
+        }
+    ]
+}
+```
+
+### 
+
+
 
 ## 4.6 APP端访问地图信息接口（AppMapController）
+
 ### 4.6.1 obtainUsedParkingCountGroupByRoadSection接口
 
 - 功能描述：分组统计各个路段已使用的泊位数
@@ -1461,6 +1578,100 @@
   }
   ```
 
+### 4.7.9 小程序生成App支付订单信息接口
+
+- 功能描述：小程序生成订单信息接口
+- 请求地址：`http://domain/order/weChat/generateMiniAppPaidOrderInfo`
+- 请求动作：`POST`
+- 参数位置：`Request Parameter`
+- 请求参数：
+    - code: code
+- 请求示例：`http://192.168.1.177:8080/order/weChat/generateMiniAppPaidOrderInfo?access_token=&code=`
+- 请求实体：
+```json
+  {
+    "orderId":1,
+    "fee":1,
+    "ip":"192.168.1.177"
+  }
+```
+- 返回示例：
+
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": {
+        "appId": "wxd5a553c228118fca",
+        "partnerId": "1489500492",
+        "prepayId": "wx20171103083244b44a6be1650109385307",
+        "pack": "Sign=WXPay",
+        "nonceStr": "a2992f9f7429465490d74819dac268b7",
+        "timestamp": "1509669162",
+        "sign": "DDC4A71221459ED45A11AC0FABDCC9F2"
+    }
+}
+```
+
+
+
+### 4.7.10 小程序生成APP欠费补缴订单信息
+
+- 功能描述：小程序生成APP欠费补缴订单信息
+
+- 请求地址：`http://domain/order/weChat/generateMiniAppArrearsPaidOrderInfo`
+
+- 请求动作：`POST`
+- 参数位置：`Request Parameter`
+- 请求参数：
+    - code: code
+
+- 请求示例：`http://192.168.1.177:8080/order/weChat/generateMiniAppArrearsPaidOrderInfo?access_token&ip=&code=`
+
+- 请求实体
+
+  ```
+    [
+        {
+            "orderId":10000272,
+            "arrearsFee":4,
+            "payType":8,
+            "payTime":"2017-10-10 12:23:23",
+            "tollStaffId":12,
+            "tollStaffName":"王五",
+            "tollStaffPhoneNum":"15009892222",
+            "district":"蜀山区",
+            "posSn":"863127038052954"
+        },
+        {
+            "orderId":10000281,
+            "arrearsFee":4,
+            "payType":8,
+            "payTime":"2017-10-10 12:23:23",
+            "tollStaffId":12,
+            "tollStaffName":"王五",
+            "tollStaffPhoneNum":"15009892222",
+            "district":"蜀山区",
+            "posSn":"863127038052954"
+        }
+    ]
+  ```
+
+- 返回示例：
+
+```$xslt
+{
+    "status": "SUCCESS",
+    "data": {
+        "appId": "wxd5a553c228118fca",
+        "partnerId": "1489500492",
+        "prepayId": "wx201711030824212ec960f5fe0013390617",
+        "pack": "Sign=WXPay",
+        "nonceStr": "4427d68545ab4c639a05e8b664d7fc7a",
+        "timestamp": "1509668659",
+        "sign": "E6B37A304C97049A76DA821FF384F908"
+    }
+}
+```
   ​
 
 ## 4.8 订单数量访问接口(OrderQuantityController)
@@ -1488,3 +1699,4 @@
     ]
 }
 ```
+
