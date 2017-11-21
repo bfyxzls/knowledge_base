@@ -16,8 +16,7 @@
     "sort":111,//排序
     "ifTop":false,//是否置顶
     "type":1,//资讯类别：1.企业资讯；2.活动资讯；3.操作指南
-    "titleImagePath":"标题文件名称",
-    "ifPublish":true//是否发布
+    "titleImagePath":"标题文件名称"
 }
 ```
 
@@ -91,8 +90,7 @@
     "sort":111,//排序
     "ifTop":false,//是否置顶
     "type":1,//资讯类别：1.企业资讯；2.活动资讯；3.操作指南
-    "titleImagePath":"标题文件名称",
-    "ifPublish":true//是否发布
+    "titleImagePath":"标题文件名称"
 }
 ```
 
