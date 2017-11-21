@@ -1,6 +1,6 @@
-## 9.1 优惠活动信息访问接口
+## 13.1 优惠活动信息访问接口
 
-### 9.1.1 isActivityExistAccordingName接口
+### 13.1.1 isActivityExistAccordingName接口
 
 - 功能描述: 根据活动名称查找该活动时候已存在
 
@@ -18,7 +18,7 @@ isExist:true    已存在
 isExist:false   不存在
 ```
 
-### 9.1.2 create接口
+### 13.1.2 create接口
 
 - 功能描述: 创建新活动
 
@@ -115,7 +115,7 @@ isExist:false   不存在
 
 ```
 
-### 9.1.3 autoTop接口
+### 13.1.3 autoTop接口
 
 - 功能描述: 创建优惠券时，输入活动名获得活动下拉框提醒
 
@@ -163,7 +163,7 @@ isExist:false   不存在
     ]
 }
 ```
-### 9.1.3 search接口
+### 13.1.3 search接口
 
 - 功能描述: 活动列表条件查询时
 
