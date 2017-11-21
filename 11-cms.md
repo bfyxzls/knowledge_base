@@ -302,7 +302,7 @@
 
 #### 9.1.9 获取资讯图片
 - 功能描述:  根据图片名称获取资讯图片
-- 请求地址: `http://domain/cms/getInformationImage`
+- 请求地址: `http://domain/cms/informations/getInformationImage`
 - 请求动作: `GET`
 - 请求示例: `http://domain/cms/informations/getInformationImage?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07&name=
 
