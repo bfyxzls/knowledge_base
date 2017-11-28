@@ -1284,11 +1284,12 @@
 - 请求地址：`http://doman/order/alipay/generateOrderInfo`
 - 请求动作：`POST`
 - 请求示例：`http://192.168.1.177:8080/order/alipay/generateOrderInfo?access_token`
-- 请求实体：
+- 请求实体：couponId为可选参数
 ```json
   {
     "orderId":1,
-    "fee":1
+    "fee":1,
+    "couponId":"8f86bfd2-4c12-41b3-a781-d739e8982b24"
   }
 ```
 - 返回示例：
@@ -1424,12 +1425,13 @@
 - 请求地址：`http://doman/order/weChat/generateOrderInfo`
 - 请求动作：`POST`
 - 请求示例：`http://192.168.1.177:8080/order/weChat/generateOrderInfo?access_token`
-- 请求实体：
+- 请求实体：couponId为可选参数
 ```json
   {
     "orderId":1,
     "fee":1,
-    "ip":"192.168.1.177"
+    "ip":"192.168.1.177",
+    "couponId":"8f86bfd2-4c12-41b3-a781-d739e8982b24"
   }
 ```
 - 返回示例：
@@ -1587,12 +1589,13 @@
 - 请求参数：
     - code: code
 - 请求示例：`http://192.168.1.177:8080/order/weChat/generateMiniAppPaidOrderInfo?access_token=&code=`
-- 请求实体：
+- 请求实体：couponId为可选参数
 ```json
   {
     "orderId":1,
     "fee":1,
-    "ip":"192.168.1.177"
+    "ip":"192.168.1.177",
+    "couponId":"8f86bfd2-4c12-41b3-a781-d739e8982b24"
   }
 ```
 - 返回示例：
