@@ -105,7 +105,7 @@
 
 - 请求动作: `GET`
 
-- 请求示例: `localhost:8080/coupon/activities?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+- 请求示例: `http://localhost:8080/coupon/activities?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
 
 - 返回示例
 
@@ -223,7 +223,7 @@
 
 - 请求动作: `GET`
 
-- 请求示例: `localhost:8080/coupon/activities/search?name=优惠&status=&page=10&size=20&sort=createdDate,DESC&access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+- 请求示例: `http://localhost:8080/coupon/activities/search?name=优惠&status=&page=10&size=20&sort=createdDate,DESC&access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
 
 - 返回示例
 
@@ -350,3 +350,309 @@
 }
 
 ```
+
+
+## 13.2 优惠券信息访问接口
+
+
+### 13.2.1 web端新增优惠券接口
+
+- 功能描述: 新增优惠券
+
+- 请求地址: `http://domain/coupon/coupons`
+
+- 请求动作: `POST`
+
+- 请求示例: `http://localhost:8080/coupon/coupons?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+
+- 请求示例
+
+```
+ {
+  "activity":{
+   "id":"5a13cc956c79211554a7f9ca",
+   "name":"圣诞优惠"
+  },
+  "fullCouponTemplate":{
+   "name":"满减券",
+   "validStartDate":"2017-11-21 10:30:30",
+   "validEndDate":"2017-11-24 10:30:30",
+   "roadSections":[
+    1001,1002
+   ],
+   "couponRules":[
+    {
+     "type":"fullCouponRule",
+     "useLimitAmount":5,
+     "discountAmount":2,
+     "maxNum":2,
+     "generateNum":5
+    },
+    {
+     "type":"fullCouponRule",
+     "useLimitAmount":10,
+     "discountAmount":5,
+     "maxNum":2,
+     "generateNum":5 
+    }
+    
+   ]
+  },
+  "freeCouponTemplate":{
+   "name":"免费券",
+   "validStartDate":"2017-11-21 19:30:30",
+   "validEndDate":"2017-11-24 12:30:30",
+   "roadSections":[
+    1003,1004
+   ],
+   "couponRules":[
+    {
+     "type":"freeCouponRule",
+     "freeHours":2,
+     "maxNum":2,
+     "generateNum":5 
+    }
+   ]
+  },
+  "hourCouponTemplate":{
+   "name":"小时券",
+   "validStartDate":"2017-11-21 10:30:30",
+   "validEndDate":"2017-11-24 10:30:30",
+   "roadSections":[
+    1005,1006
+   ],
+   "couponRules":[
+    {
+     "type":"hourCouponRule",
+     "useLimitHour":1,
+     "payAmount":1,
+     "maxNum":2,
+     "generateNum":5 
+    },{
+     "type":"hourCouponRule",
+     "useLimitHour":2,
+     "payAmount":5,
+     "maxNum":2,
+     "generateNum":5 
+    }
+   ]
+  },
+  "straightCutCouponTemplate":{
+   "name":"直减券",
+   "validStartDate":"2017-11-21 10:30:30",
+   "validEndDate":"2017-11-24 10:30:30",
+   "roadSections":[
+    1005,1006
+   ],
+   "couponRules":[
+    {
+     "type":"straightCutCouponRule",
+     "discountAmount":5,
+     "maxNum":1,
+     "generateNum":5
+    },{
+     "type":"straightCutCouponRule",
+     "discountAmount":10,
+     "maxNum":2,
+     "generateNum":5
+    }
+   ]
+  },
+  "phoneNums":[],
+  "assignable":true
+ }
+
+
+```
+
+### 13.2.2 web端查询优惠券接口
+
+- 功能描述: 根据券号模糊匹配，类型，归属活动，状态查找符合条件的优惠券
+
+- 请求地址: `http://domain/coupon/coupons`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://localhost:8080/coupon/coupons?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&id=1&type=1&activity.id=5a13cc956c79211554a7f9ca&activity.name=圣诞优惠&status=1&assignable=true`
+
+- 返回示例
+
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "id": "4fd4b0c1-a6f2-4e5f-934d-d9e25b0a5c59",
+                "activityName": "圣诞优惠",
+                "type": 1,
+                "creator": null,
+                "createDate": "2017-11-28 14:42:33",
+                "validStartDate": "2017-11-21 19:30:30",
+                "validEndDate": "2017-11-24 12:30:30",
+                "status": 1,
+                "phoneNum": null,
+                "origin": null,
+                "assignable": true
+            },
+            {
+                "id": "72d04cf8-6ffa-4f14-b3a1-5eed674544cb",
+                "activityName": "圣诞优惠",
+                "type": 1,
+                "creator": null,
+                "createDate": "2017-11-28 14:42:33",
+                "validStartDate": "2017-11-21 19:30:30",
+                "validEndDate": "2017-11-24 12:30:30",
+                "status": 1,
+                "phoneNum": null,
+                "origin": null,
+                "assignable": true
+            },
+            {
+                "id": "b98b1d7c-6433-4b99-9c4b-72b9ca0da6a9",
+                "activityName": "圣诞优惠",
+                "type": 1,
+                "creator": null,
+                "createDate": "2017-11-28 14:42:33",
+                "validStartDate": "2017-11-21 19:30:30",
+                "validEndDate": "2017-11-24 12:30:30",
+                "status": 1,
+                "phoneNum": null,
+                "origin": null,
+                "assignable": true
+            }
+        ],
+        "last": true,
+        "totalPages": 1,
+        "totalElements": 3,
+        "number": 0,
+        "size": 20,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 3
+    }
+}
+```
+
+
+## 13.3 APP端优惠券访问接口
+
+
+### 13.3.1 app用户领取优惠券接口
+
+- 功能描述: 领取优惠券
+
+- 请求地址: `http://domain/coupon/coupons/acquire`
+
+- 请求动作: `PUT`
+
+- 请求示例: `http://localhost:8080/coupon/coupons/acquire?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+
+- 返回示例示例
+
+```
+{
+	"activity":{
+	"id":"5a13cc956c79211554a7f9ca",
+	 "name":"圣诞优惠"
+	},
+	"couponRules":[
+   {
+    "type":"fullCouponRule",
+    "useLimitAmount":5,
+    "discountAmount":2,
+    "maxNum":2,
+    "generateNum":5
+   }
+   ],
+   "phoneNum":"18365265123"
+}
+```
+
+
+### 13.3.2 app用户查看已领取的优惠券接口
+
+- 功能描述: app用户查看领取的优惠券
+
+- 请求地址: `http://domain/customer/coupons/search`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://localhost:8080/customer/coupons/search?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&status=2`
+
+- 返回示例
+
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [],
+        "totalElements": 0,
+        "last": true,
+        "totalPages": 0,
+        "number": 0,
+        "size": 20,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 0
+    }
+}
+```
+
+
+
+### 13.3.3 app用户驶离结算时查看优惠券接口
+
+- 功能描述: app用户查询当前可用的优惠券列表
+
+- 请求地址: `http://domain/customer/coupons/obtainAvailableCoupons`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://localhost:8080/coupon/coupons/obtainAvailableCoupons?access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
+
+- 返回示例
+
+```
+    {
+        "status": "SUCCESS",
+        "data": {
+            "content": [],
+            "totalElements": 0,
+            "last": true,
+            "totalPages": 0,
+            "number": 0,
+            "size": 20,
+            "sort": null,
+            "first": true,
+            "numberOfElements": 0
+        }
+    }
+```
+
+## 13.4 APP端优惠券结算访问接口
+
+### 13.4.1 app自主驶出结算订单时，计算使用优惠券后的订单金额
+
+- 功能描述: 计算优惠券金额
+
+- 请求地址: `http://domain/billing/chargingStrategies/couponFee`
+
+- 请求动作: `PUT`
+
+- 请求示例: `http://http://localhost:8080/billing/chargingStrategies/couponFee?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&chargingStrategyId=1000&startTime=2017-11-28 7:00:00&vehicleType=02`
+
+- 请求示例
+
+```
+{
+ "type":"fullCouponRule",
+ "useLimitAmount":5,
+  "discountAmount":2
+}
+```
+
+
+
+
+
