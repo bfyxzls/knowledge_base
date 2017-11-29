@@ -663,24 +663,35 @@
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/customer/coupons/obtainAvailableCoupons?access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
+- 请求示例: `http://localhost:8080/customer/coupons/obtainAvailableCoupons?access_token=9241e9aa-6ef6-4ead-8818-8fbd0da03aca&roadSectionId=1001&calculatedFee=5&parkingPeriod=6000`
 
 - 返回示例
 
 ```
     {
         "status": "SUCCESS",
-        "data": {
-            "content": [],
-            "totalElements": 0,
-            "last": true,
-            "totalPages": 0,
-            "number": 0,
-            "size": 20,
-            "sort": null,
-            "first": true,
-            "numberOfElements": 0
-        }
+        "data": [
+            {
+                "id": "9df5c187-a0e3-4c57-a2fb-a27e38aac552",
+                "rule": {
+                    "type": 3,
+                    "useLimitAmount": 5,
+                    "discountAmount": 2,
+                    "generateNum": 10,
+                    "maxNum": 2
+                }
+            },
+            {
+                "id": "afff09b9-c64d-40eb-b963-21a3d5263a06",
+                "rule": {
+                    "type": 3,
+                    "useLimitAmount": 5,
+                    "discountAmount": 2,
+                    "generateNum": 10,
+                    "maxNum": 2
+                }
+            }
+        ]
     }
 ```
 
