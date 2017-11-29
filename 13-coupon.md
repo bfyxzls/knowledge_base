@@ -473,7 +473,7 @@
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/coupon/coupons?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&id=1&type=1&activity.id=5a13cc956c79211554a7f9ca&activity.name=圣诞优惠&status=1&assignable=true`
+- 请求示例: `http://localhost:8080/coupon/coupons?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&id=1&type=1&activity.id=5a13cc956c79211554a7f9ca&activity.name=圣诞优惠&status=1&assignable=true&page=4&size=2`
 
 - 返回示例
 
@@ -546,7 +546,7 @@
 
 - 请求动作: `PUT`
 
-- 请求示例: `http://localhost:8080/coupon/coupons/acquire?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+- 请求示例: `http://localhost:8080/coupon/coupons/acquire?access_token=10371f15-09c6-48de-9770-71603781a7f8`
 
 - 请求示例
 
@@ -626,29 +626,190 @@
 
 ### 13.3.2 app用户查看已领取的优惠券接口
 
-- 功能描述: app用户查看领取的优惠券
+- 功能描述: app用户查看优惠券
 
 - 请求地址: `http://domain/customer/coupons/search`
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/customer/coupons/search?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&status=2`
+- 请求示例: `http://localhost:8080/customer/coupons/search?access_token=10371f15-09c6-48de-9770-71603781a7f8&status=2`
 
 - 返回示例
 
 ```
+status=2 未使用的优惠券：
+status=3:已使用的优惠券：
+status=4:已失效的优惠券：
+
 {
     "status": "SUCCESS",
     "data": {
-        "content": [],
-        "totalElements": 0,
+        "content": [
+            {
+                "id": "0eba4bc1-fa6d-448c-a277-2a9e0248e5e8",
+                "activityName": "停车活动",
+                "template": {
+                    "validStartDate": 1511263830000,
+                    "validEndDate": 1514687430000,
+                    "roadSections": [
+                        1003,
+                        1004
+                    ]
+                },
+                "rule": {
+                    "type": 1,
+                    "freeHours": 2,
+                    "generateNum": 10,
+                    "maxNum": 2
+                },
+                "status": 2
+            },
+            {
+                "id": "5cab3fe3-1a1c-4c6d-b5c7-76d7d2c5121c",
+                "activityName": "停车活动",
+                "template": {
+                    "validStartDate": 1511263830000,
+                    "validEndDate": 1514687430000,
+                    "roadSections": [
+                        1003,
+                        1004
+                    ]
+                },
+                "rule": {
+                    "type": 1,
+                    "freeHours": 2,
+                    "generateNum": 10,
+                    "maxNum": 2
+                },
+                "status": 2
+            },
+            {
+                "id": "6b821271-7242-4071-bbc1-c5480db765ab",
+                "activityName": "圣诞优惠",
+                "template": {
+                    "validStartDate": 1511263830000,
+                    "validEndDate": 1511497830000,
+                    "roadSections": [
+                        1003,
+                        1004
+                    ]
+                },
+                "rule": {
+                    "type": 1,
+                    "freeHours": 2,
+                    "generateNum": 10,
+                    "maxNum": 2
+                },
+                "status": 2
+            },
+            {
+                "id": "e7ca84ce-84ca-423e-99ff-c37716746d77",
+                "activityName": "圣诞优惠",
+                "template": {
+                    "validStartDate": 1511263830000,
+                    "validEndDate": 1511497830000,
+                    "roadSections": [
+                        1003,
+                        1004
+                    ]
+                },
+                "rule": {
+                    "type": 1,
+                    "freeHours": 2,
+                    "generateNum": 10,
+                    "maxNum": 2
+                },
+                "status": 2
+            },
+            {
+                "id": "9df5c187-a0e3-4c57-a2fb-a27e38aac552",
+                "activityName": "圣诞优惠",
+                "template": {
+                    "validStartDate": 1511231430000,
+                    "validEndDate": 1511577030000,
+                    "roadSections": [
+                        1001,
+                        1002
+                    ]
+                },
+                "rule": {
+                    "type": 2,
+                    "useLimitAmount": 5,
+                    "discountAmount": 2,
+                    "generateNum": 10,
+                    "maxNum": 2
+                },
+                "status": 2
+            },
+            {
+                "id": "afff09b9-c64d-40eb-b963-21a3d5263a06",
+                "activityName": "圣诞优惠",
+                "template": {
+                    "validStartDate": 1511231430000,
+                    "validEndDate": 1511577030000,
+                    "roadSections": [
+                        1001,
+                        1002
+                    ]
+                },
+                "rule": {
+                    "type": 2,
+                    "useLimitAmount": 5,
+                    "discountAmount": 2,
+                    "generateNum": 10,
+                    "maxNum": 2
+                },
+                "status": 2
+            },
+            {
+                "id": "96e12f1d-db2a-4b26-9bfc-e204253527aa",
+                "activityName": "圣诞优惠",
+                "template": {
+                    "validStartDate": 1511231430000,
+                    "validEndDate": 1511577030000,
+                    "roadSections": [
+                        1001,
+                        1002
+                    ]
+                },
+                "rule": {
+                    "type": 2,
+                    "useLimitAmount": 10,
+                    "discountAmount": 5,
+                    "generateNum": 10,
+                    "maxNum": 2
+                },
+                "status": 2
+            },
+            {
+                "id": "fcebf712-6dbf-40bc-855c-6f5f87d14e7b",
+                "activityName": "圣诞优惠",
+                "template": {
+                    "validStartDate": 1511231430000,
+                    "validEndDate": 1511577030000,
+                    "roadSections": [
+                        1001,
+                        1002
+                    ]
+                },
+                "rule": {
+                    "type": 2,
+                    "useLimitAmount": 10,
+                    "discountAmount": 5,
+                    "generateNum": 10,
+                    "maxNum": 2
+                },
+                "status": 2
+            }
+        ],
+        "totalElements": 8,
         "last": true,
-        "totalPages": 0,
+        "totalPages": 1,
         "number": 0,
         "size": 20,
         "sort": null,
         "first": true,
-        "numberOfElements": 0
+        "numberOfElements": 8
     }
 }
 ```
@@ -657,42 +818,102 @@
 
 ### 13.3.3 app用户驶离结算时查看优惠券接口
 
-- 功能描述: app用户查询当前可用的优惠券列表
+- 功能描述: app用户驶离时根据路段查询当前可用的优惠券列表
 
 - 请求地址: `http://domain/customer/coupons/obtainAvailableCoupons`
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/customer/coupons/obtainAvailableCoupons?access_token=9241e9aa-6ef6-4ead-8818-8fbd0da03aca&roadSectionId=1001&calculatedFee=5&parkingPeriod=6000`
+- 请求示例: `http://localhost:8080/customer/coupons/obtainAvailableCoupons?access_token=10371f15-09c6-48de-9770-71603781a7f8&roadSectionId=1001`
 
 - 返回示例
 
 ```
-    {
-        "status": "SUCCESS",
-        "data": [
-            {
-                "id": "9df5c187-a0e3-4c57-a2fb-a27e38aac552",
-                "rule": {
-                    "type": 3,
-                    "useLimitAmount": 5,
-                    "discountAmount": 2,
-                    "generateNum": 10,
-                    "maxNum": 2
-                }
-            },
-            {
-                "id": "afff09b9-c64d-40eb-b963-21a3d5263a06",
-                "rule": {
-                    "type": 3,
-                    "useLimitAmount": 5,
-                    "discountAmount": 2,
-                    "generateNum": 10,
-                    "maxNum": 2
-                }
-            }
-        ]
-    }
+   {
+       "status": "SUCCESS",
+       "data": [
+           {
+               "id": "9df5c187-a0e3-4c57-a2fb-a27e38aac552",
+               "activityName": "圣诞优惠",
+               "template": {
+                   "validStartDate": 1511231430000,
+                   "validEndDate": 1511577030000,
+                   "roadSections": [
+                       1001,
+                       1002
+                   ]
+               },
+               "rule": {
+                   "type": 2,
+                   "useLimitAmount": 5,
+                   "discountAmount": 2,
+                   "generateNum": 10,
+                   "maxNum": 2
+               },
+               "status": 2
+           },
+           {
+               "id": "afff09b9-c64d-40eb-b963-21a3d5263a06",
+               "activityName": "圣诞优惠",
+               "template": {
+                   "validStartDate": 1511231430000,
+                   "validEndDate": 1511577030000,
+                   "roadSections": [
+                       1001,
+                       1002
+                   ]
+               },
+               "rule": {
+                   "type": 2,
+                   "useLimitAmount": 5,
+                   "discountAmount": 2,
+                   "generateNum": 10,
+                   "maxNum": 2
+               },
+               "status": 2
+           },
+           {
+               "id": "96e12f1d-db2a-4b26-9bfc-e204253527aa",
+               "activityName": "圣诞优惠",
+               "template": {
+                   "validStartDate": 1511231430000,
+                   "validEndDate": 1511577030000,
+                   "roadSections": [
+                       1001,
+                       1002
+                   ]
+               },
+               "rule": {
+                   "type": 2,
+                   "useLimitAmount": 10,
+                   "discountAmount": 5,
+                   "generateNum": 10,
+                   "maxNum": 2
+               },
+               "status": 2
+           },
+           {
+               "id": "fcebf712-6dbf-40bc-855c-6f5f87d14e7b",
+               "activityName": "圣诞优惠",
+               "template": {
+                   "validStartDate": 1511231430000,
+                   "validEndDate": 1511577030000,
+                   "roadSections": [
+                       1001,
+                       1002
+                   ]
+               },
+               "rule": {
+                   "type": 2,
+                   "useLimitAmount": 10,
+                   "discountAmount": 5,
+                   "generateNum": 10,
+                   "maxNum": 2
+               },
+               "status": 2
+           }
+       ]
+   }
 ```
 
 ## 13.4 APP端优惠券结算访问接口
