@@ -548,9 +548,11 @@
 
 - 请求示例: `http://localhost:8080/coupon/coupons/acquire?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
 
-- 返回示例示例
+- 请求示例
 
 ```
+领取满减券：
+
 {
 	"activity":{
 	"id":"5a13cc956c79211554a7f9ca",
@@ -566,6 +568,58 @@
    }
    ],
    "phoneNum":"18365265123"
+}
+
+领取免费券：
+{
+	"activity":{
+	"id":"5a1e1543e8452f12ec522c73",
+	 "name":"停车活动"
+	},
+	"couponRules":[
+   {
+    "type": "freeCouponRule",
+    "freeHours": 2,
+    "generateNum": 10,
+    "maxNum": 2
+  }
+   ],
+   "phoneNum":"18365265125"
+}
+
+领取小时券：
+{
+	"activity":{
+	"id":"5a1e1543e8452f12ec522c73",
+	 "name":"停车活动"
+	},
+	"couponRules":[
+   {
+     "type": "hourCouponRule",
+     "useLimitHour": 1,
+     "payAmount": 1,
+     "generateNum": 10,
+     "maxNum": 2
+  }
+   ],
+   "phoneNum":"18365265126"
+}
+
+领取直减券：
+{
+	"activity":{
+	"id":"5a1e1543e8452f12ec522c73",
+	 "name":"停车活动"
+	},
+	"couponRules":[
+   {
+     "type": "straightCutCouponRule",
+     "discountAmount": 5,
+     "generateNum": 10,
+     "maxNum": 1
+  }
+   ],
+   "phoneNum":"18365265128"
 }
 ```
 
@@ -609,7 +663,7 @@
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/coupon/coupons/obtainAvailableCoupons?access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
+- 请求示例: `http://localhost:8080/customer/coupons/obtainAvailableCoupons?access_token=9e245715-aef8-47ff-bf4a-3030d6258e03`
 
 - 返回示例
 
@@ -645,11 +699,38 @@
 - 请求示例
 
 ```
+满减券结算：
+
 {
  "type":"fullCouponRule",
  "useLimitAmount":5,
   "discountAmount":2
 }
+
+小时券结算：
+
+{
+ "type":"hourCouponRule",
+  "useLimitHour": 2,
+  "payAmount": 5
+}
+
+免费券计算：
+
+{
+ "type":"freeCouponRule",
+  "freeHours": 2
+}
+
+直减券计算：
+{
+  "type": "straightCutCouponRule",
+  "discountAmount": 5
+}
+
+
+
+
 ```
 
 
