@@ -964,6 +964,42 @@ status=4:已失效的优惠券：
 
 
 ```
+## 13.5 CouponRule规则
+
+### 13.5.1 FreeCouponRule
+
+         generateNum; //生成张数
+         maxNum; // 每人最多发放张数
+         
+         freeHours; // 免费时长
+         CouponType：Integer FREE = 1;//优惠券类型
+
+### 13.5.2 FullCouponRule
+
+         generateNum; //生成张数
+         maxNum; // 每人最多发放张数
+         
+         useLimitAmount; // 金额使用限制
+         discountAmount; // 优惠金额
+         CouponType：Integer FULL = 3;//优惠券类型
+         
+### 13.5.3 HourCouponRule
+
+         generateNum; //生成张数
+         maxNum; // 每人最多发放张数
+         
+         useLimitHour; // 时长使用限制
+         payAmount; // 实付金额
+         CouponType：Integer HOUR = 2//优惠券类型
+         
+### 13.5.4 StraightCutCouponRule
+         
+         generateNum; //生成张数
+         maxNum; // 每人最多发放张数
+         
+         discountAmount; // 优惠金额
+         CouponType：Integer STRAIGHT = 4;//优惠券类型
+         
 
 
 
