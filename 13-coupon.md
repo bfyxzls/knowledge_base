@@ -997,7 +997,7 @@ status=4:已失效的优惠券：
          payAmount; // 实付金额
          CouponType：Integer HOUR = 2//优惠券类型
          
-         例子：useLimitHour：2  payAmount：5   停车时长2小时收费5元
+         例子：useLimitHour：2  payAmount：5   停车时长2小时收费5分
          
 ### 13.5.4 直减券StraightCutCouponRule
          
@@ -1007,7 +1007,7 @@ status=4:已失效的优惠券：
          discountAmount; // 优惠金额
          CouponType：Integer STRAIGHT = 4;//优惠券类型
          
-         例子：discountAmount：5   5元直减券直接优惠5元
+         例子：discountAmount：5   5元直减券直接优惠5分
                
          
 
