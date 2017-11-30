@@ -855,6 +855,70 @@ status=4:已失效的优惠券：
 }
 ```
 
+### 13.3.4 查询当前最新优惠活动
+
+- 功能描述: 查询当前最新优惠活动
+
+- 请求地址: `http://domain/coupon/activities/latest`
+
+- 请求动作: `GET`
+
+- 请求示例: `localhost:8080/coupon/activities/latest?access_token=7df15a7c-6187-4a7d-9ad4-9db597fadf6f`
+
+- 返回示例
+
+```
+   {
+    "status": "SUCCESS",
+    "data": {
+        "id": "5a1fd3abdcd5d30a33b13256",
+        "name": "中秋优惠",
+        "rules": [
+            {
+                "type": 1,
+                "freeHours": 2,
+                "generateNum": null,
+                "maxNum": 2
+            }
+        ]
+    }
+}
+```
+
+### 13.3.5 查询当前用户指定活动下已领取的优惠券规则
+
+- 功能描述: 查询当前用户指定活动下已领取的优惠券规则
+
+- 请求地址: `http://domain/customer/coupons/obtainAcquiredCouponRules`
+
+- 请求动作: `GET`
+
+- 请求参数:
+    - `activityId`:活动id
+    - `activityName`:活动名称
+- 请求示例: `http://localhost:8080/customer/coupons/obtainAcquiredCouponRules?access_token=7df15a7c-6187-4a7d-9ad4-9db597fadf6f&activityId=5a13cc956c79211554a7f9ca&activityName=圣诞优惠`
+
+- 返回示例
+
+```
+   {
+    "status": "SUCCESS",
+    "data": [
+        {
+            "rule": {
+                "type": "fullCouponRule",
+                "useLimitAmount": 500,
+                "discountAmount": 200,
+                "generateNum": 5,
+                "maxNum": 2
+            },
+            "type": 3
+        },
+        ...
+    ]
+}
+```
+
 ## 13.4 APP端优惠券结算访问接口
 
 ### 13.4.1 app自主驶出结算订单时，计算使用优惠券后的订单金额
@@ -949,8 +1013,5 @@ status=4:已失效的优惠券：
          例子：discountAmount：5   5元直减券直接优惠5分
                
          
-
-
-
 
 
