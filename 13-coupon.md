@@ -966,15 +966,17 @@ status=4:已失效的优惠券：
 ```
 ## 13.5 CouponRule规则
 
-### 13.5.1 FreeCouponRule
+### 13.5.1 免费券FreeCouponRule
 
          generateNum; //生成张数
          maxNum; // 每人最多发放张数
          
          freeHours; // 免费时长
          CouponType：Integer FREE = 1;//优惠券类型
+         
+         例子：freeHours：2  免费停车两个小时，两小时内不收费
 
-### 13.5.2 FullCouponRule
+### 13.5.2 满减券FullCouponRule
 
          generateNum; //生成张数
          maxNum; // 每人最多发放张数
@@ -983,7 +985,10 @@ status=4:已失效的优惠券：
          discountAmount; // 优惠金额
          CouponType：Integer FULL = 3;//优惠券类型
          
-### 13.5.3 HourCouponRule
+         例子：useLimitAmount：20  discountAmount：5   停车金额满20减5元
+         
+         
+### 13.5.3 小时券HourCouponRule
 
          generateNum; //生成张数
          maxNum; // 每人最多发放张数
@@ -992,13 +997,17 @@ status=4:已失效的优惠券：
          payAmount; // 实付金额
          CouponType：Integer HOUR = 2//优惠券类型
          
-### 13.5.4 StraightCutCouponRule
+         例子：useLimitHour：2  payAmount：5   停车时长2小时收费5元
+         
+### 13.5.4 直减券StraightCutCouponRule
          
          generateNum; //生成张数
          maxNum; // 每人最多发放张数
          
          discountAmount; // 优惠金额
          CouponType：Integer STRAIGHT = 4;//优惠券类型
+         
+         例子：discountAmount：5   5元直减券直接优惠5元
                
          
 
