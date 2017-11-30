@@ -985,7 +985,7 @@ status=4:已失效的优惠券：
          discountAmount; // 优惠金额
          CouponType：Integer FULL = 3;//优惠券类型
          
-         例子：useLimitAmount：20  discountAmount：5   停车金额满20减5元
+         例子：useLimitAmount：20  discountAmount：5   停车金额满20分减5分
          
          
 ### 13.5.3 小时券HourCouponRule
