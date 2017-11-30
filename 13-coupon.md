@@ -1000,6 +1000,8 @@ status=4:已失效的优惠券：
          discountAmount; // 优惠金额
          CouponType：Integer STRAIGHT = 4;//优惠券类型
          
+         
+         
 
 
 
