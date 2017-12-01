@@ -1530,45 +1530,66 @@ status=4:已失效的优惠券：
 
 - 请求动作: `PUT`
 
+- 请求参数(Request Parameter):
+    - `chargingStrategyId`: 策略id
+    - `startTime`: 订单开始时间
+    - `vehicleType`: 车辆类型
+    
 - 请求示例: `http://http://localhost:8080/billing/chargingStrategies/couponFee?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&chargingStrategyId=1000&startTime=2017-11-28 7:00:00&vehicleType=02`
 
-- 请求示例
+- 请求示例(Request Body):
+    - 免费券:
+    
+    ```json
+        {
+         "type":"1",
+          "freeHours": 2
+        }
+    ```
+    - 小时券:
+    
+    ```json
+    {
+     "type":"2",
+      "useLimitHour": 2,
+      "payAmount": 5000
+    }
+    ```
+    - 满减券:
+    
+    ```json
+    {
+     "type":"3",
+     "useLimitAmount":5000,
+      "discountAmount":2000
+    }
+    ```
+    - 直减券:
+    
+    ```json
+    {
+      "type": "4",
+      "discountAmount": 5
+    }
+    ```
+- 返回参数:
+    - `fee`: 优惠后的金额,分
+    - `calculatedFee`: 计费金额(未使用优惠券时的金额),分
+    - `endTime`: 计费截止时间
+    - `parkingPeriod`: 停车时长,分钟
+- 返回示例:
 
-```
-满减券结算：
-
+```json
 {
- "type":"3",
- "useLimitAmount":5,
-  "discountAmount":2
+    "status": "SUCCESS",
+    "data": {
+        "fee": 17800,
+        "calculatedFee": 18700,
+        "endTime": "2017-12-01 11:45:19.197",
+        "parkingPeriod": 2775
+    }
 }
-
-小时券结算：
-
-{
- "type":"2",
-  "useLimitHour": 2,
-  "payAmount": 5
-}
-
-免费券计算：
-
-{
- "type":"1",
-  "freeHours": 2
-}
-
-直减券计算：
-{
-  "type": "4",
-  "discountAmount": 5
-}
-
-
-
-
-```
-
+```    
          
          
 
