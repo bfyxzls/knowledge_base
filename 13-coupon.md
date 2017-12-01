@@ -1381,15 +1381,12 @@ sort=type,DESC 按照优惠券类型降序排序
     "status": "SUCCESS",
     "data": [
         {
-            "rule": {
-                "type": "3",
-                "useLimitAmount": 500,
-                "discountAmount": 200,
-                "generateNum": 5,
-                "maxNum": 2
-            },
+            "useLimitAmount": 500,
+            "discountAmount": 200,
+            "generateNum": 5,
+            "maxNum": 2,
             "type": 3
-        },
+        },,
         ...
     ]
 }
