@@ -491,7 +491,7 @@
 
 - 请求动作: `GET`
 
-- 请求示例: `localhost:8080/coupon/activities/5a139a2e6c79212bb082ec5b?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+- 请求示例: `localhost:8080/coupon/activities/5a1fd3abdcd5d30a33b13256?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
 
 - 返回示例
 
@@ -499,34 +499,28 @@
 {
     "status": "SUCCESS",
     "data": {
-        "id": "5a139a2e6c79212bb082ec5b",
-        "name": "元旦优惠",
+        "id": "5a1fd3abdcd5d30a33b13256",
+        "name": "中秋优惠",
         "status": 1,
         "fullCouponTemplate": {
             "name": "满减券",
             "validStartDate": "2017-11-21 10:30:30",
             "validEndDate": "2017-11-25 10:30:30",
-            "roadSections": [{
-              "id":1001,
-              "name":"植保路"
-            },{
-              "id":1002,
-              "name":"长江路"
-            }],
-            "isWholeRoadSection":false,
+            "roadSections": [],
+            "isWholeRoadSection": true,
             "couponRules": [
                 {
                     "type": 3,
                     "useLimitAmount": 5,
                     "discountAmount": 2,
-                    "generateNum": 5,
+                    "generateNum": null,
                     "maxNum": 2
                 },
                 {
                     "type": 3,
                     "useLimitAmount": 10,
                     "discountAmount": 5,
-                    "generateNum": 5,
+                    "generateNum": null,
                     "maxNum": 2
                 }
             ]
@@ -535,19 +529,22 @@
             "name": "免费券",
             "validStartDate": "2017-11-21 19:30:30",
             "validEndDate": "2017-11-24 12:30:30",
-            "roadSections": [{
-              "id":1001,
-              "name":"植保路"
-            },{
-              "id":1002,
-              "name":"长江路"
-            }],
-            "isWholeRoadSection":false,
+            "roadSections": [
+                {
+                    "id": 1001,
+                    "name": "植保路"
+                },
+                {
+                    "id": 1002,
+                    "name": "长江路"
+                }
+            ],
+            "isWholeRoadSection": false,
             "couponRules": [
                 {
                     "type": 1,
                     "freeHours": 2,
-                    "generateNum": 5,
+                    "generateNum": null,
                     "maxNum": 2
                 }
             ]
@@ -556,27 +553,30 @@
             "name": "小时券",
             "validStartDate": "2017-11-21 10:30:30",
             "validEndDate": "2017-11-25 10:30:30",
-            "roadSections": [{
-              "id":1001,
-              "name":"植保路"
-            },{
-              "id":1002,
-              "name":"长江路"
-            }],
-            "isWholeRoadSection":false,
+            "roadSections": [
+                {
+                    "id": 1001,
+                    "name": "植保路"
+                },
+                {
+                    "id": 1002,
+                    "name": "长江路"
+                }
+            ],
+            "isWholeRoadSection": false,
             "couponRules": [
                 {
                     "type": 2,
                     "useLimitHour": 1,
                     "payAmount": 1,
-                    "generateNum": 5,
+                    "generateNum": null,
                     "maxNum": 2
                 },
                 {
                     "type": 2,
                     "useLimitHour": 2,
                     "payAmount": 5,
-                    "generateNum": 5,
+                    "generateNum": null,
                     "maxNum": 2
                 }
             ]
@@ -585,29 +585,33 @@
             "name": "直减券",
             "validStartDate": "2017-11-21 10:30:30",
             "validEndDate": "2017-11-25 10:30:30",
-            "roadSections": [{
-              "id":1001,
-              "name":"植保路"
-            },{
-              "id":1002,
-              "name":"长江路"
-            }],
-            "isWholeRoadSection":false,
+            "roadSections": [
+                {
+                    "id": 1001,
+                    "name": "植保路"
+                },
+                {
+                    "id": 1002,
+                    "name": "长江路"
+                }
+            ],
+            "isWholeRoadSection": false,
             "couponRules": [
                 {
                     "type": 4,
                     "discountAmount": 5,
-                    "generateNum": 5,
+                    "generateNum": null,
                     "maxNum": 1
                 },
                 {
                     "type": 4,
                     "discountAmount": 10,
-                    "generateNum": 5,
+                    "generateNum": null,
                     "maxNum": 2
                 }
             ]
-        }
+        },
+        "platform": null
     }
 }
 ```
