@@ -68,6 +68,20 @@
 
 #### 活动所属平台
 - `platform`: 1为APP
+
+#### 信息提示
+
+  `ACTIVITY_CREATE_SUCCESS` : 活动创建成功
+  
+  `REACH_MAX_COUPON_NUM` : 优惠券已达到领取上限
+  
+  `UNASSIGNED_COUPON_EMPTY` : 优惠券已被领完
+  
+  `COUPON_ASSIGN_SUCCESS` : 优惠券分配成功
+  
+  `ACTIVITY_UPDATE_SUCCESS` : 活动修改成功
+  
+  `COUPON_UNASSIGNABLE` : 优惠券不可分配
          
 ## 13.1 优惠活动信息访问接口
 
@@ -1143,7 +1157,8 @@
     "generateNum":5
    }
    ],
-   "phoneNum":"18365265123"
+   "phoneNum":"18365265123",
+   "origin":1
 }
 
 领取免费券：
@@ -1160,7 +1175,8 @@
     "maxNum": 2
   }
    ],
-   "phoneNum":"18365265125"
+   "phoneNum":"18365265125",
+   "origin":1
 }
 
 领取小时券：
@@ -1178,7 +1194,8 @@
      "maxNum": 2
   }
    ],
-   "phoneNum":"18365265126"
+   "phoneNum":"18365265126",
+   "origin":1
 }
 
 领取直减券：
@@ -1195,7 +1212,8 @@
      "maxNum": 1
   }
    ],
-   "phoneNum":"18365265128"
+   "phoneNum":"18365265128",
+   "origin":1
 }
 ```
 
