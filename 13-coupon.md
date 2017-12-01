@@ -15,6 +15,7 @@
 ```
 {
 	"name":"中秋优惠",
+	"platform":1 // 活动所属平台, APP活动为1, 非必填参数
 	"fullCouponTemplate":{
 		"name":"满减券",
 		"validStartDate":"2017-11-21 10:30:30",
@@ -1257,7 +1258,10 @@ status=4:已失效的优惠券：
 
 - 请求动作: `GET`
 
-- 请求示例: `localhost:8080/coupon/activities/latest?access_token=7df15a7c-6187-4a7d-9ad4-9db597fadf6f`
+- 请求参数：
+    - `platform`: 活动所属平台, APP活动为1
+    
+- 请求示例: `localhost:8080/coupon/activities/latest?access_token=7df15a7c-6187-4a7d-9ad4-9db597fadf6f&platform=1`
 
 - 返回示例
 
