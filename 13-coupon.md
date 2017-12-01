@@ -1208,7 +1208,7 @@
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/customer/coupons/search?access_token=10371f15-09c6-48de-9770-71603781a7f8&status=2`
+- 请求示例: `http://localhost:8080/customer/coupons/search?access_token=eff26f7a-a1cf-46ae-8d17-a61b1c7ed87c&status=2&page=1&size=2&sort=type,DESC`
 
 - 返回示例
 
@@ -1217,207 +1217,82 @@ status=2 未使用的优惠券：
 status=3:已使用的优惠券：
 status=4:已失效的优惠券：
 
+sort=type,DESC 按照优惠券类型降序排序
+
 {
     "status": "SUCCESS",
     "data": {
         "content": [
             {
-                "id": "0eba4bc1-fa6d-448c-a277-2a9e0248e5e8",
-                "activityName": "停车活动",
-                "template": {
-                    "validStartDate": 1511263830000,
-                    "validEndDate": 1514687430000,
-                    "roadSections": [{
-                      "id":1001,
-                      "name":"植保路"
-                    },{
-                      "id":1002,
-                      "name":"长江路"
-                    }],
-                    "isWholeRoadSection":false,
-                },
-                "rule": {
-                    "type": 1,
-                    "freeHours": 2,
-                    "generateNum": 10,
-                    "maxNum": 2
-                },
-                "status": 2
-            },
-            {
-                "id": "5cab3fe3-1a1c-4c6d-b5c7-76d7d2c5121c",
-                "activityName": "停车活动",
-                "template": {
-                    "validStartDate": 1511263830000,
-                    "validEndDate": 1514687430000,
-                    "roadSections": [{
-                      "id":1001,
-                      "name":"植保路"
-                    },{
-                      "id":1002,
-                      "name":"长江路"
-                    }],
-                    "isWholeRoadSection":false,
-                },
-                "rule": {
-                    "type": 1,
-                    "freeHours": 2,
-                    "generateNum": 10,
-                    "maxNum": 2
-                },
-                "status": 2
-            },
-            {
-                "id": "6b821271-7242-4071-bbc1-c5480db765ab",
-                "activityName": "圣诞优惠",
-                "template": {
-                    "validStartDate": 1511263830000,
-                    "validEndDate": 1511497830000,
-                    "roadSections": [{
-                      "id":1001,
-                      "name":"植保路"
-                    },{
-                      "id":1002,
-                      "name":"长江路"
-                    }],
-                    "isWholeRoadSection":false,
-                },
-                "rule": {
-                    "type": 1,
-                    "freeHours": 2,
-                    "generateNum": 10,
-                    "maxNum": 2
-                },
-                "status": 2
-            },
-            {
-                "id": "e7ca84ce-84ca-423e-99ff-c37716746d77",
-                "activityName": "圣诞优惠",
-                "template": {
-                    "validStartDate": 1511263830000,
-                    "validEndDate": 1511497830000,
-                    "roadSections": [{
-                      "id":1001,
-                      "name":"植保路"
-                    },{
-                      "id":1002,
-                      "name":"长江路"
-                    }],
-                    "isWholeRoadSection":false,
-                },
-                "rule": {
-                    "type": 1,
-                    "freeHours": 2,
-                    "generateNum": 10,
-                    "maxNum": 2
-                },
-                "status": 2
-            },
-            {
-                "id": "9df5c187-a0e3-4c57-a2fb-a27e38aac552",
+                "id": "0957bab8-5449-4e4e-8133-3dc153b722ae",
                 "activityName": "圣诞优惠",
                 "template": {
                     "validStartDate": 1511231430000,
-                    "validEndDate": 1511577030000,
-                    "roadSections": [{
-                      "id":1001,
-                      "name":"植保路"
-                    },{
-                      "id":1002,
-                      "name":"长江路"
-                    }],
-                    "isWholeRoadSection":false,
+                    "validEndDate": 1511490630000,
+                    "roadSections": [
+                        {
+                            "id": 1003,
+                            "name": "1003路段"
+                        },
+                        {
+                            "id": 1002,
+                            "name": "1002路段"
+                        }
+                    ],
+                    "isWholeRoadSection": false
                 },
                 "rule": {
-                    "type": 2,
-                    "useLimitAmount": 5,
-                    "discountAmount": 2,
-                    "generateNum": 10,
+                    "type": "4",
+                    "discountAmount": 1000,
+                    "generateNum": 5,
                     "maxNum": 2
                 },
                 "status": 2
             },
             {
-                "id": "afff09b9-c64d-40eb-b963-21a3d5263a06",
+                "id": "408edc56-75c1-4efa-ac04-438403af5a0a",
                 "activityName": "圣诞优惠",
                 "template": {
                     "validStartDate": 1511231430000,
-                    "validEndDate": 1511577030000,
-                    "roadSections": [{
-                      "id":1001,
-                      "name":"植保路"
-                    },{
-                      "id":1002,
-                      "name":"长江路"
-                    }],
-                    "isWholeRoadSection":false,
+                    "validEndDate": 1511490630000,
+                    "roadSections": [
+                        {
+                            "id": 1003,
+                            "name": "1003路段"
+                        },
+                        {
+                            "id": 1002,
+                            "name": "1002路段"
+                        }
+                    ],
+                    "isWholeRoadSection": false
                 },
                 "rule": {
-                    "type": 2,
-                    "useLimitAmount": 5,
-                    "discountAmount": 2,
-                    "generateNum": 10,
-                    "maxNum": 2
-                },
-                "status": 2
-            },
-            {
-                "id": "96e12f1d-db2a-4b26-9bfc-e204253527aa",
-                "activityName": "圣诞优惠",
-                "template": {
-                    "validStartDate": 1511231430000,
-                    "validEndDate": 1511577030000,
-                    "roadSections": [{
-                      "id":1001,
-                      "name":"植保路"
-                    },{
-                      "id":1002,
-                      "name":"长江路"
-                    }],
-                    "isWholeRoadSection":false,
-                },
-                "rule": {
-                    "type": 2,
-                    "useLimitAmount": 10,
-                    "discountAmount": 5,
-                    "generateNum": 10,
-                    "maxNum": 2
-                },
-                "status": 2
-            },
-            {
-                "id": "fcebf712-6dbf-40bc-855c-6f5f87d14e7b",
-                "activityName": "圣诞优惠",
-                "template": {
-                    "validStartDate": 1511231430000,
-                    "validEndDate": 1511577030000,
-                    "roadSections": [{
-                      "id":1001,
-                      "name":"植保路"
-                    },{
-                      "id":1002,
-                      "name":"长江路"
-                    }],
-                    "isWholeRoadSection":false,
-                },
-                "rule": {
-                    "type": 2,
-                    "useLimitAmount": 10,
-                    "discountAmount": 5,
-                    "generateNum": 10,
-                    "maxNum": 2
+                    "type": "4",
+                    "discountAmount": 500,
+                    "generateNum": 5,
+                    "maxNum": 1
                 },
                 "status": 2
             }
         ],
-        "totalElements": 8,
-        "last": true,
-        "totalPages": 1,
-        "number": 0,
-        "size": 20,
-        "sort": null,
-        "first": true,
-        "numberOfElements": 8
+        "totalElements": 37,
+        "totalPages": 19,
+        "last": false,
+        "number": 1,
+        "size": 2,
+        "sort": [
+            {
+                "direction": "DESC",
+                "property": "type",
+                "ignoreCase": false,
+                "nullHandling": "NATIVE",
+                "ascending": false,
+                "descending": true
+            }
+        ],
+        "first": false,
+        "numberOfElements": 2
     }
 }
 ```
