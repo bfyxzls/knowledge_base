@@ -1034,7 +1034,7 @@
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/coupon/coupons?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&id=1&type=1&activityId=5a13cc956c79211554a7f9ca&activityNname=圣诞优惠&status=1&assignable=true&page=4&size=2`
+- 请求示例: `http://localhost:8080/coupon/coupons?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&id=1&type=1&activityId=5a13cc956c79211554a7f9ca&activityName=圣诞优惠&status=1&assignable=true&page=4&size=2`
 
 - 返回示例
 
