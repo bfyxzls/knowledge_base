@@ -339,7 +339,7 @@
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/coupon/activities/search?name=优惠&status=&page=10&size=20&sort=createdDate,DESC&access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+- 请求示例: `http://localhost:8080/coupon/activities/search?queryObject.name=优惠&queryObject.status=1&page=1&size=10&access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
 
 - 返回示例
 
@@ -748,126 +748,71 @@
 
 - 功能描述: 查询最新活动
 
-- 请求地址: `http://domain/coupon/activities/searchLatest`
+- 请求地址: `http://domain/coupon/activities/latest`
 
 - 请求动作: `POST`
 
-- 请求示例: `localhost:8080/coupon/activities/searchLatest?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&status=1`
+- 请求示例: `localhost:8080/coupon/activities/latest?access_token=a2ca8f93-209f-433e-a710-065035a340fe&platform=1`
 
 - 返回示例
 
 ```
+
+platform:1 app平台
+
 {
     "status": "SUCCESS",
     "data": {
-        "id": "5a1e654ce8452f0d60af1fdc",
-        "name": "活动2",
-        "fullCouponTemplate": {
-            "name": "满减券",
-            "validStartDate": "2017-11-21 10:30:30",
-            "validEndDate": "2017-12-31 10:30:30",
-            "roadSections": [{
-              "id":1001,
-              "name":"植保路"
-            },{
-              "id":1002,
-              "name":"长江路"
-            }],
-            "isWholeRoadSection":false,
-            "couponRules": [
-                {
-                    "type": 3,
-                    "useLimitAmount": 5,
-                    "discountAmount": 2,
-                    "generateNum": null,
-                    "maxNum": 2
-                },
-                {
-                    "type": 3,
-                    "useLimitAmount": 10,
-                    "discountAmount": 5,
-                    "generateNum": null,
-                    "maxNum": 2
-                }
-            ]
-        },
-        "freeCouponTemplate": {
-            "name": "免费券",
-            "validStartDate": "2017-11-21 19:30:30",
-            "validEndDate": "2017-12-31 10:30:30",
-            "roadSections": [{
-              "id":1001,
-              "name":"植保路"
-            },{
-              "id":1002,
-              "name":"长江路"
-            }],
-            "isWholeRoadSection":false,
-            "couponRules": [
-                {
-                    "type": 1,
-                    "freeHours": 2,
-                    "generateNum": null,
-                    "maxNum": 2
-                }
-            ]
-        },
-        "hourCouponTemplate": {
-            "name": "小时券",
-            "validStartDate": "2017-11-21 10:30:30",
-            "validEndDate": "2017-12-31 10:30:30",
-            "roadSections": [{
-              "id":1001,
-              "name":"植保路"
-            },{
-              "id":1002,
-              "name":"长江路"
-            }],
-            "isWholeRoadSection":false,
-            "couponRules": [
-                {
-                    "type": 2,
-                    "useLimitHour": 1,
-                    "payAmount": 1,
-                    "generateNum": null,
-                    "maxNum": 2
-                },
-                {
-                    "type": 2,
-                    "useLimitHour": 2,
-                    "payAmount": 5,
-                    "generateNum": null,
-                    "maxNum": 2
-                }
-            ]
-        },
-        "straightCutCouponTemplate": {
-            "name": "直减券",
-            "validStartDate": "2017-11-21 10:30:30",
-            "validEndDate": "2017-12-31 10:30:30",
-            "roadSections": [{
-              "id":1001,
-              "name":"植保路"
-            },{
-              "id":1002,
-              "name":"长江路"
-            }],
-            "isWholeRoadSection":false,
-            "couponRules": [
-                {
-                    "type": 4,
-                    "discountAmount": 5,
-                    "generateNum": null,
-                    "maxNum": 1
-                },
-                {
-                    "type": 4,
-                    "discountAmount": 10,
-                    "generateNum": null,
-                    "maxNum": 2
-                }
-            ]
-        }
+        "id": "5a24ac3e5af9171b67eecb66",
+        "name": "中秋优惠",
+        "rules": [
+            {
+                "type": 1,
+                "freeHours": 2,
+                "generateNum": null,
+                "maxNum": 2
+            },
+            {
+                "type": 3,
+                "useLimitAmount": 5,
+                "discountAmount": 2,
+                "generateNum": null,
+                "maxNum": 2
+            },
+            {
+                "type": 3,
+                "useLimitAmount": 10,
+                "discountAmount": 5,
+                "generateNum": null,
+                "maxNum": 2
+            },
+            {
+                "type": 2,
+                "useLimitHour": 1,
+                "payAmount": 1,
+                "generateNum": null,
+                "maxNum": 2
+            },
+            {
+                "type": 2,
+                "useLimitHour": 2,
+                "payAmount": 5,
+                "generateNum": null,
+                "maxNum": 2
+            },
+            {
+                "type": 4,
+                "discountAmount": 5,
+                "generateNum": null,
+                "maxNum": 1
+            },
+            {
+                "type": 4,
+                "discountAmount": 10,
+                "generateNum": null,
+                "maxNum": 2
+            }
+        ]
     }
 }
 
