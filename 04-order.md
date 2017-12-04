@@ -780,7 +780,7 @@
 
 - 请求动作：`PUT`
 
-- 请求示例：`http://192.168.1.18:8080/order/app/orders/1000023/freeDriveOut?access_token=1398a422-504a-4e95-8531-52cc0f5ebcc4&payType=4&calculatedFee=100`
+- 请求示例：`http://192.168.1.18:8080/order/app/orders/1000023/freeDriveOut?access_token=1398a422-504a-4e95-8531-52cc0f5ebcc4&payType=4&calculatedFee=100&couponId=`
 
 - 返回示例：
 

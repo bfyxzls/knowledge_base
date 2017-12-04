@@ -1165,6 +1165,12 @@ platform:1 app平台
    "origin":1
 }
 ```
+- 返回示例:
+```
+{
+    "status": "SUCCESS"
+}
+```
 
 
 ### 13.3.2 app用户查看已领取的优惠券接口
@@ -1274,7 +1280,13 @@ sort=type,DESC 按照优惠券类型降序排序
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/customer/coupons/obtainAvailableCoupons?access_token=10371f15-09c6-48de-9770-71603781a7f8&roadSectionId=1001&roadSectionName=植保路`
+- 请求参数:
+   - `roadSectionId`: 路段id
+   - `roadSectionName`: 路段名称
+   - `calculatedFee`: 计费金额(分)
+   - `parkingPeriod`: 停车时长(分钟)
+   
+- 请求示例: `http://localhost:8080/customer/coupons/obtainAvailableCoupons?access_token=10371f15-09c6-48de-9770-71603781a7f8&roadSectionId=1001&roadSectionName=植保路&calculatedFee=100&parkingPeriod=4`
 
 - 返回示例
 
