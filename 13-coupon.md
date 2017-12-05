@@ -184,8 +184,7 @@
 				"maxNum":2	
 			}
 		]
-	}
-	"platform":1,
+	},
 	"status":1
 }
 
