@@ -1399,10 +1399,11 @@ sort=type,DESC 按照优惠券类型降序排序
 - 请求参数:
    - `roadSectionId`: 路段id
    - `roadSectionName`: 路段名称
-   - `calculatedFee`: 计费金额(分)
-   - `parkingPeriod`: 停车时长(分钟)
+   - `chargingStrategyId`: 收费策略id
+   - `startTime`: 驶入时间
+   - `vehicleType`: 车辆类型
    
-- 请求示例: `http://localhost:8080/customer/coupons/obtainAvailableCoupons?access_token=10371f15-09c6-48de-9770-71603781a7f8&roadSectionId=1001&roadSectionName=植保路&calculatedFee=100&parkingPeriod=4`
+- 请求示例: `http://localhost:8080/customer/coupons/obtainAvailableCoupons?access_token=a52d6375-7618-48f6-8267-d94b59966390&roadSectionId=1003&roadSectionName=1003路段&chargingStrategyId=1000&startTime=2017-11-28 7:00:00&vehicleType=02`
 
 - 返回示例
 
@@ -1411,12 +1412,27 @@ sort=type,DESC 按照优惠券类型降序排序
     "status": "SUCCESS",
     "data": [
         {
-            "id": "01ed9eac-1517-4782-9c89-d4dcd59bc14a",
+            "id": "2756299b-2881-4a79-875a-da591b7c196e",
             "rule": {
-                "type": "1",
-                "freeHours": 2,
+                "type": 4,
+                "discountAmount": 1000,
                 "generateNum": 5,
                 "maxNum": 2
+            },
+            "template": {
+                "validStartDate": 1511231430000,
+                "validEndDate": 1511490630000,
+                "roadSections": [
+                    {
+                        "id": 1003,
+                        "name": "1003路段"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "1002路段"
+                    }
+                ],
+                "isWholeRoadSection": false
             }
         }
     ]
