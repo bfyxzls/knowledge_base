@@ -1212,15 +1212,13 @@ sort=createdDate,DESC：按照优惠券生成时间降序排列
 	"id":"5a13cc956c79211554a7f9ca",
 	 "name":"圣诞优惠"
 	},
-	"couponRules":[
-   {
+	"rule": {
     "type":"3",
     "useLimitAmount":5,
     "discountAmount":2,
     "maxNum":2,
     "generateNum":5
-   }
-   ],
+   },
    "phoneNum":"18365265123",
    "origin":1
 }
@@ -1231,14 +1229,12 @@ sort=createdDate,DESC：按照优惠券生成时间降序排列
 	"id":"5a1e1543e8452f12ec522c73",
 	 "name":"停车活动"
 	},
-	"couponRules":[
-   {
+	"rule":{
     "type": "1",
     "freeHours": 2,
     "generateNum": 10,
     "maxNum": 2
-  }
-   ],
+  },
    "phoneNum":"18365265125",
    "origin":1
 }
@@ -1249,15 +1245,13 @@ sort=createdDate,DESC：按照优惠券生成时间降序排列
 	"id":"5a1e1543e8452f12ec522c73",
 	 "name":"停车活动"
 	},
-	"couponRules":[
-   {
+	"rule":{
      "type": "2",
      "useLimitHour": 1,
      "payAmount": 1,
      "generateNum": 10,
      "maxNum": 2
-  }
-   ],
+  },
    "phoneNum":"18365265126",
    "origin":1
 }
@@ -1268,14 +1262,12 @@ sort=createdDate,DESC：按照优惠券生成时间降序排列
 	"id":"5a1e1543e8452f12ec522c73",
 	 "name":"停车活动"
 	},
-	"couponRules":[
-   {
+	"rule": {
      "type": "4",
      "discountAmount": 5,
      "generateNum": 10,
      "maxNum": 1
-  }
-   ],
+  },
    "phoneNum":"18365265128",
    "origin":1
 }
