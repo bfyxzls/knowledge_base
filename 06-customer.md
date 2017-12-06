@@ -568,4 +568,153 @@ PS:需要用admin用户获得access_token
 }
 ```
 
+## 6.4 电子发票抬头
+
+### 6.4.1 新增电子发票抬头接口
+
+- 功能描述: 增加电子发票抬头
+
+- 请求地址: `localhost:8080/customer/titles`
+
+- 请求动作: `POST`
+
+- 请求示例: `localhost:8080/customer/titles?access_token=1e2bebe0-1f79-4d84-a2cd-86f6be3f7359`
+
+- 请求示例
+
+```
+{
+		"title":"个人",
+		"buyerId":"123",
+		"isDefault":false,
+		"phoneNum":"15555417041"
+	}
+```
+
+### 6.4.2 list接口
+
+- 功能描述: 电子发票抬头list
+
+- 请求地址: `localhost:8080/customer/titles`
+
+- 请求动作: `GET`
+
+- 请求示例: `localhost:8080/customer/titles?access_token=1e2bebe0-1f79-4d84-a2cd-86f6be3f7359`
+
+- 请求示例
+
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 16,
+            "title": "个人",
+            "buyerId": "123",
+            "isDefault": false,
+            "phoneNum": "15555417041"
+        },
+        {
+            "id": 22,
+            "title": "公司",
+            "buyerId": "456",
+            "isDefault": true,
+            "phoneNum": "15555417041"
+        }
+    ]
+}
+```
+
+### 6.4.3 修改发票抬头信息接口
+   
+  - 功能描述: 修改发票抬头信息
+   
+  - 请求地址: `http://localhost:8080/customer/titles/`
+   
+  - 请求动作: `PUT`
+   
+  - 请求示例: `http://localhost:8080/customer/titles/16?access_token=1e2bebe0-1f79-4d84-a2cd-86f6be3f7359`
+   
+  - 请求示例
+   
+   ```
+   {
+   		"title":"个人修改",
+   		"buyerId":"777",
+   		"isDefault":true,
+   		"phoneNum":"15555417041"
+   	}
+   ```
+  - 返回示例
+   
+   ```
+   {
+       "status": "SUCCESS",
+       "data": "更新发票抬头成功"
+   }
+   ```
+
+### 6.4.4 设置发票抬头为默认抬头接口
+
+- 功能描述: 设置发票为默认抬头
+
+- 请求地址: `http://localhost:8080/customer/titles/defaultTitle`
+
+- 请求动作: `PUT`
+
+- 请求示例: `http://localhost:8080/customer/titles/defaultTitle?access_token=1e2bebe0-1f79-4d84-a2cd-86f6be3f7359&id=22`
+
+- 返回示例
+
+```
+{
+    "status": "SUCCESS",
+    "data": "发票抬头设置默认成功"
+}
+```
+
+### 6.4.5 查询发票抬头信息接口
+
+- 功能描述: 查询发票抬头信息
+
+- 请求地址: `http://localhost:8080/customer/titles`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://localhost:8080/customer/titles/16?access_token=1e2bebe0-1f79-4d84-a2cd-86f6be3f7359`
+
+- 返回示例
+
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": 16,
+        "title": "个人修改",
+        "buyerId": "777",
+        "isDefault": false,
+        "phoneNum": "15555417041"
+    }
+}
+```
+### 6.4.6 删除发票抬头信息
+
+- 功能描述: 删除发票抬头
+
+- 请求地址: `localhost:8080/customer/titles`
+
+- 请求动作: `DELETE`
+
+- 请求示例: `http://localhost:8080/customer/titles/5?access_token=1e2bebe0-1f79-4d84-a2cd-86f6be3f7359`
+
+- 返回示例
+
+```
+{
+    "status": "SUCCESS",
+    "data": "发票抬头删除成功"
+}
+```
+
+
 
