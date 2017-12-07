@@ -755,10 +755,36 @@ PS:需要用admin用户获得access_token
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/customer/invoiceOrders/obtainInvoiceOrdersInGivenInvoice?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&invoiceId=1002`
+- 请求示例: `http://localhost:8080/customer/invoiceOrders/obtainInvoiceOrdersInGivenInvoice?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&invoiceId=78`
 
 - 返回示例
 ```aidl
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "completeDate": "2017-09-14 15:13:14 星期四",
+            "isMonthBill": false,
+            "roadSectionName": "潜山路-长江西路",
+            "parkingPeriod": 286,
+            "fee": 4000
+        },
+        {
+            "completeDate": "2017-09-15 15:13:14 星期五",
+            "isMonthBill": false,
+            "roadSectionName": "潜山路-长江西路",
+            "parkingPeriod": 301,
+            "fee": 4000
+        },
+        {
+            "completeDate": "2017-09-15 19:00:00 星期五",
+            "isMonthBill": false,
+            "roadSectionName": "潜山路-长江西路",
+            "parkingPeriod": 218,
+            "fee": 1000
+        }
+    ]
+}
 
 ```
 
