@@ -86,20 +86,20 @@
 ### 14.1.4 查询默认发票抬头信息
 
 - 功能描述:  查询默认发票抬头信息
-- 请求地址: `http://domain/customer/titles/{id}/default`
+- 请求地址: `http://domain/customer/titles/default`
 - 请求动作: `GET`
-- 请求示例: `http://domain/customer/titles/1/default?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 请求示例: `http://domain/customer/titles/default?phoneNum=&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
 - 返回示例：
 ```
 {
     "status": "SUCCESS",
     "data": {
-        "id": 16,
-        "title": "抬头名称",
-        "buyerId": "税号",
-        "isDefault": false,
-        "phoneNum": "手机号码"
+        "id": 22,
+        "title": "公司",
+        "buyerId": "456",
+        "isDefault": true,
+        "phoneNum": "15555417041"
     }
 }
 ```
