@@ -1,3 +1,80 @@
+## 说明 
+### 券分类
+#### 免费券
+- `type`: 1
+- `freeHours`: 免费时长
+- `示例`:
+
+```json
+{
+    "type":1,
+    "freeHours":2
+}
+```
+- `示例说明`: 免费停车两个小时，两小时内不收费
+         
+#### 小时券
+- `type`: 2
+- `useLimitHour`: 停车小时数使用限制，停车满指定小时数可用
+- `payAmount`: 实付金额(分)
+- `示例`:
+
+```json
+{
+    "type":2,
+    "useLimitHour": 2,
+    "payAmount": 2000
+}
+```
+- `示例说明`: 2小时收费2元
+
+#### 满减券
+- `type`: 3
+- `useLimitAmount`: 金额使用限制(分)
+- `discountAmount`: 优惠金额(分)
+- `示例`:
+
+```json
+{
+    "type":3,
+    "useLimitAmount": 5000,
+    "discountAmount": 2000
+}
+```
+- `示例说明`: 满5元减2元   
+         
+#### 直减券
+- `type`: 4
+- `discountAmount`: 优惠金额(分)
+- `示例`:
+
+```json
+{
+    "type":4,
+    "discountAmount": 2000
+}
+```
+- `示例说明`: 减2元
+
+### 常量
+
+#### 活动状态
+- `status`: 1为可用，2为禁用
+
+#### 优惠券状态
+- `status`: 1为未发放, 2为未使用, 3为已使用, 4为已失效
+
+#### 优惠券类型
+- `type`: 1为免费券, 2为小时券, 3为满减券, 4为直减券
+
+#### 活动所属平台
+- `platform`: 1为APP
+
+#### 优惠券领取渠道
+-`origin`: 1为APP, 2为H5，3为第三方，4为系统分配，5为手动分配
+
+  
+         
 ## 13.1 优惠活动信息访问接口
 
 ### 13.1.1 save接口
@@ -15,22 +92,22 @@
 ```
 {
 	"name":"中秋优惠",
+	"platform":1 // 活动所属平台, APP活动为1, 非必填参数
 	"fullCouponTemplate":{
 		"name":"满减券",
 		"validStartDate":"2017-11-21 10:30:30",
 		"validEndDate":"2017-11-25 10:30:30",
-		"roadSections":[
-			1001,1002
-		],
+		"roadSections":[],
+		"isWholeRoadSection":true, // 是否是全路段
 		"couponRules":[
 			{
-				"type":"fullCouponRule",
+				"type":"3",
 				"useLimitAmount":5,
 				"discountAmount":2,
 				"maxNum":2	
 			},
 			{
-				"type":"fullCouponRule",
+				"type":"3",
 				"useLimitAmount":10,
 				"discountAmount":5,
 				"maxNum":2	
@@ -42,12 +119,17 @@
 		"name":"免费券",
 		"validStartDate":"2017-11-21 19:30:30",
 		"validEndDate":"2017-11-24 12:30:30",
-		"roadSections":[
-			1003,1004
-		],
+		"roadSections":[{
+		  "id":1001,
+		  "name":"植保路"
+		},{
+		  "id":1002,
+		  "name":"长江路"
+		}],
+		"isWholeRoadSection":false,
 		"couponRules":[
 			{
-				"type":"freeCouponRule",
+				"type":"1",
 				"freeHours":2,
 				"maxNum":2	
 			}
@@ -57,17 +139,22 @@
 		"name":"小时券",
 		"validStartDate":"2017-11-21 10:30:30",
 		"validEndDate":"2017-11-25 10:30:30",
-		"roadSections":[
-			1005,1006
-		],
+		"roadSections":[{
+		  "id":1001,
+		  "name":"植保路"
+		},{
+		  "id":1002,
+		  "name":"长江路"
+		}],
+		"isWholeRoadSection":false,
 		"couponRules":[
 			{
-				"type":"hourCouponRule",
+				"type":"2",
 				"useLimitHour":1,
 				"payAmount":1,
 				"maxNum":2	
 			},{
-				"type":"hourCouponRule",
+				"type":"2",
 				"useLimitHour":2,
 				"payAmount":5,
 				"maxNum":2	
@@ -78,21 +165,27 @@
 		"name":"直减券",
 		"validStartDate":"2017-11-21 10:30:30",
 		"validEndDate":"2017-11-25 10:30:30",
-		"roadSections":[
-			1005,1006
-		],
+		"roadSections":[{
+		  "id":1001,
+		  "name":"植保路"
+		},{
+		  "id":1002,
+		  "name":"长江路"
+		}],
+		"isWholeRoadSection":false,
 		"couponRules":[
 			{
-				"type":"straightCutCouponRule",
+				"type":"4",
 				"discountAmount":5,
 				"maxNum":1	
 			},{
-				"type":"straightCutCouponRule",
+				"type":"4",
 				"discountAmount":10,
 				"maxNum":2	
 			}
 		]
-	}
+	},
+	"status":1
 }
 
 ```
@@ -122,20 +215,24 @@
                     "name": "满减券",
                     "validStartDate": "2017-11-21 10:30:30",
                     "validEndDate": "2017-11-25 10:30:30",
-                    "roadSections": [
-                        1001,
-                        1002
-                    ],
+                    "roadSections": [{
+                      "id":1001,
+                      "name":"植保路"
+                    },{
+                      "id":1002,
+                      "name":"长江路"
+                    }],
+                    "isWholeRoadSection":false,
                     "couponRules": [
                         {
-                            "type": "fullCouponRule",
+                            "type": "3",
                             "useLimitAmount": 5,
                             "discountAmount": 2,
                             "generateNum": null,
                             "maxNum": 2
                         },
                         {
-                            "type": "fullCouponRule",
+                            "type": "3",
                             "useLimitAmount": 10,
                             "discountAmount": 5,
                             "generateNum": null,
@@ -147,13 +244,17 @@
                     "name": "免费券",
                     "validStartDate": "2017-11-21 19:30:30",
                     "validEndDate": "2017-11-24 12:30:30",
-                    "roadSections": [
-                        1003,
-                        1004
-                    ],
+                    "roadSections": [{
+                      "id":1001,
+                      "name":"植保路"
+                    },{
+                      "id":1002,
+                      "name":"长江路"
+                    }],
+                    "isWholeRoadSection":false,
                     "couponRules": [
                         {
-                            "type": "freeCouponRule",
+                            "type": "1",
                             "freeHours": 2,
                             "generateNum": null,
                             "maxNum": 2
@@ -164,20 +265,24 @@
                     "name": "小时券",
                     "validStartDate": "2017-11-21 10:30:30",
                     "validEndDate": "2017-11-25 10:30:30",
-                    "roadSections": [
-                        1005,
-                        1006
-                    ],
+                    "roadSections": [{
+                      "id":1001,
+                      "name":"植保路"
+                    },{
+                      "id":1002,
+                      "name":"长江路"
+                    }],
+                    "isWholeRoadSection":false,
                     "couponRules": [
                         {
-                            "type": "hourCouponRule",
+                            "type": "2",
                             "useLimitHour": 1,
                             "payAmount": 1,
                             "generateNum": null,
                             "maxNum": 2
                         },
                         {
-                            "type": "hourCouponRule",
+                            "type": "2",
                             "useLimitHour": 2,
                             "payAmount": 5,
                             "generateNum": null,
@@ -189,19 +294,23 @@
                     "name": "直减券",
                     "validStartDate": "2017-11-21 10:30:30",
                     "validEndDate": "2017-11-25 10:30:30",
-                    "roadSections": [
-                        1005,
-                        1006
-                    ],
+                    "roadSections": [{
+                      "id":1001,
+                      "name":"植保路"
+                    },{
+                      "id":1002,
+                      "name":"长江路"
+                    }],
+                    "isWholeRoadSection":false
                     "couponRules": [
                         {
-                            "type": "straightCutCouponRule",
+                            "type": "4",
                             "discountAmount": 5,
                             "generateNum": null,
                             "maxNum": 1
                         },
                         {
-                            "type": "straightCutCouponRule",
+                            "type": "4",
                             "discountAmount": 10,
                             "generateNum": null,
                             "maxNum": 2
@@ -223,9 +332,11 @@
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/coupon/activities/search?name=优惠&status=&page=10&size=20&sort=createdDate,DESC&access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+- 请求示例: `http://localhost:8080/coupon/activities/search?queryObject.name=&queryObject.status=1&page=0&size=2&access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&sort=createdDate,DESC`
 
 - 返回示例
+
+sort:createdDate,DESC 按照活动创建时间降序排列
 
 ```
 {
@@ -233,27 +344,25 @@
     "data": {
         "content": [
             {
-                "id": "5a13cc956c79211554a7f9ca",
-                "name": "圣诞优惠",
-                "status": 1,
+                "id": "5a24af70e8452f2734f0e20d",
+                "name": "最终优惠",
+                "status": null,
                 "fullCouponTemplate": {
                     "name": "满减券",
                     "validStartDate": "2017-11-21 10:30:30",
                     "validEndDate": "2017-11-25 10:30:30",
-                    "roadSections": [
-                        1001,
-                        1002
-                    ],
+                    "roadSections": [],
+                    "isWholeRoadSection": true,
                     "couponRules": [
                         {
-                            "type": "fullCouponRule",
+                            "type": 3,
                             "useLimitAmount": 5,
                             "discountAmount": 2,
                             "generateNum": null,
                             "maxNum": 2
                         },
                         {
-                            "type": "fullCouponRule",
+                            "type": 3,
                             "useLimitAmount": 10,
                             "discountAmount": 5,
                             "generateNum": null,
@@ -266,12 +375,19 @@
                     "validStartDate": "2017-11-21 19:30:30",
                     "validEndDate": "2017-11-24 12:30:30",
                     "roadSections": [
-                        1003,
-                        1004
+                        {
+                            "id": 1001,
+                            "name": "植保路"
+                        },
+                        {
+                            "id": 1002,
+                            "name": "长江路"
+                        }
                     ],
+                    "isWholeRoadSection": false,
                     "couponRules": [
                         {
-                            "type": "freeCouponRule",
+                            "type": 1,
                             "freeHours": 2,
                             "generateNum": null,
                             "maxNum": 2
@@ -283,19 +399,26 @@
                     "validStartDate": "2017-11-21 10:30:30",
                     "validEndDate": "2017-11-25 10:30:30",
                     "roadSections": [
-                        1005,
-                        1006
+                        {
+                            "id": 1001,
+                            "name": "植保路"
+                        },
+                        {
+                            "id": 1002,
+                            "name": "长江路"
+                        }
                     ],
+                    "isWholeRoadSection": false,
                     "couponRules": [
                         {
-                            "type": "hourCouponRule",
+                            "type": 2,
                             "useLimitHour": 1,
                             "payAmount": 1,
                             "generateNum": null,
                             "maxNum": 2
                         },
                         {
-                            "type": "hourCouponRule",
+                            "type": 2,
                             "useLimitHour": 2,
                             "payAmount": 5,
                             "generateNum": null,
@@ -308,32 +431,154 @@
                     "validStartDate": "2017-11-21 10:30:30",
                     "validEndDate": "2017-11-25 10:30:30",
                     "roadSections": [
-                        1005,
-                        1006
+                        {
+                            "id": 1001,
+                            "name": "植保路"
+                        },
+                        {
+                            "id": 1002,
+                            "name": "长江路"
+                        }
                     ],
+                    "isWholeRoadSection": false,
                     "couponRules": [
                         {
-                            "type": "straightCutCouponRule",
+                            "type": 4,
                             "discountAmount": 5,
                             "generateNum": null,
                             "maxNum": 1
                         },
                         {
-                            "type": "straightCutCouponRule",
+                            "type": 4,
                             "discountAmount": 10,
                             "generateNum": null,
                             "maxNum": 2
                         }
                     ]
                 },
-                "createdDate": "2017-11-21 14:49:57"
+                "platform": 1
+            },
+            {
+                "id": "5a24ac3e5af9171b67eecb66",
+                "name": "中秋优惠",
+                "status": 1,
+                "fullCouponTemplate": {
+                    "name": "满减券",
+                    "validStartDate": "2017-11-21 10:30:30",
+                    "validEndDate": "2017-11-25 10:30:30",
+                    "roadSections": [],
+                    "isWholeRoadSection": true,
+                    "couponRules": [
+                        {
+                            "type": 3,
+                            "useLimitAmount": 5,
+                            "discountAmount": 2,
+                            "generateNum": null,
+                            "maxNum": 2
+                        },
+                        {
+                            "type": 3,
+                            "useLimitAmount": 10,
+                            "discountAmount": 5,
+                            "generateNum": null,
+                            "maxNum": 2
+                        }
+                    ]
+                },
+                "freeCouponTemplate": {
+                    "name": "免费券",
+                    "validStartDate": "2017-11-21 19:30:30",
+                    "validEndDate": "2017-11-24 12:30:30",
+                    "roadSections": [
+                        {
+                            "id": 1001,
+                            "name": "植保路"
+                        },
+                        {
+                            "id": 1002,
+                            "name": "长江路"
+                        }
+                    ],
+                    "isWholeRoadSection": false,
+                    "couponRules": [
+                        {
+                            "type": 1,
+                            "freeHours": 2,
+                            "generateNum": null,
+                            "maxNum": 2
+                        }
+                    ]
+                },
+                "hourCouponTemplate": {
+                    "name": "小时券",
+                    "validStartDate": "2017-11-21 10:30:30",
+                    "validEndDate": "2017-11-25 10:30:30",
+                    "roadSections": [
+                        {
+                            "id": 1001,
+                            "name": "植保路"
+                        },
+                        {
+                            "id": 1002,
+                            "name": "长江路"
+                        }
+                    ],
+                    "isWholeRoadSection": false,
+                    "couponRules": [
+                        {
+                            "type": 2,
+                            "useLimitHour": 1,
+                            "payAmount": 1,
+                            "generateNum": null,
+                            "maxNum": 2
+                        },
+                        {
+                            "type": 2,
+                            "useLimitHour": 2,
+                            "payAmount": 5,
+                            "generateNum": null,
+                            "maxNum": 2
+                        }
+                    ]
+                },
+                "straightCutCouponTemplate": {
+                    "name": "直减券",
+                    "validStartDate": "2017-11-21 10:30:30",
+                    "validEndDate": "2017-11-25 10:30:30",
+                    "roadSections": [
+                        {
+                            "id": 1001,
+                            "name": "植保路"
+                        },
+                        {
+                            "id": 1002,
+                            "name": "长江路"
+                        }
+                    ],
+                    "isWholeRoadSection": false,
+                    "couponRules": [
+                        {
+                            "type": 4,
+                            "discountAmount": 5,
+                            "generateNum": null,
+                            "maxNum": 1
+                        },
+                        {
+                            "type": 4,
+                            "discountAmount": 10,
+                            "generateNum": null,
+                            "maxNum": 2
+                        }
+                    ]
+                },
+                "platform": 1
             }
         ],
-        "totalElements": 6,
+        "last": false,
         "totalPages": 2,
-        "last": true,
-        "number": 1,
-        "size": 4,
+        "totalElements": 4,
+        "number": 0,
+        "size": 2,
         "sort": [
             {
                 "direction": "DESC",
@@ -344,12 +589,349 @@
                 "descending": true
             }
         ],
-        "first": false,
+        "first": true,
         "numberOfElements": 2
     }
 }
 
 ```
+
+### 13.1.4 web端根据活动id查询活动信息
+
+- 功能描述: 查询活动信息
+
+- 请求地址: `http://domain/coupon/activities/`
+
+- 请求动作: `GET`
+
+- 请求示例: `localhost:8080/coupon/activities/5a1fd3abdcd5d30a33b13256?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+
+- 返回示例
+
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": "5a1fd3abdcd5d30a33b13256",
+        "name": "中秋优惠",
+        "status": 1,
+        "fullCouponTemplate": {
+            "name": "满减券",
+            "validStartDate": "2017-11-21 10:30:30",
+            "validEndDate": "2017-11-25 10:30:30",
+            "roadSections": [],
+            "isWholeRoadSection": true,
+            "couponRules": [
+                {
+                    "type": 3,
+                    "useLimitAmount": 5,
+                    "discountAmount": 2,
+                    "generateNum": null,
+                    "maxNum": 2
+                },
+                {
+                    "type": 3,
+                    "useLimitAmount": 10,
+                    "discountAmount": 5,
+                    "generateNum": null,
+                    "maxNum": 2
+                }
+            ]
+        },
+        "freeCouponTemplate": {
+            "name": "免费券",
+            "validStartDate": "2017-11-21 19:30:30",
+            "validEndDate": "2017-11-24 12:30:30",
+            "roadSections": [
+                {
+                    "id": 1001,
+                    "name": "植保路"
+                },
+                {
+                    "id": 1002,
+                    "name": "长江路"
+                }
+            ],
+            "isWholeRoadSection": false,
+            "couponRules": [
+                {
+                    "type": 1,
+                    "freeHours": 2,
+                    "generateNum": null,
+                    "maxNum": 2
+                }
+            ]
+        },
+        "hourCouponTemplate": {
+            "name": "小时券",
+            "validStartDate": "2017-11-21 10:30:30",
+            "validEndDate": "2017-11-25 10:30:30",
+            "roadSections": [
+                {
+                    "id": 1001,
+                    "name": "植保路"
+                },
+                {
+                    "id": 1002,
+                    "name": "长江路"
+                }
+            ],
+            "isWholeRoadSection": false,
+            "couponRules": [
+                {
+                    "type": 2,
+                    "useLimitHour": 1,
+                    "payAmount": 1,
+                    "generateNum": null,
+                    "maxNum": 2
+                },
+                {
+                    "type": 2,
+                    "useLimitHour": 2,
+                    "payAmount": 5,
+                    "generateNum": null,
+                    "maxNum": 2
+                }
+            ]
+        },
+        "straightCutCouponTemplate": {
+            "name": "直减券",
+            "validStartDate": "2017-11-21 10:30:30",
+            "validEndDate": "2017-11-25 10:30:30",
+            "roadSections": [
+                {
+                    "id": 1001,
+                    "name": "植保路"
+                },
+                {
+                    "id": 1002,
+                    "name": "长江路"
+                }
+            ],
+            "isWholeRoadSection": false,
+            "couponRules": [
+                {
+                    "type": 4,
+                    "discountAmount": 5,
+                    "generateNum": null,
+                    "maxNum": 1
+                },
+                {
+                    "type": 4,
+                    "discountAmount": 10,
+                    "generateNum": null,
+                    "maxNum": 2
+                }
+            ]
+        },
+        "platform": null
+    }
+}
+```
+
+### 13.1.5 web端修改活动信息
+
+- 功能描述: 修改活动信息
+
+- 请求地址: `http://domain/coupon/activities`
+
+- 请求动作: `PUT`
+
+- 请求示例: `localhost:8080/coupon/activities/5a13cc956c79211554a7f9ca?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+
+- 请求示例
+
+```
+{
+
+		"name":"修改圣诞优惠",
+		"status":1,
+		 "fullCouponTemplate": {
+                "name": "满减券",
+                "validStartDate": "2017-11-21 10:30:30",
+                "validEndDate": "2017-11-25 10:30:30",
+                "roadSections": [{
+                  "id":1001,
+                  "name":"植保路"
+                },{
+                  "id":1002,
+                  "name":"长江路"
+                }],
+                "isWholeRoadSection":false,
+                "couponRules": [
+                    {
+                        "type": "3",
+                        "useLimitAmount": 5,
+                        "discountAmount": 2,
+                        "generateNum": 20,
+                        "maxNum": 2
+                    },
+                    {
+                        "type": "3",
+                        "useLimitAmount": 10,
+                        "discountAmount": 5,
+                        "generateNum": 20,
+                        "maxNum": 2
+                    }
+                ]
+            },
+            "freeCouponTemplate": {
+                "name": "免费券",
+                "validStartDate": "2017-11-21 19:30:30",
+                "validEndDate": "2017-11-24 12:30:30",
+                "roadSections": [{
+                  "id":1001,
+                  "name":"植保路"
+                },{
+                  "id":1002,
+                  "name":"长江路"
+                }],
+                "isWholeRoadSection":false,
+                "couponRules": [
+                    {
+                        "type": "1",
+                        "freeHours": 2,
+                        "generateNum": 20,
+                        "maxNum": 2
+                    }
+                ]
+            },
+            "hourCouponTemplate": {
+                "name": "小时券",
+                "validStartDate": "2017-11-21 10:30:30",
+                "validEndDate": "2017-11-25 10:30:30",
+                "roadSections": [{
+                  "id":1001,
+                  "name":"植保路"
+                },{
+                  "id":1002,
+                  "name":"长江路"
+                }],
+                "isWholeRoadSection":false,
+                "couponRules": [
+                    {
+                        "type": "2",
+                        "useLimitHour": 1,
+                        "payAmount": 1,
+                        "generateNum": null,
+                        "maxNum": 2
+                    },
+                    {
+                        "type": "2",
+                        "useLimitHour": 2,
+                        "payAmount": 5,
+                        "generateNum": 20,
+                        "maxNum": 2
+                    }
+                ]
+            },
+            "straightCutCouponTemplate": {
+                "name": "直减券",
+                "validStartDate": "2017-11-21 10:30:30",
+                "validEndDate": "2017-11-25 10:30:30",
+                "roadSections": [{
+                  "id":1001,
+                  "name":"植保路"
+                },{
+                  "id":1002,
+                  "name":"长江路"
+                }],
+                "isWholeRoadSection":false,
+                "couponRules": [
+                    {
+                        "type": "4",
+                        "discountAmount": 5,
+                        "generateNum": 20,
+                        "maxNum": 1
+                    },
+                    {
+                        "type": "4",
+                        "discountAmount": 10,
+                        "generateNum": 20,
+                        "maxNum": 2
+                    }
+                ]
+            }
+		
+}
+
+```
+
+### 13.1.6 app端查询最新可用的活动接口
+
+- 功能描述: 查询最新活动
+
+- 请求地址: `http://domain/coupon/activities/latest`
+
+- 请求动作: `POST`
+
+- 请求示例: `localhost:8080/coupon/activities/latest?access_token=a2ca8f93-209f-433e-a710-065035a340fe&platform=1`
+
+- 返回示例
+
+```
+
+platform:1 app平台
+
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": "5a24ac3e5af9171b67eecb66",
+        "name": "中秋优惠",
+        "rules": [
+            {
+                "type": 1,
+                "freeHours": 2,
+                "generateNum": null,
+                "maxNum": 2
+            },
+            {
+                "type": 3,
+                "useLimitAmount": 5,
+                "discountAmount": 2,
+                "generateNum": null,
+                "maxNum": 2
+            },
+            {
+                "type": 3,
+                "useLimitAmount": 10,
+                "discountAmount": 5,
+                "generateNum": null,
+                "maxNum": 2
+            },
+            {
+                "type": 2,
+                "useLimitHour": 1,
+                "payAmount": 1,
+                "generateNum": null,
+                "maxNum": 2
+            },
+            {
+                "type": 2,
+                "useLimitHour": 2,
+                "payAmount": 5,
+                "generateNum": null,
+                "maxNum": 2
+            },
+            {
+                "type": 4,
+                "discountAmount": 5,
+                "generateNum": null,
+                "maxNum": 1
+            },
+            {
+                "type": 4,
+                "discountAmount": 10,
+                "generateNum": null,
+                "maxNum": 2
+            }
+        ]
+    }
+}
+
+```
+
+
 
 
 ## 13.2 优惠券信息访问接口
@@ -377,19 +959,24 @@
    "name":"满减券",
    "validStartDate":"2017-11-21 10:30:30",
    "validEndDate":"2017-11-24 10:30:30",
-   "roadSections":[
-    1001,1002
-   ],
+   "roadSections": [{
+     "id":1001,
+     "name":"植保路"
+   },{
+     "id":1002,
+     "name":"长江路"
+   }],
+   "isWholeRoadSection":false,
    "couponRules":[
     {
-     "type":"fullCouponRule",
+     "type":"3",
      "useLimitAmount":5,
      "discountAmount":2,
      "maxNum":2,
      "generateNum":5
     },
     {
-     "type":"fullCouponRule",
+     "type":"3",
      "useLimitAmount":10,
      "discountAmount":5,
      "maxNum":2,
@@ -402,12 +989,17 @@
    "name":"免费券",
    "validStartDate":"2017-11-21 19:30:30",
    "validEndDate":"2017-11-24 12:30:30",
-   "roadSections":[
-    1003,1004
-   ],
+   "roadSections": [{
+     "id":1001,
+     "name":"植保路"
+   },{
+     "id":1002,
+     "name":"长江路"
+   }],
+   "isWholeRoadSection":false,
    "couponRules":[
     {
-     "type":"freeCouponRule",
+     "type":"1",
      "freeHours":2,
      "maxNum":2,
      "generateNum":5 
@@ -418,18 +1010,23 @@
    "name":"小时券",
    "validStartDate":"2017-11-21 10:30:30",
    "validEndDate":"2017-11-24 10:30:30",
-   "roadSections":[
-    1005,1006
-   ],
+   "roadSections": [{
+     "id":1001,
+     "name":"植保路"
+   },{
+     "id":1002,
+     "name":"长江路"
+   }],
+   "isWholeRoadSection":false,
    "couponRules":[
     {
-     "type":"hourCouponRule",
+     "type":"2",
      "useLimitHour":1,
      "payAmount":1,
      "maxNum":2,
      "generateNum":5 
     },{
-     "type":"hourCouponRule",
+     "type":"2",
      "useLimitHour":2,
      "payAmount":5,
      "maxNum":2,
@@ -441,17 +1038,22 @@
    "name":"直减券",
    "validStartDate":"2017-11-21 10:30:30",
    "validEndDate":"2017-11-24 10:30:30",
-   "roadSections":[
-    1005,1006
-   ],
+   "roadSections": [{
+     "id":1001,
+     "name":"植保路"
+   },{
+     "id":1002,
+     "name":"长江路"
+   }],
+   "isWholeRoadSection":false,
    "couponRules":[
     {
-     "type":"straightCutCouponRule",
+     "type":"4",
      "discountAmount":5,
      "maxNum":1,
      "generateNum":5
     },{
-     "type":"straightCutCouponRule",
+     "type":"4",
      "discountAmount":10,
      "maxNum":2,
      "generateNum":5
@@ -465,6 +1067,27 @@
 
 ```
 
+### 13.2.4 web端给优惠券分配手机号
+
+- 功能描述: 分配优惠券
+
+- 请求地址: `http://domain/coupon/coupons`
+
+- 请求动作: `PUT`
+
+- 请求示例: `localhost:8080/coupon/coupons/assignCoupon?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&id=586adbde-3877-4397-a1fa-19e40aa97d39&phoneNum=18366666666`
+
+- 返回示例
+
+```
+{
+    "status": "SUCCESS",
+    "data": "优惠券分配成功"
+}
+
+```
+
+
 ### 13.2.2 web端查询优惠券接口
 
 - 功能描述: 根据券号模糊匹配，类型，归属活动，状态查找符合条件的优惠券
@@ -473,11 +1096,13 @@
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/coupon/coupons?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&id=1&type=1&activity.id=5a13cc956c79211554a7f9ca&activity.name=圣诞优惠&status=1&assignable=true&page=4&size=2`
+- 请求示例: `http://localhost:8080/coupon/coupons?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&id=&type=1&activityId=5a13cc956c79211554a7f9ca&activityName=圣诞优惠&status=1&assignable=true&phoneNum=&page=0&size=2&sort =createdDate,DESC`
 
 - 返回示例
 
 ```
+sort=createdDate,DESC：按照优惠券生成时间降序排列
+
 {
     "status": "SUCCESS",
     "data": {
@@ -533,7 +1158,36 @@
     }
 }
 ```
+### 13.2.3 web端根据券号查询优惠券信息
 
+- 功能描述: 查询优惠券信息
+
+- 请求地址: `http://domain/coupon/coupons/`
+
+- 请求动作: `PUT`
+
+- 请求示例: `localhost:8080/coupon/coupons/01ed9eac-1517-4782-9c89-d4dcd59bc14a?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": "01ed9eac-1517-4782-9c89-d4dcd59bc14a",
+        "activityName": "圣诞优惠",
+        "type": 1,
+        "creator": null,
+        "createDate": "2017-11-30 12:00:36",
+        "validStartDate": "2017-11-21 19:30:30",
+        "validEndDate": "2017-11-28 12:30:30",
+        "status": 2,
+        "phoneNum": "15555417041",
+        "origin": null,
+        "assignable": true
+    }
+}
+
+```
 
 ## 13.3 APP端优惠券访问接口
 
@@ -558,16 +1212,15 @@
 	"id":"5a13cc956c79211554a7f9ca",
 	 "name":"圣诞优惠"
 	},
-	"couponRules":[
-   {
-    "type":"fullCouponRule",
+	"rule": {
+    "type":"3",
     "useLimitAmount":5,
     "discountAmount":2,
     "maxNum":2,
     "generateNum":5
-   }
-   ],
-   "phoneNum":"18365265123"
+   },
+   "phoneNum":"18365265123",
+   "origin":1
 }
 
 领取免费券：
@@ -576,15 +1229,14 @@
 	"id":"5a1e1543e8452f12ec522c73",
 	 "name":"停车活动"
 	},
-	"couponRules":[
-   {
-    "type": "freeCouponRule",
+	"rule":{
+    "type": "1",
     "freeHours": 2,
     "generateNum": 10,
     "maxNum": 2
-  }
-   ],
-   "phoneNum":"18365265125"
+  },
+   "phoneNum":"18365265125",
+   "origin":1
 }
 
 领取小时券：
@@ -593,16 +1245,15 @@
 	"id":"5a1e1543e8452f12ec522c73",
 	 "name":"停车活动"
 	},
-	"couponRules":[
-   {
-     "type": "hourCouponRule",
+	"rule":{
+     "type": "2",
      "useLimitHour": 1,
      "payAmount": 1,
      "generateNum": 10,
      "maxNum": 2
-  }
-   ],
-   "phoneNum":"18365265126"
+  },
+   "phoneNum":"18365265126",
+   "origin":1
 }
 
 领取直减券：
@@ -611,15 +1262,20 @@
 	"id":"5a1e1543e8452f12ec522c73",
 	 "name":"停车活动"
 	},
-	"couponRules":[
-   {
-     "type": "straightCutCouponRule",
+	"rule": {
+     "type": "4",
      "discountAmount": 5,
      "generateNum": 10,
      "maxNum": 1
-  }
-   ],
-   "phoneNum":"18365265128"
+  },
+   "phoneNum":"18365265128",
+   "origin":1
+}
+```
+- 返回示例:
+```
+{
+    "status": "SUCCESS"
 }
 ```
 
@@ -632,7 +1288,7 @@
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/customer/coupons/search?access_token=10371f15-09c6-48de-9770-71603781a7f8&status=2`
+- 请求示例: `http://localhost:8080/customer/coupons/search?access_token=eff26f7a-a1cf-46ae-8d17-a61b1c7ed87c&status=2&page=1&size=2&sort=type,DESC`
 
 - 返回示例
 
@@ -641,175 +1297,82 @@ status=2 未使用的优惠券：
 status=3:已使用的优惠券：
 status=4:已失效的优惠券：
 
+sort=type,DESC 按照优惠券类型降序排序
+
 {
     "status": "SUCCESS",
     "data": {
         "content": [
             {
-                "id": "0eba4bc1-fa6d-448c-a277-2a9e0248e5e8",
-                "activityName": "停车活动",
-                "template": {
-                    "validStartDate": 1511263830000,
-                    "validEndDate": 1514687430000,
-                    "roadSections": [
-                        1003,
-                        1004
-                    ]
-                },
-                "rule": {
-                    "type": 1,
-                    "freeHours": 2,
-                    "generateNum": 10,
-                    "maxNum": 2
-                },
-                "status": 2
-            },
-            {
-                "id": "5cab3fe3-1a1c-4c6d-b5c7-76d7d2c5121c",
-                "activityName": "停车活动",
-                "template": {
-                    "validStartDate": 1511263830000,
-                    "validEndDate": 1514687430000,
-                    "roadSections": [
-                        1003,
-                        1004
-                    ]
-                },
-                "rule": {
-                    "type": 1,
-                    "freeHours": 2,
-                    "generateNum": 10,
-                    "maxNum": 2
-                },
-                "status": 2
-            },
-            {
-                "id": "6b821271-7242-4071-bbc1-c5480db765ab",
-                "activityName": "圣诞优惠",
-                "template": {
-                    "validStartDate": 1511263830000,
-                    "validEndDate": 1511497830000,
-                    "roadSections": [
-                        1003,
-                        1004
-                    ]
-                },
-                "rule": {
-                    "type": 1,
-                    "freeHours": 2,
-                    "generateNum": 10,
-                    "maxNum": 2
-                },
-                "status": 2
-            },
-            {
-                "id": "e7ca84ce-84ca-423e-99ff-c37716746d77",
-                "activityName": "圣诞优惠",
-                "template": {
-                    "validStartDate": 1511263830000,
-                    "validEndDate": 1511497830000,
-                    "roadSections": [
-                        1003,
-                        1004
-                    ]
-                },
-                "rule": {
-                    "type": 1,
-                    "freeHours": 2,
-                    "generateNum": 10,
-                    "maxNum": 2
-                },
-                "status": 2
-            },
-            {
-                "id": "9df5c187-a0e3-4c57-a2fb-a27e38aac552",
+                "id": "0957bab8-5449-4e4e-8133-3dc153b722ae",
                 "activityName": "圣诞优惠",
                 "template": {
                     "validStartDate": 1511231430000,
-                    "validEndDate": 1511577030000,
+                    "validEndDate": 1511490630000,
                     "roadSections": [
-                        1001,
-                        1002
-                    ]
+                        {
+                            "id": 1003,
+                            "name": "1003路段"
+                        },
+                        {
+                            "id": 1002,
+                            "name": "1002路段"
+                        }
+                    ],
+                    "isWholeRoadSection": false
                 },
                 "rule": {
-                    "type": 2,
-                    "useLimitAmount": 5,
-                    "discountAmount": 2,
-                    "generateNum": 10,
+                    "type": "4",
+                    "discountAmount": 1000,
+                    "generateNum": 5,
                     "maxNum": 2
                 },
                 "status": 2
             },
             {
-                "id": "afff09b9-c64d-40eb-b963-21a3d5263a06",
+                "id": "408edc56-75c1-4efa-ac04-438403af5a0a",
                 "activityName": "圣诞优惠",
                 "template": {
                     "validStartDate": 1511231430000,
-                    "validEndDate": 1511577030000,
+                    "validEndDate": 1511490630000,
                     "roadSections": [
-                        1001,
-                        1002
-                    ]
+                        {
+                            "id": 1003,
+                            "name": "1003路段"
+                        },
+                        {
+                            "id": 1002,
+                            "name": "1002路段"
+                        }
+                    ],
+                    "isWholeRoadSection": false
                 },
                 "rule": {
-                    "type": 2,
-                    "useLimitAmount": 5,
-                    "discountAmount": 2,
-                    "generateNum": 10,
-                    "maxNum": 2
-                },
-                "status": 2
-            },
-            {
-                "id": "96e12f1d-db2a-4b26-9bfc-e204253527aa",
-                "activityName": "圣诞优惠",
-                "template": {
-                    "validStartDate": 1511231430000,
-                    "validEndDate": 1511577030000,
-                    "roadSections": [
-                        1001,
-                        1002
-                    ]
-                },
-                "rule": {
-                    "type": 2,
-                    "useLimitAmount": 10,
-                    "discountAmount": 5,
-                    "generateNum": 10,
-                    "maxNum": 2
-                },
-                "status": 2
-            },
-            {
-                "id": "fcebf712-6dbf-40bc-855c-6f5f87d14e7b",
-                "activityName": "圣诞优惠",
-                "template": {
-                    "validStartDate": 1511231430000,
-                    "validEndDate": 1511577030000,
-                    "roadSections": [
-                        1001,
-                        1002
-                    ]
-                },
-                "rule": {
-                    "type": 2,
-                    "useLimitAmount": 10,
-                    "discountAmount": 5,
-                    "generateNum": 10,
-                    "maxNum": 2
+                    "type": "4",
+                    "discountAmount": 500,
+                    "generateNum": 5,
+                    "maxNum": 1
                 },
                 "status": 2
             }
         ],
-        "totalElements": 8,
-        "last": true,
-        "totalPages": 1,
-        "number": 0,
-        "size": 20,
-        "sort": null,
-        "first": true,
-        "numberOfElements": 8
+        "totalElements": 37,
+        "totalPages": 19,
+        "last": false,
+        "number": 1,
+        "size": 2,
+        "sort": [
+            {
+                "direction": "DESC",
+                "property": "type",
+                "ignoreCase": false,
+                "nullHandling": "NATIVE",
+                "ascending": false,
+                "descending": true
+            }
+        ],
+        "first": false,
+        "numberOfElements": 2
     }
 }
 ```
@@ -824,96 +1387,111 @@ status=4:已失效的优惠券：
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/customer/coupons/obtainAvailableCoupons?access_token=10371f15-09c6-48de-9770-71603781a7f8&roadSectionId=1001`
+- 请求参数:
+   - `roadSectionId`: 路段id
+   - `roadSectionName`: 路段名称
+   - `chargingStrategyId`: 收费策略id
+   - `startTime`: 驶入时间
+   - `vehicleType`: 车辆类型
+   
+- 请求示例: `http://localhost:8080/customer/coupons/obtainAvailableCoupons?access_token=a52d6375-7618-48f6-8267-d94b59966390&roadSectionId=1003&roadSectionName=1003路段&chargingStrategyId=1000&startTime=2017-11-28 7:00:00&vehicleType=02`
 
 - 返回示例
 
 ```
    {
-       "status": "SUCCESS",
-       "data": [
-           {
-               "id": "9df5c187-a0e3-4c57-a2fb-a27e38aac552",
-               "activityName": "圣诞优惠",
-               "template": {
-                   "validStartDate": 1511231430000,
-                   "validEndDate": 1511577030000,
-                   "roadSections": [
-                       1001,
-                       1002
-                   ]
-               },
-               "rule": {
-                   "type": 2,
-                   "useLimitAmount": 5,
-                   "discountAmount": 2,
-                   "generateNum": 10,
-                   "maxNum": 2
-               },
-               "status": 2
-           },
-           {
-               "id": "afff09b9-c64d-40eb-b963-21a3d5263a06",
-               "activityName": "圣诞优惠",
-               "template": {
-                   "validStartDate": 1511231430000,
-                   "validEndDate": 1511577030000,
-                   "roadSections": [
-                       1001,
-                       1002
-                   ]
-               },
-               "rule": {
-                   "type": 2,
-                   "useLimitAmount": 5,
-                   "discountAmount": 2,
-                   "generateNum": 10,
-                   "maxNum": 2
-               },
-               "status": 2
-           },
-           {
-               "id": "96e12f1d-db2a-4b26-9bfc-e204253527aa",
-               "activityName": "圣诞优惠",
-               "template": {
-                   "validStartDate": 1511231430000,
-                   "validEndDate": 1511577030000,
-                   "roadSections": [
-                       1001,
-                       1002
-                   ]
-               },
-               "rule": {
-                   "type": 2,
-                   "useLimitAmount": 10,
-                   "discountAmount": 5,
-                   "generateNum": 10,
-                   "maxNum": 2
-               },
-               "status": 2
-           },
-           {
-               "id": "fcebf712-6dbf-40bc-855c-6f5f87d14e7b",
-               "activityName": "圣诞优惠",
-               "template": {
-                   "validStartDate": 1511231430000,
-                   "validEndDate": 1511577030000,
-                   "roadSections": [
-                       1001,
-                       1002
-                   ]
-               },
-               "rule": {
-                   "type": 2,
-                   "useLimitAmount": 10,
-                   "discountAmount": 5,
-                   "generateNum": 10,
-                   "maxNum": 2
-               },
-               "status": 2
-           }
-       ]
-   }
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": "2756299b-2881-4a79-875a-da591b7c196e",
+            "rule": {
+                "type": 4,
+                "discountAmount": 1000,
+                "generateNum": 5,
+                "maxNum": 2
+            },
+            "template": {
+                "validStartDate": 1511231430000,
+                "validEndDate": 1511490630000,
+                "roadSections": [
+                    {
+                        "id": 1003,
+                        "name": "1003路段"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "1002路段"
+                    }
+                ],
+                "isWholeRoadSection": false
+            }
+        }
+    ]
+}
+```
+
+### 13.3.4 查询当前最新优惠活动
+
+- 功能描述: 查询当前最新优惠活动
+
+- 请求地址: `http://domain/coupon/activities/latest`
+
+- 请求动作: `GET`
+
+- 请求参数：
+    - `platform`: 活动所属平台, APP活动为1
+    
+- 请求示例: `localhost:8080/coupon/activities/latest?access_token=7df15a7c-6187-4a7d-9ad4-9db597fadf6f&platform=1`
+
+- 返回示例
+
+```
+   {
+    "status": "SUCCESS",
+    "data": {
+        "id": "5a1fd3abdcd5d30a33b13256",
+        "name": "中秋优惠",
+        "rules": [
+            {
+                "type": 1,
+                "freeHours": 2,
+                "generateNum": null,
+                "maxNum": 2
+            }
+        ]
+    }
+}
+```
+
+### 13.3.5 查询当前用户指定活动下已领取的优惠券规则
+
+- 功能描述: 查询当前用户指定活动下已领取的优惠券规则
+
+- 请求地址: `http://domain/customer/coupons/obtainAcquiredCouponRules`
+
+- 请求动作: `GET`
+
+- 请求参数:
+    - `activityId`:活动id
+    - `activityName`:活动名称
+- 请求示例: `http://localhost:8080/customer/coupons/obtainAcquiredCouponRules?access_token=7df15a7c-6187-4a7d-9ad4-9db597fadf6f&activityId=5a13cc956c79211554a7f9ca&activityName=圣诞优惠`
+
+- 返回示例
+
+```
+   {
+    "status": "SUCCESS",
+    "data": [
+        {
+            "useLimitAmount": 500,
+            "discountAmount": 200,
+            "generateNum": 5,
+            "maxNum": 2,
+            "type": 3
+        },,
+        ...
+    ]
+}
 ```
 
 ## 13.4 APP端优惠券结算访问接口
@@ -926,92 +1504,67 @@ status=4:已失效的优惠券：
 
 - 请求动作: `PUT`
 
+- 请求参数(Request Parameter):
+    - `chargingStrategyId`: 策略id
+    - `startTime`: 订单开始时间
+    - `vehicleType`: 车辆类型
+    
 - 请求示例: `http://http://localhost:8080/billing/chargingStrategies/couponFee?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&chargingStrategyId=1000&startTime=2017-11-28 7:00:00&vehicleType=02`
 
-- 请求示例
+- 请求示例(Request Body):
+    - 免费券:
+    
+    ```json
+        {
+         "type":"1",
+          "freeHours": 2
+        }
+    ```
+    - 小时券:
+    
+    ```json
+    {
+     "type":"2",
+      "useLimitHour": 2,
+      "payAmount": 5000
+    }
+    ```
+    - 满减券:
+    
+    ```json
+    {
+     "type":"3",
+     "useLimitAmount":5000,
+      "discountAmount":2000
+    }
+    ```
+    - 直减券:
+    
+    ```json
+    {
+      "type": "4",
+      "discountAmount": 5
+    }
+    ```
+- 返回参数:
+    - `fee`: 优惠后的金额,分
+    - `calculatedFee`: 计费金额(未使用优惠券时的金额),分
+    - `endTime`: 计费截止时间
+    - `parkingPeriod`: 停车时长,分钟
+- 返回示例:
 
-```
-满减券结算：
-
+```json
 {
- "type":"fullCouponRule",
- "useLimitAmount":5,
-  "discountAmount":2
+    "status": "SUCCESS",
+    "data": {
+        "fee": 17800,
+        "calculatedFee": 18700,
+        "endTime": "2017-12-01 11:45:19.197",
+        "parkingPeriod": 2775
+    }
 }
-
-小时券结算：
-
-{
- "type":"hourCouponRule",
-  "useLimitHour": 2,
-  "payAmount": 5
-}
-
-免费券计算：
-
-{
- "type":"freeCouponRule",
-  "freeHours": 2
-}
-
-直减券计算：
-{
-  "type": "straightCutCouponRule",
-  "discountAmount": 5
-}
-
-
-
-
-```
-## 13.5 CouponRule规则
-
-### 13.5.1 免费券FreeCouponRule
-
-         generateNum; //生成张数
-         maxNum; // 每人最多发放张数
-         
-         freeHours; // 免费时长
-         CouponType：Integer FREE = 1;//优惠券类型
-         
-         例子：freeHours：2  免费停车两个小时，两小时内不收费
-
-### 13.5.2 满减券FullCouponRule
-
-         generateNum; //生成张数
-         maxNum; // 每人最多发放张数
-         
-         useLimitAmount; // 金额使用限制
-         discountAmount; // 优惠金额
-         CouponType：Integer FULL = 3;//优惠券类型
-         
-         例子：useLimitAmount：20  discountAmount：5   停车金额满20分减5分
+```    
          
          
-### 13.5.3 小时券HourCouponRule
-
-         generateNum; //生成张数
-         maxNum; // 每人最多发放张数
-         
-         useLimitHour; // 时长使用限制
-         payAmount; // 实付金额
-         CouponType：Integer HOUR = 2//优惠券类型
-         
-         例子：useLimitHour：2  payAmount：5   停车时长2小时收费5分
-         
-### 13.5.4 直减券StraightCutCouponRule
-         
-         generateNum; //生成张数
-         maxNum; // 每人最多发放张数
-         
-         discountAmount; // 优惠金额
-         CouponType：Integer STRAIGHT = 4;//优惠券类型
-         
-         例子：discountAmount：5   5元直减券直接优惠5分
-               
-         
-
-
-
 
 
