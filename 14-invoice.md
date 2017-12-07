@@ -11,8 +11,7 @@
 {
 	"title":"抬头名称",
 	"buyerId":"税号",
-	"isDefault":false,//默认状态
-	"phoneNum":"手机号码"
+	"isDefault":false//默认状态
 }
 ```
 
@@ -71,8 +70,7 @@
 {
 	"title":"抬头名称",
 	"buyerId":"税号",
-	"isDefault":false,
-	"phoneNum":"手机号码"
+	"isDefault":false
 }
 ```
 - 返回示例：
