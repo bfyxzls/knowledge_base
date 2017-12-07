@@ -673,8 +673,7 @@ PS:需要用admin用户获得access_token
    		"isDefault":true,
    		"phoneNum":"15555417041"
    	}
-   ```
-```
+  ```
 
 ### 6.4.5 查询发票抬头信息接口
 
