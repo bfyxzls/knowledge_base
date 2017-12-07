@@ -660,7 +660,7 @@ PS:需要用admin用户获得access_token
 
 - 请求地址: `http://localhost:8080/customer/titles/default`
 
-- 请求动作: `PUT`
+- 请求动作: `GET`
 
 - 请求示例: `http://localhost:8080/customer/titles/defaultTitle?access_token=1e2bebe0-1f79-4d84-a2cd-86f6be3f7359&PhoneNum=15555417041`
 
