@@ -716,5 +716,51 @@ PS:需要用admin用户获得access_token
 }
 ```
 
+## 6.5  发票订单（InvoiceOrder）
+### 6.5.1 查询指定区域下的发票订单信息
+- 功能描述: 查询指定区域下的发票订单信息
+
+- 请求地址: `localhost:8080/customer/invoiceOrders/obtainInvoiceOrdersInGivenDistrict?access_token&districtId`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://localhost:8080/customer/invoiceOrders/obtainInvoiceOrdersInGivenDistrict?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&districtId=1002`
+
+- 返回示例
+```aidl
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "completeDate": "2017-09-14 15:13:14 星期四",
+            "isMonthBill": false,
+            "roadSectionName": "潜山路-长江西路",
+            "parkingPeriod": 287,
+            "fee": 0
+        },
+        {
+                    "completeDate": "2017-12-08 22:13:14 星期五",
+                    "isMonthBill": false,
+                    "roadSectionName": "潜山路-长江西路",
+                    "parkingPeriod": 2252,
+                    "fee": 4000
+                }
+            ]
+        }
+```
+### 6.5.1 查询指定电子订单下的发票订单信息
+- 功能描述: 查询指定电子订单下的发票订单信息
+
+- 请求地址: `localhost:8080/customer/invoiceOrders/obtainInvoiceOrdersInGivenInvoice?access_token&invoiceId`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://localhost:8080/customer/invoiceOrders/obtainInvoiceOrdersInGivenInvoice?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&invoiceId=1002`
+
+- 返回示例
+```aidl
+
+```
+
 
 
