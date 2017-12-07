@@ -599,7 +599,7 @@ PS:需要用admin用户获得access_token
 
 - 请求动作: `GET`
 
-- 请求示例: `localhost:8080/customer/titles?access_token=1e2bebe0-1f79-4d84-a2cd-86f6be3f7359`
+- 请求示例: `localhost:8080/customer/titles?access_token=1e2bebe0-1f79-4d84-a2cd-86f6be3f7359&PhoneNum=15555417041`
 
 - 请求示例
 
@@ -654,23 +654,26 @@ PS:需要用admin用户获得access_token
    }
    ```
 
-### 6.4.4 设置发票抬头为默认抬头接口
+### 6.4.4 获取默认发票抬头接口
 
 - 功能描述: 设置发票为默认抬头
 
-- 请求地址: `http://localhost:8080/customer/titles/defaultTitle`
+- 请求地址: `http://localhost:8080/customer/titles/default`
 
 - 请求动作: `PUT`
 
-- 请求示例: `http://localhost:8080/customer/titles/defaultTitle?access_token=1e2bebe0-1f79-4d84-a2cd-86f6be3f7359&id=22`
+- 请求示例: `http://localhost:8080/customer/titles/defaultTitle?access_token=1e2bebe0-1f79-4d84-a2cd-86f6be3f7359&PhoneNum=15555417041`
 
 - 返回示例
 
 ```
-{
-    "status": "SUCCESS",
-    "data": "发票抬头设置默认成功"
-}
+ {
+   		"title":"个人修改",
+   		"buyerId":"777",
+   		"isDefault":true,
+   		"phoneNum":"15555417041"
+   	}
+   ```
 ```
 
 ### 6.4.5 查询发票抬头信息接口
