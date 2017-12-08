@@ -157,9 +157,9 @@
 ```
 
 
-## 14.3 Invoice Controller接口
+## 14.3 发票信息访问接口
 
-### 14.3.1 districts接口
+### 14.3.1 获取行政区列表接口
 
 - 功能描述:  获取行政区列表
 - 请求地址: `http://domain/customer/invoices/districts`
@@ -204,7 +204,7 @@
 ```
 
 
-### 14.3.2 createParkingInvoice接口
+### 14.3.2 停车订单开发票接口
 
 - 功能描述:  停车订单开发票
 - 请求地址: `http://domain/customer/invoices`
@@ -234,7 +234,7 @@
 ```
 
 
-### 14.3.3 list接口
+### 14.3.3 获取所有开票记录接口
 
 - 功能描述:  获取个人所有的开票记录
 - 请求地址: `http://domain/customer/invoices/list`
@@ -283,7 +283,7 @@
 
 ```
 
-### 14.3.5 disableInvoice接口
+### 14.3.5 发票冲红接口
 
 - 功能描述:  根据id冲红蓝字发票
 - 请求地址: `http://domain/customer/invoices/{id}`
@@ -299,7 +299,7 @@
 
 ```
 
-### 14.3.5 resendEmail接口
+### 14.3.5 重发邮件接口
 
 - 功能描述:  重新发送邮件
 - 请求地址: `http://domain/customer/invoices/resendEmail`
@@ -317,7 +317,7 @@
 ```
 
 
-### 14.3.6 createMonthBillInvoice接口
+### 14.3.6 月票开发票接口
 
 - 功能描述:  创建月票的电子发票
 - 请求地址: `http://domain/customer/invoices/monthBill`
@@ -348,7 +348,7 @@
 ```
 
 
-### 14.3.7 orders接口
+### 14.3.7 客户查询指定电子发票订单接口
 
 - 功能描述:  客户查询指定电子发票下的订单
 - 请求地址: `http://domain/customer/invoices/{id}/orders`
