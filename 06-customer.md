@@ -789,6 +789,31 @@ PS:需要用admin用户获得access_token
 }
 
 ```
+### 6.5.1 感觉订单Id查询发票
+- 功能描述: 感觉订单Id查询发票
+
+- 请求地址: `localhost:8080/customer/{id}/getInvoices?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://localhost:8080/customer/invoiceOrders/10000009/getInvoice?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c4`
+
+- 返回示例
+```aidl
+{
+    "status": "SUCCESS",
+    "data": {
+        "invoiceInfoSalerNameAbbr": null,
+        "invoiceCode": "111001371071",
+        "invoiceNumber": "70040241",
+        "invoiceInfoBuyerType": null,
+        "invoiceInfoBuyerId": null,
+        "invoiceInfoBuyerName": "李剑",
+        "createdDate": null
+    }
+}
+
+```
 
 
 
