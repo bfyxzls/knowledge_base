@@ -217,10 +217,11 @@
 ```
 {
     "districtId":1001,
-    "orderIds":[],
+    "ids":[],
     "titleCmd":{
         "title":"李剑"
     },
+    "buyerId":"12344",
     "mail":"479159321@qq.com"
 }
 
@@ -240,7 +241,7 @@
 - 功能描述:  获取个人所有的开票记录
 - 请求地址: `http://domain/customer/invoices/list`
 - 请求动作: `GET`
-- 请求示例: `http://domain/customer/invoices/list?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07&page=0&size=20&sort=createdDate,DESC`
+- 请求示例: `http://localhost:8080/customer/invoices/list?access_token=c67010ce-be53-476f-808e-84bbf5e6f7d7&page=0&size=20&sort=globalInfoRequestTime,DESC`
 
 
 - 返回数据示例  
@@ -277,7 +278,8 @@
         "title": "李剑",
         "type": "停车费",
         "price": "1.0",
-        "email": "479159321@qq.com"
+        "email": "479159321@qq.com",
+        "pdfUrl": "http://111.202.226.69:9026/zxkp/pdf?c=6bf213a81c1824940ca6"
     }
 }
 
