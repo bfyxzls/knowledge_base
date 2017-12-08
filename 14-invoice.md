@@ -86,7 +86,7 @@
 - 功能描述:  查询默认发票抬头信息
 - 请求地址: `http://domain/customer/titles/default`
 - 请求动作: `GET`
-- 请求示例: `http://domain/customer/titles/default?phoneNum=&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 请求示例: `http://domain/customer/titles/default?&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
 - 返回示例：
 ```
