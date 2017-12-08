@@ -796,7 +796,7 @@ PS:需要用admin用户获得access_token
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/customer/invoiceOrders/10000009/getInvoice?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c4`
+- 请求示例: `http://localhost:8080/customer/webInvoiceOrders/10000009/getInvoice?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c4`
 
 - 返回示例
 ```aidl
