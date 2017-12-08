@@ -372,3 +372,125 @@
 }
 
 ```
+
+## 14.4 Web端发票信息访问接口
+
+### 14.4.1 Web端发票列表接口
+
+- 功能描述:  Web端获取电子发票列表
+- 请求地址: `http://localhost:8080/customer/web/invoices/query`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/customer/web/invoices/query?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&invoiceNumber=20171208091042646444&invoicePhoneNum=adm&invoiceType&status=1&invoiceStartTime&invoiceEndTime&page=0&size=20&sort`
+
+- 请求数据示例  
+```
+{
+    "invoiceNumber": "123",
+    "invoicePhoneNum":"21313",
+    "invoiceType":0,
+    "status":1,
+    "invoiceStartTime":"151738176318763",
+    "invoiceEndTime":"151738176318763",
+}
+
+```
+
+
+- 返回数据示例  
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "id": 162,
+                "invoiceCode": null,
+                "invoiceNumber": null,
+                "invoiceInfoType": "0",
+                "invoiceInfoConsumerPhoneNum": "admin",
+                "buyerMail": "479159321@qq.com",
+                "globalInfoRequestTime": "2017-12-08 09:11:05",
+                "invoiceInfoSalerName": "测试",
+                "invoiceInfoPriceAndTaxAmount": "50.05",
+                "invoiceInfoTax": "5%",
+                "invoiceInfoTaxAmount": "2.38",
+                "invoiceInfoPriceAmount": "47.669999999999995",
+                "invoiceInfoTitle": "李剑",
+                "invoiceInfoSerialNumber": "20171208091042646444",
+                "invoiceInfoBuyerName": "李剑",
+                "status": 1,
+                "invoiceInfoOriginBlueInvoiceNum": "",
+                "invoiceCreatedTime": "2017-12-08 09:11:05"
+            },
+            {
+                "id": 163,
+                "invoiceCode": null,
+                "invoiceNumber": null,
+                "invoiceInfoType": "0",
+                "invoiceInfoConsumerPhoneNum": "admin",
+                "buyerMail": "479159321@qq.com",
+                "globalInfoRequestTime": "2017-12-08 09:11:45",
+                "invoiceInfoSalerName": "测试",
+                "invoiceInfoPriceAndTaxAmount": "50.05",
+                "invoiceInfoTax": "5%",
+                "invoiceInfoTaxAmount": "2.38",
+                "invoiceInfoPriceAmount": "47.669999999999995",
+                "invoiceInfoTitle": "李剑",
+                "invoiceInfoSerialNumber": "20171208091145685883",
+                "invoiceInfoBuyerName": "李剑",
+                "status": 1,
+                "invoiceInfoOriginBlueInvoiceNum": "",
+                "invoiceCreatedTime": "2017-12-08 09:11:45"
+            }
+        ],
+        "totalElements": 13,
+        "last": true,
+        "totalPages": 1,
+        "number": 0,
+        "size": 20,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 13
+    }
+}
+
+```
+
+
+### 14.4.2 Web端发票详情接口
+
+- 功能描述:  Web端获取发票详情
+- 请求地址: `http://localhost:8080/customer/web/invoices/162`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/customer/web/invoices/162?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+
+
+
+- 返回数据示例  
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": 162,
+        "invoiceCode": null,
+        "invoiceNumber": null,
+        "invoiceInfoType": "0",
+        "invoiceInfoConsumerPhoneNum": "admin",
+        "buyerMail": "479159321@qq.com",
+        "globalInfoRequestTime": "2017-12-08 09:11:05",
+        "invoiceInfoSalerName": "测试",
+        "invoiceInfoPriceAndTaxAmount": "50.05",
+        "invoiceInfoTax": "5%",
+        "invoiceInfoTaxAmount": "2.38",
+        "invoiceInfoPriceAmount": "47.669999999999995",
+        "invoiceInfoTitle": "李剑",
+        "invoiceInfoSerialNumber": "20171208091042646444",
+        "invoiceInfoBuyerName": "李剑",
+        "status": 1,
+        "invoiceInfoOriginBlueInvoiceNum": "",
+        "invoiceOrders": [],
+        "invoiceCreatedTime": "2017-12-08 09:11:05"
+    }
+}
+
+```
