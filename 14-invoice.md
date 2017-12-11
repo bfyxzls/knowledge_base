@@ -286,9 +286,9 @@
 ### 14.3.5 发票冲红接口
 
 - 功能描述:  根据id冲红蓝字发票
-- 请求地址: `http://domain/customer/invoices/{id}`
+- 请求地址: `http://domain/customer/web/invoices/{id}`
 - 请求动作: `DELETE`
-- 请求示例: `http://domain/customer/invoices/64?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 请求示例: `http://domain/customer/web/invoices/64?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
 
 - 返回数据示例  
@@ -385,10 +385,10 @@
 - 请求数据示例  
 ```
 {
-    "invoiceNumber": "123",
-    "invoicePhoneNum":"21313",
-    "invoiceType":0,
-    "status":1,
+    "invoiceNumber": "发票号码",
+    "invoicePhoneNum":"手机号码",
+    "invoiceType":0,        //发票类型 0：蓝票 1：红票
+    "status":1,             //开票状态 1：待开具 2：已开具
     "invoiceStartTime":"151738176318763",
     "invoiceEndTime":"151738176318763",
 }
@@ -403,24 +403,24 @@
     "data": {
         "content": [
             {
-                "id": 162,
-                "invoiceCode": null,
-                "invoiceNumber": null,
-                "invoiceInfoType": "0",
-                "invoiceInfoConsumerPhoneNum": "admin",
-                "buyerMail": "479159321@qq.com",
-                "globalInfoRequestTime": "2017-12-08 09:11:05",
-                "invoiceInfoSalerName": "测试",
-                "invoiceInfoPriceAndTaxAmount": "50.05",
-                "invoiceInfoTax": "5%",
-                "invoiceInfoTaxAmount": "2.38",
-                "invoiceInfoPriceAmount": "47.669999999999995",
-                "invoiceInfoTitle": "李剑",
-                "invoiceInfoSerialNumber": "20171208091042646444",
-                "invoiceInfoBuyerName": "李剑",
-                "status": 1,
-                "invoiceInfoOriginBlueInvoiceNum": "",
-                "invoiceCreatedTime": "2017-12-08 09:11:05"
+                "id": 162,  
+                "invoiceCode": null,        //发票代码
+                "invoiceNumber": null,      //发票号码
+                "invoiceInfoType": "0",     发票类型 0蓝1红
+                "invoiceInfoConsumerPhoneNum": "admin",     //消费者手机号码
+                "buyerMail": "479159321@qq.com",        //邮箱
+                "globalInfoRequestTime": "2017-12-08 09:11:05",     //申请时间
+                "invoiceInfoSalerName": "测试",       开票公司
+                "invoiceInfoPriceAndTaxAmount": "50.05",        //开票金额
+                "invoiceInfoTax": "5%",     //税率
+                "invoiceInfoTaxAmount": "2.38",     //税额
+                "invoiceInfoPriceAmount": "47.669999999999995",     //税后收入
+                "invoiceInfoTitle": "李剑",       //发票抬头
+                "invoiceInfoSerialNumber": "20171208091042646444",      //发票税号
+                "invoiceInfoBuyerName": "李剑",   //开票对象
+                "status": 1,        发票状态1：待开2：已开
+                "invoiceInfoOriginBlueInvoiceNum": "",      //原蓝票号码
+                "invoiceCreatedTime": "2017-12-08 09:11:05"     //创建时间
             },
             {
                 "id": 163,
@@ -472,24 +472,33 @@
     "status": "SUCCESS",
     "data": {
         "id": 162,
-        "invoiceCode": null,
-        "invoiceNumber": null,
-        "invoiceInfoType": "0",
-        "invoiceInfoConsumerPhoneNum": "admin",
-        "buyerMail": "479159321@qq.com",
-        "globalInfoRequestTime": "2017-12-08 09:11:05",
-        "invoiceInfoSalerName": "测试",
-        "invoiceInfoPriceAndTaxAmount": "50.05",
-        "invoiceInfoTax": "5%",
-        "invoiceInfoTaxAmount": "2.38",
-        "invoiceInfoPriceAmount": "47.669999999999995",
-        "invoiceInfoTitle": "李剑",
-        "invoiceInfoSerialNumber": "20171208091042646444",
-        "invoiceInfoBuyerName": "李剑",
-        "status": 1,
-        "invoiceInfoOriginBlueInvoiceNum": "",
-        "invoiceOrders": [],
-        "invoiceCreatedTime": "2017-12-08 09:11:05"
+         "invoiceCode": null,        //发票代码
+        "invoiceNumber": null,      //发票号码
+        "invoiceInfoType": "0",     发票类型 0蓝1红
+        "invoiceInfoConsumerPhoneNum": "admin",     //消费者手机号码
+        "buyerMail": "479159321@qq.com",        //邮箱
+        "globalInfoRequestTime": "2017-12-08 09:11:05",     //申请时间
+        "invoiceInfoSalerName": "测试",       开票公司
+        "invoiceInfoPriceAndTaxAmount": "50.05",        //开票金额
+        "invoiceInfoTax": "5%",     //税率
+        "invoiceInfoTaxAmount": "2.38",     //税额
+        "invoiceInfoPriceAmount": "47.669999999999995",     //税后收入
+        "invoiceInfoTitle": "李剑",       //发票抬头
+        "invoiceInfoSerialNumber": "20171208091042646444",      //发票税号
+        "invoiceInfoBuyerName": "李剑",   //开票对象
+        "status": 1,        发票状态1：待开2：已开
+        "invoiceInfoOriginBlueInvoiceNum": "",      //原蓝票号码
+        "invoiceCreatedTime": "2017-12-08 09:11:05"     //创建时间
+        "invoiceOrders": [
+            {
+                "id":1      //订单编号
+                "carPlate":"皖A12345"    //车牌
+                "roadSectionName":"长江西路"    //缴费路段
+                "completeDate": "2017-08-11 11：11：11"   //订单完成时间
+                "arrearsPaidDate":"2017-08-11 11：11：11"   //欠费补缴时间
+                "fee":2.00      //缴费金额
+            }
+        ]
     }
 }
 
