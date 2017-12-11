@@ -122,7 +122,7 @@
 
 ### 14.2.1 客户查询指定区域下的发票订单
 
-- 功能描述:  删除发票抬头信息
+- 功能描述:  客户查询指定区域下的发票订单
 - 请求地址: `http://domain/customer/invoiceOrders/list`
 - 请求动作: `DELETE`
 - 请求示例: `http://domain/customer/invoiceOrders/list?districtId=1002&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
@@ -133,25 +133,12 @@
     "status": "SUCCESS",
     "data": [
         {
+            "id": 10000178,
             "completeDate": "2017-09-15 15:13:14 星期五",
             "isMonthBill": false,
             "roadSectionName": "潜山路-长江西路",
             "parkingPeriod": 301,
             "fee": 4000
-        },
-        {
-            "completeDate": "2017-09-14 15:13:14 星期四",
-            "isMonthBill": false,
-            "roadSectionName": "潜山路-长江西路",
-            "parkingPeriod": 286,
-            "fee": 4000
-        },
-        {
-            "completeDate": "2017-09-15 19:00:00 星期五",
-            "isMonthBill": false,
-            "roadSectionName": "潜山路-长江西路",
-            "parkingPeriod": 218,
-            "fee": 1000
         }
     ]
 }
