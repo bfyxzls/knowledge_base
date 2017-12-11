@@ -233,7 +233,8 @@ type:2 公司
         "title":"李剑"
     },
     "buyerId":"12344",
-    "mail":"479159321@qq.com"
+    "mail":"479159321@qq.com"，
+    "type":"1"
 }
 
 ```
@@ -346,7 +347,8 @@ type:2 公司
     ],
     "title":"abc",
     "buyerId":"123",
-    "mail":"123@qq.com"
+    "mail":"123@qq.com",
+    "type":"1"
 }
 
 ```
