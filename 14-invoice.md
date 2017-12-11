@@ -96,7 +96,8 @@ type:2 公司
 {
 	"title":"抬头名称",
 	"buyerId":"税号",
-	"isDefault":false
+	"isDefault":false,
+	"type":"1"
 }
 ```
 - 返回示例：
