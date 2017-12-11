@@ -1,3 +1,30 @@
+## 常量
+
+### 发票抬头常量
+
+- `type` : 1为个人，2为公司
+
+### 发票类型常量
+
+- `DEFAULT_TYPE` :停车费
+
+### 发票状态常量
+
+- `InvoiceStatus`: WAIT_INVOICE:1, INVOICED:2, OVERDUE:3
+
+### 发票常量
+ 
+  - `BLUE_INVOICE`:"0"    红票
+     `RED_INVOICE` : "1" 蓝票
+     `PRODUCT_CODE` : "3040502020200000000" 商品编码
+     `COMMON_TAX` : "0" 普通征税方式
+     `COMMON_INVOICE_LINE` : "0"; 正常发票行
+     `FIRST_LINE` : "1"  第一行
+     `PARKING_ORDER_FEE_ITEM` : "停车费"
+     `TAX_RATE` : 0.05  税率
+     `APP_ID` : "dzfp"
+     `DRAW_INVOICE` : "REQUEST_E_FAPIAO_KJ"  开发票接口名称
+
 ## 14.1 电子发票抬头信息访问接口
 
 ### 14.1.1 新增电子发票抬头
@@ -30,32 +57,30 @@
 - 功能描述:  查询发票抬头信息
 - 请求地址: `http://domain/customer/titles`
 - 请求动作: `GET`
-- 请求示例: `http://domain/customer/titles?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 请求示例: `http://domain/customer/titles?access_token=be7c3399-de89-481c-acba-d5987050c81a&type=2`
 - 返回示例
 ```
+type:1 个人
+type:2 公司
+
 {
     "status": "SUCCESS",
     "data": [
         {
-            "id": 16,
-            "title": "个人修改",
-            "buyerId": "777",
+            "id": 149,
+            "title": "合肥城市泊车投资管理有限公司",
+            "buyerId": "777777",
             "isDefault": false,
-            "phoneNum": "15555417041"
+            "phoneNum": "15555417041",
+            "type": "2"
         },
         {
-            "id": 22,
-            "title": "公司",
-            "buyerId": "456",
-            "isDefault": true,
-            "phoneNum": "15555417041"
-        },
-        {
-            "id": 118,
-            "title": "抬头名称",
-            "buyerId": "税号",
+            "id": 152,
+            "title": "保安集团",
+            "buyerId": "111111",
             "isDefault": false,
-            "phoneNum": "手机号码"
+            "phoneNum": "15555417041",
+            "type": "2"
         }
     ]
 }
@@ -71,7 +96,8 @@
 {
 	"title":"抬头名称",
 	"buyerId":"税号",
-	"isDefault":false
+	"isDefault":false,
+	"type":"1"
 }
 ```
 - 返回示例：
@@ -122,9 +148,9 @@
 
 ### 14.2.1 客户查询指定区域下的发票订单
 
-- 功能描述:  删除发票抬头信息
+- 功能描述:  客户查询指定区域下的发票订单
 - 请求地址: `http://domain/customer/invoiceOrders/list`
-- 请求动作: `DELETE`
+- 请求动作: `GET`
 - 请求示例: `http://domain/customer/invoiceOrders/list?districtId=1002&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
 - 返回示例：
@@ -133,25 +159,12 @@
     "status": "SUCCESS",
     "data": [
         {
+            "id": 10000178,
             "completeDate": "2017-09-15 15:13:14 星期五",
             "isMonthBill": false,
             "roadSectionName": "潜山路-长江西路",
             "parkingPeriod": 301,
             "fee": 4000
-        },
-        {
-            "completeDate": "2017-09-14 15:13:14 星期四",
-            "isMonthBill": false,
-            "roadSectionName": "潜山路-长江西路",
-            "parkingPeriod": 286,
-            "fee": 4000
-        },
-        {
-            "completeDate": "2017-09-15 19:00:00 星期五",
-            "isMonthBill": false,
-            "roadSectionName": "潜山路-长江西路",
-            "parkingPeriod": 218,
-            "fee": 1000
         }
     ]
 }
@@ -221,7 +234,8 @@
         "title":"李剑"
     },
     "buyerId":"12344",
-    "mail":"479159321@qq.com"
+    "mail":"479159321@qq.com"，
+    "type":"1"
 }
 
 ```
@@ -334,7 +348,8 @@
     ],
     "title":"abc",
     "buyerId":"123",
-    "mail":"123@qq.com"
+    "mail":"123@qq.com",
+    "type":"1"
 }
 
 ```
