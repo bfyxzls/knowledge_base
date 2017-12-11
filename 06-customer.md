@@ -750,7 +750,7 @@ PS:需要用admin用户获得access_token
             ]
         }
 ```
-### 6.5.1 查询指定电子订单下的发票订单信息
+### 6.5.2 查询指定电子订单下的发票订单信息
 - 功能描述: 查询指定电子订单下的发票订单信息
 
 - 请求地址: `localhost:8080/customer/invoiceOrders/obtainInvoiceOrdersInGivenInvoice?access_token&invoiceId`
@@ -786,6 +786,42 @@ PS:需要用admin用户获得access_token
             "fee": 1000
         }
     ]
+}
+
+```
+### 6.5.3 web端根据订单ID查询发票信息
+- 功能描述: web端根据订单ID查询发票信息{
+                            "status": "SUCCESS",
+                            "data": {
+                                "invoiceInfoSalerNameAbbr": null,
+                                "invoiceCode": "111001371071",
+                                "invoiceNumber": "70040241",
+                                "invoiceInfoBuyerType": null,
+                                "invoiceInfoBuyerId": null,
+                                "invoiceInfoBuyerName": "李剑",
+                                "createdDate": null
+                            }
+                        }
+
+- 请求地址: `localhost:8080/customer/web/invoiceOrders/{id}/getInvoices?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://localhost:8080/customer/web/invoiceOrders/10000009/getInvoice?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c4`
+
+- 返回示例
+```aidl
+{
+    "status": "SUCCESS",
+    "data": {
+        "invoiceInfoSalerNameAbbr": null,
+        "invoiceCode": "111001371071",
+        "invoiceNumber": "70040241",
+        "invoiceInfoBuyerType": null,
+        "invoiceInfoBuyerId": null,
+        "invoiceInfoBuyerName": "李剑",
+        "createdDate": null
+    }
 }
 
 ```

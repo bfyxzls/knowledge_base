@@ -1,12 +1,3 @@
-
-## 说明
-
-### 常量
-
-#### 发票类型
-
-- `type`: 1为个人， 2为公司
-
 ## 14.1 电子发票抬头信息访问接口
 
 ### 14.1.1 新增电子发票抬头
@@ -20,8 +11,7 @@
 {
 	"title":"抬头名称",
 	"buyerId":"税号",
-	"isDefault":false//默认状态,
-	 "type":"1"
+	"isDefault":false//默认状态
 }
 ```
 
@@ -379,27 +369,6 @@
             "fee": 4000
         }
     ]
-}
-
-```
-
-### 14.3.8 创建月票发票接口
-
-
-- 功能描述:  客户开具月票电子发票
-- 请求地址: `http://localhost:8080/invoices/monthBill`
-- 请求动作: `GET`
-- 请求示例: `http://localhost:8080/invoices/monthBill?access_token=ff4fe7f7-6312-4d0a-a5b7-386a7b4c6a3e`
-- 请求数据示例  
-```
-{
-    "districtId": 1001,
-    "ids":[
-        1000
-    ],
-    "title":"abc",
-    "buyerId":"123",
-    "mail":"1184750950@qq.com"
 }
 
 ```
