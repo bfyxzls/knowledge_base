@@ -216,9 +216,7 @@
 {
     "districtId":1001,
     "ids":[],
-    "titleCmd":{
-        "title":"李剑"
-    },
+    "title":"李剑",
     "buyerId":"12344",
     "mail":"479159321@qq.com"
 }
