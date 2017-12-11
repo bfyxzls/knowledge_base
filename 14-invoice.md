@@ -11,7 +11,8 @@
 {
 	"title":"抬头名称",
 	"buyerId":"税号",
-	"isDefault":false//默认状态
+	"isDefault":false//默认状态，
+	"type":"1"
 }
 ```
 
