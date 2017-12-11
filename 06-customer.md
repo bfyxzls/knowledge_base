@@ -790,18 +790,7 @@ PS:需要用admin用户获得access_token
 
 ```
 ### 6.5.3 web端根据订单ID查询发票信息
-- 功能描述: web端根据订单ID查询发票信息{
-                            "status": "SUCCESS",
-                            "data": {
-                                "invoiceInfoSalerNameAbbr": null,
-                                "invoiceCode": "111001371071",
-                                "invoiceNumber": "70040241",
-                                "invoiceInfoBuyerType": null,
-                                "invoiceInfoBuyerId": null,
-                                "invoiceInfoBuyerName": "李剑",
-                                "createdDate": null
-                            }
-                        }
+- 功能描述: web端根据订单ID查询发票信息
 
 - 请求地址: `localhost:8080/customer/web/invoiceOrders/{id}/getInvoices?access_token`
 
