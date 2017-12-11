@@ -300,7 +300,7 @@
 
 ```
 
-### 14.3.5 重发邮件接口
+### 14.3.6 重发邮件接口
 
 - 功能描述:  重新发送邮件
 - 请求地址: `http://domain/customer/invoices/resendEmail`
@@ -318,7 +318,7 @@
 ```
 
 
-### 14.3.6 月票开发票接口
+### 14.3.8 月票开发票接口
 
 - 功能描述:  创建月票的电子发票
 - 请求地址: `http://domain/customer/invoices/monthBill`
