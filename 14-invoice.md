@@ -389,8 +389,8 @@
     "invoicePhoneNum":"手机号码",
     "invoiceType":0,        //发票类型 0：蓝票 1：红票
     "status":1,             //开票状态 1：待开具 2：已开具
-    "invoiceStartTime":"151738176318763",
-    "invoiceEndTime":"151738176318763",
+    "invoiceStartTime":"2017-11-08 11：11：11",
+    "invoiceEndTime":"2017-11-08 11：11：11",
 }
 
 ```
@@ -503,3 +503,25 @@
 }
 
 ```
+
+
+
+### 14.4.3 Web端发票流水导出xls文件接口
+
+- 功能描述:  Web端导出发票流水
+- 请求地址: `http://localhost:8080/customer/web/invoices/exportExcel`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/customer/web/invoices/exportExcel?invoiceStartTime=2017-12-01%2009:11:45&invoiceEndTime=2017-12-11%2009:11:45&access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431
+
+`- 请求数据示例  
+ ```
+ {
+     "invoiceNumber": "发票号码",
+     "invoicePhoneNum":"手机号码",
+     "invoiceType":0,        //发票类型 0：蓝票 1：红票
+     "status":1,             //开票状态 1：待开具 2：已开具
+     "invoiceStartTime":"2017-11-08 11：11：11",
+     "invoiceEndTime":"2017-11-08 11：11：11",
+ }
+ 
+ ```
