@@ -124,7 +124,7 @@
 
 - 功能描述:  客户查询指定区域下的发票订单
 - 请求地址: `http://domain/customer/invoiceOrders/list`
-- 请求动作: `DELETE`
+- 请求动作: `GET`
 - 请求示例: `http://domain/customer/invoiceOrders/list?districtId=1002&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
 - 返回示例：
