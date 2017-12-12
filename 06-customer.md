@@ -662,44 +662,8 @@ PS:需要用admin用户获得access_token
     }
 }
 ```
-### 6.5.2 查询指定电子订单下的订单信息
-- 功能描述: 查询指定电子订单下订单信息
 
-- 请求地址: `localhost:8080/customer/invoices/{id}/orders?access_token`
-
-- 请求动作: `GET`
-
-- 请求示例: `http://localhost:8080/customer/invoices/170/orders?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
-
-- 返回示例
-```aidl
-{
-    "status": "SUCCESS",
-    "data": [
-        {
-            "id": 10000019,
-            "completeDate": "2017-09-15 16:56:29 星期五",
-            "isMonthBill": false,
-            "carPlate": "皖A00000",
-            "parkingAreaName": null,
-            "roadSectionName": "潜山路-长江西路",
-            "parkingPeriod": 94,
-            "fee": 600
-        },
-        {
-            "id": 10000003,
-            "completeDate": "2017-09-14 15:13:14 星期四",
-            "isMonthBill": true,
-            "carPlate": "皖A66666",
-            "parkingAreaName": null,
-            "roadSectionName": "潜山路-长江西路",
-            "parkingPeriod": 4272,
-            "fee": 4000
-        }
-    ]
-}
-```
-### 6.5.3 web端根据订单ID查询发票信息
+### 6.5.2 web端根据订单ID查询发票信息
 - 功能描述: web端根据订单ID查询发票信息
 
 - 请求地址: `localhost:8080/customer/web/invoiceOrders/{id}/getInvoices?access_token`
