@@ -733,17 +733,7 @@ PS:需要用admin用户获得access_token
 {
     "status": "SUCCESS",
     "data": {
-        "2017-DECEMBER": [
-            {
-                "id": 10000283,
-                "completeDate": "2017-12-06 22:13:14 星期三",
-                "isMonthBill": false,
-                "carPlate": "皖A12345",
-                "parkingAreaName": null,
-                "roadSectionName": "潜山路-长江西路",
-                "parkingPeriod": 104,
-                "fee": 4000
-            },
+        "2017-12": [
             {
                 "id": 10000282,
                 "completeDate": "2017-12-06 22:13:14 星期三",
@@ -795,7 +785,7 @@ PS:需要用admin用户获得access_token
                 "fee": 4000
             }
         ],
-        "2017-OCTOBER": [
+        "2017-10": [
             {
                 "id": 10000119,
                 "completeDate": "2017-10-11 11:23:00 星期三",
