@@ -154,7 +154,7 @@ type:2 公司
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/customer/invoiceOrders/list?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&districtId=1002&startTime=2017-10-01 19:20:00&endTime=2017-12-10 00:00:00&carPlates=皖A12345,皖A0000`
+- 请求示例: `http://localhost:8080/customer/invoiceOrders/list?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&districtId=1002&carPlates=皖A12345,皖A00000`
 
 - 返回示例
 ```aidl
