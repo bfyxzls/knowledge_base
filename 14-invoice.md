@@ -352,7 +352,7 @@ type:2 公司
 - 功能描述:  重新发送邮件
 - 请求地址: `http://domain/customer/invoices/resendEmail`
 - 请求动作: `PUT`
-- 请求示例: `http://domain/customer/invoices/resendEmail?id=64&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07&id=156&email=1184750950@qq.com`
+- 请求示例: `http://domain/customer/invoices/resendEmail?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07&id=156&email=1184750950@qq.com`
 
 
 - 返回数据示例  
@@ -486,7 +486,7 @@ type:2 公司
                 "invoiceInfoPriceAmount": "47.669999999999995",
                 "invoiceInfoTitle": "李剑",
                 "invoiceInfoSerialNumber": "20171208091145685883",
-                "invoiceInfoBuyerName": "李剑",
+                "invoiceInfoBuyerType": "个人/公司",
                 "status": 1,
                 "invoiceInfoOriginBlueInvoiceNum": "",
                 "invoiceCreatedTime": "2017-12-08 09:11:45"
@@ -534,7 +534,7 @@ type:2 公司
         "invoiceInfoPriceAmount": "47.669999999999995",     //税后收入
         "invoiceInfoTitle": "李剑",       //发票抬头
         "invoiceInfoSerialNumber": "20171208091042646444",      //发票税号
-        "invoiceInfoBuyerName": "李剑",   //开票对象
+        "invoiceInfoBuyerType": "个人",   //开票对象（个人/公司）
         "status": 1,        发票状态1：待开2：已开
         "invoiceInfoOriginBlueInvoiceNum": "",      //原蓝票号码
         "invoiceCreatedTime": "2017-12-08 09:11:05"     //创建时间
@@ -657,3 +657,32 @@ type:2 公司
      ]
  }
  ```
+ 
+ ### 14.4.6 web端创建月票电子发票接口
+ 
+ - 功能描述:  创建月票的电子发票
+ - 请求地址: `http://domain/customer/web/invoices/monthBill`
+ - 请求动作: `POST`
+ - 请求示例: `http://domain/customer/web/invoices/monthBill?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+ 
+ - 请求数据示例  
+ ```
+ {
+     "districtId": ,
+     "ids":[
+         1000
+     ],
+     "title":"合肥城泊",
+      "buyerId":"91340100695707415Y",
+       "mail":"1184750950@qq.com",
+       "type":"2"
+ }
+ 
+ ```
+ 
+ 
+ - 返回数据示例  
+ ```
+ {
+     "status": "SUCCESS"
+ }
