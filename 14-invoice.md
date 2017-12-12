@@ -505,7 +505,7 @@ type:2 公司
                 "invoiceInfoPriceAmount": "47.669999999999995",
                 "invoiceInfoTitle": "李剑",
                 "invoiceInfoSerialNumber": "20171208091145685883",
-                "invoiceInfoBuyerName": "李剑",
+                "invoiceInfoBuyerType": "个人/公司",
                 "status": 1,
                 "invoiceInfoOriginBlueInvoiceNum": "",
                 "invoiceCreatedTime": "2017-12-08 09:11:45"
@@ -553,7 +553,7 @@ type:2 公司
         "invoiceInfoPriceAmount": "47.669999999999995",     //税后收入
         "invoiceInfoTitle": "李剑",       //发票抬头
         "invoiceInfoSerialNumber": "20171208091042646444",      //发票税号
-        "invoiceInfoBuyerName": "李剑",   //开票对象
+        "invoiceInfoBuyerType": "个人",   //开票对象（个人/公司）
         "status": 1,        发票状态1：待开2：已开
         "invoiceInfoOriginBlueInvoiceNum": "",      //原蓝票号码
         "invoiceCreatedTime": "2017-12-08 09:11:05"     //创建时间
