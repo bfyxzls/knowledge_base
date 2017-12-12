@@ -298,23 +298,7 @@ type:2 公司
 
 ```
 
-### 14.3.5 发票冲红接口
-
-- 功能描述:  根据id冲红蓝字发票
-- 请求地址: `http://domain/customer/invoices/{id}`
-- 请求动作: `DELETE`
-- 请求示例: `http://domain/customer/invoices/64?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
-
-
-- 返回数据示例  
-```
-{
-    "status": "SUCCESS"
-}
-
-```
-
-### 14.3.6 重发邮件接口
+### 14.3.5 重发邮件接口
 
 - 功能描述:  重新发送邮件
 - 请求地址: `http://domain/customer/invoices/resendEmail`
@@ -332,7 +316,7 @@ type:2 公司
 ```
 
 
-### 14.3.8 月票开发票接口
+### 14.3.6 月票开发票接口
 
 - 功能描述:  创建月票的电子发票
 - 请求地址: `http://domain/customer/invoices/monthBill`
@@ -538,6 +522,22 @@ type:2 公司
      "status":1,             //开票状态 1：待开具 2：已开具
      "invoiceStartTime":"2017-11-08 11：11：11",
      "invoiceEndTime":"2017-11-08 11：11：11",
+ }
+ 
+ ```
+ 
+ ### 14.4.4 发票冲红接口
+ 
+ - 功能描述:  根据id冲红蓝字发票
+ - 请求地址: `http://domain/customer/web/invoices/{id}`
+ - 请求动作: `DELETE`
+ - 请求示例: `http://domain/customer/web/invoices/64?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+ 
+ 
+ - 返回数据示例  
+ ```
+ {
+     "status": "SUCCESS"
  }
  
  ```
