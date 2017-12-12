@@ -148,28 +148,96 @@ type:2 公司
 
 ### 14.2.1 客户查询指定区域下的发票订单
 
-- 功能描述:  客户查询指定区域下的发票订单
-- 请求地址: `http://domain/customer/invoiceOrders/list`
-- 请求动作: `GET`
-- 请求示例: `http://domain/customer/invoiceOrders/list?districtId=1002&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 功能描述: 查询指定区域下的发票订单信息
 
-- 返回示例：
-```
+- 请求地址: `localhost:8080/customer/invoiceOrders/obtainInvoiceOrdersInGivenDistrict?access_token&districtId`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://localhost:8080/customer/invoiceOrders/list?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&districtId=1002&startTime=2017-10-01 19:20:00&endTime=2017-12-10 00:00:00`
+
+- 返回示例
+```aidl
 {
     "status": "SUCCESS",
-    "data": [
-        {
-            "id": 10000178,
-            "completeDate": "2017-09-15 15:13:14 星期五",
-            "isMonthBill": false,
-            "roadSectionName": "潜山路-长江西路",
-            "parkingPeriod": 301,
-            "fee": 4000
-        }
-    ]
+    "data": {
+        "2017-12": [
+            {
+                "id": 10000282,
+                "completeDate": "2017-12-06 22:13:14 星期三",
+                "isMonthBill": false,
+                "carPlate": "皖A12345",
+                "parkingAreaName": null,
+                "roadSectionName": "潜山路-长江西路",
+                "parkingPeriod": 109,
+                "fee": 4000
+            },
+            {
+                "id": 10000284,
+                "completeDate": "2017-12-06 22:13:14 星期三",
+                "isMonthBill": false,
+                "carPlate": "皖A12345",
+                "parkingAreaName": null,
+                "roadSectionName": "潜山路-长江西路",
+                "parkingPeriod": 99,
+                "fee": 4000
+            },
+            {
+                "id": 10000286,
+                "completeDate": "2017-12-06 22:13:14 星期三",
+                "isMonthBill": false,
+                "carPlate": "皖A12345",
+                "parkingAreaName": null,
+                "roadSectionName": "潜山路-长江西路",
+                "parkingPeriod": -616,
+                "fee": 4000
+            },
+            {
+                "id": 10000285,
+                "completeDate": "2017-12-06 22:13:14 星期三",
+                "isMonthBill": false,
+                "carPlate": "皖A12345",
+                "parkingAreaName": null,
+                "roadSectionName": "潜山路-长江西路",
+                "parkingPeriod": 92,
+                "fee": 4000
+            },
+            {
+                "id": 10000288,
+                "completeDate": "2017-12-08 22:13:14 星期五",
+                "isMonthBill": false,
+                "carPlate": "皖A12345",
+                "parkingAreaName": null,
+                "roadSectionName": "潜山路-长江西路",
+                "parkingPeriod": 2257,
+                "fee": 4000
+            }
+        ],
+        "2017-10": [
+            {
+                "id": 10000119,
+                "completeDate": "2017-10-11 11:23:00 星期三",
+                "isMonthBill": false,
+                "carPlate": "皖A00000",
+                "parkingAreaName": null,
+                "roadSectionName": "潜山路-长江西路",
+                "parkingPeriod": 0,
+                "fee": 0
+            },
+            {
+                "id": 10000118,
+                "completeDate": "2017-10-11 09:35:57 星期三",
+                "isMonthBill": false,
+                "carPlate": "浙N91879",
+                "parkingAreaName": null,
+                "roadSectionName": "潜山路-长江西路",
+                "parkingPeriod": 0,
+                "fee": 0
+            }
+        ]
+    }
 }
 ```
-
 
 ## 14.3 发票信息访问接口
 
@@ -503,6 +571,35 @@ type:2 公司
 }
 
 ```
+### 14.4.3 web端根据订单ID查询发票信息
+- 功能描述: web端根据订单ID查询发票信息
+
+- 请求地址: `localhost:8080/customer/web/invoiceOrders/{id}/getInvoices?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://localhost:8080/customer/web/invoiceOrders/10000009/getInvoice?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c4`
+
+- 返回示例
+```aidl
+{
+    "status": "SUCCESS",
+    "data": {
+        "invoiceInfoSalerNameAbbr": null,
+        "invoiceCode": "111001371071",
+        "invoiceNumber": "70040241",
+        "invoiceInfoBuyerType": null,
+        "invoiceInfoBuyerId": null,
+        "invoiceInfoBuyerName": "李剑",
+        "createdDate": null
+    }
+}
+
+```
+
+
+
+
 
 
 
