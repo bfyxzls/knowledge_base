@@ -89,7 +89,7 @@
 - 功能描述: 查询扎帐流水
 - 请求地址: `http://domain/employee/accounting`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/employee/accounting?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&name=姚望&phoneNum=18651893733&status=1&accountTime=2017-10-31&username=yaow`
+- 请求示例: `http://localhost:8080/employee/accounting?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&name=姚望&phoneNum=18651893733&status=1&accountTime=2017-10-31&username=yaow&sort=createdDate,Desc`
 - 请求参数:
     - `name`: 员工姓名
     - `username`: 员工工号

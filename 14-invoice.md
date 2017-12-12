@@ -96,7 +96,8 @@ type:2 公司
 {
 	"title":"抬头名称",
 	"buyerId":"税号",
-	"isDefault":false
+	"isDefault":false,
+	"type":"1"
 }
 ```
 - 返回示例：
@@ -170,9 +171,9 @@ type:2 公司
 ```
 
 
-## 14.3 Invoice Controller接口
+## 14.3 发票信息访问接口
 
-### 14.3.1 districts接口
+### 14.3.1 获取行政区接口
 
 - 功能描述:  获取行政区列表
 - 请求地址: `http://domain/customer/invoices/districts`
@@ -217,7 +218,7 @@ type:2 公司
 ```
 
 
-### 14.3.2 createParkingInvoice接口
+### 14.3.2 停车订单开发票接口
 
 - 功能描述:  停车订单开发票
 - 请求地址: `http://domain/customer/invoices`
@@ -248,7 +249,7 @@ type:2 公司
 ```
 
 
-### 14.3.3 list接口
+### 14.3.3 开票流水接口
 
 - 功能描述:  获取个人所有的开票记录
 - 请求地址: `http://domain/customer/invoices/list`
@@ -297,23 +298,7 @@ type:2 公司
 
 ```
 
-### 14.3.5 disableInvoice接口
-
-- 功能描述:  根据id冲红蓝字发票
-- 请求地址: `http://domain/customer/invoices/{id}`
-- 请求动作: `DELETE`
-- 请求示例: `http://domain/customer/invoices/64?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
-
-
-- 返回数据示例  
-```
-{
-    "status": "SUCCESS"
-}
-
-```
-
-### 14.3.5 resendEmail接口
+### 14.3.5 重发邮件接口
 
 - 功能描述:  重新发送邮件
 - 请求地址: `http://domain/customer/invoices/resendEmail`
@@ -331,7 +316,7 @@ type:2 公司
 ```
 
 
-### 14.3.6 createMonthBillInvoice接口
+### 14.3.6 月票开发票接口
 
 - 功能描述:  创建月票的电子发票
 - 请求地址: `http://domain/customer/invoices/monthBill`
@@ -363,7 +348,7 @@ type:2 公司
 ```
 
 
-### 14.3.7 orders接口
+### 14.3.7 获取发票订单接口
 
 - 功能描述:  客户查询指定电子发票下的订单
 - 请求地址: `http://domain/customer/invoices/{id}/orders`
@@ -537,6 +522,22 @@ type:2 公司
      "status":1,             //开票状态 1：待开具 2：已开具
      "invoiceStartTime":"2017-11-08 11：11：11",
      "invoiceEndTime":"2017-11-08 11：11：11",
+ }
+ 
+ ```
+ 
+ ### 14.4.4 发票冲红接口
+ 
+ - 功能描述:  根据id冲红蓝字发票
+ - 请求地址: `http://domain/customer/web/invoices/{id}`
+ - 请求动作: `DELETE`
+ - 请求示例: `http://domain/customer/web/invoices/64?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+ 
+ 
+ - 返回数据示例  
+ ```
+ {
+     "status": "SUCCESS"
  }
  
  ```
