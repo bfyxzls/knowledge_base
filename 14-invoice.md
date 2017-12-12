@@ -676,3 +676,32 @@ type:2 公司
      ]
  }
  ```
+ 
+ ### 14.4.6 web端创建月票电子发票接口
+ 
+ - 功能描述:  创建月票的电子发票
+ - 请求地址: `http://domain/customer/web/invoices/monthBill`
+ - 请求动作: `POST`
+ - 请求示例: `http://domain/customer/web/invoices/monthBill?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+ 
+ - 请求数据示例  
+ ```
+ {
+     "districtId": ,
+     "ids":[
+         1000
+     ],
+     "title":"合肥城泊",
+      "buyerId":"91340100695707415Y",
+       "mail":"1184750950@qq.com",
+       "type":"2"
+ }
+ 
+ ```
+ 
+ 
+ - 返回数据示例  
+ ```
+ {
+     "status": "SUCCESS"
+ }
