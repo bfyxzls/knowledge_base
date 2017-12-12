@@ -303,7 +303,7 @@ type:2 公司
 - 功能描述:  重新发送邮件
 - 请求地址: `http://domain/customer/invoices/resendEmail`
 - 请求动作: `PUT`
-- 请求示例: `http://domain/customer/invoices/resendEmail?id=64&access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07&id=156&email=1184750950@qq.com`
+- 请求示例: `http://domain/customer/invoices/resendEmail?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07&id=156&email=1184750950@qq.com`
 
 
 - 返回数据示例  
