@@ -556,7 +556,7 @@ type:2 公司
 ### 14.4.3 web端根据订单ID查询发票信息
 - 功能描述: web端根据订单ID查询发票信息
 
-- 请求地址: `localhost:8080/customer/web/invoiceOrders/{id}/getInvoices?access_token`
+- 请求地址: `localhost:8080/customer/web/invoiceOrders/{id}/getInvoice?access_token`
 
 - 请求动作: `GET`
 
