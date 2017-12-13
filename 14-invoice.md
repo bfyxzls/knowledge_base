@@ -39,7 +39,7 @@
 	"title":"抬头名称",
 	"buyerId":"税号",
 	"isDefault":false//默认状态，
-	"type":"1"
+	"type":1
 }
 ```
 
@@ -57,12 +57,9 @@
 - 功能描述:  查询发票抬头信息
 - 请求地址: `http://domain/customer/titles`
 - 请求动作: `GET`
-- 请求示例: `http://domain/customer/titles?access_token=be7c3399-de89-481c-acba-d5987050c81a&type=2`
+- 请求示例: `http://domain/customer/titles?access_token=be7c3399-de89-481c-acba-d5987050c81a`
 - 返回示例
 ```
-type:1 个人
-type:2 公司
-
 {
     "status": "SUCCESS",
     "data": [
@@ -72,7 +69,7 @@ type:2 公司
             "buyerId": "777777",
             "isDefault": false,
             "phoneNum": "15555417041",
-            "type": "2"
+            "type": 2
         },
         {
             "id": 152,
@@ -80,7 +77,7 @@ type:2 公司
             "buyerId": "111111",
             "isDefault": false,
             "phoneNum": "15555417041",
-            "type": "2"
+            "type": 2
         }
     ]
 }
@@ -97,7 +94,7 @@ type:2 公司
 	"title":"抬头名称",
 	"buyerId":"税号",
 	"isDefault":false,
-	"type":"1"
+	"type":1
 }
 ```
 - 返回示例：
@@ -124,7 +121,8 @@ type:2 公司
         "title": "公司",
         "buyerId": "456",
         "isDefault": true,
-        "phoneNum": "15555417041"
+        "phoneNum": "15555417041",
+        "type":2
     }
 }
 ```
