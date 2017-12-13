@@ -2863,11 +2863,11 @@ isExist:false   不存在
 }
 
 ```
-### 2.7.5 queryByRoadSectionName接口
+### 2.7.5 queryByParkingAreaName接口
 - 功能描述: 根据路段名查询岗位信息
 - 请求地址: `http://localhost:8080/infras/posts/query?access_token&roadSectionName`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/posts/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&roadSectionName=岳西路-长江西路&page=0&size=20&sort=id,DESC`
+- 请求示例: `http://localhost:8080/infras/posts/query?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee&parkingAreaName=岳西路&page=0&size=20&sort=id,DESC`
 - 返回示例:
 ```
 {
