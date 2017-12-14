@@ -421,6 +421,36 @@
 
 ```
 
+### 14.3.8 订单快速开发票接口
+
+- 功能描述:  停车订单快速开发票
+- 请求地址: `http://domain/customer/invoices/fast`
+- 请求动作: `POST`
+- 请求示例: `http://domain/customer/invoices/fast?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+
+- 请求数据示例  
+```
+{
+    "districtId":1001,
+    "ids":[],
+    "titleCmd":{
+        "title":"李剑"
+    },
+    "buyerId":"12344",
+    "mail":"479159321@qq.com"，
+    "type":"1"
+}
+
+```
+
+- 返回数据示例  
+```
+{
+    "status": "SUCCESS"
+}
+
+```
+
 ## 14.4 Web端发票信息访问接口
 
 ### 14.4.1 Web端发票列表接口
