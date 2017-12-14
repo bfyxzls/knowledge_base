@@ -421,32 +421,23 @@
 
 ```
 
-### 14.3.8 订单快速开发票接口
+### 14.3.8 纸质发票接口
 
-- 功能描述:  停车订单快速开发票
-- 请求地址: `http://domain/customer/invoices/fast`
-- 请求动作: `POST`
-- 请求示例: `http://domain/customer/invoices/fast?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
-
-- 请求数据示例  
+- 功能描述:  客户开具纸质发票
+- 请求地址: `http://domain/customer/invoices/paperInvoice`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/customer/invoices/paperInvoice?access_token=9e02c0ba-3042-4e41-aed4-80c0cccbafab`
+- 请求示例  
 ```
 {
-    "districtId":1001,
-    "ids":[],
-    "titleCmd":{
-        "title":"李剑"
-    },
-    "buyerId":"12344",
-    "mail":"479159321@qq.com"，
-    "type":"1"
-}
-
-```
-
-- 返回数据示例  
-```
-{
-    "status": "SUCCESS"
+	"type":1,
+	"invoiceNum":"001",
+	"invoiceCode":"123",
+	"invoiceTitle":"合肥城泊",
+	"buyerId":"123456789",
+	"taxRate":"0.05",
+	"taxAmount":"20000",
+	"afterTaxIncome":"1000"
 }
 
 ```
@@ -715,3 +706,5 @@
  {
      "status": "SUCCESS"
  }
+ 
+
