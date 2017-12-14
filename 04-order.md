@@ -1423,6 +1423,45 @@
 }
 ```
 
+### 4.4.13 条件查询特殊车辆的接口
+
+- 功能描述：根据车牌牌照、归属人，归属人手机号查找特殊车辆
+
+- 请求地址：`localhost:8080/order/vehicles/special/query?carPlate&ownerName&ownerPhoneNum&access_token`
+           `carPlate&ownerName&ownerPhoneNum是非必须的可以缺省`
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/order/vehicles/special/query?carPlate=皖A12345&ownerName=vivivi&ownerPhoneNum=12345678900&access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+
+- 返回示例：
+```json
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "id": 30,
+                "carPlate": "皖A12345",
+                "ownerName": "vivivi",
+                "ownerCompany": "hfcb",
+                "createdDate": 1513167338643,
+                "createdBy": "wyf",
+                "ownerPhoneNum": "12345678900",
+                "valid": true
+            }
+        ],
+        "last": true,
+        "totalElements": 1,
+        "totalPages": 1,
+        "size": 20,
+        "number": 0,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 1
+    }
+}
+```
+
 ## 4.5 APP端获取车辆信息接口（AppVehicleController）
 
 ### 4.5.1 getArrearsParkingOrder接口
