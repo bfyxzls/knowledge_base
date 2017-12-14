@@ -1034,7 +1034,9 @@
       }
   }
   ```
-  ### 4.4.4 obtainArrearsOrdersWithOutPage接口
+  
+  
+### 4.4.4 obtainArrearsOrdersWithOutPage接口
 
 - 功能描述：按车牌查询欠费订单列表
 
@@ -1047,7 +1049,7 @@
 
 - 返回示例：
 
-  ```json
+ ```json
   {
     "status": "SUCCESS",
     "data": [
@@ -1061,8 +1063,38 @@
         }
     ]
 }
-  ```
+
+```
+
+
+### 4.4.5 isDiscount接口
+
+- 功能描述：车辆类型判断、新能源车是否可享受优惠
+
+- 请求地址：`localhost:8080/order/vehicles/check?access_token&carPlat`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/order/vehicles/localhost:8080/order/vehicles/check?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&carPlate=%e7%9a%96A12347`
+    - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
+
+- 返回示例：
+
+ ```json
+{
+    "status": "SUCCESS",
+    "data": {
+        "carPlate": "皖A12347",
+        "valid": false,
+        "isDiscount": true
+    }
+}
+
+```
+
+
 ## 4.5 APP端获取车辆信息接口（AppVehicleController）
+
 ### 4.5.1 getArrearsParkingOrder接口
 - 功能描述：分页获取车辆的欠费订单
 
@@ -1229,8 +1261,6 @@
 }
 ```
 
-### 
-
 
 
 ## 4.6 APP端访问地图信息接口（AppMapController）
@@ -1259,7 +1289,7 @@
 ```
 
 
-### 4.6.2 obtainUsedParkingCountByRoadSection接口
+### 4.6.1 obtainUsedParkingCountByRoadSection接口
 
 - 功能描述：根据路段统计路段已使用的泊位数
 
