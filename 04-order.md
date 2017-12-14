@@ -1085,7 +1085,6 @@
     "status": "SUCCESS",
     "data": {
         "carPlate": "皖A12347",
-        "valid": false,
         "isDiscount": true
     }
 }
