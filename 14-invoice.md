@@ -39,7 +39,7 @@
 	"title":"抬头名称",
 	"buyerId":"税号",
 	"isDefault":false//默认状态，
-	"type":"1"
+	"type":1
 }
 ```
 
@@ -57,12 +57,9 @@
 - 功能描述:  查询发票抬头信息
 - 请求地址: `http://domain/customer/titles`
 - 请求动作: `GET`
-- 请求示例: `http://domain/customer/titles?access_token=be7c3399-de89-481c-acba-d5987050c81a&type=2`
+- 请求示例: `http://domain/customer/titles?access_token=be7c3399-de89-481c-acba-d5987050c81a`
 - 返回示例
 ```
-type:1 个人
-type:2 公司
-
 {
     "status": "SUCCESS",
     "data": [
@@ -72,7 +69,7 @@ type:2 公司
             "buyerId": "777777",
             "isDefault": false,
             "phoneNum": "15555417041",
-            "type": "2"
+            "type": 2
         },
         {
             "id": 152,
@@ -80,7 +77,7 @@ type:2 公司
             "buyerId": "111111",
             "isDefault": false,
             "phoneNum": "15555417041",
-            "type": "2"
+            "type": 2
         }
     ]
 }
@@ -97,7 +94,7 @@ type:2 公司
 	"title":"抬头名称",
 	"buyerId":"税号",
 	"isDefault":false,
-	"type":"1"
+	"type":1
 }
 ```
 - 返回示例：
@@ -124,7 +121,8 @@ type:2 公司
         "title": "公司",
         "buyerId": "456",
         "isDefault": true,
-        "phoneNum": "15555417041"
+        "phoneNum": "15555417041",
+        "type":2
     }
 }
 ```
@@ -154,7 +152,7 @@ type:2 公司
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/customer/invoiceOrders/list?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&districtId=1002&startTime=2017-10-01 19:20:00&endTime=2017-12-10 00:00:00`
+- 请求示例: `http://localhost:8080/customer/invoiceOrders/list?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&districtId=1002&carPlates=皖A12345,皖A00000`
 
 - 返回示例
 ```aidl
@@ -556,7 +554,7 @@ type:2 公司
 ### 14.4.3 web端根据订单ID查询发票信息
 - 功能描述: web端根据订单ID查询发票信息
 
-- 请求地址: `localhost:8080/customer/web/invoiceOrders/{id}/getInvoices?access_token`
+- 请求地址: `localhost:8080/customer/web/invoiceOrders/{id}/getInvoice?access_token`
 
 - 请求动作: `GET`
 
