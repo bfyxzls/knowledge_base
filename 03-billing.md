@@ -35,13 +35,12 @@ http://domain/billing/chargingStrategies/fee?access_token=token&
 chargingStrategyId=_chargingStrategyId&
 startTime=_startTime&
 vehicleType=_vehicleType&isDiscount=_isDiscount
-&valid=_valid
 ```
 - 请求动作: `GET`
 - 请求示例: 
 ```
 http://localhost:8080/billing/chargingStrategies/fee?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431
-&chargingStrategyId=1000&startTime=2017-12-14 8:00:00&vehicleType=04&isDiscount=false&valid=false
+&chargingStrategyId=1000&startTime=2017-12-14 8:00:00&vehicleType=04&isDiscount=false
 ```
 - 返回示例
 ```
