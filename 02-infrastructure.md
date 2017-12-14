@@ -4548,7 +4548,7 @@ isExist:false   不存在
 
 # 2.13 Districts信息访问接口
 ### 2.13.1 查询所有的区名
-- 功能描述: App端购买月票时显示所有的区
+- 功能描述: App端购买月票时显示所有的区以及其下的停车场信息
 - 请求地址: `http://localhost:8080/infras/districts?access_token`
 - 请求动作: `GET`
 - 请求示例: `http://localhost:8080/infras/districts?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
@@ -4557,35 +4557,56 @@ isExist:false   不存在
 {
     "status": "SUCCESS",
     "data": [
-        "庐阳区",
-        "蜀山区",
-        "包河区",
-        "瑶海区",
-        "庐江县",
-        "肥东县",
-        "肥西县"
-    ]
-}
-```
-### 2.13.1 查询指定区下的停车场
-- 功能描述: App端购买月票时显示指定区下的停车场
-- 请求地址: `http://localhost:8080/infras/districts/{id}/parkingAreas?access_token`
-- 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/districts/1002/parkingAreas?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
-- 返回示例:
-```
-{
-    "status": "SUCCESS",
-    "data": [
         {
-            "id": 1000,
-            "name": "植保路"
+            "name": "庐阳区",
+            "parkingAreaDtos": []
         },
         {
-            "id": 1002,
-            "name": "岳东路停车场"
+            "name": "蜀山区",
+            "parkingAreaDtos": [
+                {
+                    "id": 1000,
+                    "name": "植保路"
+                },
+                {
+                    "id": 1002,
+                    "name": "岳东路停车场"
+                }
+            ]
+        },
+        {
+            "name": "包河区",
+            "parkingAreaDtos": []
+        },
+        {
+            "name": "瑶海区",
+            "parkingAreaDtos": []
+        },
+        {
+            "name": "庐江县",
+            "parkingAreaDtos": []
+        },
+        {
+            "name": "肥东县",
+            "parkingAreaDtos": [
+                {
+                    "id": 1001,
+                    "name": "888"
+                },
+                {
+                    "id": 1003,
+                    "name": "岳东路停车场"
+                },
+                {
+                    "id": 1004,
+                    "name": "岳东路停车场"
+                }
+            ]
+        },
+        {
+            "name": "肥西县",
+            "parkingAreaDtos": []
         }
     ]
 }
 ```
-
