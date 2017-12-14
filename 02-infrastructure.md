@@ -4546,3 +4546,40 @@ isExist:false   不存在
 }
 ```
 
+# 2.13 Districts信息访问接口
+### 2.13.1 查询所有的区名
+- 功能描述: App端购买月票时显示所有的区
+- 请求地址: `http://localhost:8080/infras/districts?access_token`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/infras/districts?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+- 返回示例:
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        "庐阳区",
+        "蜀山区",
+        "包河区",
+        "瑶海区",
+        "庐江县",
+        "肥东县",
+        "肥西县"
+    ]
+}
+```
+### 2.13.1 查询指定区下的停车场
+- 功能描述: App端购买月票时显示指定区下的停车场
+- 请求地址: `http://localhost:8080/infras/districts/{id}/parkingAreas?access_token`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/infras/districts/1002/parkingAreas?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+- 返回示例:
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        "植保路",
+        "岳东路停车场"
+    ]
+}
+```
+
