@@ -1067,15 +1067,15 @@
 ```
 
 
-### 4.4.5 isDiscount接口
+### 4.4.5 检查车辆类型接口
 
-- 功能描述：车辆类型判断、新能源车是否可享受优惠
+- 功能描述：根据车牌检查车辆类型是否为特殊车辆或新能源车(报备的新能源车每天两次免费停车1小时，报备的特殊车可免费停车)
 
-- 请求地址：`localhost:8080/order/vehicles/check?access_token&carPlat`
+- 请求地址：`localhost:8080/order/vehicles/check?access_token&carPlat=_carPlate&vehicleType=_vehicleType`
 
 - 请求动作: `GET`
 
-- 请求示例：`http://localhost:8080/order/vehicles/localhost:8080/order/vehicles/check?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&carPlate=%e7%9a%96A12347`
+- 请求示例：`http://localhost:8080/order/vehicles/localhost:8080/order/vehicles/check?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&carPlate=%e7%9a%96A12347&vehicleType=02`
     - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
 
 - 返回示例：
@@ -1084,8 +1084,7 @@
 {
     "status": "SUCCESS",
     "data": {
-        "carPlate": "皖A12347",
-        "isDiscount": true
+        "vehicleType": "03"
     }
 }
 

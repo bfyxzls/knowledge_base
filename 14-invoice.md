@@ -277,9 +277,7 @@
 {
     "districtId":1001,
     "ids":[],
-    "titleCmd":{
-        "title":"李剑"
-    },
+    "title":"李剑",
     "buyerId":"12344",
     "mail":"479159321@qq.com"，
     "type":"1"
@@ -438,6 +436,37 @@
 	"taxRate":"0.05",
 	"taxAmount":"20000",
 	"afterTaxIncome":"1000"
+}
+
+```
+
+### 14.3.9 停车订单便捷开发票接口
+
+- 功能描述:  停车订单便捷开发票接口
+- 请求地址: `http://domain/customer/invoices/convenience`
+- 请求动作: `POST`
+- 请求示例: `http://domain/customer/invoices/convenience?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+
+- 请求数据示例  
+```
+{
+    "districtId": 1001,
+    "ids":[
+        64,32
+    ],
+    "title":"abc",
+    "buyerId":"123",
+    "mail":"123@qq.com",
+    "type":"1"
+}
+
+```
+
+
+- 返回数据示例  
+```
+{
+    "status": "SUCCESS"
 }
 
 ```
