@@ -2080,7 +2080,7 @@
 ```$xslt
 {
 	"ids":[
-		10000282,10000284
+		10000099,10000007
 		],
 		"reason":"收费失误"
 }
@@ -2094,13 +2094,13 @@
 
 - 请求动作：`PUT`
 
-- 请求示例：`localhost:8080/order/orders/10000070/modifyFee?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+- 请求示例：`http://localhost:8080/order/orders/10000018/modifyFee?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
 
 - 请求示例：
 
 ```$xslt
 {
-	"currentFee":300,
+	"fee":300,
 	"reason":"未找到收费员"
 }
 ```
@@ -2113,7 +2113,7 @@
 
 - 请求动作：`GET`
 
-- 请求示例：`localhost:8080/order/orders/10000070/orderLogs?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+- 请求示例：`localhost:8080/order/orders/10000018/modifiedRecords?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
 
 
 - 返回示例：
@@ -2121,44 +2121,14 @@
             "status": "SUCCESS",
             "data": [
                 {
-                    "orderId": 10000070,
+                    "orderId": 10000018,
                     "operatorUsername": "admin",
-                    "originArrearsFee": 600,
+                    "originArrearsFee": 1000,
                     "currentFee": 300,
                     "remark": "未找到收费员",
                     "type": 2,
-                    "description": null,
-                    "time": null
-                },
-                {
-                    "orderId": 10000070,
-                    "operatorUsername": "admin",
-                    "originArrearsFee": 1000,
-                    "currentFee": 600,
-                    "remark": "未找到收费员",
-                    "type": 2,
-                    "description": null,
-                    "time": null
-                },
-                {
-                    "orderId": 10000070,
-                    "operatorUsername": "admin",
-                    "originArrearsFee": 1000,
-                    "currentFee": 1000,
-                    "remark": "未找到收费员",
-                    "type": 2,
-                    "description": null,
-                    "time": null
-                },
-                {
-                    "orderId": 10000070,
-                    "operatorUsername": "admin",
-                    "originArrearsFee": 2100,
-                    "currentFee": 1000,
-                    "remark": "未找到收费员",
-                    "type": 2,
-                    "description": null,
-                    "time": null
+                    "description": "修改应交金额",
+                    "time": "2017-12-15 18:09:16"
                 }
             ]
         }
