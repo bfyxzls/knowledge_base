@@ -426,7 +426,7 @@
 - 功能描述:  客户开具纸质发票
 - 请求地址: `http://domain/customer/invoices/paperInvoice`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/customer/invoices/paperInvoice?access_token=9e02c0ba-3042-4e41-aed4-80c0cccbafab`
+- 请求示例: `http://localhost:8080/customer//web/invoices/monthBill/paper?access_token=9e02c0ba-3042-4e41-aed4-80c0cccbafab`
 - 请求示例  
 ```
 {
