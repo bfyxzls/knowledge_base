@@ -2112,3 +2112,143 @@
             ]
         }
 ```
+
+## 4.10 区查询接口
+
+- 功能描述：`获取所有的区及其道路信息`
+
+- 调用场景：`用户在购买月票时，获取所有的区及其道路信息`
+
+- 请求地址：`http://domain/order/app/districts`
+
+- 请求动作：`GET`
+
+- 请求示例：`http://localhost:8080/order/app/districts?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+
+- 返回示例：
+```json
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "name": "庐阳区",
+            "parkingAreaDtos": []
+        },
+        {
+            "name": "蜀山区",
+            "parkingAreaDtos": [
+                {
+                    "id": 1000,
+                    "name": "植保路"
+                }
+            ]
+        },
+        {
+            "name": "包河区",
+            "parkingAreaDtos": []
+        },
+        {
+            "name": "瑶海区",
+            "parkingAreaDtos": [
+                {
+                    "id": 1005,
+                    "name": "延长西路"
+                }
+            ]
+        },
+        {
+            "name": "庐江县",
+            "parkingAreaDtos": []
+        },
+        {
+            "name": "肥东县",
+            "parkingAreaDtos": []
+        },
+        {
+            "name": "肥西县",
+            "parkingAreaDtos": []
+        }
+    ]
+}
+```
+
+## 4.10 道路查询接口
+
+- 功能描述：`根据路段ID获得道路信息`
+
+- 调用场景：`客户在购买月票是，根据路段ID获得道路信息`
+
+- 请求地址：`http://domain/order/app/parkingAreas/{id}`
+
+- 请求动作：`GET`
+
+- 请求示例：`http://localhost:8080/order/app/parkingAreas/1000?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+
+- 返回示例：
+```json
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 1004,
+            "name": "test",
+            "parkingArea": {
+                "id": 1000,
+                "code": "0000001",
+                "name": "植保路",
+                "district": "蜀山区"
+            }
+        },
+        {
+            "id": 1000,
+            "name": "23",
+            "parkingArea": {
+                "id": 1000,
+                "code": "0000001",
+                "name": "植保路",
+                "district": "蜀山区"
+            }
+        },
+        {
+            "id": 1043,
+            "name": "测试单价添加",
+            "parkingArea": {
+                "id": 1000,
+                "code": "0000001",
+                "name": "植保路",
+                "district": "蜀山区"
+            }
+        },
+        {
+            "id": 1001,
+            "name": "长江西路2",
+            "parkingArea": {
+                "id": 1000,
+                "code": "0000001",
+                "name": "植保路",
+                "district": "蜀山区"
+            }
+        },
+        {
+            "id": 1003,
+            "name": "潜山路-长江西路",
+            "parkingArea": {
+                "id": 1000,
+                "code": "0000001",
+                "name": "植保路",
+                "district": "蜀山区"
+            }
+        },
+        {
+            "id": 1002,
+            "name": "长江西路",
+            "parkingArea": {
+                "id": 1000,
+                "code": "0000001",
+                "name": "植保路",
+                "district": "蜀山区"
+            }
+        }
+    ]
+}
+```
