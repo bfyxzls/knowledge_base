@@ -1096,6 +1096,8 @@
 
 - 请求地址：`localhost:8080/order/vehicles/special?access_token`
 
+- 调用场景：`web端录入特殊车辆，报备的特殊车辆不收费`
+
 - 请求动作: `POST`
 
 - 请求示例：`http://localhost:8080/order/vehicles/special?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
@@ -1115,24 +1117,17 @@
 
  ```json
 {
-    "status": "SUCCESS",
-    "data": {
-        "id": 32,
-        "carPlate": "皖A11111",
-        "ownerName": "gigigi",
-        "ownerCompany": "bat",
-        "createdDate": 1513215483085,
-        "createdBy": "wyf",
-        "ownerPhoneNum": "0986543211",
-        "valid": true
-    }
+    "status": "SUCCESS"
 }
 
 ```
 
 ### 4.4.7 新增新能源车接口
 
-- 功能描述：新增新能源车
+- 功能描述：`新增新能源车`
+
+- 调用场景：`web端录入新能源车，报备的新能源车每天可享受两次一小时停车免费的优惠`
+
 
 - 请求地址：`localhost:8080/order/vehicles/newEnergy?access_token`
 
@@ -1159,27 +1154,16 @@
 
  ```json
 {
-    "status": "SUCCESS",
-    "data": {
-        "id": 33,
-        "carPlate": "皖A00001",
-        "ownerPhoneNum": "11234567809",
-        "valid": true,
-        "ownerCardId": "123456782287654321",
-        "engineNum": "000",
-        "vin": "000",
-        "registerTime": 1513159200000,
-        "validDate": 1544716800000,
-        "remark": null,
-        "lastModifiedDate": 1513215726922
-    }
+    "status": "SUCCESS"
 }
 
 ```
 
 ### 4.4.8 更新特殊车辆接口
 
-- 功能描述：更新特殊车辆
+- 功能描述：`更新特殊车辆`
+
+- 调用场景：`web端编辑特殊车辆信息`
 
 - 请求地址：`localhost:8080/order/vehicles/special/{id}?access_token`
 
@@ -1203,23 +1187,15 @@
 
  ```json
 {
-    "status": "SUCCESS",
-    "data": {
-        "id": 32,
-        "carPlate": "皖A11111",
-        "ownerName": "gigi",
-        "ownerCompany": "hfcb",
-        "createdDate": 1513215483085,
-        "createdBy": "wyf",
-        "ownerPhoneNum": "12345678900",
-        "valid": true
-    }
+    "status": "SUCCESS"
 }
 ```
 
 ### 4.4.9 更新新能源车辆接口
 
-- 功能描述：更新新能源车车辆
+- 功能描述：`更新新能源车车辆`
+
+- 调用场景：`web端编辑新能源车信息`
 
 - 请求地址：`localhost:8080/order/vehicles/newEnergy/{id}?access_token`
 
@@ -1244,131 +1220,15 @@
 - 返回示例：
 ```json
 {
-    "status": "SUCCESS",
-    "data": {
-        "id": 33,
-        "carPlate": "皖A00001",
-        "ownerPhoneNum": "11234567809",
-        "valid": true,
-        "ownerCardId": "123456782287654321",
-        "engineNum": "111",
-        "vin": "111",
-        "registerTime": 1513159200000,
-        "validDate": 1576252800000,
-        "remark": null,
-        "lastModifiedDate": 1513215726922
-    }
-}
-
-```
-
-### 4.4.10 查询所有的特殊车辆接口
-
-- 功能描述：查询所有的特殊车辆
-
-- 请求地址：`localhost:8080/order/vehicles/special?access_token`
-
-- 请求动作: `GET`
-
-- 请求示例：`http://localhost:8080/order/vehicles/special?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
-
-- 返回示例：
-```json
-{
-    "status": "SUCCESS",
-    "data": {
-        "content": [
-            {
-                "id": 30,
-                "carPlate": "皖A12345",
-                "ownerName": "vivivi",
-                "ownerCompany": "hfcb",
-                "createdDate": 1513167338643,
-                "createdBy": "wyf",
-                "ownerPhoneNum": "12345678900",
-                "valid": true
-            },
-            {
-                "id": 32,
-                "carPlate": "皖A11111",
-                "ownerName": "gigi",
-                "ownerCompany": "hfcb",
-                "createdDate": 1513215483085,
-                "createdBy": "wyf",
-                "ownerPhoneNum": "12345678900",
-                "valid": true
-            }
-        ],
-        "last": true,
-        "totalElements": 2,
-        "totalPages": 1,
-        "size": 20,
-        "number": 0,
-        "first": true,
-        "sort": null,
-        "numberOfElements": 2
-    }
+    "status": "SUCCESS"
 }
 ```
 
-### 4.4.10 查询所有的新能源车辆接口
+### 4.4.10 查询指定的特殊车辆接口
 
-- 功能描述：查询所有的新能源车辆
+- 功能描述：`查询指定的特殊车辆`
 
-- 请求地址：`localhost:8080/order/vehicles/newEnergy?access_token`
-
-- 请求动作: `GET`
-
-- 请求示例：`http://localhost:8080/order/vehicles/newEnergy?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
-
-- 返回示例：
-```json
-{
-    "status": "SUCCESS",
-    "data": {
-        "content": [
-            {
-                "id": 31,
-                "carPlate": "皖A00000",
-                "ownerPhoneNum": "01234567899",
-                "valid": true,
-                "ownerCardId": "123456789987654321",
-                "engineNum": "000",
-                "vin": "000",
-                "registerTime": 1513159200000,
-                "validDate": 1544716800000,
-                "remark": "新能源车",
-                "lastModifiedDate": 1513167401754
-            },
-            {
-                "id": 33,
-                "carPlate": "皖A00001",
-                "ownerPhoneNum": "11234567809",
-                "valid": true,
-                "ownerCardId": "123456782287654321",
-                "engineNum": "111",
-                "vin": "111",
-                "registerTime": 1513159200000,
-                "validDate": 1576252800000,
-                "remark": null,
-                "lastModifiedDate": 1513216167101
-            }
-        ],
-        "last": true,
-        "totalElements": 2,
-        "totalPages": 1,
-        "size": 20,
-        "number": 0,
-        "first": true,
-        "sort": null,
-        "numberOfElements": 2
-    }
-}
-```
-
-### 4.4.11 查询指定的特殊车辆接口
-
-- 功能描述：查询指定的特殊车辆
+- 调用场景：`web端查询特殊车辆详细信息`
 
 - 请求地址：`localhost:8080/order/vehicles/sepcial/{id}?access_token`
 
@@ -1393,9 +1253,11 @@
 }
 ```
 
-### 4.4.12 查询指定的新能源车辆接口
+### 4.4.11 查询指定的新能源车辆接口
 
-- 功能描述：查询指定的新能源车辆
+- 功能描述：`查询指定的新能源车辆`
+
+- 调用场景：`web端查询新能源车详细信息`
 
 - 请求地址：`localhost:8080/order/vehicles/newEnergy/{id}?access_token`
 
@@ -1423,9 +1285,11 @@
 }
 ```
 
-### 4.4.13 条件查询特殊车辆的接口
+### 4.4.12 条件查询特殊车辆的接口
 
-- 功能描述：根据车牌牌照、归属人，归属人手机号查找特殊车辆
+- 功能描述：`根据车牌牌照、归属人，归属人手机号查找特殊车辆`
+
+- 调用场景：`web端根据车牌牌照、归属人，归属人手机号查找特殊车辆`
 
 - 请求地址：`localhost:8080/order/vehicles/special/query?carPlate&ownerName&ownerPhoneNum&access_token`
            `carPlate&ownerName&ownerPhoneNum是非必须的可以缺省`
@@ -1448,6 +1312,82 @@
                 "createdBy": "wyf",
                 "ownerPhoneNum": "12345678900",
                 "valid": true
+            }
+        ],
+        "last": true,
+        "totalElements": 1,
+        "totalPages": 1,
+        "size": 20,
+        "number": 0,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 1
+    }
+}
+```
+
+### 4.4.11 查询指定的新能源车辆接口
+
+- 功能描述：`查询指定的新能源车辆`
+
+- 调用场景：`web端查询新能源车详细信息`
+
+- 请求地址：`localhost:8080/order/vehicles/newEnergy/{id}?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/order/vehicles/newEnergy/31?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+
+- 返回示例：
+```json
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": 31,
+        "carPlate": "皖A00000",
+        "ownerPhoneNum": "01234567899",
+        "valid": true,
+        "ownerCardId": "123456789987654321",
+        "engineNum": "000",
+        "vin": "000",
+        "registerTime": 1513159200000,
+        "validDate": 1544716800000,
+        "remark": "新能源车",
+        "lastModifiedDate": 1513167401754
+    }
+}
+```
+
+### 4.4.12 条件查询新能源车的接口
+
+- 功能描述：`根据车牌、归属人手机号、状态查询新能源车`
+
+- 调用场景：`web端根据车牌、归属人手机号、状态查询新能源车`
+
+- 请求地址：`localhost:8080/order/vehicles/newEnergy/query?carPlate&valid&ownerPhoneNum&access_token`
+           `carPlate&valid&ownerPhoneNum是非必须的可以缺省`
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/order/vehicles/newEnergy/query?carPlate=皖A12345&valid=true&ownerPhoneNum=12345678900&access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+
+- 返回示例：
+```json
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "id": 30,
+                "carPlate": "皖A12345",
+                "ownerPhoneNum": "12345678900",
+                "valid": true,
+                "ownerCardId": null,
+                "engineNum": null,
+                "vin": null,
+                "registerTime": null,
+                "validDate": null,
+                "remark": null,
+                "lastModifiedDate": 1513167387311
             }
         ],
         "last": true,
