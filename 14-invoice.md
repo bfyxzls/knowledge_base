@@ -424,18 +424,19 @@
 - 功能描述:  客户开具纸质发票
 - 请求地址: `http://domain/customer/invoices/paperInvoice`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/customer/invoices/paperInvoice?access_token=9e02c0ba-3042-4e41-aed4-80c0cccbafab`
+- 请求示例: `http://localhost:8080/customer//web/invoices/monthBill/paper?access_token=9e02c0ba-3042-4e41-aed4-80c0cccbafab`
 - 请求示例  
 ```
 {
-	"type":1,
-	"invoiceNum":"001",
-	"invoiceCode":"123",
-	"invoiceTitle":"合肥城泊",
-	"buyerId":"123456789",
-	"taxRate":"0.05",
-	"taxAmount":"20000",
-	"afterTaxIncome":"1000"
+	  "type":1,
+      "invoiceNum":"001",
+      "invoiceCode":"123",
+      "invoiceTitle":"合肥城泊",
+      "buyerId":"123456789",
+      "taxRate":"0.05",
+      "taxAmount":"20000",
+      "afterTaxIncome":"2000",
+      "monthBillId":1011                      
 }
 
 ```
