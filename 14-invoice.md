@@ -430,14 +430,15 @@
 - 请求示例  
 ```
 {
-	"type":1,
-	"invoiceNum":"001",
-	"invoiceCode":"123",
-	"invoiceTitle":"合肥城泊",
-	"buyerId":"123456789",
-	"taxRate":"0.05",
-	"taxAmount":"20000",
-	"afterTaxIncome":"1000"
+	  "type":1,
+      "invoiceNum":"001",
+      "invoiceCode":"123",
+      "invoiceTitle":"合肥城泊",
+      "buyerId":"123456789",
+      "taxRate":"0.05",
+      "taxAmount":"20000",
+      "afterTaxIncome":"2000",
+      "monthBillId":1011                      
 }
 
 ```

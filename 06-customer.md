@@ -392,12 +392,12 @@ PS:需要用admin用户获得access_token
 - 功能描述: 新增一个MonthBill，并保存进数据库
 - 请求地址: `http://domain/customer/monthBills?access_token=token`
 - 请求动作: `POST`
-- 请求示例: `http://localhost:8080/customer/monthBills/?access_token=8f3a8e76-fd86-49c6-9bf2-5f42563c2486`
+- 请求示例: `http://localhost:8080/customer/monthBills/?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
 - Body：
 ```
 {
     "customerCarPlate": "皖A12346",
-    "customerName": "高颖",
+    "customerName": "梁伟",
     "customerPhoneNum": "133333333333",
     "customerCardNum": "325452155845245865",
     "startMonth": 1501545600000,
@@ -408,7 +408,8 @@ PS:需要用admin用户获得access_token
     "shouldPay": 10000,
     "actualPay": 10000,
     "valid": true,
-    "description": null
+    "description": null,
+    "district":1
 }
 ```
 - 返回示例
