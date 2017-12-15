@@ -1108,53 +1108,470 @@ sort=createdDate,DESC：按照优惠券生成时间降序排列
     "data": {
         "content": [
             {
-                "id": "4fd4b0c1-a6f2-4e5f-934d-d9e25b0a5c59",
-                "activityName": "圣诞优惠",
+                "id": "5a273d7cde74ae16742721fd",
+                "activityName": "活动7",
                 "type": 1,
                 "creator": null,
-                "createDate": "2017-11-28 14:42:33",
+                "createDate": "2017-12-06 08:44:44",
                 "validStartDate": "2017-11-21 19:30:30",
                 "validEndDate": "2017-11-24 12:30:30",
-                "status": 1,
-                "phoneNum": null,
-                "origin": null,
-                "assignable": true
+                "status": 2,
+                "phoneNum": "15555417041",
+                "origin": 1,
+                "assignable": true,
+                "rule": {
+                    "type": 1,
+                    "freeHours": 2,
+                    "generateNum": 2,
+                    "maxNum": 2
+                },
+                "roadSections": [
+                    {
+                        "id": 1001,
+                        "name": "植保路"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "长江路"
+                    }
+                ],
+                "receiveTime": null,
+                "usedTime": null,
+                "orderId": null
             },
             {
-                "id": "72d04cf8-6ffa-4f14-b3a1-5eed674544cb",
-                "activityName": "圣诞优惠",
+                "id": "5a273d7cde74ae16742721fe",
+                "activityName": "活动7",
                 "type": 1,
                 "creator": null,
-                "createDate": "2017-11-28 14:42:33",
+                "createDate": "2017-12-06 08:44:44",
                 "validStartDate": "2017-11-21 19:30:30",
                 "validEndDate": "2017-11-24 12:30:30",
-                "status": 1,
-                "phoneNum": null,
-                "origin": null,
-                "assignable": true
+                "status": 2,
+                "phoneNum": "15555417041",
+                "origin": 1,
+                "assignable": true,
+                "rule": {
+                    "type": 1,
+                    "freeHours": 2,
+                    "generateNum": 2,
+                    "maxNum": 2
+                },
+                "roadSections": [
+                    {
+                        "id": 1001,
+                        "name": "植保路"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "长江路"
+                    }
+                ],
+                "receiveTime": null,
+                "usedTime": null,
+                "orderId": null
             },
             {
-                "id": "b98b1d7c-6433-4b99-9c4b-72b9ca0da6a9",
-                "activityName": "圣诞优惠",
-                "type": 1,
+                "id": "5a273d7cde74ae16742721ff",
+                "activityName": "活动7",
+                "type": 3,
                 "creator": null,
-                "createDate": "2017-11-28 14:42:33",
-                "validStartDate": "2017-11-21 19:30:30",
-                "validEndDate": "2017-11-24 12:30:30",
+                "createDate": "2017-12-06 08:44:44",
+                "validStartDate": "2017-11-21 10:30:30",
+                "validEndDate": "2017-11-24 10:30:30",
+                "status": 2,
+                "phoneNum": "18365265123",
+                "origin": 1,
+                "assignable": true,
+                "rule": {
+                    "type": 3,
+                    "useLimitAmount": 5,
+                    "discountAmount": 2,
+                    "generateNum": 2,
+                    "maxNum": 2
+                },
+                "roadSections": [
+                    {
+                        "id": 1001,
+                        "name": "植保路"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "长江路"
+                    }
+                ],
+                "receiveTime": null,
+                "usedTime": null,
+                "orderId": null
+            },
+            {
+                "id": "5a273d7cde74ae1674272200",
+                "activityName": "活动7",
+                "type": 3,
+                "creator": null,
+                "createDate": "2017-12-06 08:44:44",
+                "validStartDate": "2017-11-21 10:30:30",
+                "validEndDate": "2017-11-24 10:30:30",
+                "status": 2,
+                "phoneNum": "18365265123",
+                "origin": 1,
+                "assignable": true,
+                "rule": {
+                    "type": 3,
+                    "useLimitAmount": 5,
+                    "discountAmount": 2,
+                    "generateNum": 2,
+                    "maxNum": 2
+                },
+                "roadSections": [
+                    {
+                        "id": 1001,
+                        "name": "植保路"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "长江路"
+                    }
+                ],
+                "receiveTime": null,
+                "usedTime": null,
+                "orderId": null
+            },
+            {
+                "id": "5a273d7cde74ae1674272201",
+                "activityName": "活动7",
+                "type": 3,
+                "creator": null,
+                "createDate": "2017-12-06 08:44:44",
+                "validStartDate": "2017-11-21 10:30:30",
+                "validEndDate": "2017-11-24 10:30:30",
                 "status": 1,
                 "phoneNum": null,
                 "origin": null,
-                "assignable": true
+                "assignable": true,
+                "rule": {
+                    "type": 3,
+                    "useLimitAmount": 10,
+                    "discountAmount": 5,
+                    "generateNum": 2,
+                    "maxNum": 2
+                },
+                "roadSections": [
+                    {
+                        "id": 1001,
+                        "name": "植保路"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "长江路"
+                    }
+                ],
+                "receiveTime": null,
+                "usedTime": null,
+                "orderId": null
+            },
+            {
+                "id": "5a273d7cde74ae1674272202",
+                "activityName": "活动7",
+                "type": 3,
+                "creator": null,
+                "createDate": "2017-12-06 08:44:44",
+                "validStartDate": "2017-11-21 10:30:30",
+                "validEndDate": "2017-11-24 10:30:30",
+                "status": 1,
+                "phoneNum": null,
+                "origin": null,
+                "assignable": true,
+                "rule": {
+                    "type": 3,
+                    "useLimitAmount": 10,
+                    "discountAmount": 5,
+                    "generateNum": 2,
+                    "maxNum": 2
+                },
+                "roadSections": [
+                    {
+                        "id": 1001,
+                        "name": "植保路"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "长江路"
+                    }
+                ],
+                "receiveTime": null,
+                "usedTime": null,
+                "orderId": null
+            },
+            {
+                "id": "5a273d7cde74ae1674272203",
+                "activityName": "活动7",
+                "type": 2,
+                "creator": null,
+                "createDate": "2017-12-06 08:44:44",
+                "validStartDate": "2017-11-21 10:30:30",
+                "validEndDate": "2017-11-24 10:30:30",
+                "status": 1,
+                "phoneNum": null,
+                "origin": null,
+                "assignable": true,
+                "rule": {
+                    "type": 2,
+                    "useLimitHour": 1,
+                    "payAmount": 1,
+                    "generateNum": 2,
+                    "maxNum": 2
+                },
+                "roadSections": [
+                    {
+                        "id": 1001,
+                        "name": "植保路"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "长江路"
+                    }
+                ],
+                "receiveTime": null,
+                "usedTime": null,
+                "orderId": null
+            },
+            {
+                "id": "5a273d7cde74ae1674272204",
+                "activityName": "活动7",
+                "type": 2,
+                "creator": null,
+                "createDate": "2017-12-06 08:44:44",
+                "validStartDate": "2017-11-21 10:30:30",
+                "validEndDate": "2017-11-24 10:30:30",
+                "status": 1,
+                "phoneNum": null,
+                "origin": null,
+                "assignable": true,
+                "rule": {
+                    "type": 2,
+                    "useLimitHour": 1,
+                    "payAmount": 1,
+                    "generateNum": 2,
+                    "maxNum": 2
+                },
+                "roadSections": [
+                    {
+                        "id": 1001,
+                        "name": "植保路"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "长江路"
+                    }
+                ],
+                "receiveTime": null,
+                "usedTime": null,
+                "orderId": null
+            },
+            {
+                "id": "5a273d7cde74ae1674272205",
+                "activityName": "活动7",
+                "type": 2,
+                "creator": null,
+                "createDate": "2017-12-06 08:44:44",
+                "validStartDate": "2017-11-21 10:30:30",
+                "validEndDate": "2017-11-24 10:30:30",
+                "status": 1,
+                "phoneNum": null,
+                "origin": null,
+                "assignable": true,
+                "rule": {
+                    "type": 2,
+                    "useLimitHour": 2,
+                    "payAmount": 5,
+                    "generateNum": 2,
+                    "maxNum": 2
+                },
+                "roadSections": [
+                    {
+                        "id": 1001,
+                        "name": "植保路"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "长江路"
+                    }
+                ],
+                "receiveTime": null,
+                "usedTime": null,
+                "orderId": null
+            },
+            {
+                "id": "5a273d7cde74ae1674272206",
+                "activityName": "活动7",
+                "type": 2,
+                "creator": null,
+                "createDate": "2017-12-06 08:44:44",
+                "validStartDate": "2017-11-21 10:30:30",
+                "validEndDate": "2017-11-24 10:30:30",
+                "status": 1,
+                "phoneNum": null,
+                "origin": null,
+                "assignable": true,
+                "rule": {
+                    "type": 2,
+                    "useLimitHour": 2,
+                    "payAmount": 5,
+                    "generateNum": 2,
+                    "maxNum": 2
+                },
+                "roadSections": [
+                    {
+                        "id": 1001,
+                        "name": "植保路"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "长江路"
+                    }
+                ],
+                "receiveTime": null,
+                "usedTime": null,
+                "orderId": null
+            },
+            {
+                "id": "5a273d7cde74ae1674272207",
+                "activityName": "活动7",
+                "type": 4,
+                "creator": null,
+                "createDate": "2017-12-06 08:44:44",
+                "validStartDate": "2017-11-21 10:30:30",
+                "validEndDate": "2017-11-24 10:30:30",
+                "status": 1,
+                "phoneNum": null,
+                "origin": null,
+                "assignable": true,
+                "rule": {
+                    "type": 4,
+                    "discountAmount": 5,
+                    "generateNum": 2,
+                    "maxNum": 1
+                },
+                "roadSections": [
+                    {
+                        "id": 1001,
+                        "name": "植保路"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "长江路"
+                    }
+                ],
+                "receiveTime": null,
+                "usedTime": null,
+                "orderId": null
+            },
+            {
+                "id": "5a273d7cde74ae1674272208",
+                "activityName": "活动7",
+                "type": 4,
+                "creator": null,
+                "createDate": "2017-12-06 08:44:44",
+                "validStartDate": "2017-11-21 10:30:30",
+                "validEndDate": "2017-11-24 10:30:30",
+                "status": 1,
+                "phoneNum": null,
+                "origin": null,
+                "assignable": true,
+                "rule": {
+                    "type": 4,
+                    "discountAmount": 5,
+                    "generateNum": 2,
+                    "maxNum": 1
+                },
+                "roadSections": [
+                    {
+                        "id": 1001,
+                        "name": "植保路"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "长江路"
+                    }
+                ],
+                "receiveTime": null,
+                "usedTime": null,
+                "orderId": null
+            },
+            {
+                "id": "5a273d7cde74ae1674272209",
+                "activityName": "活动7",
+                "type": 4,
+                "creator": null,
+                "createDate": "2017-12-06 08:44:44",
+                "validStartDate": "2017-11-21 10:30:30",
+                "validEndDate": "2017-11-24 10:30:30",
+                "status": 1,
+                "phoneNum": null,
+                "origin": null,
+                "assignable": true,
+                "rule": {
+                    "type": 4,
+                    "discountAmount": 10,
+                    "generateNum": 2,
+                    "maxNum": 2
+                },
+                "roadSections": [
+                    {
+                        "id": 1001,
+                        "name": "植保路"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "长江路"
+                    }
+                ],
+                "receiveTime": null,
+                "usedTime": null,
+                "orderId": null
+            },
+            {
+                "id": "5a273d7cde74ae167427220a",
+                "activityName": "活动7",
+                "type": 4,
+                "creator": null,
+                "createDate": "2017-12-06 08:44:44",
+                "validStartDate": "2017-11-21 10:30:30",
+                "validEndDate": "2017-11-24 10:30:30",
+                "status": 1,
+                "phoneNum": null,
+                "origin": null,
+                "assignable": true,
+                "rule": {
+                    "type": 4,
+                    "discountAmount": 10,
+                    "generateNum": 2,
+                    "maxNum": 2
+                },
+                "roadSections": [
+                    {
+                        "id": 1001,
+                        "name": "植保路"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "长江路"
+                    }
+                ],
+                "receiveTime": null,
+                "usedTime": null,
+                "orderId": null
             }
         ],
         "last": true,
+        "totalElements": 14,
         "totalPages": 1,
-        "totalElements": 3,
-        "number": 0,
         "size": 20,
-        "sort": null,
+        "number": 0,
         "first": true,
-        "numberOfElements": 3
+        "sort": null,
+        "numberOfElements": 14
     }
 }
 ```
