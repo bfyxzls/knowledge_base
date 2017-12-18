@@ -568,6 +568,86 @@ PS:需要用admin用户获得access_token
     }
 }
 ```
+## 6.4 支付接口
+
+### 6.4.1支付宝生成App支付订单信息接口
+
+- 功能描述：支付宝生成订单信息接口
+- 请求地址：`http://doman/customer/alipay/generateAppMonthBillInfo`
+- 请求动作：`POST`
+- 请求示例：`http://hocalhost:8080/customer/alipay/generateAppMonthBillInfo?access_token=d0f17df9-1bc5-4fde-b7d1-6ee9f5605cc3`
+```json
+ {
+     "customerCarPlate": "皖A12346",
+     "customerName": "梁伟",
+     "customerPhoneNum": "133333333333",
+     "customerCardNum": "325452155845245865",
+     "startMonth": 1501545600000,
+     "endMonth": 1509408000000,
+     "roadSectionIds": [
+         1036
+     ],
+     "shouldPay": 10000,
+     "actualPay": 10000,
+     "valid": true,
+     "description": null,
+     "district":1
+ }
+```
+- 返回示例：
+
+```
+{
+    "status": "SUCCESS",
+    "data": "alipay_sdk=alipay-sdk-java-dynamicVersionNo&app_id=2017082908447174&biz_content=%7B%22body%22%3A%22%E6%9C%88%E7%A5%A8%E7%BC%B4%E8%B4%B9%22%2C%22out_trade_no%22%3A%22201712151921366189130%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22subject%22%3A%22%E6%9C%88%E7%A5%A8%E7%BC%B4%E8%B4%B9%22%2C%22timeout_express%22%3A%2230m%22%2C%22total_amount%22%3A%22100.0%22%7D&charset=UTF-8&format=json&method=alipay.trade.app.pay&notify_url=http%3A%2F%2Fhfcb.asuscomm.com%3A9080%2Fcustomer%2Falipay%2Fcallback%2FappMonthBillPaymentNotify&sign=GzpKXG5A8Om85vqb8Q2U6fPHrUEUFiOtv7zHj%2FIrASftJROJdX54rnf32rCqKTSCwQOsMpqRxyY5eAb35KpS%2BIwKo9i4rOOnjT2%2FuzDl8FV1greGrYbfyRf0B3TB7UyXU7udJIQ1PEczjjpBBl5WlCzEYbupvv6Q6fyUtC%2FB6dUIivxbg7yCSN6b5YmazOr%2BE%2BHrqbjdhAQkLn0JV%2FjjZ26TU%2BHFqTqZKNr20xgPN4mHzyeNGqLTKBAyZ%2B9DnXANvMXDZKljUvxjj4ieo2ZsP6dIq4xUs5VdtS5j9qgfid5z5YkK7JAttsmOEACn1LWAespzr2Hxf4nPdRxvSuZPuA%3D%3D&sign_type=RSA2&timestamp=2017-12-15+19%3A21%3A36&version=1.0"
+}
+```
+
+
+### 6.4.2 微信生成App支付订单信息接口
+
+- 功能描述：微信生成订单信息接口
+- 请求地址：`http://doman/customer/wechat/generateAppMonthBillInfo`
+- 请求动作：`POST`
+- 请求示例：`http://localhost:8080/customer/weChat/generateAppMonthBillInfo?access_token=d0f17df9-1bc5-4fde-b7d1-6ee9f5605cc3&ip=192.168.1.111`
+```json
+ {
+       "customerCarPlate": "皖A12346",
+       "customerName": "梁伟",
+       "customerPhoneNum": "133333333333",
+       "customerCardNum": "325452155845245865",
+       "startMonth": 1501545600000,
+       "endMonth": 1509408000000,
+       "roadSectionIds": [
+           1036
+       ],
+       "shouldPay": 10000,
+       "actualPay": 10000,
+       "valid": true,
+       "description": null,
+       "district":1
+   }
+```
+- 返回示例：
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "appId": "wxd5a553c228118fca",
+        "partnerId": "1489500492",
+        "prepayId": "wx20171215192443b4216f455f0108954480",
+        "pack": "Sign=WXPay",
+        "nonceStr": "44d213eb8d3140238cd97e77950b70ac",
+        "timestamp": "1513337082",
+        "sign": "3AA0839C5DA6D414D04E975B621A6465",
+        "tradeId": "201712151924415203048",
+        "result": "SUCCESS"
+    }
+}
+```
+
+
+
 
 
 
