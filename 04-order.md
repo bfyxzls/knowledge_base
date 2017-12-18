@@ -1067,15 +1067,15 @@
 ```
 
 
-### 4.4.5 isDiscount接口
+### 4.4.5 检查车辆类型接口
 
-- 功能描述：车辆类型判断、新能源车是否可享受优惠
+- 功能描述：根据车牌检查车辆类型是否为特殊车辆或新能源车(报备的新能源车每天两次免费停车1小时，报备的特殊车可免费停车)
 
-- 请求地址：`localhost:8080/order/vehicles/check?access_token&carPlat`
+- 请求地址：`localhost:8080/order/vehicles/check?access_token&carPlat=_carPlate&vehicleType=_vehicleType`
 
 - 请求动作: `GET`
 
-- 请求示例：`http://localhost:8080/order/vehicles/localhost:8080/order/vehicles/check?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&carPlate=%e7%9a%96A12347`
+- 请求示例：`http://localhost:8080/order/vehicles/localhost:8080/order/vehicles/check?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&carPlate=%e7%9a%96A12347&vehicleType=02`
     - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
 
 - 返回示例：
@@ -1084,8 +1084,7 @@
 {
     "status": "SUCCESS",
     "data": {
-        "carPlate": "皖A12347",
-        "isDiscount": true
+        "vehicleType": "03"
     }
 }
 
@@ -1230,7 +1229,7 @@
 
 - 调用场景：`web端查询特殊车辆详细信息`
 
-- 请求地址：`localhost:8080/order/vehicles/sepcial/{id}?access_token`
+- 请求地址：`localhost:8080/order/vehicles/special/{id}?access_token`
 
 - 请求动作: `GET`
 
@@ -1326,39 +1325,8 @@
 }
 ```
 
-### 4.4.11 查询指定的新能源车辆接口
 
-- 功能描述：`查询指定的新能源车辆`
-
-- 调用场景：`web端查询新能源车详细信息`
-
-- 请求地址：`localhost:8080/order/vehicles/newEnergy/{id}?access_token`
-
-- 请求动作: `GET`
-
-- 请求示例：`http://localhost:8080/order/vehicles/newEnergy/31?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
-
-- 返回示例：
-```json
-{
-    "status": "SUCCESS",
-    "data": {
-        "id": 31,
-        "carPlate": "皖A00000",
-        "ownerPhoneNum": "01234567899",
-        "valid": true,
-        "ownerCardId": "123456789987654321",
-        "engineNum": "000",
-        "vin": "000",
-        "registerTime": 1513159200000,
-        "validDate": 1544716800000,
-        "remark": "新能源车",
-        "lastModifiedDate": 1513167401754
-    }
-}
-```
-
-### 4.4.12 条件查询新能源车的接口
+### 4.4.13 条件查询新能源车的接口
 
 - 功能描述：`根据车牌、归属人手机号、状态查询新能源车`
 
@@ -1399,6 +1367,25 @@
         "first": true,
         "numberOfElements": 1
     }
+}
+```
+
+### 4.4.14 验证车辆唯一性接口
+
+- 功能描述：`验证特殊车辆或新能源车是否已录入`
+
+- 调用场景：`web端录入特殊车辆或新能源车之前，先验证车辆是否存在`
+
+- 请求地址：`http://domain/order/vehicles?access_token&carPlate`
+
+- 请求动作: `HEAD`
+
+- 请求示例：`http://localhost:8080/order/vehicles?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&carPlate=皖A00009`
+
+- 返回示例：
+```json
+{
+isExist:false
 }
 ```
 
