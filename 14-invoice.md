@@ -434,7 +434,7 @@
       "invoiceTitle":"合肥城泊",
       "buyerId":"123456789",
       "taxRate":"0.05",
-      "taxAmount":"20000",
+      "taxAmount":"100",
       "afterTaxIncome":"2000",
       "monthBillId":1011                      
 }
