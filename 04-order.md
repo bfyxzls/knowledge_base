@@ -1326,39 +1326,8 @@
 }
 ```
 
-### 4.4.11 查询指定的新能源车辆接口
 
-- 功能描述：`查询指定的新能源车辆`
-
-- 调用场景：`web端查询新能源车详细信息`
-
-- 请求地址：`localhost:8080/order/vehicles/newEnergy/{id}?access_token`
-
-- 请求动作: `GET`
-
-- 请求示例：`http://localhost:8080/order/vehicles/newEnergy/31?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
-
-- 返回示例：
-```json
-{
-    "status": "SUCCESS",
-    "data": {
-        "id": 31,
-        "carPlate": "皖A00000",
-        "ownerPhoneNum": "01234567899",
-        "valid": true,
-        "ownerCardId": "123456789987654321",
-        "engineNum": "000",
-        "vin": "000",
-        "registerTime": 1513159200000,
-        "validDate": 1544716800000,
-        "remark": "新能源车",
-        "lastModifiedDate": 1513167401754
-    }
-}
-```
-
-### 4.4.12 条件查询新能源车的接口
+### 4.4.13 条件查询新能源车的接口
 
 - 功能描述：`根据车牌、归属人手机号、状态查询新能源车`
 
