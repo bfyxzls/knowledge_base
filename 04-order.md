@@ -1370,6 +1370,25 @@
 }
 ```
 
+### 4.4.14 验证车辆唯一性接口
+
+- 功能描述：`验证特殊车辆或新能源车是否已录入`
+
+- 调用场景：`web端录入特殊车辆或新能源车之前，先验证车辆是否存在`
+
+- 请求地址：`http://domain/order/vehicles?access_token&carPlate`
+
+- 请求动作: `HEAD`
+
+- 请求示例：`http://localhost:8080/order/vehicles?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&carPlate=皖A00009`
+
+- 返回示例：
+```json
+{
+isExist:false
+}
+```
+
 ## 4.5 APP端获取车辆信息接口（AppVehicleController）
 
 ### 4.5.1 getArrearsParkingOrder接口
