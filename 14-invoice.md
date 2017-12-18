@@ -10,7 +10,7 @@
 
 ### 发票状态常量
 
-- `InvoiceStatus`: WAIT_INVOICE:1, INVOICED:2, OVERDUE:3
+- `InvoiceStatus`: WAIT_INVOICE:1, INVOICED:2, OVERDUE:3, FAILURE: 4
 
 ### 发票常量
  
