@@ -1229,7 +1229,7 @@
 
 - 调用场景：`web端查询特殊车辆详细信息`
 
-- 请求地址：`localhost:8080/order/vehicles/sepcial/{id}?access_token`
+- 请求地址：`localhost:8080/order/vehicles/special/{id}?access_token`
 
 - 请求动作: `GET`
 
