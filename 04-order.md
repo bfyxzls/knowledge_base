@@ -2183,16 +2183,8 @@ isExist:false
         {
             "id": 1004,
             "name": "test",
-            "parkingArea": {
-                "id": 1000,
-                "code": "0000001",
-                "name": "植保路",
-                "district": "蜀山区"
-            }
-        },
-        {
-            "id": 1000,
-            "name": "23",
+            "monthBillNum": null,
+            "monthBillPrice": null,
             "parkingArea": {
                 "id": 1000,
                 "code": "0000001",
@@ -2203,26 +2195,8 @@ isExist:false
         {
             "id": 1043,
             "name": "测试单价添加",
-            "parkingArea": {
-                "id": 1000,
-                "code": "0000001",
-                "name": "植保路",
-                "district": "蜀山区"
-            }
-        },
-        {
-            "id": 1001,
-            "name": "长江西路2",
-            "parkingArea": {
-                "id": 1000,
-                "code": "0000001",
-                "name": "植保路",
-                "district": "蜀山区"
-            }
-        },
-        {
-            "id": 1003,
-            "name": "潜山路-长江西路",
+            "monthBillNum": null,
+            "monthBillPrice": null,
             "parkingArea": {
                 "id": 1000,
                 "code": "0000001",
@@ -2233,6 +2207,32 @@ isExist:false
         {
             "id": 1002,
             "name": "长江西路",
+            "monthBillNum": null,
+            "monthBillPrice": null,
+            "parkingArea": {
+                "id": 1000,
+                "code": "0000001",
+                "name": "植保路",
+                "district": "蜀山区"
+            }
+        },
+        {
+            "id": 1003,
+            "name": "潜山路",
+            "monthBillNum": null,
+            "monthBillPrice": null,
+            "parkingArea": {
+                "id": 1000,
+                "code": "0000001",
+                "name": "植保路",
+                "district": "蜀山区"
+            }
+        },
+        {
+            "id": 1000,
+            "name": "望江西路-创新大道",
+            "monthBillNum": null,
+            "monthBillPrice": null,
             "parkingArea": {
                 "id": 1000,
                 "code": "0000001",
