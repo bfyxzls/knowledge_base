@@ -645,6 +645,37 @@ PS:需要用admin用户获得access_token
     }
 }
 ```
+## 6.6 道路查询接口
+
+### 6.5.1 根据道路ID获得道路信息
+
+
+- 功能描述：`获取指定路段的信息`
+
+- 调用场景：`客户在购买月票时获取指定路段的信息(路段id、路段名、月票剩余数量、月票单价)`
+
+- 请求地址：`http://domain/customer/roadSections/{id}`
+
+- 请求动作：`GET`
+
+- 请求示例：`http://localhost:8080/customer/roadSections/1000?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+
+- 返回示例：
+```json
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": 1000,
+        "name": "望江西路-创新大道",
+        "unsoldMonthBillNum": 1000,
+        "monthBillPrice": 10000,
+        "parkingAreaName": "植保路"
+    }
+}
+```
+
+
+
 
 
 
