@@ -654,11 +654,11 @@ PS:需要用admin用户获得access_token
 
 - 调用场景：`客户在购买月票时获取指定路段的信息(路段id、路段名、月票剩余数量、月票单价)`
 
-- 请求地址：`http://domain/customer/roadSections/{id}`
+- 请求地址：`http://domain/customer/roadSections/{id}？access_token&startMonth&endMonth`
 
 - 请求动作：`GET`
 
-- 请求示例：`http://localhost:8080/customer/roadSections/1000?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431http://localhost:8080/customer/roadSections/1000?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&startMonth=2017-12&endMonth=2017-12`
+- 请求示例：`http://localhost:8080/customer/roadSections/1000?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&startMonth=2017-12&endMonth=2017-12`
 
 - 返回示例：
 ```json
