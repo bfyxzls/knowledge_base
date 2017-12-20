@@ -1143,7 +1143,6 @@
     "ownerCardId":"123456782287654321",
     "engineNum": "000",
     "vin": "000",
-    "registerTime": "2017-12-13 18:00:00",
     "validDate" :"2018-12-14 00:00:00"
  }
 
@@ -1276,7 +1275,7 @@
         "ownerCardId": "123456789987654321",
         "engineNum": "000",
         "vin": "000",
-        "registerTime": 1513159200000,
+        "createdDate": 1513167349875,
         "validDate": 1544716800000,
         "remark": "新能源车",
         "lastModifiedDate": 1513167401754
@@ -1341,33 +1340,33 @@
 - 返回示例：
 ```json
 {
-    "status": "SUCCESS",
-    "data": {
-        "content": [
-            {
-                "id": 30,
-                "carPlate": "皖A12345",
-                "ownerPhoneNum": "12345678900",
-                "valid": true,
-                "ownerCardId": null,
-                "engineNum": null,
-                "vin": null,
-                "registerTime": null,
-                "validDate": null,
-                "remark": null,
-                "lastModifiedDate": 1513167387311
-            }
-        ],
-        "last": true,
-        "totalElements": 1,
-        "totalPages": 1,
-        "size": 20,
-        "number": 0,
-        "sort": null,
-        "first": true,
-        "numberOfElements": 1
-    }
-}
+     "status": "SUCCESS",
+     "data": {
+         "content": [
+             {
+                 "id": 30,
+                 "carPlate": "皖A12345",
+                 "ownerPhoneNum": "12345678900",
+                 "valid": true,
+                 "ownerCardId": null,
+                 "engineNum": null,
+                 "vin": null,
+                 "createdDate": 1513167338643,
+                 "validDate": null,
+                 "remark": null,
+                 "lastModifiedDate": 1513167387311
+             }
+         ],
+         "last": true,
+         "totalElements": 1,
+         "totalPages": 1,
+         "size": 20,
+         "number": 0,
+         "sort": null,
+         "first": true,
+         "numberOfElements": 1
+     }
+ }
 ```
 
 ### 4.4.14 验证车辆唯一性接口
