@@ -673,10 +673,26 @@ PS:需要用admin用户获得access_token
     }
 }
 ```
+## 6.7 区域查询接口
 
+### 6.7.1 根据区名获得该区对应的ID
 
+- 功能描述：`根据区名获得该区对应的ID`
 
+- 请求地址：`http://domain/customer/districts/getId？access_token&name`
 
+- 请求动作：`GET`
+
+- 请求示例：`http://localhost:8080/customer/districts/getId?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&name=蜀山区`
+
+- 返回示例：
+```json
+{
+    "status": "SUCCESS",
+    "data": 1002
+}
+
+```
 
 
 
