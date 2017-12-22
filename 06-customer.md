@@ -673,11 +673,77 @@ PS:需要用admin用户获得access_token
     }
 }
 ```
+## 6.7 区域查询接口
+
+### 6.7.1 根据区名获得该区对应的ID
+
+- 功能描述：`根据区名获得该区对应的ID`
+
+- 请求地址：`http://domain/customer/districts/getId？access_token&name`
+
+- 请求动作：`GET`
+
+- 请求示例：`http://localhost:8080/customer/districts/getId?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&name=蜀山区`
+
+- 返回示例：
+```json
+{
+    "status": "SUCCESS",
+    "data": 1002
+}
+
+```
+## 6.8 路段查询接口
+
+### 6.8.1 根据路段ID获得道路信息
 
 
+- 功能描述：`获取指定路边停车场的路段信息`
 
+- 调用场景：`客户在购买月票时获取指定路边停车场的路段信息(路段id、路段名、月票剩余数量、月票单价)`
 
+- 请求地址：`http://domain/customer/parkingAreas/{id}？access_token&startMonth&endMonth`
 
+- 请求动作：`GET`
+
+- 请求示例：`http://localhost:8080/customer/parkingAreas/1000?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&startMonth=2017-12&endMonth=2017-12`
+
+- 返回示例：
+```json
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 1000,
+            "name": "望江西路-创新大道",
+            "unsoldMonthBillNum": 1000,
+            "monthBillPrice": 10000,
+            "parkingAreaName": "植保路"
+        },
+        {
+            "id": 1003,
+            "name": "潜山路",
+            "unsoldMonthBillNum": 0,
+            "monthBillPrice": null,
+            "parkingAreaName": "植保路"
+        },
+        {
+            "id": 1002,
+            "name": "长江西路",
+            "unsoldMonthBillNum": 0,
+            "monthBillPrice": null,
+            "parkingAreaName": "植保路"
+        },
+        {
+            "id": 1004,
+            "name": "test",
+            "unsoldMonthBillNum": 0,
+            "monthBillPrice": null,
+            "parkingAreaName": "植保路"
+        }
+    ]
+}
+```
 
 
 
