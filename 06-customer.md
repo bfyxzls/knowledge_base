@@ -607,7 +607,7 @@ PS:需要用admin用户获得access_token
 ### 6.4.2 微信生成App支付订单信息接口
 
 - 功能描述：微信生成订单信息接口
-- 请求地址：`http://doman/customer/wechat/generateAppMonthBillInfo`
+- 请求地址：`http://doman/customer/weChat/generateAppMonthBillInfo`
 - 请求动作：`POST`
 - 请求示例：`http://localhost:8080/customer/weChat/generateAppMonthBillInfo?access_token=d0f17df9-1bc5-4fde-b7d1-6ee9f5605cc3&ip=192.168.1.111`
 ```json
