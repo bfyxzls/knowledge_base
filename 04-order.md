@@ -1139,7 +1139,6 @@
 {
 	"carPlate":"皖A00001",
     "ownerPhoneNum":"11234567809",
-    "valid":true,
     "ownerCardId":"123456782287654321",
     "engineNum": "000",
     "vin": "000",
@@ -1206,7 +1205,6 @@
 {
 	"carPlate":"皖A00001",
     "ownerPhoneNum":"11234567809",
-    "valid":true,
     "ownerCardId":"123456782287654321",
     "engineNum": "111",
     "vin": "111",
