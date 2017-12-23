@@ -645,9 +645,9 @@ PS:需要用admin用户获得access_token
     }
 }
 ```
-## 6.6 道路查询接口
+## 6.5 道路查询接口
 
-### 6.5.1 根据道路ID获得道路信息
+### 6.5.1 根据路段ID获得路段信息
 
 
 - 功能描述：`获取指定路段的信息`
@@ -673,9 +673,28 @@ PS:需要用admin用户获得access_token
     }
 }
 ```
-## 6.7 区域查询接口
+### 6.5.2 根据路段id获取所在的行政区
 
-### 6.7.1 根据区名获得该区对应的ID
+- 功能描述：`根据路段的id获取所在的行政区`
+
+- 请求地址：`http://domain/customer/districts/getDistrictByRoadSectionId？access_token&name`
+
+- 请求动作：`GET`
+
+- 请求示例：`http://localhost:8080/customer/districts/getDistrictByRoadSectionId?access_token=35293431-a0e5-40db-866c-3f46a26f3a0a&id=1000`
+
+- 返回示例：
+```
+{
+    "status": "SUCCESS",
+    "data": "蜀山区"
+}
+
+```
+
+## 6.6 区域查询接口
+
+### 6.6.1 根据区名获得该区对应的ID
 
 - 功能描述：`根据区名获得该区对应的ID`
 
