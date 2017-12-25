@@ -217,6 +217,81 @@
     ]
 }
 ```
+### 14.2.2 客户查询指定区域下的未开具发票的月票
+
+- 功能描述: 查询指定区域下的未开具发票的月票
+
+- 请求地址: `http://domain:8080/customer/invoiceOrders/list/monthBill`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://domain:8080/customer/invoiceOrders/list/monthBill?access_token=cd6a60af-9ecf-489e-95b7-8a5fc87684b0&districtId=1&carPlates=皖A12346`
+
+- 返回示例
+```
+
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "date": "2017-12",
+            "invoiceMonthBillOrderDtos": [
+                {
+                    "id": 1035,
+                    "completeDate": "2017-12-22 15:42:37 星期五",
+                    "isMonthBill": false,
+                    "carPlate": "皖A12346",
+                    "parkingAreaName": "888",
+                    "roadSectionName": "望江西路",
+                    "parkingPeriod": null,
+                    "fee": 10000,
+                    "startMonth": "2018-01-01 00:00:00",
+                    "endMonth": "2018-04-30 23:59:59"
+                },
+                {
+                    "id": 1036,
+                    "completeDate": "2017-12-22 15:43:23 星期五",
+                    "isMonthBill": false,
+                    "carPlate": "皖A12346",
+                    "parkingAreaName": "888",
+                    "roadSectionName": "望江西路",
+                    "parkingPeriod": null,
+                    "fee": 10000,
+                    "startMonth": "2018-01-01 00:00:00",
+                    "endMonth": "2018-04-30 23:59:59"
+                },
+                {
+                    "id": 1037,
+                    "completeDate": "2017-12-22 15:49:28 星期五",
+                    "isMonthBill": false,
+                    "carPlate": "皖A12346",
+                    "parkingAreaName": "888",
+                    "roadSectionName": "望江西路",
+                    "parkingPeriod": null,
+                    "fee": 10000,
+                    "startMonth": "2018-01-01 00:00:00",
+                    "endMonth": "2018-04-30 23:59:59"
+                },
+                {
+                    "id": 1038,
+                    "completeDate": "2017-12-22 15:54:28 星期五",
+                    "isMonthBill": false,
+                    "carPlate": "皖A12346",
+                    "parkingAreaName": "888",
+                    "roadSectionName": "望江西路",
+                    "parkingPeriod": null,
+                    "fee": 10000,
+                    "startMonth": "2018-01-01 00:00:00",
+                    "endMonth": "2018-04-30 23:59:59"
+                }
+            ]
+        }
+    ]
+}
+```
+
+
+
 
 ## 14.3 发票信息访问接口
 
