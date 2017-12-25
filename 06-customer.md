@@ -538,32 +538,27 @@ PS:需要用admin用户获得access_token
 ### 6.2.7 根据发票信息查询月票信息详情
 
 - 功能描述: 根据月票发票查询月票详情
-- 请求地址: `http://localhost:8080/customer/monthBills/invoiceMonthBillDetails`
+- 请求地址: `http://domain:8080/customer/web/invoices/{id}/monthBill`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/customer/monthBills/invoiceMonthBillDetails?access_token=eb5cdfca-d589-4251-a151-3da95b5ea81c&id=170`
+- 请求示例: `http://localhost:8080/customer/web/invoices/170/monthBill?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
 - 返回示例
 
-```json
+```
 {
     "status": "SUCCESS",
     "data": [
         {
             "customerCarPlate": "皖A12346",
             "customerPhoneNum": "133333333333",
-            "roadSectionIds": [
-                1036,
-                1001,
-                1002
-            ],
-            "roadSectionDtos": [
+            "roadSections": [
                 {
-                    "id": 1001,
                     "name": "望江西路",
+                    "id": 1001,
                     "parkingAreaName": "888"
                 },
                 {
-                    "id": 1002,
                     "name": "长江西路",
+                    "id": 1002,
                     "parkingAreaName": "植保路"
                 }
             ],
