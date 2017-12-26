@@ -500,3 +500,210 @@
     }
 }
 ```
+
+## 16.4 led访问接口
+
+### 16.4.1 新增led接口
+
+- 功能描述:  新增led
+- 请求地址: `http://domain:8080/guidance/leds`
+- 请求动作: `POST`
+- 请求示例: `http://domain:8080/guidance/leds?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+- 请求示例
+```
+{
+	"name":"led测试",
+	"bizParkingAreas":[]
+}
+```
+- 返回示例
+
+```
+{
+    "status": "SUCCESS",
+    "data": "Led屏幕信息保存成功"
+}
+```
+
+### 16.4.2 根据id查询led信息接口
+
+- 功能描述:  根据id查询led详情
+- 请求地址: `http://localhost:8080/guidance/leds/{id}`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/guidance/leds/23?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": 23,
+        "name": "led",
+        "index": null,
+        "size": null,
+        "novaCode": null,
+        "bizParkingAreas": [],
+        "screen": null
+    }
+}
+```
+
+
+### 16.4.3 条件查询led接口
+
+- 功能描述:  条件查询led信息
+- 请求地址: `http://localhost:8080/guidance/leds/search`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/guidance/leds/search?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010&page=0&size=1&name=led`
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "id": 23,
+                "name": "led",
+                "index": null,
+                "size": null,
+                "novaCode": null,
+                "bizParkingAreas": [],
+                "screen": null
+            }
+        ],
+        "last": false,
+        "totalPages": 6,
+        "totalElements": 6,
+        "number": 0,
+        "size": 1,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 1
+    }
+}
+```
+
+### 16.4.4 查询未关联诱导牌的led接口
+
+- 功能描述:  查询未关联诱导牌的led详情
+- 请求地址: `http://localhost:8080/guidance/leds/unrelated`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/guidance/leds/unrelated?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 23,
+            "name": "led",
+            "index": null,
+            "size": null,
+            "novaCode": null,
+            "bizParkingAreas": [],
+            "screen": null
+        },
+        {
+            "id": 1,
+            "name": "led1",
+            "index": 1,
+            "size": null,
+            "novaCode": null,
+            "bizParkingAreas": [],
+            "screen": null
+        },
+        {
+            "id": 2,
+            "name": "led2",
+            "index": 2,
+            "size": null,
+            "novaCode": null,
+            "bizParkingAreas": [],
+            "screen": null
+        },
+        {
+            "id": 3,
+            "name": "led3",
+            "index": 3,
+            "size": null,
+            "novaCode": null,
+            "bizParkingAreas": [],
+            "screen": null
+        },
+        {
+            "id": 4,
+            "name": "led4",
+            "index": 4,
+            "size": null,
+            "novaCode": null,
+            "bizParkingAreas": [],
+            "screen": null
+        }
+    ]
+}
+```
+
+## 16.5 nova卡访问接口
+
+### 16.5.1 新增nova接口
+
+- 功能描述:  新增nova卡
+- 请求地址: `http://localhost:8080/guidance/novas`
+- 请求动作: `POST`
+- 请求示例: `http://localhost:8080/guidance/novas?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+- 请求示例
+```
+{
+	"code":"Pluto2017baohesanji001",
+	"sim":"1111111111111"
+}
+```
+
+
+### 16.5.2 根据id查询nova信息接口
+
+- 功能描述:  根据id查询nova卡详情
+- 请求地址: `http://localhost:8080/guidance/novas/{id}`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/guidance/novas/26?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": 26,
+        "code": "001",
+        "sim": "1111111111111",
+        "screen": null
+    }
+}
+```
+### 16.5.3 条件查询nova接口
+
+- 功能描述:  条件查询nova卡详情
+- 请求地址: `http://localhost:8080/guidance/novas/search`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/guidance/novas/search?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010&page=0&size=1&code=1&sim=1`
+- 返回示例
+
+
+
+### 16.5.4 查询未关联诱导牌的nova接口
+
+- 功能描述: 查询未关联诱导牌的nova卡
+- 请求地址: `http://localhost:8080/guidance/novas/unrelated`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/guidance/novas/unrelated?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 26,
+            "code": "001",
+            "sim": "1111111111111",
+            "screen": null
+        }
+    ]
+}
+```
