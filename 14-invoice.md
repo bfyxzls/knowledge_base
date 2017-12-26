@@ -155,67 +155,64 @@
 - 请求示例: `http://localhost:8080/customer/invoiceOrders/list?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&districtId=1002&carPlates=皖A12345,皖A00000`
 
 - 返回示例
-```aidl
-{
-    "status": "SUCCESS",
-    "data": [
-        {
-            "date": "2017-12",
-            "invoiceOrderDtos": [
-                {
-                    "id": 10000282,
-                    "completeDate": "2017-12-06 22:13:14 星期三",
-                    "isMonthBill": false,
-                    "carPlate": "皖A12345",
-                    "parkingAreaName": null,
-                    "roadSectionName": "潜山路-长江西路",
-                    "parkingPeriod": 109,
-                    "fee": 4000
-                },
-                {
-                    "id": 10000286,
-                    "completeDate": "2017-12-06 22:13:14 星期三",
-                    "isMonthBill": false,
-                    "carPlate": "皖A12345",
-                    "parkingAreaName": null,
-                    "roadSectionName": "潜山路-长江西路",
-                    "parkingPeriod": -616,
-                    "fee": 4000
-                },
-                {
-                    "id": 10000288,
-                    "completeDate": "2017-12-08 22:13:14 星期五",
-                    "isMonthBill": false,
-                    "carPlate": "皖A12345",
-                    "parkingAreaName": null,
-                    "roadSectionName": "潜山路-长江西路",
-                    "parkingPeriod": 2257,
-                    "fee": 4000
-                },
-                {
-                    "id": 10000285,
-                    "completeDate": "2017-12-06 22:13:14 星期三",
-                    "isMonthBill": false,
-                    "carPlate": "皖A12345",
-                    "parkingAreaName": null,
-                    "roadSectionName": "潜山路-长江西路",
-                    "parkingPeriod": 92,
-                    "fee": 4000
-                },
-                {
-                    "id": 10000284,
-                    "completeDate": "2017-12-06 22:13:14 星期三",
-                    "isMonthBill": false,
-                    "carPlate": "皖A12345",
-                    "parkingAreaName": null,
-                    "roadSectionName": "潜山路-长江西路",
-                    "parkingPeriod": 99,
-                    "fee": 4000
-                }
-            ]
-        }
-    ]
-}
+```{
+       "status": "SUCCESS",
+       "data": [
+           {
+               "date": "2017-12",
+               "invoiceMonthBillOrderDtos": [
+                   {
+                       "id": 1035,
+                       "completeDate": "2017-12-22 15:42:37 星期五",
+                       "isMonthBill": false,
+                       "carPlate": "皖A12346",
+                       "parkingAreaName": "888",
+                       "roadSectionName": "望江西路",
+                       "parkingPeriod": null,
+                       "fee": 10000,
+                       "startMonth": "2018-01-01 00:00:00",
+                       "endMonth": "2018-04-30 23:59:59"
+                   },
+                   {
+                       "id": 1036,
+                       "completeDate": "2017-12-22 15:43:23 星期五",
+                       "isMonthBill": false,
+                       "carPlate": "皖A12346",
+                       "parkingAreaName": "888",
+                       "roadSectionName": "望江西路",
+                       "parkingPeriod": null,
+                       "fee": 10000,
+                       "startMonth": "2018-01-01 00:00:00",
+                       "endMonth": "2018-04-30 23:59:59"
+                   },
+                   {
+                       "id": 1037,
+                       "completeDate": "2017-12-22 15:49:28 星期五",
+                       "isMonthBill": false,
+                       "carPlate": "皖A12346",
+                       "parkingAreaName": "888",
+                       "roadSectionName": "望江西路",
+                       "parkingPeriod": null,
+                       "fee": 10000,
+                       "startMonth": "2018-01-01 00:00:00",
+                       "endMonth": "2018-04-30 23:59:59"
+                   },
+                   {
+                       "id": 1038,
+                       "completeDate": "2017-12-22 15:54:28 星期五",
+                       "isMonthBill": false,
+                       "carPlate": "皖A12346",
+                       "parkingAreaName": "888",
+                       "roadSectionName": "望江西路",
+                       "parkingPeriod": null,
+                       "fee": 10000,
+                       "startMonth": "2018-01-01 00:00:00",
+                       "endMonth": "2018-04-30 23:59:59"
+                   }
+               ]
+           }
+       ]
+   }
 ```
 ### 14.2.2 客户查询指定区域下的未开具发票的月票
 
