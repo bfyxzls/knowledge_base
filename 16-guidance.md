@@ -642,6 +642,19 @@
 }
 ```
 
+### 16.4.5 编辑led信息
+
+- 功能描述:  修改led信息
+- 请求地址: `http://domain/guidance/leds/{id}`
+- 请求动作: `PUT`
+- 请求示例: `http://domain/guidance/leds/29?access_token=dd162dd1-26ec-45f4-a8ec-e99b00df4652`
+- 请求示例
+```
+{
+	"name":"修改led"
+}
+```
+
 ## 16.5 nova卡访问接口
 
 ### 16.5.1 新增nova接口
@@ -705,5 +718,19 @@
             "screen": null
         }
     ]
+}
+```
+
+### 16.5.5 编辑nova卡信息
+
+- 功能描述: 编辑nova卡的信息
+- 请求地址: `http://domain:8080/guidance/novas/{id}`
+- 请求动作: `PUT`
+- 请求示例: `http://domian:8080/guidance/novas/26?access_token=dd162dd1-26ec-45f4-a8ec-e99b00df4652`
+- 请求示例
+```
+{
+	"code":"修改code",
+	"sim":"2222222222222"
 }
 ```
