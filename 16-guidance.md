@@ -528,9 +528,9 @@
 ### 16.4.2 根据id查询led信息接口
 
 - 功能描述:  根据id查询led详情
-- 请求地址: `http://localhost:8080/guidance/leds/{id}`
+- 请求地址: `http://domain:8080/guidance/leds/{id}`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/guidance/leds/23?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+- 请求示例: `http://domain:8080/guidance/leds/23?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
 - 返回示例
 ```
 {
@@ -551,9 +551,9 @@
 ### 16.4.3 条件查询led接口
 
 - 功能描述:  条件查询led信息
-- 请求地址: `http://localhost:8080/guidance/leds/search`
+- 请求地址: `http://domain:8080/guidance/leds/search`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/guidance/leds/search?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010&page=0&size=1&name=led`
+- 请求示例: `http://domain:8080/guidance/leds/search?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010&page=0&size=1&name=led`
 - 返回示例
 ```
 {
@@ -585,9 +585,9 @@
 ### 16.4.4 查询未关联诱导牌的led接口
 
 - 功能描述:  查询未关联诱导牌的led详情
-- 请求地址: `http://localhost:8080/guidance/leds/unrelated`
+- 请求地址: `http://domain:8080/guidance/leds/unrelated`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/guidance/leds/unrelated?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+- 请求示例: `http://domain:8080/guidance/leds/unrelated?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
 - 返回示例
 ```
 {
@@ -647,9 +647,9 @@
 ### 16.5.1 新增nova接口
 
 - 功能描述:  新增nova卡
-- 请求地址: `http://localhost:8080/guidance/novas`
+- 请求地址: `http://domain:8080/guidance/novas`
 - 请求动作: `POST`
-- 请求示例: `http://localhost:8080/guidance/novas?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+- 请求示例: `http://domain:8080/guidance/novas?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
 - 请求示例
 ```
 {
@@ -662,9 +662,9 @@
 ### 16.5.2 根据id查询nova信息接口
 
 - 功能描述:  根据id查询nova卡详情
-- 请求地址: `http://localhost:8080/guidance/novas/{id}`
+- 请求地址: `http://domain:8080/guidance/novas/{id}`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/guidance/novas/26?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+- 请求示例: `http://domain:8080/guidance/novas/26?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
 - 返回示例
 ```
 {
@@ -680,9 +680,9 @@
 ### 16.5.3 条件查询nova接口
 
 - 功能描述:  条件查询nova卡详情
-- 请求地址: `http://localhost:8080/guidance/novas/search`
+- 请求地址: `http://domain:8080/guidance/novas/search`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/guidance/novas/search?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010&page=0&size=1&code=1&sim=1`
+- 请求示例: `http://domain:8080/guidance/novas/search?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010&page=0&size=1&code=1&sim=1`
 - 返回示例
 
 
@@ -690,9 +690,9 @@
 ### 16.5.4 查询未关联诱导牌的nova接口
 
 - 功能描述: 查询未关联诱导牌的nova卡
-- 请求地址: `http://localhost:8080/guidance/novas/unrelated`
+- 请求地址: `http://domain:8080/guidance/novas/unrelated`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/guidance/novas/unrelated?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+- 请求示例: `http://domain:8080/guidance/novas/unrelated?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
 - 返回示例
 ```
 {
