@@ -644,37 +644,25 @@
 {
     "status": "SUCCESS",
     "data": {
-        "id": 162,
-         "invoiceCode": null,        //发票代码
-        "invoiceNumber": null,      //发票号码
-        "invoiceInfoType": "0",     发票类型 0蓝1红
-        "invoiceInfoConsumerPhoneNum": "admin",     //消费者手机号码
-        "buyerMail": "479159321@qq.com",        //邮箱
-        "globalInfoRequestTime": "2017-12-08 09:11:05",     //申请时间
-        "invoiceInfoSalerName": "测试",       开票公司
-        "invoiceInfoPriceAndTaxAmount": "50.05",        //开票金额
-        "invoiceInfoTax": "5%",     //税率
-        "invoiceInfoTaxAmount": "2.38",     //税额
-        "invoiceInfoPriceAmount": "47.669999999999995",     //税后收入
-        "invoiceInfoTitle": "李剑",       //发票抬头
-        "invoiceInfoSerialNumber": "20171208091042646444",      //发票税号
-        "invoiceInfoBuyerType": "个人",   //开票对象（个人/公司）
-        "status": 1,        发票状态1：待开2：已开
-        "invoiceInfoOriginBlueInvoiceNum": "",      //原蓝票号码
-        "invoiceCreatedTime": "2017-12-08 09:11:05"     //创建时间
-        "invoiceOrders": [
-            {
-                "id":1      //订单编号
-                "carPlate":"皖A12345"    //车牌
-                "roadSectionName":"长江西路"    //缴费路段
-                "completeDate": "2017-08-11 11：11：11"   //订单完成时间
-                "arrearsPaidDate":"2017-08-11 11：11：11"   //欠费补缴时间
-                "fee":2.00      //缴费金额
-            }
-        ]
+        "invoiceCode": null,
+        "invoiceNumber": null,
+        "invoiceInfoBuyerType": null,
+        "invoiceInfoType": "0",
+        "invoiceInfoSerialNumber": "20171208090722740619",
+        "invoiceInfoPriceAndTaxAmount": "0.02",
+        "invoiceInfoTax": "5%",
+        "invoiceInfoTaxAmount": "0.01",
+        "invoiceInfoPriceAmount": "0.01",
+        "customerPhoneNum": "15555417041",
+        "invoiceInfoConsumerMail": "",
+        "globalInfoRequestTime": "2017-12-08 09:07:22",
+        "invoiceInfoSalerName": null,
+        "status": 1,
+        "invoiceOrders": [],
+        "invoiceMonthBills": [],
+        "invoiceCreatedTime": 1512696672000
     }
 }
-
 ```
 ### 14.4.3 web端根据订单ID查询发票信息
 - 功能描述: web端根据订单ID查询发票信息
