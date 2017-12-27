@@ -563,6 +563,7 @@
     "status":1,             //开票状态 1：待开具 2：已开具
     "invoiceStartTime":"2017-11-08 11：11：11",
     "invoiceEndTime":"2017-11-08 11：11：11",
+    "issueInvoiceType":1 //1：电子发票 2：纸质发票
 }
 
 ```
