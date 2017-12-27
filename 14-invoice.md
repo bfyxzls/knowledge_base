@@ -647,6 +647,7 @@
         "invoiceCode": "111001371071",
         "invoiceNumber": "70043894",
         "invoiceInfoBuyerType": "1",
+        "invoiceInfoBuyerName":"公司"，
         "invoiceInfoType": "0",
         "invoiceInfoSerialNumber": "20171227103545988117",
         "invoiceInfoPriceAndTaxAmount": "1.0",
@@ -654,7 +655,7 @@
         "invoiceInfoTaxAmount": "0.05",
         "invoiceInfoPriceAmount": "0.95",
         "customerPhoneNum": "admin",
-        "invoiceInfoConsumerMail": "",
+        "buyerMail": "1184750950@qq.com",
         "globalInfoRequestTime": "2017-12-27 10:35:45",
         "invoiceInfoSalerName": null,
         "status": 2,
@@ -673,9 +674,7 @@
         ],
         "invoiceCreatedTime": 1514342145989
     }
-}
-
-```
+}```
 ### 14.4.3 web端根据订单ID查询发票信息
 - 功能描述: web端根据订单ID查询发票信息
 
