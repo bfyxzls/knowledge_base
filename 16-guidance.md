@@ -18,8 +18,12 @@
     "coordinate":"117.313610 31.708892",
     "maintainer":"李冲",
     "maintainerPhoneNum":"18756578763",
-    "totalNum":300,
-    "source":1
+    "parkingPositionQuantity":300,
+    "source":1,  //数据来源，1：老系统上报，2是捷顺，3是摄像头上报
+    "province":"",
+    "city":"",
+    "isOwnBusiness":false,
+    "unitPrice":0,
 }
 ```
 
@@ -50,8 +54,12 @@
     "coordinate":"117.313610 31.708892",
     "maintainer":"李冲",
     "maintainerPhoneNum":"18756578763",
-    "totalNum":300,
-    "source":1
+    "parkingPositionQuantity":300,
+    "source":1,  //数据来源，1：老系统上报，2是捷顺，3是摄像头上报
+    "province":"",
+    "city":"",
+    "isOwnBusiness":false,
+    "unitPrice":0,
 }
 ```
 
@@ -89,8 +97,12 @@
         "coordinate": "117.313610 31.708892",
         "maintainer": "李冲",
         "maintainerPhoneNum": "18756578763",
-        "totalNum": 300,
-        "source": 1,
+        "parkingPositionQuantity":300,
+        "source":1,  //数据来源，1：老系统上报，2是捷顺，3是摄像头上报
+        "province":"",
+        "city":"",
+        "isOwnBusiness":false,
+        "unitPrice":0,
         "leds": []
     }
 }
@@ -123,8 +135,12 @@
                 "coordinate": "117.313610 31.708892",
                 "maintainer": "李冲",
                 "maintainerPhoneNum": "18756578763",
-                "totalNum": 300,
-                "source": 1
+                "parkingPositionQuantity":300,
+                "source":1,  //数据来源，1：老系统上报，2是捷顺，3是摄像头上报
+                "province":"",
+                "city":"",
+                "isOwnBusiness":false,
+                "unitPrice":0,
             },
             {
                 "id": 15,
@@ -139,8 +155,12 @@
                 "coordinate": "117.313610 31.708892",
                 "maintainer": "李冲",
                 "maintainerPhoneNum": "18756578763",
-                "totalNum": 300,
-                "source": 1
+                "parkingPositionQuantity":300,
+                "source":1,  //数据来源，1：老系统上报，2是捷顺，3是摄像头上报
+                "province":"",
+                "city":"",
+                "isOwnBusiness":false,
+                "unitPrice":0,
             }
         ],
         "last": true,
