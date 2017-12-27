@@ -644,25 +644,37 @@
 {
     "status": "SUCCESS",
     "data": {
-        "invoiceCode": null,
-        "invoiceNumber": null,
-        "invoiceInfoBuyerType": null,
+        "invoiceCode": "111001371071",
+        "invoiceNumber": "70043894",
+        "invoiceInfoBuyerType": "1",
         "invoiceInfoType": "0",
-        "invoiceInfoSerialNumber": "20171208090722740619",
-        "invoiceInfoPriceAndTaxAmount": "0.02",
+        "invoiceInfoSerialNumber": "20171227103545988117",
+        "invoiceInfoPriceAndTaxAmount": "1.0",
         "invoiceInfoTax": "5%",
-        "invoiceInfoTaxAmount": "0.01",
-        "invoiceInfoPriceAmount": "0.01",
-        "customerPhoneNum": "15555417041",
+        "invoiceInfoTaxAmount": "0.05",
+        "invoiceInfoPriceAmount": "0.95",
+        "customerPhoneNum": "admin",
         "invoiceInfoConsumerMail": "",
-        "globalInfoRequestTime": "2017-12-08 09:07:22",
+        "globalInfoRequestTime": "2017-12-27 10:35:45",
         "invoiceInfoSalerName": null,
-        "status": 1,
-        "invoiceOrders": [],
-        "invoiceMonthBills": [],
-        "invoiceCreatedTime": 1512696672000
+        "status": 2,
+        "invoiceOrders": null,
+        "invoiceMonthBills": [
+            {
+                "customerCarPlate": "皖A10101",
+                "customerPhoneNum": "18505652621",
+                "roadSectionIds": [
+                    1040
+                ],
+                "endMonth": 1517414399000,
+                "createDate": 1514017989198,
+                "actualPay": 1
+            }
+        ],
+        "invoiceCreatedTime": 1514342145989
     }
 }
+
 ```
 ### 14.4.3 web端根据订单ID查询发票信息
 - 功能描述: web端根据订单ID查询发票信息
