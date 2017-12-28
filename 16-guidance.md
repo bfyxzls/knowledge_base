@@ -782,3 +782,62 @@
 	"sim":"2222222222222"
 }
 ```
+
+### 16.5.6 下发重启nova卡指令
+
+- 功能描述: 下发重启nova卡指令
+- 请求地址: `http://domain:8080/guidance/novas/{code}/reboot`
+- 请求动作: `POST`
+- 请求示例: `http://domian:8080/guidance/novas/111111/reboot?access_token=dd162dd1-26ec-45f4-a8ec-e99b00df4652`
+- 返回示例
+```
+{
+    "status": "SUCCESS"
+}
+```
+
+### 16.5.7 下发nova卡自检指令
+
+- 功能描述: 下发nova卡自检指令
+- 请求地址: `http://domain:8080/guidance/novas/{code}/checkSelf`
+- 请求动作: `POST`
+- 请求参数:
+    - `code`: nova卡编号
+- 请求示例: `http://domian:8080/guidance/novas/111111/checkSelf?access_token=dd162dd1-26ec-45f4-a8ec-e99b00df4652`
+- 返回示例
+```
+{
+    "status": "SUCCESS"
+}
+```
+
+### 16.5.8 下发nova卡截屏指令
+
+- 功能描述: 下发nova卡截屏指令
+- 请求地址: `http://domain:8080/guidance/novas/{code}/screenCapture`
+- 请求动作: `POST`
+- 请求参数:
+    - `code`: nova卡编号
+- 请求示例: `http://domian:8080/guidance/novas/111111/screenCapture?access_token=dd162dd1-26ec-45f4-a8ec-e99b00df4652`
+- 返回示例
+```
+{
+    "status": "SUCCESS"
+}
+```
+
+### 16.5.9 下发nova卡开关屏指令
+
+- 功能描述: 下发nova卡开关屏指令
+- 请求地址: `http://domain:8080/guidance/novas/{code}/screenControl?flag`
+- 请求动作: `POST`
+- 请求参数:
+    - `code`: nova卡编号
+    - `flag`: 开关屏标志，1开，2关
+- 请求示例: `http://domian:8080/guidance/novas/111111/screenControl?access_token=dd162dd1-26ec-45f4-a8ec-e99b00df4652&flag=1`
+- 返回示例
+```
+{
+    "status": "SUCCESS"
+}
+```
