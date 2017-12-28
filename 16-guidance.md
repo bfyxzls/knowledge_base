@@ -577,8 +577,6 @@
 ```
 {
 	"name":"led测试",
-	"index":1,
-	"novaCode":"Pluto2017baohesanji010",
 	"bizParkingAreasId":[
 	    49,44
 	]
@@ -604,13 +602,17 @@
 {
     "status": "SUCCESS",
     "data": {
-        "id": 23,
-        "name": "led",
-        "index": null,
+        "id": 50,
+        "name": "LED测试7",
+        "index": 1,
         "size": null,
-        "novaCode": null,
-        "bizParkingAreas": [],
-        "screen": null
+        "novaCode": "Pluto2017baohesanji001",
+        "ledParkingAreaDtos": [
+            {
+                "name": "二级诱导屏天河河大厦"
+            }
+        ],
+        "screenName": "长江西路诱导牌"
     }
 }
 ```
@@ -624,30 +626,44 @@
 - 请求示例: `http://domain:8080/guidance/leds/search?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010&page=0&size=1&name=led`
 - 返回示例
 ```
-{
-    "status": "SUCCESS",
-    "data": {
-        "content": [
-            {
-                "id": 23,
-                "name": "led",
-                "index": null,
-                "size": null,
-                "novaCode": null,
-                "bizParkingAreas": [],
-                "screen": null
-            }
-        ],
-        "last": false,
-        "totalPages": 6,
-        "totalElements": 6,
-        "number": 0,
-        "size": 1,
-        "sort": null,
-        "first": true,
-        "numberOfElements": 1
-    }
-}
+
+  {
+      "status": "SUCCESS",
+      "data": {
+          "content": [
+              {
+                  "id": 41,
+                  "name": "测试LED",
+                  "index": 1,
+                  "size": null,
+                  "novaCode": null,
+                  "ledParkingAreaDtos": [],
+                  "screenName": "长江西路诱导牌"
+              },
+              {
+                  "id": 50,
+                  "name": "LED测试7",
+                  "index": 1,
+                  "size": null,
+                  "novaCode": "Pluto2017baohesanji001",
+                  "ledParkingAreaDtos": [
+                      {
+                          "name": "二级诱导屏天河河大厦"
+                      }
+                  ],
+                  "screenName": "长江西路诱导牌"
+              }
+          ],
+          "last": true,
+          "totalPages": 1,
+          "totalElements": 2,
+          "number": 0,
+          "size": 2,
+          "sort": null,
+          "first": true,
+          "numberOfElements": 2
+      }
+  }
 ```
 
 ### 16.4.4 查询未关联诱导牌的led接口
@@ -662,49 +678,9 @@
     "status": "SUCCESS",
     "data": [
         {
-            "id": 23,
-            "name": "led",
-            "index": null,
-            "size": null,
-            "novaCode": null,
-            "bizParkingAreas": [],
-            "screen": null
-        },
-        {
-            "id": 1,
-            "name": "led1",
-            "index": 1,
-            "size": null,
-            "novaCode": null,
-            "bizParkingAreas": [],
-            "screen": null
-        },
-        {
-            "id": 2,
-            "name": "led2",
-            "index": 2,
-            "size": null,
-            "novaCode": null,
-            "bizParkingAreas": [],
-            "screen": null
-        },
-        {
-            "id": 3,
-            "name": "led3",
-            "index": 3,
-            "size": null,
-            "novaCode": null,
-            "bizParkingAreas": [],
-            "screen": null
-        },
-        {
-            "id": 4,
-            "name": "led4",
-            "index": 4,
-            "size": null,
-            "novaCode": null,
-            "bizParkingAreas": [],
-            "screen": null
+            "id": 90,
+            "name": "led测试",
+            "ledParkingAreaDtos": []
         }
     ]
 }
