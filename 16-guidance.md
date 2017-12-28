@@ -429,59 +429,15 @@
         "address": "贵潜路口",
         "level": 1,
         "maintainer": "zj",
-        "leds": [
+        "maintainerPhoneNum": null,
+        "screenLedDtos": [
             {
-                "id": 1,
-                "name": "led1",
+                "name": "测试LED",
                 "index": 1,
-                "size": "96*48",
-                "novaCode": null,
-                "bizParkingAreas": [],
-                "screen": null
-            },
-            {
-                "id": 2,
-                "name": "led2",
-                "index": 2,
-                "size": "96*48",
-                "novaCode": null,
-                "bizParkingAreas": [],
-                "screen": null
-            },
-            {
-                "id": 3,
-                "name": "led3",
-                "index": 3,
-                "size": "96*48",
-                "novaCode": null,
-                "bizParkingAreas": [],
-                "screen": null
-            },
-            {
-                "id": 4,
-                "name": "led4",
-                "index": 4,
-                "size": "96*48",
-                "novaCode": null,
-                "bizParkingAreas": [],
-                "screen": null
+                "bizParkingAreas": []
             }
         ],
-        "novaCode": "54321",
-        "logs": [
-            {
-                "id": 1,
-                "date": 1514165987000,
-                "cause": "过热",
-                "novaCode": "54321"
-            },
-            {
-                "id": 2,
-                "date": 1514079636000,
-                "cause": "错点过多",
-                "novaCode": "54321"
-            }
-        ]
+        "novaCode": "Pluto2017baohesanji001"
     }
 }
 ```
@@ -572,6 +528,42 @@
     ]
 }
 ```
+
+### 16.3.7 获取诱导牌的告警日志
+
+- 功能描述:  获取诱牌的告警日志
+- 请求地址: `http://domain/guidance/screens/{id}/failureLog`
+- 请求动作: `GET`
+- 请求示例: `http://domain/guidance/screens/43/failureLog?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+
+- 返回示例
+{
+    "case":"屏体电源断电",
+    "date":"2017-12-28 12:00:00"
+}
+
+### 16.3.8 获取诱导牌下停车场
+
+- 功能描述:  获取诱牌下的停车场
+- 请求地址: `http://domain/guidance/screens/{id}/parkingArea`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/guidance/screens/75/parkingArea?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
+
+- 返回示例
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": 75,
+        "name": "长江西路诱导牌",
+        "address": "贵潜路口",
+        "bizParkingAreaMapDtos": [
+            {
+                "name": "二级诱导屏天河河大厦",
+                "remainNum": 1
+            }
+        ]
+    }
+}
 
 ## 16.4 led访问接口
 
