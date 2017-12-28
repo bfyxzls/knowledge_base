@@ -28,7 +28,7 @@
     "source":1,  //数据来源，1：老系统上报，2是捷顺，3是摄像头上报
     "province":"",
     "OwnBusiness":false,
-    "uncity":"",
+    "city":"",
     "unitPrice":0
 }
 ```
