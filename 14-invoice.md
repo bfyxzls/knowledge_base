@@ -657,16 +657,17 @@
         "customerPhoneNum": "admin",
         "buyerMail": "1184750950@qq.com",
         "globalInfoRequestTime": "2017-12-27 10:35:45",
-        "invoiceInfoSalerName": null,
-        "status": 2,
+        "invoiceInfoSalerN
         "invoiceOrders": null,
         "invoiceMonthBills": [
             {
-                "customerCarPlate": "皖A10101",
+                "customerCarPlateame": null,
+                                                             "status": 2,": "皖A10101",
                 "customerPhoneNum": "18505652621",
                 "roadSectionIds": [
                     1040
                 ],
+                "startMonth": 1517484399000
                 "endMonth": 1517414399000,
                 "createDate": 1514017989198,
                 "actualPay": 1
