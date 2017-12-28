@@ -9,7 +9,7 @@
 - 请求示例
 ```
 {
- "name":"二级诱导屏天河河大厦",
+    "name":"二级诱导屏天河河大厦",
     "code":"111111",
     "types":[1],
     "chargeable":true,
@@ -21,9 +21,9 @@
     "parkingPositionQuantity":300,
     "source":1,  //数据来源，1：老系统上报，2是捷顺，3是摄像头上报
     "province":"",
-    "city":"",
-    "isOwnBusiness":false,
-    "unitPrice":0,
+    "OwnBusiness":false,
+    "uncity":"",
+    "unitPrice":0
 }
 ```
 
@@ -577,7 +577,11 @@
 ```
 {
 	"name":"led测试",
-	"bizParkingAreas":[]
+	"index":1,
+	"novaCode":"Pluto2017baohesanji010",
+	"bizParkingAreasId":[
+	    49,44
+	]
 }
 ```
 - 返回示例
