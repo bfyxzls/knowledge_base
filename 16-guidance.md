@@ -15,7 +15,13 @@
     "chargeable":true,
     "district":"包河区",
     "address": "潜山路",
-    "coordinate":"117.313610 31.708892",
+    "coordinate": {
+            "type": "Point",
+            "coordinates": [
+                12,
+                67
+            ]
+        },
     "maintainer":"李冲",
     "maintainerPhoneNum":"18756578763",
     "parkingPositionQuantity":300,
@@ -45,13 +51,19 @@
 - 请求示例
 ```
 {
- "name":"二级诱导屏天河河大厦",
+    "name":"二级诱导屏天河河大厦",
     "code":"111111",
     "types":[1],
     "chargeable":true,
     "district":"包河区",
     "address": "潜山路",
-    "coordinate":"117.313610 31.708892",
+    "coordinate": {
+            "type": "Point",
+            "coordinates": [
+                12,
+                67
+            ]
+        },
     "maintainer":"李冲",
     "maintainerPhoneNum":"18756578763",
     "parkingPositionQuantity":300,
@@ -94,7 +106,7 @@
         "chargeable": true,
         "district": "包河区",
         "address": "潜山路",
-        "coordinate": "117.313610 31.708892",
+        "coordinate": "11,11",
         "maintainer": "李冲",
         "maintainerPhoneNum": "18756578763",
         "parkingPositionQuantity":300,
@@ -132,7 +144,7 @@
                 "chargeable": true,
                 "district": "包河区",
                 "address": "潜山路",
-                "coordinate": "117.313610 31.708892",
+                "coordinate": "11,11",
                 "maintainer": "李冲",
                 "maintainerPhoneNum": "18756578763",
                 "parkingPositionQuantity":300,
@@ -152,7 +164,13 @@
                 "chargeable": true,
                 "district": "包河区",
                 "address": "潜山路",
-                "coordinate": "117.313610 31.708892",
+                "coordinate": {
+                        "type": "Point",
+                        "coordinates": [
+                            12,
+                            67
+                        ]
+                    },
                 "maintainer": "李冲",
                 "maintainerPhoneNum": "18756578763",
                 "parkingPositionQuantity":300,
@@ -208,7 +226,7 @@
 ```
 {
 	"num":30,
-	"type":1,
+	"type":1,  //  1:+ 0:-
 	"week":[
 	  1,2,3	
 	],
@@ -247,7 +265,6 @@
 	"endTime":"17:00:00",
 	"validStartDate":"2017-12-20",
 	"validEndDate":"2017-12-25",
-	"bizParkingAreaId": 14
 }
 ```
 
@@ -365,8 +382,13 @@
 	],
 	"district":"庐阳区",
 	"address":"贵潜路口",
-	"coordinate":"117.313610 31.708892",
-	"maintainer": "zj"
+	"coordinate": {
+            "type": "Point",
+            "coordinates": [
+                12,
+                67
+            ]
+        }
 }
 ```
 
@@ -396,8 +418,13 @@
 	],
 	"district":"蜀山阳区",
 	"address":"明珠广场",
-	"coordinate":"117.313610 31.708892",
-	"maintainer": "zz"
+	"coordinate": {
+            "type": "Point",
+            "coordinates": [
+                12,
+                67
+            ]
+        }
 }
 ```
 
