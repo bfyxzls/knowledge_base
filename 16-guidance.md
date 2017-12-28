@@ -521,6 +521,58 @@
 }
 ```
 
+### 16.3.5 地图搜索查询诱导牌接口
+
+- 功能描述:  根据name模糊查询所有相关诱导牌的信息
+- 请求地址: `http://localhost:8080/guidance/screens/queryScreens`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/guidance/screens/queryScreens?access_token=4f5de152-f371-4b0c-a508-e3cd94d4783f&name=西`
+
+
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 43,
+            "coordinate": "117.313610 31.708892",
+            "level": 1,
+            "isOnline": false
+        }
+    ]
+}
+```
+
+### 16.3.6 地图查询所有诱导牌位置接口
+
+- 功能描述:  地图上查看所有诱导牌的地址
+- 请求地址: `http://localhost:8080/guidance/screens/queryAddress`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/guidance/screens/queryAddress?access_token=4f5de152-f371-4b0c-a508-e3cd94d4783f`
+
+
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 43,
+            "coordinate": "117.313610 31.708892",
+            "level": 1,
+            "isOnline": false
+        },
+        {
+            "id": 53,
+            "coordinate": "117.313610 31.708892",
+            "level": 3,
+            "isOnline": false
+        }
+    ]
+}
+```
+
 ## 16.4 led访问接口
 
 ### 16.4.1 新增led接口
