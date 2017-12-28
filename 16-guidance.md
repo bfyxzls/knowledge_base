@@ -719,7 +719,11 @@
 - 请求示例
 ```
 {
-	"name":"修改led"
+	"name":"修改led",
+	"size":"64*32",
+	"bizParkingAreaIds":[
+	    44,49
+	]
 }
 ```
 
