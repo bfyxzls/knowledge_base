@@ -508,7 +508,8 @@
       "taxRate":"0.05",
       "taxAmount":"100",
       "afterTaxIncome":"2000",
-      "monthBillId":1011                      
+      "monthBillId":1011,
+      "districtId":1001                     
 }
 
 ```
