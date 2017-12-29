@@ -241,8 +241,14 @@ isExist:false   不存在
     "status": "SUCCESS",
     "data": [
         {
-            "name": "二级诱导屏天河河大厦",
-            "id": 15
+            "id": 15,
+            "coordinate": {
+                "type": "Point",
+                "coordinates": [
+                    12,
+                    67
+                ]
+            }
         }
     ]
 }
