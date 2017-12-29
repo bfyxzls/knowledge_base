@@ -227,6 +227,27 @@ isExist:true    已存在
 isExist:false   不存在
 ```
 
+### 16.1.7 地图上查看所有商业停车场坐标信息接口
+
+- 功能描述:  地图上查看所有商业停车场坐标信息
+- 请求地址: `http://domain/guidance/bizParkingAreas/coordinates`
+- 请求动作: `GET`
+- 请求示例: `http://domain/guidance/bizParkingAreas/coordinates?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+
+
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "name": "二级诱导屏天河河大厦",
+            "id": 15
+        }
+    ]
+}
+```
+
 ## 16.2 诱导预案访问接口
 
 ### 16.2.1 新增诱导预案接口
