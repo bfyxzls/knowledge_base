@@ -28,7 +28,7 @@
     "source":1,  //数据来源，1：老系统上报，2是捷顺，3是摄像头上报
     "province":"",
     "OwnBusiness":false,
-    "uncity":"",
+    "city":"",
     "unitPrice":0
 }
 ```
@@ -199,6 +199,40 @@
 - 请求地址: `http://domain/guidance/bizParkingAreas/unrelated`
 - 请求动作: `GET`
 - 请求示例: `http://domain/guidance/bizParkingAreas/unrelated?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07&name=路`
+
+
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "name": "二级诱导屏天河河大厦",
+            "id": 15
+        }
+    ]
+}
+```
+
+### 16.1.6 商业停车场唯一性验证接口 
+- 功能描述:  根据code查询停车场是否存在
+- 请求地址: `http://localhost:8080/guidance/bizParkingAreas?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
+- 请求动作: `HEAD`
+- 请求示例: `http://localhost:8080/guidance/bizParkingAreas?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
+
+- 返回用户示例  
+```
+返回信息包含在Response Header中：
+isExist:true    已存在
+isExist:false   不存在
+```
+
+### 16.1.7 地图上查看所有商业停车场坐标信息接口
+
+- 功能描述:  地图上查看所有商业停车场坐标信息
+- 请求地址: `http://domain/guidance/bizParkingAreas/coordinates`
+- 请求动作: `GET`
+- 请求示例: `http://domain/guidance/bizParkingAreas/coordinates?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
 
 - 返回示例
