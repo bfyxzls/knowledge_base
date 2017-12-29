@@ -1127,7 +1127,9 @@ isExist:false   不存在
             ]
         },
     "parkingAreaId":123,
-    "unitPrice": 300
+    "unitPrice": 300,
+    "monthBillNum":100,
+    "monthBillPrice":100
               
 }
 ```
