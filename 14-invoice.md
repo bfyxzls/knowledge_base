@@ -436,7 +436,8 @@
         "price": "1.0",
         "email": "479159321@qq.com",
         "pdfUrl": "http://111.202.226.69:9026/zxkp/pdf?c=6bf213a81c1824940ca6",
-        "number":4
+        "number":4,
+        "goodsType"：1     ////发票类型   1：订单停车费  2：月票停车费
     }
 }
 
@@ -568,6 +569,37 @@
 ```
 {
     "status": "SUCCESS"
+}
+
+```
+
+### 14.3.10 获取发票下月票信息接口
+
+- 功能描述:  客户查询指定电子发票下的月票
+- 请求地址: `http://domain/customer/invoices/{id}/monthBills`
+- 请求动作: `GET`
+- 请求示例: `http://domain/customer/invoices/1021/monthBills?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+
+
+- 返回数据示例  
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 1028,
+            "createdDate": "2017-12-20 08:53:59 星期三",
+            "customerCarPlate": "皖A99999",
+            "parkingAreaName": null,
+            "roadSectionName": [
+                "望江西路",
+                "长江西路",
+                "潜山路"
+            ],
+            "monthNum": 2678399000,
+            "fee": 10000
+        }
+    ]
 }
 
 ```
