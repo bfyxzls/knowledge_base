@@ -371,7 +371,7 @@
 - 功能描述:  获取个人所有的开票记录
 - 请求地址: `http://domain/customer/invoices/list`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/customer/invoices/list?access_token=c67010ce-be53-476f-808e-84bbf5e6f7d7&page=0&size=20&sort=globalInfoRequestTime,DESC`
+- 请求示例: `http://localhost:8080/customer/invoices/list?access_token=69f4f17d-1e14-4c6b-a711-c5b02ebed275&page=0&size=4&sort=createdDate,DESC`
 
 
 - 返回数据示例  
@@ -380,11 +380,32 @@
     "status": "SUCCESS",
     "data": [
         {
-            "id": 64,
-            "status": 2,
+            "id": 864,
+            "status": 4,
             "type": "停车费",
-            "price": "1.0",
-            "createdTime": "2017-12-07 11:27:53"
+            "price": "40.0",
+            "createdTime": "2017-12-20 16:19:05"
+        },
+        {
+            "id": 863,
+            "status": 4,
+            "type": "停车费",
+            "price": "40.0",
+            "createdTime": "2017-12-20 16:17:33"
+        },
+        {
+            "id": 862,
+            "status": 4,
+            "type": "停车费",
+            "price": "40.0",
+            "createdTime": "2017-12-20 16:17:13"
+        },
+        {
+            "id": 861,
+            "status": 4,
+            "type": "停车费",
+            "price": "40.0",
+            "createdTime": "2017-12-20 16:16:46"
         }
     ]
 }
