@@ -588,20 +588,41 @@
     "data": [
         {
             "id": 1028,
-            "createdDate": "2017-12-20 08:53:59 星期三",
-            "customerCarPlate": "皖A99999",
+            "completeDate": "2017-12-20 08:53:59 星期三",
+            "carPlate": "皖A99999",
             "parkingAreaName": null,
             "roadSectionName": [
                 "望江西路",
                 "长江西路",
                 "潜山路"
             ],
-            "monthNum": 2678399000,
+            "startMonth": "2017-12-20 08:53:59",
+            "endMonth": "2017-12-20 08:53:59",
             "fee": 10000
         }
     ]
 }
 
+```
+
+### 14.3.11 获取存在可开发票的订单和月票所属行政区列表接口
+
+- 功能描述:  获取存在可开发票的订单和月票所属行政区列表
+- 请求地址: `http://domain/customer/invoices/query/districts`
+- 请求动作: `GET`
+- 请求示例: `http://domain/customer/invoices/query/districts?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+
+- 返回数据示例  
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 1001,
+            "name": "庐阳区"
+        }
+    ]
+}
 ```
 
 ## 14.4 Web端发票信息访问接口
