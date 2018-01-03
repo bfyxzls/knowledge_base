@@ -253,6 +253,35 @@ isExist:false   不存在
     ]
 }
 ```
+### 16.1.8 查询未关联led的停车场
+
+- 功能描述:  查询未关联led的停车场
+- 请求地址: `http://localhost:8080/guidance/bizParkingAreas/unrelatedLed`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/guidance/bizParkingAreas/unrelatedLed?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&id=`
+- 返回示例
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 91,
+            "name": "二级诱导屏天河河大厦"
+        },
+        {
+            "id": 92,
+            "name": "二级诱导屏天河河大厦"
+        },
+        {
+            "id": 93,
+            "name": "二级诱导屏天河河大厦"
+        },
+        {
+            "id": 99,
+            "name": "二级诱导屏天河河大厦"
+        }
+    ]
+}
+
 
 ## 16.2 诱导预案访问接口
 
@@ -738,7 +767,7 @@ isExist:false   不存在
 - 功能描述:  查询未关联诱导牌的led详情
 - 请求地址: `http://domain:8080/guidance/leds/unrelated`
 - 请求动作: `GET`
-- 请求示例: `http://domain:8080/guidance/leds/unrelated?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+- 请求示例: `http://localhost:8080/guidance/leds/unrelated?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&screenId`
 - 返回示例
 ```
 {
@@ -820,7 +849,7 @@ isExist:false   不存在
 - 功能描述: 查询未关联诱导牌的nova卡
 - 请求地址: `http://domain:8080/guidance/novas/unrelated`
 - 请求动作: `GET`
-- 请求示例: `http://domain:8080/guidance/novas/unrelated?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+- 请求示例: `http://localhost:8080/guidance/novas/unrelated?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&screenId
 - 返回示例
 ```
 {
