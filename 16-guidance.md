@@ -114,8 +114,8 @@
         "province":"",
         "city":"",
         "isOwnBusiness":false,
-        "unitPrice":0,
-        "leds": []
+        "unitPrice":0
+   
     }
 }
 ```
@@ -506,7 +506,7 @@ isExist:false   不存在
 - 功能描述:  获取诱导屏
 - 请求地址: `http://domain/guidance/screens/15`
 - 请求动作: `GET`
-- 请求示例: `http://domain/guidance/screens/15?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 请求示例: `http://domain/guidance/screens/102?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
 
 - 返回示例
@@ -514,21 +514,34 @@ isExist:false   不存在
 {
     "status": "SUCCESS",
     "data": {
-        "name": "长江西路诱导牌",
+        "id": 102,
+        "name": "长江西路诱导牌1222",
         "district": "庐阳区",
-        "coordinate": "117.313610 31.708892",
+        "coordinate": {
+            "type": "Point",
+            "coordinates": [
+                12,
+                67
+            ]
+        },
         "address": "贵潜路口",
         "level": 1,
-        "maintainer": "zj",
+        "maintainer": null,
         "maintainerPhoneNum": null,
         "screenLedDtos": [
             {
-                "name": "测试LED",
-                "index": 1,
-                "bizParkingAreas": []
+                "id": 98,
+                "name": "led测试12",
+                "index": 1
+            },
+            {
+                "id": 100,
+                "name": "修改后的LED",
+                "index": 2
             }
         ],
-        "novaCode": "Pluto2017baohesanji001"
+        "novaCode": "54321",
+        "novaId": 54321
     }
 }
 ```
@@ -843,6 +856,31 @@ isExist:false   不存在
 - 请求示例: `http://domain:8080/guidance/novas/search?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010&page=0&size=1&code=1&sim=1`
 - 返回示例
 
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "id": 54321,
+                "code": "54321",
+                "sim": "1213"
+            },
+            {
+                "id": 103,
+                "code": "Pluto2018001",
+                "sim": "1111111111113"
+            }
+        ],
+        "totalPages": 1,
+        "totalElements": 2,
+        "last": true,
+        "number": 0,
+        "size": 10,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 2
+    }
+}
 
 
 ### 16.5.4 查询未关联诱导牌的nova接口
