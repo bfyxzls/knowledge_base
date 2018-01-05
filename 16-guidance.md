@@ -976,3 +976,32 @@ isExist:false   不存在
     "status": "SUCCESS"
 }
 ```
+
+## 16.6 sim卡接口
+ 
+ ### 16.6.1 新增sim卡
+ 
+ - 功能描述:  新增sim卡
+ - 请求地址: `http://domain:8080/guidance/sims`
+ - 请求动作: `POST`
+ - 请求示例: `http://domain:8080/guidance/sims?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+ - 请求示
+ 
+ {
+ 	"simCode":"001"
+ }
+ 
+ ### 16.6.2 查询未关联nova卡的sim卡
+ 
+ - 功能描述:  查询未关联nova卡的sim卡
+  - 请求地址: `http://domain:8080/guidance/sims/unrelated`
+  - 请求动作: `POST`
+  - 请求示例: `http://domain:8080/guidance/sims/unrelated?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010&novaId=`
+  - 请求示
+  
+  {
+    "id":1,
+  	"simCode":"001"
+  }
+  
+
