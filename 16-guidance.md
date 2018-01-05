@@ -114,8 +114,8 @@
         "province":"",
         "city":"",
         "isOwnBusiness":false,
-        "unitPrice":0,
-        "leds": []
+        "unitPrice":0
+   
     }
 }
 ```
@@ -241,12 +241,42 @@ isExist:false   不存在
     "status": "SUCCESS",
     "data": [
         {
-            "name": "二级诱导屏天河河大厦",
-            "id": 15
+            "id": 15,
+            "coordinate": {
+                "type": "Point",
+                "coordinates": [
+                    12,
+                    67
+                ]
+            }
         }
     ]
 }
 ```
+### 16.1.8 查询未关联led的停车场
+
+- 功能描述:  查询未关联led的停车场
+- 请求地址: `http://localhost:8080/guidance/bizParkingAreas/unrelatedLed`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/guidance/bizParkingAreas/unrelatedLed?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&id=`
+- 返回示例
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 91,
+            "name": "二级诱导屏天河河大厦"
+        },
+        {
+            "id": 92,
+            "name": "二级诱导屏天河河大厦"
+        },
+        {
+            "id": 99,
+            "name": "二级诱导屏天河河大厦"
+        }
+    ]
+}
 
 ## 16.2 诱导预案访问接口
 
@@ -476,7 +506,7 @@ isExist:false   不存在
 - 功能描述:  获取诱导屏
 - 请求地址: `http://domain/guidance/screens/15`
 - 请求动作: `GET`
-- 请求示例: `http://domain/guidance/screens/15?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 请求示例: `http://domain/guidance/screens/102?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 
 
 - 返回示例
@@ -484,21 +514,34 @@ isExist:false   不存在
 {
     "status": "SUCCESS",
     "data": {
-        "name": "长江西路诱导牌",
+        "id": 102,
+        "name": "长江西路诱导牌1222",
         "district": "庐阳区",
-        "coordinate": "117.313610 31.708892",
+        "coordinate": {
+            "type": "Point",
+            "coordinates": [
+                12,
+                67
+            ]
+        },
         "address": "贵潜路口",
         "level": 1,
-        "maintainer": "zj",
+        "maintainer": null,
         "maintainerPhoneNum": null,
         "screenLedDtos": [
             {
-                "name": "测试LED",
-                "index": 1,
-                "bizParkingAreas": []
+                "id": 98,
+                "name": "led测试12",
+                "index": 1
+            },
+            {
+                "id": 100,
+                "name": "修改后的LED",
+                "index": 2
             }
         ],
-        "novaCode": "Pluto2017baohesanji001"
+        "novaCode": "54321",
+        "novaId": 54321
     }
 }
 ```
@@ -638,7 +681,7 @@ isExist:false   不存在
 ```
 {
 	"name":"led测试",
-	"bizParkingAreasId":[
+	"bizParkingAreasIds":[
 	    49,44
 	]
 }
@@ -657,23 +700,23 @@ isExist:false   不存在
 - 功能描述:  根据id查询led详情
 - 请求地址: `http://domain:8080/guidance/leds/{id}`
 - 请求动作: `GET`
-- 请求示例: `http://domain:8080/guidance/leds/23?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+- 请求示例: `http://domain/guidance/leds/100?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431`
 - 返回示例
 ```
 {
     "status": "SUCCESS",
     "data": {
-        "id": 50,
-        "name": "LED测试7",
-        "index": 1,
+        "id": 100,
+        "name": "修改后的LED",
+        "index": null,
         "size": null,
-        "novaCode": "Pluto2017baohesanji001",
-        "ledParkingAreaDtos": [
+        "ledBizParkingAreaDtos": [
             {
+                "id": 93,
                 "name": "二级诱导屏天河河大厦"
             }
         ],
-        "screenName": "长江西路诱导牌"
+        "screenName": null
     }
 }
 ```
@@ -687,44 +730,50 @@ isExist:false   不存在
 - 请求示例: `http://domain:8080/guidance/leds/search?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010&page=0&size=1&name=led`
 - 返回示例
 ```
-
-  {
-      "status": "SUCCESS",
-      "data": {
-          "content": [
-              {
-                  "id": 41,
-                  "name": "测试LED",
-                  "index": 1,
-                  "size": null,
-                  "novaCode": null,
-                  "ledParkingAreaDtos": [],
-                  "screenName": "长江西路诱导牌"
-              },
-              {
-                  "id": 50,
-                  "name": "LED测试7",
-                  "index": 1,
-                  "size": null,
-                  "novaCode": "Pluto2017baohesanji001",
-                  "ledParkingAreaDtos": [
-                      {
-                          "name": "二级诱导屏天河河大厦"
-                      }
-                  ],
-                  "screenName": "长江西路诱导牌"
-              }
-          ],
-          "last": true,
-          "totalPages": 1,
-          "totalElements": 2,
-          "number": 0,
-          "size": 2,
-          "sort": null,
-          "first": true,
-          "numberOfElements": 2
-      }
-  }
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "id": 90,
+                "name": "led测试",
+                "index": null,
+                "size": null,
+                "ledBizParkingAreaDtos": [],
+                "screenName": null
+            },
+            {
+                "id": 98,
+                "name": "led测试12",
+                "index": null,
+                "size": null,
+                "ledBizParkingAreaDtos": [],
+                "screenName": null
+            },
+            {
+                "id": 100,
+                "name": "修改后的LED",
+                "index": null,
+                "size": null,
+                "ledBizParkingAreaDtos": [
+                    {
+                        "id": 93,
+                        "name": "二级诱导屏天河河大厦"
+                    }
+                ],
+                "screenName": null
+            }
+        ],
+        "last": true,
+        "totalPages": 1,
+        "totalElements": 3,
+        "number": 0,
+        "size": 10,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 3
+    }
+}
 ```
 
 ### 16.4.4 查询未关联诱导牌的led接口
@@ -732,7 +781,7 @@ isExist:false   不存在
 - 功能描述:  查询未关联诱导牌的led详情
 - 请求地址: `http://domain:8080/guidance/leds/unrelated`
 - 请求动作: `GET`
-- 请求示例: `http://domain:8080/guidance/leds/unrelated?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+- 请求示例: `http://localhost:8080/guidance/leds/unrelated?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&screenId`
 - 返回示例
 ```
 {
@@ -776,7 +825,7 @@ isExist:false   不存在
 ```
 {
 	"code":"Pluto2017baohesanji001",
-	"sim":"1111111111111"
+	"simCode":"1111111111111"
 }
 ```
 
@@ -807,6 +856,31 @@ isExist:false   不存在
 - 请求示例: `http://domain:8080/guidance/novas/search?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010&page=0&size=1&code=1&sim=1`
 - 返回示例
 
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "id": 54321,
+                "code": "54321",
+                "sim": "1213"
+            },
+            {
+                "id": 103,
+                "code": "Pluto2018001",
+                "sim": "1111111111113"
+            }
+        ],
+        "totalPages": 1,
+        "totalElements": 2,
+        "last": true,
+        "number": 0,
+        "size": 10,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 2
+    }
+}
 
 
 ### 16.5.4 查询未关联诱导牌的nova接口
@@ -814,7 +888,7 @@ isExist:false   不存在
 - 功能描述: 查询未关联诱导牌的nova卡
 - 请求地址: `http://domain:8080/guidance/novas/unrelated`
 - 请求动作: `GET`
-- 请求示例: `http://domain:8080/guidance/novas/unrelated?access_token=da9cd025-d3f6-4cc8-b472-1c9b94af0010`
+- 请求示例: `http://localhost:8080/guidance/novas/unrelated?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&screenId
 - 返回示例
 ```
 {
@@ -902,3 +976,4 @@ isExist:false   不存在
     "status": "SUCCESS"
 }
 ```
+

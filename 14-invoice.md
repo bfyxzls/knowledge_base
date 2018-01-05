@@ -371,22 +371,48 @@
 - 功能描述:  获取个人所有的开票记录
 - 请求地址: `http://domain/customer/invoices/list`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/customer/invoices/list?access_token=c67010ce-be53-476f-808e-84bbf5e6f7d7&page=0&size=20&sort=globalInfoRequestTime,DESC`
+- 请求示例: `http://localhost:8080/customer/invoices/list?access_token=69f4f17d-1e14-4c6b-a711-c5b02ebed275&page=0&size=4&sort=createdDate,DESC`
 
 
 - 返回数据示例  
 ```
 {
     "status": "SUCCESS",
-    "data": [
-        {
-            "id": 64,
-            "status": 2,
-            "type": "停车费",
-            "price": "1.0",
-            "createdTime": "2017-12-07 11:27:53"
-        }
-    ]
+    "data": {
+        "content": [
+            {
+                "id": 864,
+                "status": 4,
+                "type": "停车费",
+                "price": "40.0",
+                "createdTime": "2017-12-20 16:19:05"
+            },
+            {
+                "id": 863,
+                "status": 4,
+                "type": "停车费",
+                "price": "40.0",
+                "createdTime": "2017-12-20 16:17:33"
+            }
+        ],
+        "last": false,
+        "totalElements": 69,
+        "totalPages": 35,
+        "number": 0,
+        "size": 2,
+        "sort": [
+            {
+                "direction": "DESC",
+                "property": "createdDate",
+                "ignoreCase": false,
+                "nullHandling": "NATIVE",
+                "ascending": false,
+                "descending": true
+            }
+        ],
+        "first": true,
+        "numberOfElements": 2
+    }
 }
 
 ```
@@ -410,7 +436,8 @@
         "price": "1.0",
         "email": "479159321@qq.com",
         "pdfUrl": "http://111.202.226.69:9026/zxkp/pdf?c=6bf213a81c1824940ca6",
-        "number":4
+        "number":4,
+        "goodsType"：1     ////发票类型   1：订单停车费  2：月票停车费
     }
 }
 
@@ -508,7 +535,8 @@
       "taxRate":"0.05",
       "taxAmount":"100",
       "afterTaxIncome":"2000",
-      "monthBillId":1011                      
+      "monthBillId":1011,
+      "districtId":1001                     
 }
 
 ```
@@ -526,7 +554,7 @@
 {
     "districtId": 1001,
     "ids":[
-        64,32
+        "444144404440444044404440444344414447"
     ],
     "title":"abc",
     "buyerId":"123",
@@ -543,6 +571,58 @@
     "status": "SUCCESS"
 }
 
+```
+
+### 14.3.10 获取发票下月票信息接口
+
+- 功能描述:  客户查询指定电子发票下的月票
+- 请求地址: `http://domain/customer/invoices/{id}/monthBills`
+- 请求动作: `GET`
+- 请求示例: `http://domain/customer/invoices/1021/monthBills?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+
+
+- 返回数据示例  
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 1028,
+            "completeDate": "2017-12-20 08:53:59 星期三",
+            "carPlate": "皖A99999",
+            "parkingAreaName": null,
+            "roadSectionName": [
+                "望江西路",
+                "长江西路",
+                "潜山路"
+            ],
+            "startMonth": "2017-12-20 08:53:59",
+            "endMonth": "2017-12-20 08:53:59",
+            "fee": 10000
+        }
+    ]
+}
+
+```
+
+### 14.3.11 获取存在可开发票的订单和月票所属行政区列表接口
+
+- 功能描述:  获取存在可开发票的订单和月票所属行政区列表
+- 请求地址: `http://domain/customer/invoices/query/districts`
+- 请求动作: `GET`
+- 请求示例: `http://domain/customer/invoices/query/districts?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+
+- 返回数据示例  
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 1001,
+            "name": "庐阳区"
+        }
+    ]
+}
 ```
 
 ## 14.4 Web端发票信息访问接口
