@@ -77,3 +77,32 @@ public class EsConfig {
     }
 }
 ```
+
+### Spring-data 2.0 api变化
+- `findOne`: `findById`,返回Option
+- `save(list)`: `saveAll`
+- ``
+
+### 服务无故shutdown
+- 需配置`log4j`
+- `feign client`添加`oauth2`配置
+```java
+public class FeignClientOAuthConfig {
+
+    @Bean
+    public RequestInterceptor requestInterceptor(OAuth2ClientContext oauth2ClientContext, OAuth2ProtectedResourceDetails resource){
+        return new OAuth2FeignRequestInterceptor(oauth2ClientContext, resource);
+    }
+
+    @Bean
+    public DefaultOAuth2ClientContext oauth2ClientContext() {
+        return new DefaultOAuth2ClientContext(new DefaultAccessTokenRequest());
+    }
+
+    @Bean
+    public AuthorizationCodeResourceDetails oauth2RemoteResource() {
+        return new AuthorizationCodeResourceDetails();
+    }
+}
+
+```
