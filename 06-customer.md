@@ -264,7 +264,7 @@
     ]
 }
 ```
-### 6.1.8 查询用户信息接口
+### 6.1.8 查询用户车辆信息接口
 
 - 功能描述:  查询用户车辆信息
 - 请求地址: `http://domain/customer/customers/obtainVehicles`
