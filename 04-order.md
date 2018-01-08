@@ -1582,7 +1582,7 @@ isExist:false
 ```
 
 
-### 4.6.1 obtainUsedParkingCountByRoadSection接口
+### 4.6.2 obtainUsedParkingCountByRoadSection接口
 
 - 功能描述：根据路段统计路段已使用的泊位数
 
