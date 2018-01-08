@@ -332,7 +332,7 @@
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/coupon/activities/search?queryObject.name=&queryObject.status=1&page=0&size=2&access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&sort=createdDate,DESC`
+- 请求示例: `http://localhost:8080/coupon/activities/search?name=&status=1&page=0&size=2&access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&sort=createdDate,DESC`
 
 - 返回示例
 
@@ -1880,36 +1880,6 @@ sort=type,DESC 按照优惠券类型降序排序
 }
 ```
 
-### 13.3.5 查询当前用户指定活动下已领取的优惠券规则
-
-- 功能描述: 查询当前用户指定活动下已领取的优惠券规则
-
-- 请求地址: `http://domain/customer/coupons/obtainAcquiredCouponRules`
-
-- 请求动作: `GET`
-
-- 请求参数:
-    - `activityId`:活动id
-    - `activityName`:活动名称
-- 请求示例: `http://localhost:8080/customer/coupons/obtainAcquiredCouponRules?access_token=7df15a7c-6187-4a7d-9ad4-9db597fadf6f&activityId=5a13cc956c79211554a7f9ca&activityName=圣诞优惠`
-
-- 返回示例
-
-```
-   {
-    "status": "SUCCESS",
-    "data": [
-        {
-            "useLimitAmount": 500,
-            "discountAmount": 200,
-            "generateNum": 5,
-            "maxNum": 2,
-            "type": 3
-        },,
-        ...
-    ]
-}
-```
 
 ## 13.4 APP端优惠券结算访问接口
 
