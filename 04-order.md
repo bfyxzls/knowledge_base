@@ -1505,29 +1505,8 @@ isExist:false
 }
 ```
 
-### 4.5.4 obtainArrearsStats接口
 
-- 功能描述：获取欠费订单总笔数与总金额的统计接口
-
-- 请求地址：`http://domain/order/app/vehicles/obtainArrearsStats`
-
-- 请求动作: `GET`
-
-- 请求示例：`http://domain/order/app/vehicles/obtainArrearsStats?access_token=7d3e6db0-65d7-43ea-9b9f-59eb83744345`
-
-- 返回示例：
-```
-{
-    "status": "SUCCESS",
-    "data": {
-        "num": 16,
-        "sum": 30606
-    }
-}
-
-```
-
-### 4.5.5 getArrearsParkingOrderWithOutPage接口
+### 4.5.4 getArrearsParkingOrderWithOutPage接口
 
 - 功能描述：获取车辆的欠费订单列表
 - 请求地址：`http://domain/order/app/vehicles/{carPlate}/arrearsWithOutPage`
