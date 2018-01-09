@@ -30,7 +30,7 @@
     "isOwnBusiness":false,
     "city":"",
     "unitPrice":0,
-    "openingHour":"2018-1-8 12:00:00",
+    "openingHour":"7:00-22:00",
     "tags":[],
     "bizParkingAreaType":1 
 }
