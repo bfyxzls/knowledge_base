@@ -27,9 +27,12 @@
     "parkingPositionQuantity":300,
     "source":1,  //数据来源，1：老系统上报，2是捷顺，3是摄像头上报
     "province":"",
-    "OwnBusiness":false,
+    "isOwnBusiness":false,
     "city":"",
-    "unitPrice":0
+    "unitPrice":0,
+    "openingHour":"2018-1-8 12:00:00",
+    "tags":[],
+    "bizParkingAreaType":1 
 }
 ```
 
@@ -278,6 +281,34 @@ isExist:false   不存在
     ]
 }
 
+### 16.1.9 app端获取商业停车场信息
+
+- 功能描述:  app端获取停车场信息
+- 请求地址: `http://domain/guidance//app/bizParkingAreas/{id}`
+- 请求动作: `GET`
+- 请求示例: `http://domain/guidance//app/bizParkingAreas/112?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 返回示例：
+
+
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": 112,
+        "name": "修改后测试停车场",
+        "bizParkingAreaType": null,
+        "address": "潜山路",
+        "tags": [
+            "1",
+            "2"
+        ],
+        "firstHourPrice": 5,
+        "parkingRemainNum": 300,
+        "openingHour": "2018-1-8 10:00:00"
+    }
+}
+
+
+
 ## 16.2 诱导预案访问接口
 
 ### 16.2.1 新增诱导预案接口
@@ -286,7 +317,7 @@ isExist:false   不存在
 - 请求地址: `http://domain/guidance/inductionPlans`
 - 请求动作: `POST`
 - 请求示例: `http://domain/guidance/inductionPlans?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
-- 请求示例
+      - 请求示例
 ```
 {
 	"num":30,
@@ -329,6 +360,7 @@ isExist:false   不存在
 	"endTime":"17:00:00",
 	"validStartDate":"2017-12-20",
 	"validEndDate":"2017-12-25",
+	"bizParkingAreaId":113
 }
 ```
 
@@ -437,6 +469,9 @@ isExist:false   不存在
 - 请求示例: `http://domain/guidance/screens?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 - 请求示例
 ```
+
+novaId: NotNull!
+
 {
 	"name":"长江西路诱导牌",
 	"level":1,
@@ -618,15 +653,16 @@ isExist:false   不存在
     "status": "SUCCESS",
     "data": [
         {
-            "id": 43,
-            "coordinate": "117.313610 31.708892",
-            "level": 1,
-            "isOnline": false
-        },
-        {
-            "id": 53,
-            "coordinate": "117.313610 31.708892",
-            "level": 3,
+            "id": 134,
+            "name": "修改后的诱导牌",
+            "coordinate": {
+                "type": "Point",
+                "coordinates": [
+                    12,
+                    67
+                ]
+            },
+            "level": 2,
             "isOnline": false
         }
     ]
@@ -914,7 +950,7 @@ isExist:false   不存在
 ```
 {
 	"code":"修改code",
-	"sim":"2222222222222"
+	"simCode":"2222222222222"
 }
 ```
 
