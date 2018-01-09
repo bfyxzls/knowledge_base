@@ -23,7 +23,10 @@
     "manufacturerIco":null,
     "address":"",
     "dcNum":12,
-    "acNum":10
+    "acNum":10,
+    "tags":[
+    "24小时"
+    ]
 }
 ```
 
@@ -51,12 +54,15 @@
         "createdBy": "wyf",
         "createdDate": 1510569381322,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": 1510569381322
+        "lastModifiedDate": 1510569381322，
+        "tags":[
+            "24小时"
+            ]
     }
 }
 ```
 
-#### 10.1.2 查询站点信息
+### 10.1.2 查询站点信息
 
 - 功能描述:  查询站点信息
 - 请求地址: `http://domain/pile/chargingStations/{id}`
@@ -87,13 +93,16 @@
         "createdBy": "wyf",
         "createdDate": 1510569381322,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": 1510569381322
+        "lastModifiedDate": 1510569381322，
+        "tags":[
+            "24小时"
+            ]
     }
 }
 ```
 
 
-#### 10.1.3 通过站点编号更新站点信息
+### 10.1.3 通过站点编号更新站点信息
 
 - 功能描述:  修改站点
 - 请求地址: `http://domain/pile/chargingStations/{id}`
@@ -151,7 +160,7 @@
 }
 ```
 
-#### 10.1.4 查询站点列表
+### 10.1.4 查询站点列表
 
 - 功能描述:  查询站点列表
 - 请求地址: `http://domain/pile/chargingStations`
@@ -231,7 +240,7 @@
 }
 ```
 
-#### 10.1.5 上传厂商图标
+### 10.1.5 上传厂商图标
 - 功能描述:  上传厂商图标
 - 请求地址: `http://domain/pile/chargingStations/uploadManufacturerIco`
 - 请求动作: `POST`
@@ -246,7 +255,7 @@
 }
 ```
 
-#### 10.1.6 删除厂商图标
+### 10.1.6 删除厂商图标
 
 - 功能描述:  删除厂商图标
 - 请求地址: `http://domain/pile/chargingStations/deleteManufacturerIco`
@@ -262,7 +271,7 @@
 }
 ```
 
-#### 10.1.7 获取厂商图标
+### 10.1.7 获取厂商图标
 - 功能描述:  根据图片名称获取厂商图标
 - 请求地址: `http://domain/pile/chargingStations/getManufacturerIco`
 - 请求动作: `GET`
@@ -271,13 +280,13 @@
 - 返回数据示例  
 ![Markdown](http://i2.kiimg.com/1949/7c84a20ddd1f1eaa.png)
 
-#### 10.1.8 导出站点列表
+### 10.1.8 导出站点列表
 - 功能描述:  导出站点列表
 - 请求地址: `http://domain/pile/chargingStations/export`
 - 请求动作: `GET`
 - 请求示例: `http://domain/pile/chargingStations/export?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07&name=&manufacturerName&status=`
 
-#### 10.1.9 获取所有站点列表
+### 10.1.9 获取所有站点列表
 - 功能描述:  获取所有站点列表
 - 请求地址: `http://domain/pile/chargingStations/findAll`
 - 请求动作: `GET`
@@ -335,7 +344,7 @@
 }
 ```
 
-#### 10.1.10 判断充电桩编码是否已存在
+### 10.1.10 判断充电桩编码是否已存在
 - 功能描述:  判断充电桩编码是否已存在
 - 请求地址: `http://domain/pile/chargingStations/findCodeExist?access_token=f2ca8520-11a9-415b-9d15-21690acbb369&code=12`
 - 请求动作: `GET`
