@@ -293,17 +293,39 @@ isExist:false   不存在
 {
     "status": "SUCCESS",
     "data": {
-        "id": 112,
-        "name": "修改后测试停车场",
-        "bizParkingAreaType": null,
+        "id": 139,
+        "name": "测试停车场3",
+        "bizParkingAreaType": 1,
         "address": "潜山路",
         "tags": [
-            "1",
-            "2"
+            "在线缴费",
+            "24小时"
         ],
-        "firstHourPrice": 5,
-        "parkingRemainNum": 300,
-        "openingHour": "2018-1-8 10:00:00"
+        "firstHourPrice": 3,
+        "parkingRemainNum": 12,
+        "openingHour": "7:00-20:00",
+        "bizParkingAreaChargeDtos": [
+            {
+                "fee": 0,
+                "hour": "15分钟"
+            },
+            {
+                "fee": 5,
+                "hour": "1小时"
+            },
+            {
+                "fee": 7,
+                "hour": "3小时"
+            },
+            {
+                "fee": 9,
+                "hour": "5小时"
+            },
+            {
+                "fee": 10,
+                "hour": "封顶"
+            }
+        ]
     }
 }
 
