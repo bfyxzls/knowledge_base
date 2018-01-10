@@ -4290,6 +4290,54 @@ isExist:false   不存在
 }
 ```
 
+### 2.11.6 条件查询未关联的SIM卡
+
+- 功能描述: 根据iccid模糊查询未关联的SIM卡
+- 请求地址: `http://localhost:8081/sims/unrelated?access_token=ec00544b-7c11-448c-a75e-9e22a08fc1b9&iccid=5`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8081/sims/unrelated?access_token=ec00544b-7c11-448c-a75e-9e22a08fc1b9&iccid=5`
+         
+- 请求示例:
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "id": 1005,
+                "iccid": "12345"
+            },
+            {
+                "id": 1000,
+                "iccid": "14567"
+            }
+        ],
+        "pageable": {
+            "sort": {
+                "sorted": false,
+                "unsorted": true
+            },
+            "offset": 0,
+            "pageSize": 20,
+            "pageNumber": 0,
+            "unpaged": false,
+            "paged": true
+        },
+        "last": true,
+        "totalPages": 1,
+        "totalElements": 2,
+        "number": 0,
+        "size": 20,
+        "sort": {
+            "sorted": false,
+            "unsorted": true
+        },
+        "numberOfElements": 2,
+        "first": true
+    }
+}
+```
+
 
 # 2.12 POS机信息访问接口
 
@@ -4450,9 +4498,10 @@ isExist:false   不存在
 {
 	"code":"12313",
 	"imei":"ada21",
-	"producer":"肥西一厂",
+	"producer":1079,
 	"status":1020,
-	"version——type":1019
+	"version":1019,
+	"simIccid": "1213"
 }
 ```
 
@@ -4472,7 +4521,8 @@ isExist:false   不存在
     "deptId": 123,
     "status": 2 ,
     "remark": "q231",
-    "employeeId": 123  
+    "employeeId": 123,
+    "simIccid": "1213"
 }
 ```
 

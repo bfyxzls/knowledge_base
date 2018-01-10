@@ -33,32 +33,7 @@
 - 返回数据示例  
 ```$xslt
 {
-    "status": "SUCCESS",
-    "data": {
-        "id": 6,
-        "code": "1",
-        "name": "测试",
-        "coordinate": {
-            "type": "Point",
-            "coordinates": [
-                12,
-                67
-            ]
-        },
-        "status": 1,
-        "manufacturerName": "厂商",
-        "manufacturerIco": null,
-        "address": "",
-        "dcNum": 12,
-        "acNum": 10,
-        "createdBy": "wyf",
-        "createdDate": 1510569381322,
-        "lastModifiedBy": "wyf",
-        "lastModifiedDate": 1510569381322，
-        "tags":[
-            "24小时"
-            ]
-    }
+    "status": "SUCCESS"
 }
 ```
 
@@ -74,7 +49,7 @@
 {
     "status": "SUCCESS",
     "data": {
-        "id": 6,
+        "id": 8,
         "code": "1",
         "name": "测试",
         "coordinate": {
@@ -91,12 +66,12 @@
         "dcNum": 12,
         "acNum": 10,
         "createdBy": "wyf",
-        "createdDate": 1510569381322,
+        "createdDate": "2018-01-10",
+        "lastModifiedDate": "2018-01-10",
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": 1510569381322，
-        "tags":[
+        "tags": [
             "24小时"
-            ]
+        ]
     }
 }
 ```
@@ -134,29 +109,7 @@
 - 返回数据示例  
 ```$xslt
 {
-    "status": "SUCCESS",
-    "data": {
-        "id": 6,
-        "code": "1",
-        "name": "测试",
-        "coordinate": {
-            "type": "Point",
-            "coordinates": [
-                12,
-                67
-            ]
-        },
-        "status": 1,
-        "manufacturerName": "厂商",
-        "manufacturerIco": null,
-        "address": "",
-        "dcNum": 12,
-        "acNum": 10,
-        "createdBy": "wyf",
-        "createdDate": 1510569381322,
-        "lastModifiedBy": "wyf",
-        "lastModifiedDate": 1510569381322
-    }
+    "status": "SUCCESS"
 }
 ```
 
@@ -174,41 +127,9 @@
     "data": {
         "content": [
             {
-                "id": 2,
-                "code": "123",
-                "name": "123",
-                "coordinate": null,
-                "status": 2,
-                "manufacturerName": "123",
-                "manufacturerIco": "123",
-                "address": "123",
-                "dcNum": 12,
-                "acNum": 12,
-                "createdBy": "wyf",
-                "createdDate": 1510197969918,
-                "lastModifiedBy": "wyf",
-                "lastModifiedDate": 1510197969918
-            },
-            {
-                "id": 1,
-                "code": "123",
-                "name": "123",
-                "coordinate": null,
-                "status": 2,
-                "manufacturerName": "123",
-                "manufacturerIco": "123",
-                "address": "123",
-                "dcNum": 12,
-                "acNum": 12,
-                "createdBy": "wyf",
-                "createdDate": 1510197946664,
-                "lastModifiedBy": "wyf",
-                "lastModifiedDate": 1510198286042
-            },
-            {
-                "id": 6,
+                "id": 8,
                 "code": "1",
-                "name": "测试",
+                "name": "测试1",
                 "coordinate": {
                     "type": "Point",
                     "coordinates": [
@@ -223,19 +144,34 @@
                 "dcNum": 12,
                 "acNum": 10,
                 "createdBy": "wyf",
-                "createdDate": 1510569381322,
+                "createdDate": "2018-01-10",
+                "lastModifiedDate": "2018-01-10",
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": 1510569381322
+                "tags": null
             }
         ],
-        "last": true,
+        "pageable": {
+            "sort": {
+                "sorted": false,
+                "unsorted": true
+            },
+            "offset": 0,
+            "pageSize": 20,
+            "pageNumber": 0,
+            "paged": true,
+            "unpaged": false
+        },
         "totalPages": 1,
-        "totalElements": 3,
-        "size": 10,
+        "totalElements": 1,
+        "last": true,
+        "size": 20,
         "number": 0,
-        "first": true,
-        "sort": null,
-        "numberOfElements": 3
+        "numberOfElements": 1,
+        "sort": {
+            "sorted": false,
+            "unsorted": true
+        },
+        "first": true
     }
 }
 ```
@@ -299,33 +235,9 @@
     "status": "SUCCESS",
     "data": [
         {
-            "id": 2,
-            "code": "123",
-            "name": "123",
-            "coordinate": null,
-            "status": 2,
-            "manufacturerName": "123",
-            "manufacturerIco": "123",
-            "address": "123",
-            "dcNum": 12,
-            "acNum": 12
-        },
-        {
-            "id": 1,
-            "code": "123",
-            "name": "123",
-            "coordinate": null,
-            "status": 2,
-            "manufacturerName": "123",
-            "manufacturerIco": "123",
-            "address": "123",
-            "dcNum": 12,
-            "acNum": 12
-        },
-        {
-            "id": 6,
+            "id": 8,
             "code": "1",
-            "name": "测试",
+            "name": "测试1",
             "coordinate": {
                 "type": "Point",
                 "coordinates": [
@@ -338,7 +250,14 @@
             "manufacturerIco": null,
             "address": "",
             "dcNum": 12,
-            "acNum": 10
+            "acNum": 10,
+            "createdBy": "wyf",
+            "createdDate": "2018-01-10",
+            "lastModifiedDate": "2018-01-10",
+            "lastModifiedBy": "wyf",
+            "tags": [
+                "24小时"
+            ]
         }
     ]
 }
