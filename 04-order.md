@@ -636,7 +636,39 @@
 
 - 返回示例：
 
-  ```json
+ ```
+  
+ {
+    "status": "SUCCESS",
+    "data": {
+        "id": 10000227,
+        "carPlate": "皖A12345",
+        "parkingCode": "1000004",
+        "driveInPosSn": "123",
+        "roadSectionName": "潜山路-长江西路",
+        "vehicleType": "01",
+        "driveInEmployeeId": 1001,
+        "createdDate": "2017-11-09 09:21:23",
+        "arrears": 1000
+    }
+}
+```
+  
+  
+### 4.1.18 obtainTodayOrders接口
+
+- 功能描述：收费员获取今日订单流水
+
+- 请求地址：`http://domain/order/orders/obtainTodayOrders?access_token`
+
+- 请求动作：`GET`
+
+- 请求示例：`http://localhost:8080/order/orders/obtainTodayOrders?access_token=37c53656-1507-4cb8-a047-6bad018510c7`
+
+- 返回示例：
+
+```
+
  {
     "status": "SUCCESS",
     "data": {
@@ -652,32 +684,23 @@
     }
 }
   ```
-### 4.1.18 obtainTodayOrders接口
+  
+### 4.1.19 posConfirmedOrderNotLeave接口
 
-- 功能描述：收费员获取今日订单流水
+- 功能描述：app端缴费但未驶离，收费员确认未驶离时将订单置为确认未驶离状态
 
-- 请求地址：`http://domain/order/orders/obtainTodayOrders?access_token`
+- 请求地址：`localhost:8082/orders/posConfirmedOrderNotLeave?access_token=&id=`
 
-- 请求动作：`GET`
+- 请求动作：`PUT`
 
-- 请求示例：`http://localhost:8080/order/orders/obtainTodayOrders?access_token=37c53656-1507-4cb8-a047-6bad018510c7`
+- 请求示例：`localhost:8082/orders/posConfirmedOrderNotLeave?access_token=a5f5d95a-ee28-4323-b6b0-144ca1458ef6&id=10000227`
 
 - 返回示例：
 
-  ```json
+```
+
  {
-    "status": "SUCCESS",
-    "data": {
-        "id": 10000227,
-        "carPlate": "皖A12345",
-        "parkingCode": "1000004",
-        "driveInPosSn": "123",
-        "roadSectionName": "潜山路-长江西路",
-        "vehicleType": "01",
-        "driveInEmployeeId": 1001,
-        "createdDate": "2017-11-09 09:21:23",
-        "arrears": 1000
-    }
+    "status": "SUCCESS"
 }
   ```
   
@@ -1919,6 +1942,50 @@ isExist:false
     }
 }
 ```
+
+### 4.7.11 支付宝生成未驶离订单二维码支付信息
+
+- 功能描述：支付宝生成未驶离订单二维码支付信息
+
+- 请求地址：`http://doman/order/alipay/generateQRCodePayNotLeaveOrderInfo`
+
+- 请求动作：`POST`
+
+- 请求示例：`http://192.168.1.177:8080/order/alipay/generateQRCodePayNotLeaveOrderInfo?access_token`
+
+- 请求实体
+
+  ```
+  {
+          "orderId": 10000272,
+          "fee":4,
+          "employeeId": 1000,
+          "posSn": "1889773",
+          "ip":"192.1.1.1"
+      }
+  ```
+  
+### 4.7.12 微信生成未驶离订单二维码支付信息
+
+- 功能描述：微信生成未驶离订单二维码支付信息
+
+- 请求地址：`http://doman/order/alipay/generateQRCodePayNotLeaveOrderInfo`
+
+- 请求动作：`POST`
+
+- 请求示例：`http://192.168.1.177:8080/order/weCaht/generateQRCodePayNotLeaveOrderInfo?access_token`
+
+- 请求实体
+
+  ```
+  {
+          "orderId": 10000272,
+          "fee":4,
+          "employeeId": 1000,
+          "posSn": "1889773",
+          "ip":"192.1.1.1"
+      }
+  ```
   ​
 
 ## 4.8 订单数量访问接口(OrderQuantityController)
