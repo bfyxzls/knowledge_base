@@ -2346,6 +2346,31 @@ isExist:false   不存在
         "province": "安徽省",
         "city": "合肥市",
         "district": "蜀山区",
+         "bizParkingAreaType":2,
+         "tags":["在线缴费"], 
+         "openingHour":"7:00-22:00",
+          "bizParkingAreaChargeDtos": [
+                     {
+                         "fee": 0,
+                         "hour": "15分钟"
+                     },
+                     {
+                         "fee": 5,
+                         "hour": "1小时"
+                     },
+                     {
+                         "fee": 7,
+                         "hour": "3小时"
+                     },
+                     {
+                         "fee": 9,
+                         "hour": "5小时"
+                     },
+                     {
+                         "fee": 10,
+                         "hour": "封顶"
+                     }
+                 ]   
         "createdBy": "wyf",
         "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
@@ -2461,7 +2486,10 @@ isExist:false   不存在
     "maintainEnterpriseId": 123,
     "province": "安徽省",
     "city": "合肥市",
-    "district": "蜀山区",              
+    "district": "蜀山区",
+    "bizParkingAreaType":2,
+    "tags":["在线缴费"], 
+    "openingHour":"7:00-22:00"      
 }
 ```
 - 返回示例
