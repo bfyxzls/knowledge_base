@@ -1082,8 +1082,11 @@ isExist:false   不存在
 {               
     "name": "望江西路-创新大道",
     "level": 1023,
-    "levelText": "B级路段",
-    "unitPrice": 300
+    "coordinates":,
+    "unitPrice":1,
+    "monthBillNum":10,
+    "monthBillPrice":100,
+    "parkingAreaId":1
 }
        
 ```
