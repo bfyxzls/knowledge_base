@@ -118,7 +118,10 @@
         "province":"",
         "city":"",
         "isOwnBusiness":false,
-        "unitPrice":0
+        "unitPrice":0,
+        "bizParkingAreaType":1,
+        "tags":[],
+        "openingHour":"7:00-22:00"
    
     }
 }
