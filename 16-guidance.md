@@ -75,6 +75,7 @@
     "city":"",
     "isOwnBusiness":false,
     "unitPrice":0,
+    "tags":[]
 }
 ```
 
@@ -87,7 +88,7 @@
 ```
 
 
-### 16.1.3 获取商业停车场详情接口
+### 16.1.3 web端获取商业停车场详情接口
 
 - 功能描述:  获取商业停车场详情
 - 请求地址: `http://domain/guidance/bizParkingAreas/15`
