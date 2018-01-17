@@ -117,7 +117,7 @@
 }
 ```
 
-#### 9.1.4 查询资讯列表
+### 9.1.4 查询资讯列表
 
 - 功能描述:  通过标题模糊匹配，发布时间之前及发布状态查询资讯列表
 - 请求地址: `http://domain/cms/informations/query?access_token`
@@ -180,7 +180,7 @@
 }
 ```
 
-#### 9.1.5 置顶资讯
+### 9.1.5 置顶资讯
 
 - 功能描述:  通过id置顶资讯
 - 请求地址: `http://domain/cms/informations/{id}/top`
@@ -210,7 +210,7 @@
 }
 ```
 
-#### 9.1.6 上传资讯的图片
+### 9.1.6 上传资讯的图片
 
 - 功能描述:  上传资讯的图片
 - 请求地址: `http://domain/zuul/cms/informations/uploadImage`
@@ -226,7 +226,7 @@
 }
 ```
 
-#### 9.1.7 删除资讯图片
+### 9.1.7 删除资讯图片
 
 - 功能描述:  删除资讯的图片
 - 请求地址: `http://domain/cms/informations/deleteImage`
@@ -242,7 +242,7 @@
 }
 ```
 
-#### 9.1.8 获取置顶资讯
+###  9.1.8 获取置顶资讯
 
 - 功能描述:  获取置顶资讯
 - 请求地址: `http://domain/cms/informations/queryTop`
@@ -300,7 +300,7 @@
 }
 ```
 
-#### 9.1.9 获取资讯图片
+### 9.1.9 获取资讯图片
 - 功能描述:  根据图片名称获取资讯图片
 - 请求地址: `http://domain/cms/informations/getInformationImage`
 - 请求动作: `GET`
@@ -309,7 +309,7 @@
 - 返回数据示例  
 ![Markdown](http://i2.kiimg.com/1949/7c84a20ddd1f1eaa.png)
 
-#### 9.1.10 通过资讯类型获取置顶资讯
+### 9.1.10 通过资讯类型获取置顶资讯
 
 - 功能描述:  通过资讯类型获取置顶资讯
 - 请求地址: `http://domain/cms/informations/queryTopByType`
