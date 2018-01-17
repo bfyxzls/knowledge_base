@@ -129,3 +129,63 @@
 - 请求示例: `http://localhost:8080/app/appVersions/downloadApk?access_token=df102429-f62d-461f-8a13-b4f08dce4c56&apkFileName=d404f5fa-e3ac-4f02-85c9-71f3eb1716b9.apk`
 - 返回参数: apk文件
 
+## 10.2 反馈信息
+
+### 10.2.1 app端新增反馈信息
+
+- 功能描述: 新增反馈信息
+- 请求地址: `http://domain/app/feedbacks?access_token=`
+- 请求动作: `POST`
+- 请求示例: `http://localhost:8080/app/feedbacks?access_token=df102429-f62d-461f-8a13-b4f08dce4c56`
+- 请求示例：
+
+```
+{
+    "status":1,
+    "type":,
+    "feedbackDate":"2018-1-17 12:00:00",
+    "source":1， 1:app 2:小程序 3：公众号
+    "description":"收费不合理"
+}
+```
+
+### 10.2.2 app端查看反馈记录
+
+
+- 功能描述: 查询用户反馈信息
+- 请求地址: `http://domain/app/feedbacks/search?access_token=`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/app/feedbacks/search?access_token=df102429-f62d-461f-8a13-b4f08dce4c56`
+- 返回示例：
+
+```
+{
+    "status":1,
+    "type":,
+    "feedbackPhoneNum":18365265123,
+    "feedbackDate":"2018-1-17 12:00:00",
+    "description":"收费不合理"
+}
+```
+
+
+### 10.2.2 web端模糊查询反馈记录
+
+
+- 功能描述: 新增反馈信息
+- 请求地址: `http://domain/app/feedbacks/query?access_token=`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/app/feedbacks/query?access_token=df102429-f62d-461f-8a13-b4f08dce4c56`
+- 请求示例：
+
+```
+{
+    "status":1,
+    "type":,
+    "feedbackPhoneNum":18365265123,
+    "feedbackDate":"2018-1-17 12:00:00",
+    "description":"收费不合理"
+}
+```
+
+
