@@ -160,11 +160,33 @@
 
 ```
 {
-    "status":1,
-    "type":,
-    "feedbackPhoneNum":18365265123,
-    "feedbackDate":"2018-1-17 12:00:00",
-    "description":"收费不合理"
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 1,
+            "feedbackPhoneNum": "admin",
+            "status": 1,
+            "type": 1,
+            "feedbackDate": "2018-01-17 12:00:00",
+            "description": "收费不合理"
+        },
+        {
+            "id": 2,
+            "feedbackPhoneNum": "admin",
+            "status": 1,
+            "type": 1,
+            "feedbackDate": "2018-01-18 12:00:00",
+            "description": "收费太高"
+        },
+        {
+            "id": 3,
+            "feedbackPhoneNum": "admin",
+            "status": 2,
+            "type": 1,
+            "feedbackDate": "2018-01-28 10:00:00",
+            "description": "用户体验太差"
+        }
+    ]
 }
 ```
 
@@ -175,16 +197,62 @@
 - 功能描述: 新增反馈信息
 - 请求地址: `http://domain/app/feedbacks/query?access_token=`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/app/feedbacks/query?access_token=df102429-f62d-461f-8a13-b4f08dce4c56`
+- 请求示例: `http://localhost:8087/feedbacks/query?access_token=049fcb64-722c-4a43-8423-76b634ecdf19&feedbackPhoneNum&status&page=0&size=10&sort=feedbackDate,Desc`
 - 请求示例：
 
 ```
 {
-    "status":1,
-    "type":,
-    "feedbackPhoneNum":18365265123,
-    "feedbackDate":"2018-1-17 12:00:00",
-    "description":"收费不合理"
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "id": 3,
+                "feedbackPhoneNum": "admin",
+                "status": 2,
+                "type": 1,
+                "feedbackDate": "2018-01-28 10:00:00",
+                "description": "用户体验太差"
+            },
+            {
+                "id": 2,
+                "feedbackPhoneNum": "admin",
+                "status": 1,
+                "type": 1,
+                "feedbackDate": "2018-01-18 12:00:00",
+                "description": "收费太高"
+            },
+            {
+                "id": 1,
+                "feedbackPhoneNum": "admin",
+                "status": 1,
+                "type": 1,
+                "feedbackDate": "2018-01-17 12:00:00",
+                "description": "收费不合理"
+            }
+        ],
+        "pageable": {
+            "sort": {
+                "sorted": true,
+                "unsorted": false
+            },
+            "offset": 0,
+            "pageNumber": 0,
+            "pageSize": 10,
+            "paged": true,
+            "unpaged": false
+        },
+        "last": true,
+        "totalPages": 1,
+        "totalElements": 3,
+        "number": 0,
+        "size": 10,
+        "sort": {
+            "sorted": true,
+            "unsorted": false
+        },
+        "numberOfElements": 3,
+        "first": true
+    }
 }
 ```
 
