@@ -195,9 +195,9 @@
 
 
 - 功能描述: 新增反馈信息
-- 请求地址: `http://domain/app/feedbacks/query?access_token=`
+- 请求地址: `http://domain/app/feedbacks/web/query?access_token=`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8087/feedbacks/query?access_token=049fcb64-722c-4a43-8423-76b634ecdf19&feedbackPhoneNum&status&feedbackStartDate=2018-1-16&feedbackEndDate=2018-1-19&page=0&size=10&sort=feedbackDate,Desc`
+- 请求示例: `http://localhost:8087/feedbacks/query/web?access_token=049fcb64-722c-4a43-8423-76b634ecdf19&feedbackPhoneNum&status&feedbackStartDate=2018-1-16&feedbackEndDate=2018-1-19&page=0&size=10&sort=feedbackDate,Desc`
 - 请求示例：
 
 ```
