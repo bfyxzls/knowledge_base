@@ -1351,152 +1351,7 @@ isExist:false
 }
 ```
 
-## 4.5 APP端获取车辆信息接口（AppVehicleController）
 
-### 4.5.1 getArrearsParkingOrder接口
-- 功能描述：分页获取车辆的欠费订单
-
-- 请求地址：`http://domain/order/app/vehicles/{carPlate}/arrears`
-
-- 请求动作: `GET`
-
-- 请求示例：`http://localhost:8080/order/app/vehicles/%e7%9a%96A12345/arrears?access_token&page&size&sort`
-    - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
-
-- 返回示例：
- ```
-{
-    "status": "SUCCESS",
-    "data": {
-        "content": [
-            {
-                "orderId": 10000271,
-                "roadSectionName": "岳西路-长江西路",
-                "parkingAreaName": "岳西路停车场",
-                "category": "路边停车",
-                "createdDate": "2017-08-09 19:15:00",
-                "completeDate": "2017-07-13 15:13:14",
-                "parkingPeriod": 74,
-                "arrearsFee": 0
-            }
-        ],
-        "totalElements": 5,
-        "last": true,
-        "totalPages": 1,
-        "number": 0,
-        "size": 20,
-        "sort": null,
-        "first": true,
-        "numberOfElements": 5
-    }
-}
- ```
-### 4.5.2 getParkingRecord接口
-- 功能描述：获得车辆停车记录
-
-- 请求地址：`http://domain/order/app/vehicles/{carPlate}/parkingRecords`
-
-- 请求动作: `GET`
-
-- 请求示例：`http://localhost:8080/order/app/vehicles/%e7%9a%96A12345/parkingRecords?access_token&page&size&page`
-
-- 返回示例：
-```
-{
-    "status": "SUCCESS",
-    "data": {
-        "content": [
-            {
-                "createdDate": "2017-08-03 17:26:49",
-                "completeDate": "2017-08-03 17:26:49",
-                "period": 0,
-                "roadSectionName": "岳西路-长江西路",
-                "parkingAreaName": "岳西路停车场",
-                "fee": 222,
-                "status": 3
-            }
-        ],
-        "totalElements": 40,
-        "last": false,
-        "totalPages": 2,
-        "number": 0,
-        "size": 20,
-        "sort": null,
-        "first": true,
-        "numberOfElements": 20
-    }
-}
-```
-
-### 4.5.3 getPaymentRecord接口
-- 功能描述：获得车辆收费记录
-
-- 请求地址：`http://domain/order/app/vehicles/{carPlate}/paymentRecords`
-
-- 请求动作: `GET`
-
-- 请求示例：`http://localhost:8080/order/app/vehicles/%e7%9a%96A12345/paymentRecords?access_token&page&size&sort`
-
-- 返回示例：
-```
-{
-    "status": "SUCCESS",
-    "data": {
-        "content": [
-            {
-                "carPlate": "皖A12345",
-                "category": "路边停车",
-                "completeDate": "2017-08-03 17:26:49",
-                "fee": 222,
-                "period": 8770,
-                "appPayTypes": [
-                    {
-                        "fee": 222,
-                        "payType": 4,
-                        "payTime": "2017-08-03 17:16:14"
-                    }
-                ]
-            }
-        ],
-        "totalElements": 40,
-        "last": false,
-        "totalPages": 2,
-        "number": 0,
-        "size": 20,
-        "sort": null,
-        "first": true,
-        "numberOfElements": 20
-    }
-}
-```
-
-
-### 4.5.4 getArrearsParkingOrderWithOutPage接口
-
-- 功能描述：获取车辆的欠费订单列表
-- 请求地址：`http://domain/order/app/vehicles/{carPlate}/arrearsWithOutPage`
-- 请求动作: `GET`
-- 请求示例：`http://localhost:8080/order/app/vehicles/%e7%9a%96A12345/arrears?access_token`
-  - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
-- 返回示例：
-
-```
-{
-    "status": "SUCCESS",
-    "data": [
-        {
-            "orderId": 10000202,
-            "roadSectionName": "潜山路-长江西路",
-            "parkingAreaName": "植保路",
-            "category": "路边停车",
-            "createdDate": "2017-10-26 15:33:46",
-            "completeDate": "2017-10-26 15:13:14",
-            "parkingPeriod": -20,
-            "arrearsFee": 1000
-        }
-    ]
-}
-```
 
 
 
@@ -2146,7 +2001,7 @@ isExist:false
 }
 ```
 
-## 4.10 道路查询接口
+## 4.11 道路查询接口
 
 ### 4.10.1 根据路段ID获得道路信息
 
@@ -2228,3 +2083,105 @@ isExist:false
     ]
 }
 ```
+
+## 4.12 APP端获取所有停车场坐标和泊位信息接口
+
+- 功能描述: 获取所有停车场坐标和泊位信息
+
+- 请求地址: `http://localhost:8080/order/app/roadSections?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例: `http://localhost:8080/order/app/roadSections?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+
+- 返回示例:
+
+  ```json
+  {
+      "status": "SUCCESS",
+      "data": [
+          {
+              "id": 1022,
+              "name": "长江路",
+              "coordinates": {
+                  "type": "MultiLineString",
+                  "coordinates": [
+                      [
+                          [
+                              117.19933306810447,
+                              31.85425372612921
+                          ],
+                          [
+                              117.20415567991324,
+                              31.85509211848664
+                          ]
+                      ],
+                      [
+                          [
+                              117.20410740015097,
+                              31.855206029903528
+                          ],
+                          [
+                              117.1993223392684,
+                              31.854381308066642
+                          ]
+                      ]
+                  ]
+              },
+              "usedParkingNum": 0,
+              "totalParkingNum": 0,
+            	"unitPrice": 300
+          }
+      ]
+  }
+  ```
+  
+ ## 4.13 APP端根据路段id获取停车场信息接口
+  
+  - 功能描述: app端根据路段id查询路段泊位信息
+  
+    - 请求地址: `http://localhost:8080/order/app/roadSections/queryRoadSectionInfo?roadSectionId=1021&access_token`
+  
+    - 请求动作: `GET`
+  
+    - 请求示例: `http://localhost:8080/order/app/roadSections/queryRoadSectionInfo?roadSectionId=1021&access_token=9d3af5fd-3e33-4d18-bafd-1317302bf826`
+  
+    - 返回示例:
+  
+   ```
+   {
+       "status": "SUCCESS",
+       "data": {
+           "id": 1030,
+           "name": "岳西路-长江西路",
+           "parkingAreaName": "潜山路-长江西路",
+           "coordinates": {
+               "type": "MultiLineString",
+               "coordinates": [
+                   [
+                       [
+                           117.19933306810447,
+                           31.85425372612921
+                       ],
+                       [
+                           117.20415567991324,
+                           31.85509211848664
+                       ]
+                   ],
+                   [
+                       [
+                           117.20410740015097,
+                           31.855206029903528
+                       ],
+                       [
+                           117.1993223392684,
+                           31.854381308066642
+                       ]
+                   ]
+               ]
+           },
+           "usedParkingNum": 12,
+           "totalParkingNum": 11
+       }
+   }
+   ```
