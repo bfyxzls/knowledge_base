@@ -1310,57 +1310,6 @@ isExist:false   不存在
   }
   ```
 
-### 2.3.8 app queryAllRoadSectionInfo接口
-
-- 功能描述: 获取所有停车场坐标和泊位信息
-
-- 请求地址: `http://localhost:8080/infras/app/roadSections?access_token`
-
-- 请求动作: `GET`
-
-- 请求示例: `http://localhost:8080/infras/app/roadSections?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
-
-- 返回示例:
-
-  ```json
-  {
-      "status": "SUCCESS",
-      "data": [
-          {
-              "id": 1022,
-              "name": "长江路",
-              "coordinates": {
-                  "type": "MultiLineString",
-                  "coordinates": [
-                      [
-                          [
-                              117.19933306810447,
-                              31.85425372612921
-                          ],
-                          [
-                              117.20415567991324,
-                              31.85509211848664
-                          ]
-                      ],
-                      [
-                          [
-                              117.20410740015097,
-                              31.855206029903528
-                          ],
-                          [
-                              117.1993223392684,
-                              31.854381308066642
-                          ]
-                      ]
-                  ]
-              },
-              "usedParkingNum": 0,
-              "totalParkingNum": 0,
-            	"unitPrice": 300
-          }
-      ]
-  }
-  ```
 
 ### 2.3.9 queryRoadSectionByName接口
 
@@ -1408,7 +1357,7 @@ isExist:false   不存在
               "parkingNum": 0,
               "name": "长江路"
           },
-          ...
+         
       ]
   }
   ```
@@ -1463,55 +1412,7 @@ isExist:false   不存在
   }
   ```
 
-### 2.3.11 app queryRoadSectionInfoById接口
 
-- 功能描述: app端根据路段id查询路段泊位信息
-
-  - 请求地址: `http://localhost:8080/infras/app/roadSections/queryRoadSectionInfo?roadSectionId=1021&access_token`
-
-  - 请求动作: `GET`
-
-  - 请求示例: `http://localhost:8080/infras/app/roadSections/queryRoadSectionInfo?roadSectionId=1021&access_token=9d3af5fd-3e33-4d18-bafd-1317302bf826`
-
-  - 返回示例:
-
- ```
- {
-     "status": "SUCCESS",
-     "data": {
-         "id": 1030,
-         "name": "岳西路-长江西路",
-         "parkingAreaName": "潜山路-长江西路",
-         "coordinates": {
-             "type": "MultiLineString",
-             "coordinates": [
-                 [
-                     [
-                         117.19933306810447,
-                         31.85425372612921
-                     ],
-                     [
-                         117.20415567991324,
-                         31.85509211848664
-                     ]
-                 ],
-                 [
-                     [
-                         117.20410740015097,
-                         31.855206029903528
-                     ],
-                     [
-                         117.1993223392684,
-                         31.854381308066642
-                     ]
-                 ]
-             ]
-         },
-         "usedParkingNum": 12,
-         "totalParkingNum": 11
-     }
- }
- ```
 
 ### 2.3.12 通过id查询匹配的路段概要信息
 
@@ -2521,8 +2422,18 @@ isExist:false   不存在
 - 请求示例: `http://localhost:8080/infras/parkingAreas/1037?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body:
 ```
-{  
-    "city": "北京市"  
+{               
+    "code": "700000",
+    "name": "岳东路停车场",
+    "coordinates": null,
+    "parkingPositionQuantity": 600,
+    "maintainEnterpriseId": 123,
+    "province": "安徽省",
+    "city": "合肥市",
+    "district": "蜀山区",
+    "bizParkingAreaType":2,
+    "tags":["在线缴费"], 
+    "openingHour":"7:00-22:00"      
 }
 ```
 - 返回示例
