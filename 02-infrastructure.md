@@ -993,6 +993,37 @@ isExist:false   不存在
 }
 
 ```
+
+### 2.2.6 app端根据反馈类型id获取反馈类型详情
+
+- 功能描述: 根据id查找编码类型
+- 请求地址: `http://localhost:8080/infras/appCodeTypes/{id}?access_token`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/infras/appCodeTypes/1009?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": 1009,
+        "name": "路段级别",
+        "codes": [
+            {
+                "id": 1022,
+                "value": "A级路段"
+            },
+            {
+                "id": 1023,
+                "value": "B级路段"
+            }
+        ],
+        "createdBy": "wyf",
+        "createdDate": 1502886018656,
+        "lastModifiedBy": "wyf",
+        "lastModifiedDate": 1504517002229
+    }
+}
+
 # 2.3 路段信息访问接口
 ### 2.3.1 get接口
 - 功能描述: 根据id，查找路段信息
