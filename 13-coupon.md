@@ -1092,11 +1092,11 @@ platform:1 app平台
 
 - 功能描述: 根据券号模糊匹配，类型，归属活动，状态查找符合条件的优惠券
 
-- 请求地址: `http://domain/coupon/coupons`
+- 请求地址: `http://domain/coupon/coupons/search`
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/coupon/coupons?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&id=&type=1&activityId=5a13cc956c79211554a7f9ca&activityName=圣诞优惠&status=1&assignable=true&phoneNum=&page=0&size=2&sort =createdDate,DESC`
+- 请求示例: `http://localhost:8080/coupon/coupons/search?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&id=&type=1&activityId=5a13cc956c79211554a7f9ca&activityName=圣诞优惠&status=1&assignable=true&phoneNum=&page=0&size=2&sort =createdDate,DESC`
 
 - 返回示例
 
