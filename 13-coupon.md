@@ -863,7 +863,7 @@ sort:createdDate,DESC 按照活动创建时间降序排列
 
 - 请求地址: `http://domain/coupon/activities/latest`
 
-- 请求动作: `POST`
+- 请求动作: `GET`
 
 - 请求示例: `localhost:8080/coupon/activities/latest?access_token=a2ca8f93-209f-433e-a710-065035a340fe&platform=1`
 
