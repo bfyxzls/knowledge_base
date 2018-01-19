@@ -747,6 +747,155 @@ PS:需要用admin用户获得access_token
 
 ```
 
+## 6.7 APP端获取车辆信息接口（AppVehicleController）
+
+### 6.7.1 获取车辆欠费订单接口
+
+- 功能描述：分页获取车辆的欠费订单
+
+- 请求地址：`http://domain/customer/vehicles/{carPlate}/arrears`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/customer/vehicles/%e7%9a%96A12345/arrears?access_token&page&size&sort`
+    - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
+
+- 返回示例：
+ ```
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "orderId": 10000271,
+                "roadSectionName": "岳西路-长江西路",
+                "parkingAreaName": "岳西路停车场",
+                "category": "路边停车",
+                "createdDate": "2017-08-09 19:15:00",
+                "completeDate": "2017-07-13 15:13:14",
+                "parkingPeriod": 74,
+                "arrearsFee": 0
+            }
+        ],
+        "totalElements": 5,
+        "last": true,
+        "totalPages": 1,
+        "number": 0,
+        "size": 20,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 5
+    }
+}
+ ```
+### 6.7.2 获取车辆停车记录接口
+
+- 功能描述：获得车辆停车记录
+
+- 请求地址：`http://domain/customer/vehicles/{carPlate}/parkingRecords`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/customer/vehicles/%e7%9a%96A12345/parkingRecords?access_token&page&size&page`
+
+- 返回示例：
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "createdDate": "2017-08-03 17:26:49",
+                "completeDate": "2017-08-03 17:26:49",
+                "period": 0,
+                "roadSectionName": "岳西路-长江西路",
+                "parkingAreaName": "岳西路停车场",
+                "fee": 222,
+                "status": 3
+            }
+        ],
+        "totalElements": 40,
+        "last": false,
+        "totalPages": 2,
+        "number": 0,
+        "size": 20,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 20
+    }
+}
+```
+
+### 6.7.3 App端获取缴费记录接口
+- 功能描述：获得车辆收费记录
+
+- 请求地址：`http://domain/order/customer/vehicles/{carPlate}/paymentRecords`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/customer/vehicles/%e7%9a%96A12345/paymentRecords?access_token&page&size&sort`
+
+- 返回示例：
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "carPlate": "皖A12345",
+                "category": "路边停车",
+                "completeDate": "2017-08-03 17:26:49",
+                "fee": 222,
+                "period": 8770,
+                "appPayTypes": [
+                    {
+                        "fee": 222,
+                        "payType": 4,
+                        "payTime": "2017-08-03 17:16:14"
+                    }
+                ]
+            }
+        ],
+        "totalElements": 40,
+        "last": false,
+        "totalPages": 2,
+        "number": 0,
+        "size": 20,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 20
+    }
+}
+```
+
+
+### 6.7.4 获取欠费订单不分页接口
+
+- 功能描述：获取车辆的欠费订单列表
+- 请求地址：`http://domain/customer/vehicles/{carPlate}/arrearsWithOutPage`
+- 请求动作: `GET`
+- 请求示例：`http://localhost:8080/customer/vehicles/%e7%9a%96A12345/arrears?access_token`
+  - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
+- 返回示例：
+
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "orderId": 10000202,
+            "roadSectionName": "潜山路-长江西路",
+            "parkingAreaName": "植保路",
+            "category": "路边停车",
+            "createdDate": "2017-10-26 15:33:46",
+            "completeDate": "2017-10-26 15:13:14",
+            "parkingPeriod": -20,
+            "arrearsFee": 1000
+        }
+    ]
+}
+```
+
 
 
 

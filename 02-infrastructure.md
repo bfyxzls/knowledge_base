@@ -1,6 +1,6 @@
 # 2.1 商业停车场信息访问接口
 PS:需要用admin用户获得access_token
-### 2.1.1 get接口
+## 2.1.1 get接口
 - 功能描述: 根据id查找商业停车场的信息
 - 请求地址: `http://localhost:8080/infras/businessParkingAreas/{id}?access_token`
 - 请求动作: `GET`
@@ -35,7 +35,7 @@ PS:需要用admin用户获得access_token
     }
 }
 ```
-### 2.1.2 list接口
+## 2.1.2 list接口
 - 功能描述: 查商业停车场列表信息
 - 请求地址: `http://localhost:8080/infras/businessParkingAreas?access_token`
 - 请求动作: `GET`
@@ -82,7 +82,7 @@ PS:需要用admin用户获得access_token
     }
 }
 ```
-### 2.1.3 save接口
+## 2.1.3 save接口
 - 功能描述: 添加新的商业停车场信息
 - 请求地址: `http://localhost:8080/infras/businessParkingAreas?access_token`
 - 请求动作: `POST`
@@ -139,7 +139,7 @@ PS:需要用admin用户获得access_token
     }
 }
 ```
-### 2.1.4 update接口
+## 2.1.4 update接口
 - 功能描述: 更新商业停车场信息
 - 请求地址: `http://localhost:8080/infras/businessParkingAreas/{id}?access_token`
 - 请求动作: `PUT`
@@ -196,7 +196,7 @@ PS:需要用admin用户获得access_token
     }
 }
 ```
-### 2.1.5 queryByName接口
+## 2.1.5 queryByName接口
 - 功能描述: 根据名字查询商业停车场信息
 - 请求地址: `http://localhost:8080/infras/businessParkingAreas/query?access_token&name`
 - 请求动作: `GET`
@@ -299,7 +299,7 @@ PS:需要用admin用户获得access_token
 }
 
 ```
-### 2.1.6 autoTop接口
+## 2.1.6 autoTop接口
 - 功能描述: 根据名字自动提示查询商业停车场信息
 - 请求地址: `http://localhost:8080/infras/businessParkingAreas/autoTop?access_token&name`
 - 请求动作: `GET`
@@ -384,7 +384,7 @@ PS:需要用admin用户获得access_token
     ]
 }
 ```
-### 2.1.7 queryAllCoordinates接口
+## 2.1.7 queryAllCoordinates接口
 
 - 功能描述: 获取所有商业停车场坐标信息
 
@@ -417,7 +417,7 @@ PS:需要用admin用户获得access_token
 
   ​
 
-### 2.1.8 app queryAllCoordinates接口
+## 2.1.8 app queryAllCoordinates接口
 
 - 功能描述: app端获取所有商业停车场坐标信息
 
@@ -453,7 +453,7 @@ PS:需要用admin用户获得access_token
   }
   ```
 
-### 2.1.9 queryCoordinatesByName接口
+## 2.1.9 queryCoordinatesByName接口
 
 - 功能描述: 通过名称查询商业停车场坐标信息
 
@@ -485,7 +485,7 @@ PS:需要用admin用户获得access_token
 
   ​
 
-### 2.1.10 app queryCoordinatesByName接口
+## 2.1.10 app queryCoordinatesByName接口
 
 - 功能描述: 通过名称查询商业停车场坐标信息
 
@@ -516,7 +516,7 @@ PS:需要用admin用户获得access_token
   ```
 
   ​
-### 2.1.11 app queryBusinessParkingAreaInfoById接口
+## 2.1.11 app queryBusinessParkingAreaInfoById接口
 
 - 功能描述: 通过商业停车场id查询商业停车场信息
 
@@ -547,7 +547,7 @@ PS:需要用admin用户获得access_token
      }
  }
  ```
-### 2.1.12 商业停车场唯一性验证接口 
+## 2.1.12 商业停车场唯一性验证接口 
 - 功能描述:  根据code查询停车场是否存在
 - 请求地址: `http://localhost:8080/infras/businessParkingAreas?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
 - 请求动作: `HEAD`
@@ -560,7 +560,7 @@ isExist:true    已存在
 isExist:false   不存在
 ```
 
-### 2.1.13 remainParkingNum接口
+## 2.1.13 remainParkingNum接口
 
 - 功能描述:  更新商业停车场剩余车位
 - 请求地址: `http://localhost:8080/infras/businessParkingAreas/remainParkingNum?code=0000003&remainParkingNum=10`
@@ -575,7 +575,7 @@ isExist:false   不存在
 
 # 2.2 编码类型信息访问接口
 
-### 2.2.1 get接口
+## 2.2.1 get接口
 - 功能描述: 根据id查找编码类型
 - 请求地址: `http://localhost:8080/infras/codeTypes/{id}?access_token`
 - 请求动作: `GET`
@@ -605,7 +605,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.2.2 List接口
+## 2.2.2 List接口
 - 功能描述: 查询编码类型列表信息
 - 请求地址: `http://localhost:8080/infras/codeTypes?access_token`
 - 请求动作: `GET`
@@ -763,7 +763,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.2.3 save接口
+## 2.2.3 save接口
 - 功能描述: 添加新的编码类型
 - 请求地址: `http://localhost:8080/infras/codeTypes?access_token`
 - 请求动作: `POST`
@@ -817,7 +817,7 @@ isExist:false   不存在
  }
    
 ```
-### 2.2.4 update接口
+## 2.2.4 update接口
 - 功能描述: 根据id更新编码类型信息
 - 请求地址: `http://localhost:8080/infras/codeTypes/{id}?access_token`
 - 请求动作: `put`
@@ -872,7 +872,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.2.5 queryByName接口
+## 2.2.5 queryByName接口
 - 功能描述: 根据名字查询编码类型信息
 - 请求地址: `http://localhost:8080/infras/codeTypes/query?access_token&name`
 - 请求动作: `GET`
@@ -993,6 +993,37 @@ isExist:false   不存在
 }
 
 ```
+
+## 2.2.6 app端根据反馈类型id获取反馈类型详情
+
+- 功能描述: 根据id查找编码类型
+- 请求地址: `http://localhost:8080/infras/appCodeTypes/{id}?access_token`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/infras/appCodeTypes/1009?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": 1009,
+        "name": "路段级别",
+        "codes": [
+            {
+                "id": 1022,
+                "value": "A级路段"
+            },
+            {
+                "id": 1023,
+                "value": "B级路段"
+            }
+        ],
+        "createdBy": "wyf",
+        "createdDate": 1502886018656,
+        "lastModifiedBy": "wyf",
+        "lastModifiedDate": 1504517002229
+    }
+}
+
 # 2.3 路段信息访问接口
 ### 2.3.1 get接口
 - 功能描述: 根据id，查找路段信息
@@ -1310,59 +1341,9 @@ isExist:false   不存在
   }
   ```
 
-### 2.3.8 app queryAllRoadSectionInfo接口
 
-- 功能描述: 获取所有停车场坐标和泊位信息
-
-- 请求地址: `http://localhost:8080/infras/app/roadSections?access_token`
-
-- 请求动作: `GET`
-
-- 请求示例: `http://localhost:8080/infras/app/roadSections?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
-
-- 返回示例:
-
-  ```json
-  {
-      "status": "SUCCESS",
-      "data": [
-          {
-              "id": 1022,
-              "name": "长江路",
-              "coordinates": {
-                  "type": "MultiLineString",
-                  "coordinates": [
-                      [
-                          [
-                              117.19933306810447,
-                              31.85425372612921
-                          ],
-                          [
-                              117.20415567991324,
-                              31.85509211848664
-                          ]
-                      ],
-                      [
-                          [
-                              117.20410740015097,
-                              31.855206029903528
-                          ],
-                          [
-                              117.1993223392684,
-                              31.854381308066642
-                          ]
-                      ]
-                  ]
-              },
-              "usedParkingNum": 0,
-              "totalParkingNum": 0,
-            	"unitPrice": 300
-          }
-      ]
-  }
-  ```
-
-### 2.3.9 queryRoadSectionByName接口
+# 2.3 RoadSection接口开发
+## 2.3.1 queryRoadSectionByName接口
 
 - 功能描述: 根据名字查询匹配的停车场坐标和泊位信息
 
@@ -1408,12 +1389,12 @@ isExist:false   不存在
               "parkingNum": 0,
               "name": "长江路"
           },
-          ...
+         
       ]
   }
   ```
 
-### 2.3.10 app queryRoadSectionByName接口
+## 2.3.2 app queryRoadSectionByName接口
 
 - 功能描述: app端根据名字查询匹配的停车场坐标和泊位信息
 
@@ -1463,57 +1444,9 @@ isExist:false   不存在
   }
   ```
 
-### 2.3.11 app queryRoadSectionInfoById接口
 
-- 功能描述: app端根据路段id查询路段泊位信息
 
-  - 请求地址: `http://localhost:8080/infras/app/roadSections/queryRoadSectionInfo?roadSectionId=1021&access_token`
-
-  - 请求动作: `GET`
-
-  - 请求示例: `http://localhost:8080/infras/app/roadSections/queryRoadSectionInfo?roadSectionId=1021&access_token=9d3af5fd-3e33-4d18-bafd-1317302bf826`
-
-  - 返回示例:
-
- ```
- {
-     "status": "SUCCESS",
-     "data": {
-         "id": 1030,
-         "name": "岳西路-长江西路",
-         "parkingAreaName": "潜山路-长江西路",
-         "coordinates": {
-             "type": "MultiLineString",
-             "coordinates": [
-                 [
-                     [
-                         117.19933306810447,
-                         31.85425372612921
-                     ],
-                     [
-                         117.20415567991324,
-                         31.85509211848664
-                     ]
-                 ],
-                 [
-                     [
-                         117.20410740015097,
-                         31.855206029903528
-                     ],
-                     [
-                         117.1993223392684,
-                         31.854381308066642
-                     ]
-                 ]
-             ]
-         },
-         "usedParkingNum": 12,
-         "totalParkingNum": 11
-     }
- }
- ```
-
-### 2.3.12 通过id查询匹配的路段概要信息
+## 2.3.3 通过id查询匹配的路段概要信息
 
 - 功能描述：通过id查询匹配的路段概要信息
 - 请求地址：`http://domain/infras/roadSections/{id}/generalInfo?access_token`
@@ -1532,7 +1465,7 @@ isExist:false   不存在
 }
 ```
 
-### 2.3.13 根据路段查询所有岗位
+## 2.3.4 根据路段查询所有岗位
 
 - 功能描述：根据路段查询所有岗位
 - 请求地址：`http://domain/infras/roadSections/{id}/posts?access_token`
@@ -1556,7 +1489,7 @@ isExist:false   不存在
 }
 ```
 
-### 2.3.14 按区统计泊位数
+## 2.3.5 按区统计泊位数
 
 - 功能描述：根据路段查询所有岗位
 
@@ -1589,7 +1522,7 @@ isExist:false   不存在
 
 
 
-### 2.4.1 get接口
+## 2.4.1 get接口
 - 功能描述: 根据id查询泊位信息
 - 请求地址: `http://localhost:8080/infras/parkings/{id}?access_token`
 - 请求动作: `GET`
@@ -1627,7 +1560,7 @@ isExist:false   不存在
     }
 }
 ```
-### 2.4.2 list接口
+## 2.4.2 list接口
 - 功能描述: 查找泊位信息列表
 - 请求地址: `http://localhost:8080/infras/parkings?access_token`
 - 请求动作: `GET`
@@ -1705,7 +1638,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.4.3 save接口
+## 2.4.3 save接口
 - 功能描述: 添加新的泊位信息
 - 请求地址: `http://localhost:8080/infras/parkings?access_token`
 - 请求动作: `POST`
@@ -1758,7 +1691,7 @@ isExist:false   不存在
     }
 }
 ```
-### 2.4.4 update接口
+## 2.4.4 update接口
 - 功能描述: 根据id更新泊位信息
 - 请求地址: `http://localhost:8080/infras/parkings/{id}?access_token`
 - 请求动作: `PUT`
@@ -1805,7 +1738,7 @@ isExist:false   不存在
     }
 }
 ```
-### 2.4.5 queryByCode接口
+## 2.4.5 queryByCode接口
 - 功能描述: 根据编码查询停车场信息
 - 请求地址: `http://localhost:8080/infras/parkings/query?access_token&code`
 - 请求动作: `GET`
@@ -1962,7 +1895,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.4.6 根据泊位编码查询所属岗位id
+## 2.4.6 根据泊位编码查询所属岗位id
 
 - 功能描述: 根据泊位编码查询所属岗位id
 - 请求地址: `http://localhost:8080/infras/parkings/{code}/post?access_token`
@@ -1979,7 +1912,7 @@ isExist:false   不存在
 }
 ```
 
-### 2.4.7 泊位唯一性验证接口 
+## 2.4.7 泊位唯一性验证接口 
 - 功能描述:  根据code查询泊位是否存在
 - 请求地址: `http://localhost:8080/infras/parkings?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
 - 请求动作: `HEAD`
@@ -1996,7 +1929,7 @@ isExist:false   不存在
 
 # 2.5 企业信息访问接口
 
-### 2.5.1 get接口
+## 2.5.1 get接口
 - 功能描述: 根据id查询企业信息
 - 请求地址: `http://localhost:8080/infras/enterprises/{id}?access_token`
 - 请求动作: `GET`
@@ -2027,7 +1960,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.5.2 list接口
+## 2.5.2 list接口
 - 功能描述: 查询企业信息列表
 - 请求地址: `http://localhost:8080/infras/enterprises?access_token`
 - 请求动作: `GET`
@@ -2108,7 +2041,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.5.3 save接口
+## 2.5.3 save接口
 - 功能描述: 添加新的企业信息
 - 请求地址: `http://localhost:8080/infras/enterprises?access_token`
 - 请求动作: `POST`
@@ -2155,7 +2088,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.5.4 update接口
+## 2.5.4 update接口
 - 功能描述: 根据id更新企业信息
 - 请求地址: `http://localhost:8080/infras/enterprises/{id}?access_token`
 - 请求动作: `PUT`
@@ -2203,7 +2136,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.5.5 queryByName接口
+## 2.5.5 queryByName接口
 - 功能描述: 根据名字查询企业信息
 - 请求地址: `http://localhost:8080/infras/enterprises/query?access_token&name`
 - 请求动作: `GET`
@@ -2274,7 +2207,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.5.6 autoTop接口
+## 2.5.6 autoTop接口
 - 功能描述: 根据名字查询匹配的企业信息
 - 请求地址: `http://localhost:8080/infras/enterprises/autoTop?access_token&name`
 - 请求动作: `GET`
@@ -2327,7 +2260,7 @@ isExist:false   不存在
 
 ```
 # 2.6 停车场信息访问接口
-### 2.6.1 get接口
+## 2.6.1 get接口
 - 功能描述: 根据id查找停车场信息
 - 请求地址: `http://localhost:8080/infras/parkingAreas/{id}?access_token`
 - 请求动作: `GET`
@@ -2379,7 +2312,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.6.2 list接口
+## 2.6.2 list接口
 - 功能描述: 查询停车场信息列表
 - 请求地址: `http://localhost:8080/infras/parkingAreas?access_token`
 - 请求动作: `GET`
@@ -2471,7 +2404,7 @@ isExist:false   不存在
     }
 }
 ```
-### 2.6.3 save接口
+## 2.6.3 save接口
 - 功能描述: 添加新的停车场信息
 - 请求地址: `http://localhost:8080/infras/parkingAreas?access_token`
 - 请求动作: `POST`
@@ -2514,15 +2447,25 @@ isExist:false   不存在
 }
 
 ```
-### 2.6.4 update接口
+## 2.6.4 update接口
 - 功能描述: 根据id更新停车场信息
 - 请求地址: `http://localhost:8080/infras/parkingAreas/{id}?access_token`
 - 请求动作: `PUT`
 - 请求示例: `http://localhost:8080/infras/parkingAreas/1037?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - Body:
 ```
-{  
-    "city": "北京市"  
+{               
+    "code": "700000",
+    "name": "岳东路停车场",
+    "coordinates": null,
+    "parkingPositionQuantity": 600,
+    "maintainEnterpriseId": 123,
+    "province": "安徽省",
+    "city": "合肥市",
+    "district": "蜀山区",
+    "bizParkingAreaType":2,
+    "tags":["在线缴费"], 
+    "openingHour":"7:00-22:00"      
 }
 ```
 - 返回示例
@@ -2547,7 +2490,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.6.5 queryByName接口
+## 2.6.5 queryByName接口
 - 功能描述: 根据名字查询停车场信息
 - 请求地址: `http://localhost:8080/infras/parkingAreas/query?access_token&name`
 - 请求动作: `GET`
@@ -2618,7 +2561,7 @@ isExist:false   不存在
     }
 }
 ```
-### 2.6.6 autoTop接口
+## 2.6.6 autoTop接口
 - 功能描述: 根据名字查询匹配的停车场信息
 - 请求地址: `http://localhost:8080/infras/parkingAreas/autoTop?access_token&name`
 - 请求动作: `GET`
@@ -2663,7 +2606,7 @@ isExist:false   不存在
 }
  ```
 
- ### 2.6.7 路边停车场唯一性验证接口 
+ ## 2.6.7 路边停车场唯一性验证接口 
 - 功能描述:  根据code查询路边停车场是否存在
 - 请求地址: `http://localhost:8080/infras/parkingAreas?access_token=5709e4d3-49d1-4499-89c4-76905af9e87c&code=154146`
 - 请求动作: `HEAD`
@@ -2679,7 +2622,7 @@ isExist:false   不存在
  
 
 # 2.7 岗位信息访问接口
-### 2.7.1 get接口
+## 2.7.1 get接口
 - 功能描述: 根据id查询岗位信息
 - 请求地址: `http://localhost:8080/infras/posts/{id}?access_token`
 - 请求动作: `GET`
@@ -2716,7 +2659,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.7.2 list接口
+## 2.7.2 list接口
 - 功能描述: 查询岗位信息列表
 - 请求地址: `http://localhost:8080/infras/posts?access_token`
 - 请求动作: `GET`
@@ -2815,7 +2758,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.7.3 save接口
+## 2.7.3 save接口
 - 功能描述: 添加新的岗位信息
 - 请求地址: `http://localhost:8080/infras/posts?access_token`
 - 请求动作: `POST`
@@ -2866,7 +2809,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.7.4 update接口
+## 2.7.4 update接口
 - 功能描述: 根据id更新岗位信息
 - 请求地址: `http://localhost:8080/infras/posts/{id}?access_token`
 - 请求动作: `PUT`
@@ -2914,7 +2857,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.7.5 queryByParkingAreaName接口
+## 2.7.5 queryByParkingAreaName接口
 - 功能描述: 根据路段名查询岗位信息
 - 请求地址: `http://localhost:8080/infras/posts/query?access_token&roadSectionName`
 - 请求动作: `GET`
@@ -2972,7 +2915,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.7.6 autoTop接口
+## 2.7.6 autoTop接口
 - 功能描述: 根据路段名查询岗位信息
 - 请求地址: `http://localhost:8080/infras/posts/autoTop?access_token&roadSectionName`
 - 请求动作: `GET`
@@ -3061,7 +3004,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.7.7 获取指定岗位下的所有员工信息
+## 2.7.7 获取指定岗位下的所有员工信息
 
 - 功能描述：获取指定岗位下的所有员工信息
 - 请求地址：`http://domain/infras/posts/{id}/employees?access_token`
@@ -3087,7 +3030,7 @@ isExist:false   不存在
 
 # 2.8 部门信息访问接口
 
-### 2.8.1 get接口
+## 2.8.1 get接口
 - 功能描述: 根据id查询部门信息
 - 请求地址: `http://localhost:8080/infras/depts/{id}?access_token`
 - 请求动作: `GET`
@@ -3128,7 +3071,7 @@ isExist:false   不存在
     }
 }
 ```
-### 2.8.2 list接口
+## 2.8.2 list接口
 - 功能描述: 查询部门信息列表
 - 请求地址: `http://localhost:8080/infras/depts?access_token`
 - 请求动作: `GET`
@@ -3241,7 +3184,7 @@ isExist:false   不存在
     }
 }
 ```
-### 2.8.3 save接口
+## 2.8.3 save接口
 - 功能描述: 添加新的部门信息
 - 请求地址: `http://localhost:8080/infras/depts?access_token`
 - 请求动作: `POST`
@@ -3293,7 +3236,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.8.4 update接口
+## 2.8.4 update接口
 - 功能描述: 根据id更新部门信息
 - 请求地址: `http://localhost:8080/infras/depts/{id}?access_token`
 - 请求动作: `PUT`
@@ -3345,7 +3288,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.8.5 queryByName接口
+## 2.8.5 queryByName接口
 - 功能描述: 根据部门名字查询匹配的所有部门信息
 - 请求地址: `http://localhost:8080/infras/depts/query?access_token&name`
 - 请求动作: `GET`
@@ -3408,7 +3351,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.8.6 autoTop接口
+## 2.8.6 autoTop接口
 - 功能描述: 根据部门名字自动提示匹配的部门信息
 - 请求地址: `http://localhost:8080/infras/depts/autoTop?access_token`
 - 请求动作: `GET`
@@ -3513,7 +3456,7 @@ isExist:false   不存在
 
 ```
 # 2.9 编码信息访问接口
-### 2.9.1 get接口
+## 2.9.1 get接口
 - 功能描述: 根据id查找编码与编码类型名
 - 请求地址: `http://localhost:8080/infras/dictionaries/getCodes?access_token&codeTypeId`
 - 请求动作: `GET`
@@ -3539,7 +3482,7 @@ isExist:false   不存在
 }
 ```
 # 2.10 雇员信息访问接口
-### 2.10.1 get接口
+## 2.10.1 get接口
 - 功能描述: 根据id查找雇员信息
 - 请求地址: `http://localhost:8080/infras/employees/{id}?access_token`
 - 请求动作: `GET`
@@ -3565,7 +3508,7 @@ isExist:false   不存在
     }
 }
 ```
-### 2.10.2 list接口
+## 2.10.2 list接口
 - 功能描述: 查询雇员信息列表
 - 请求地址: `http://localhost:8080/infras/employees?access_token`
 - 请求动作: `GET`
@@ -3761,7 +3704,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.10.3 save接口
+## 2.10.3 save接口
 - 功能描述: 添加新的雇员信息
 - 请求地址: `http://localhost:8080/infras/employees?access_token`
 - 请求动作: `POST`
@@ -3802,7 +3745,7 @@ isExist:false   不存在
 }
 
 ```
-### 2.10.4 update接口
+## 2.10.4 update接口
 - 功能描述: 根据id更新雇员信息
 - 请求地址: `http://localhost:8080/infras/employees/{id}?access_token`
 - 请求动作: `PUT`
@@ -3841,7 +3784,7 @@ isExist:false   不存在
     }
 }
 ```
-### 2.10.5 queryByNameAndPhoneNum接口
+## 2.10.5 queryByNameAndPhoneNum接口
 - 功能描述: 根据姓名或电话查询雇员信息
 - 请求地址: `http://localhost:8080/infras/employees/query?access_token`
          或 `http://localhost:8080/infras/employees/query?access_token&name`
@@ -3946,7 +3889,7 @@ isExist:false   不存在
 }
 ```
 
-### 2.10.6 autoTop接口
+## 2.10.6 autoTop接口
 - 功能描述: 根据员工名字自动提示匹配的员工信息
 - 请求地址: `http://localhost:8080/infras/employees/autoTop?name=123&access_token`
 - 请求动作: `GET`
@@ -4092,7 +4035,7 @@ isExist:false   不存在
 
 ```
 
-### 2.10.7 员工获取个人信息
+## 2.10.7 员工获取个人信息
 - 功能描述: 员工获取个人信息
 - 请求地址: `http://localhost:8080/infras/employees/selfInfo?access_token`
 - 请求动作: `GET`
@@ -4117,7 +4060,7 @@ isExist:false   不存在
 
 # 2.11 SIM卡信息访问接口
 
-### 2.11.1 根据id查询SIM卡信息接口
+## 2.11.1 根据id查询SIM卡信息接口
 
 - 功能描述: 根据id查询SIM卡信息
 - 请求地址: `http://localhost:8080/infras/sims/{id}?access_token`
@@ -4160,7 +4103,7 @@ isExist:false   不存在
 }
 ```
 
-### 2.11.2 查询所有SIM卡信息接口
+## 2.11.2 查询所有SIM卡信息接口
 
 - 功能描述: 查询所有SIM卡信息
 - 请求地址: `http://localhost:8080/infras/sims?access_token`
@@ -4215,7 +4158,7 @@ isExist:false   不存在
 }
 ```
 
-### 2.11.3 新增SIM卡接口
+## 2.11.3 新增SIM卡接口
 
 - 功能描述: 新增SIM卡
 - 请求地址: `http://localhost:8080/infras/sims?access_token`
@@ -4234,7 +4177,7 @@ isExist:false   不存在
 }
 ```
 
-### 2.11.4 更新SIM卡接口
+## 2.11.4 更新SIM卡接口
 
 - 功能描述: 更新SIM卡信息
 - 请求地址: `http://localhost:8080/infras/sims/{id}?access_token`
@@ -4255,7 +4198,7 @@ isExist:false   不存在
 }
 ```
 
-### 2.11.5 条件查询SIM卡接口
+## 2.11.5 条件查询SIM卡接口
 
 - 功能描述: 按iccid和SN码查询SIM卡信息
 - 请求地址: `http://localhost:8080/infras/sims/query?iccid=123&snCode=456?access_token2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
@@ -4321,7 +4264,7 @@ isExist:false   不存在
 }
 ```
 
-### 2.11.6 条件查询未关联的SIM卡
+## 2.11.6 条件查询未关联的SIM卡
 
 - 功能描述: 根据iccid模糊查询未关联的SIM卡
 - 请求地址: `http://localhost:8081/sims/unrelated?access_token=ec00544b-7c11-448c-a75e-9e22a08fc1b9&iccid=5`
@@ -4372,7 +4315,7 @@ isExist:false   不存在
 
 # 2.12 POS机信息访问接口
 
-### 2.12.1 根据id查询POS机信息接口
+## 2.12.1 根据id查询POS机信息接口
 
 - 功能描述: 根据id查询POS机信息
 - 请求地址: `http://localhost:8080/infras/poses/{id}?access_token`
@@ -4439,7 +4382,7 @@ isExist:false   不存在
 }
 ```
 
-### 2.12.2 查询所有POS机信息接口
+## 2.12.2 查询所有POS机信息接口
 
 - 功能描述: 查询所有POS机信息
 - 请求地址: `http://localhost:8080/infras/poses?access_token`
@@ -4518,7 +4461,7 @@ isExist:false   不存在
 }
 ```
 
-### 2.12.3 新增POS机接口
+## 2.12.3 新增POS机接口
 
 - 功能描述: 新增POS机
 - 请求地址: `http://localhost:8080/infras/poses?access_token`
@@ -4536,7 +4479,7 @@ isExist:false   不存在
 }
 ```
 
-### 2.12.4 更新POS机接口
+## 2.12.4 更新POS机接口
 
 - 功能描述: 更新POS机信息
 - 请求地址: `http://localhost:8080/infras/poses/{id}?access_token`
@@ -4557,7 +4500,7 @@ isExist:false   不存在
 }
 ```
 
-### 2.12.5 条件查询POS机接口
+## 2.12.5 条件查询POS机接口
 
 - 功能描述: 按Pos机编号和使用者姓名查询Pos机信息
 - 请求地址: `http://localhost:8080/infras/poses/query?code=123&employeeName=456?access_token2fbd327e-3fc9-43f9-8227-3c4f121d00ca`
@@ -4648,7 +4591,7 @@ isExist:false   不存在
 ```
 
 # 2.13 Districts信息访问接口
-### 2.13.1 查询所有的区名
+## 2.13.1 查询所有的区名
 - 功能描述: App端购买月票时显示所有的区以及其下的停车场信息
 - 请求地址: `http://localhost:8080/infras/districts?access_token`
 - 请求动作: `GET`

@@ -1039,3 +1039,22 @@ novaId: NotNull!
 }
 ```
 
+### 16.5.10 查询nova卡状态
+
+- 功能描述: 下发nova卡开关屏指令
+- 请求地址: `http://domain:8080/guidance/novas/{code}/status`
+- 请求动作: `GET`
+- 请求参数:
+    - `code`: nova卡编号
+- 请求示例: `http://localhost:8092/novas/nova20170206001/status?access_token=1c39b4c7-629b-4b07-9e06-nova20170206001`
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": {
+        "id": "68b909d0-e622-46cf-8190-f67d22f1dc3a",
+        "code": "nova20170206001",
+        "isOnline": true
+    }
+}
+```
