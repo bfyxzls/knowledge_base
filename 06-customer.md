@@ -753,11 +753,11 @@ PS:需要用admin用户获得access_token
 
 - 功能描述：分页获取车辆的欠费订单
 
-- 请求地址：`http://domain/customer/app/vehicles/{carPlate}/arrears`
+- 请求地址：`http://domain/customer/vehicles/{carPlate}/arrears`
 
 - 请求动作: `GET`
 
-- 请求示例：`http://localhost:8080/customer/app/vehicles/%e7%9a%96A12345/arrears?access_token&page&size&sort`
+- 请求示例：`http://localhost:8080/customer/vehicles/%e7%9a%96A12345/arrears?access_token&page&size&sort`
     - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
 
 - 返回示例：
@@ -792,11 +792,11 @@ PS:需要用admin用户获得access_token
 
 - 功能描述：获得车辆停车记录
 
-- 请求地址：`http://domain/customer/app/vehicles/{carPlate}/parkingRecords`
+- 请求地址：`http://domain/customer/vehicles/{carPlate}/parkingRecords`
 
 - 请求动作: `GET`
 
-- 请求示例：`http://localhost:8080/customer/app/vehicles/%e7%9a%96A12345/parkingRecords?access_token&page&size&page`
+- 请求示例：`http://localhost:8080/customer/vehicles/%e7%9a%96A12345/parkingRecords?access_token&page&size&page`
 
 - 返回示例：
 ```
@@ -833,7 +833,7 @@ PS:需要用admin用户获得access_token
 
 - 请求动作: `GET`
 
-- 请求示例：`http://localhost:8080/customer/app/vehicles/%e7%9a%96A12345/paymentRecords?access_token&page&size&sort`
+- 请求示例：`http://localhost:8080/customer/vehicles/%e7%9a%96A12345/paymentRecords?access_token&page&size&sort`
 
 - 返回示例：
 ```
@@ -872,9 +872,9 @@ PS:需要用admin用户获得access_token
 ### 6.7.4 获取欠费订单不分页接口
 
 - 功能描述：获取车辆的欠费订单列表
-- 请求地址：`http://domain/customer/app/vehicles/{carPlate}/arrearsWithOutPage`
+- 请求地址：`http://domain/customer/vehicles/{carPlate}/arrearsWithOutPage`
 - 请求动作: `GET`
-- 请求示例：`http://localhost:8080/customer/app/vehicles/%e7%9a%96A12345/arrears?access_token`
+- 请求示例：`http://localhost:8080/customer/vehicles/%e7%9a%96A12345/arrears?access_token`
   - 注意事项： 车牌中的汉字须先进行url编码后方可放入url中作参数传递
 - 返回示例：
 
