@@ -1294,11 +1294,11 @@ isExist:false   不存在
 
 - 功能描述: 获取所有停车场坐标和泊位信息
 
-- 请求地址: `http://localhost:8080/infras/roadSections/queryCoordinatesAndParkingStatus?access_token`
+- 请求地址: `http://localhost:8080/order/roadSections/queryCoordinatesAndParkingStatus?access_token`
 
 - 请求动作: `GET`
 
-- 请求示例: `http://localhost:8080/infras/roadSections/queryCoordinatesAndParkingStatus?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+- 请求示例: `http://localhost:8080/order/roadSections/queryCoordinatesAndParkingStatus?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 
 - 返回示例:
 
