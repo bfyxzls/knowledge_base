@@ -230,9 +230,9 @@
 
 ### 7.1.5 queryEmployeeAttendanceById接口
 - 功能描述: 获取员工当天签到信息
-- 请求地址: `http://domain/employee/attendanceRecords/queryEmployeeAttendanceById?access_token&employeeId=1003`
+- 请求地址: `http://domain/employee/attendanceRecords/queryEmployeeAttendanceById?access_token&d=5a613d5ebb5b901f74705977`
 - 请求动作: `Get`
-- 请求示例: `http://localhost:8080/employee/attendanceRecords/queryEmployeeAttendanceById?employeeId=1020&access_token`
+- 请求示例: `http://localhost:8080/employee/attendanceRecords/queryEmployeeAttendanceById?id=5a613d5ebb5b901f74705977&access_token`
 - 返回示例
 ```
 {
@@ -279,9 +279,9 @@
 
 ### 7.1.6 queryMotionTrailById接口
 - 功能描述: 获取指定员工当天运动轨迹信息
-- 请求地址: `http://domain/employee/attendanceRecords/queryMotionTrailById?access_token&employeeId=1003`
+- 请求地址: `http://domain/employee/attendanceRecords/queryMotionTrailById?access_token&id=5a613d5ebb5b901f74705977`
 - 请求动作: `Get`
-- 请求示例: `http://localhost:8080/employee/attendanceRecords/queryMotionTrailById?employeeId=1020&access_token`
+- 请求示例: `http://localhost:8080/employee/attendanceRecords/queryMotionTrailById?id=5a613d5ebb5b901f74705977&access_token`
 - 返回示例
 ```
 {
