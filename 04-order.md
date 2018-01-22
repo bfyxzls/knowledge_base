@@ -2084,15 +2084,18 @@ isExist:false
 }
 ```
 
-## 4.12 APP端获取所有停车场坐标和泊位信息接口
+## 4.12 app端根据中心坐标获取一定范围内的停车场
 
-- 功能描述: 获取所有停车场坐标和泊位信息
+- 功能描述: app端根据中心坐标获取一定范围内的停车场
 
 - 请求地址: `http://localhost:8080/order/app/roadSections?access_token`
 
-- 请求动作: `GET`
+- 请求动作: `POST`
 
 - 请求示例: `http://localhost:8080/order/app/roadSections?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+ ```json
+{"type":"Point", "coordinates":[117.230994,31.852322]}
+```
 
 - 返回示例:
 
@@ -2101,36 +2104,36 @@ isExist:false
       "status": "SUCCESS",
       "data": [
           {
-              "id": 1022,
-              "name": "长江路",
+              "id": 1004,
+              "name": "test",
+              "parkingAreaName": "植保路",
               "coordinates": {
-                  "type": "MultiLineString",
+                  "type": "Point",
                   "coordinates": [
-                      [
-                          [
-                              117.19933306810447,
-                              31.85425372612921
-                          ],
-                          [
-                              117.20415567991324,
-                              31.85509211848664
-                          ]
-                      ],
-                      [
-                          [
-                              117.20410740015097,
-                              31.855206029903528
-                          ],
-                          [
-                              117.1993223392684,
-                              31.854381308066642
-                          ]
-                      ]
+                      117.23099401664943,
+                      31.852322000277283
                   ]
               },
-              "usedParkingNum": 0,
-              "totalParkingNum": 0,
-            	"unitPrice": 300
+              "usedParkingNum": null,
+              "totalParkingNum": null,
+              "unitPrice": null,
+              "distance": 0
+          },
+          {
+              "id": 1000,
+              "name": "望江西路-创新大道",
+              "parkingAreaName": "植保路",
+              "coordinates": {
+                  "type": "Point",
+                  "coordinates": [
+                      117.23099401664943,
+                      31.852322000277283
+                  ]
+              },
+              "usedParkingNum": null,
+              "totalParkingNum": null,
+              "unitPrice": null,
+              "distance": 0
           }
       ]
   }

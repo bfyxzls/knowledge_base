@@ -417,7 +417,7 @@ PS:需要用admin用户获得access_token
 
   ​
 
-## 2.1.8 app queryAllCoordinates接口
+## 2.1.8 app queryAllCoordinates接口(作废)
 
 - 功能描述: app端获取所有商业停车场坐标信息
 
