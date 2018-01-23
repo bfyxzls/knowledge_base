@@ -334,6 +334,98 @@ isExist:false   不存在
 }
 
 
+### 16.1.10 
+- 功能描述： app端根据中心坐标获取一定范围内的停车场
+- 请求地址: `http://domain/guidance/app/bizParkingAreas?access_token=ba7901a0-e3c1-44ca-96c5-b2dddd6da3e1`
+- 请求动作: `POST`
+- 请求示例: `http://domain/guidance/app/bizParkingAreas?access_token=ba7901a0-e3c1-44ca-96c5-b2dddd6da3e1`
+```json
+{"type":"Point", "coordinates":[12,67.0001]}
+```
+- 返回示例：
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 139,
+            "name": "测试停车场3",
+            "address": "潜山路",
+            "distance": 10,
+            "unitPrice": 3,
+            "remainParkingNum": null,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12,
+                    67
+                ]
+            }
+        },
+        {
+            "id": 140,
+            "name": "测试停车场3",
+            "address": "潜山路",
+            "distance": 10,
+            "unitPrice": 3,
+            "remainParkingNum": null,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12,
+                    67
+                ]
+            }
+        },
+        {
+            "id": 112,
+            "name": "修改后测试停车场88888",
+            "address": "潜山路",
+            "distance": 10,
+            "unitPrice": 10,
+            "remainParkingNum": null,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12,
+                    67
+                ]
+            }
+        },
+        {
+            "id": 162,
+            "name": "二级诱导屏天河河大厦",
+            "address": "潜山路",
+            "distance": 10,
+            "unitPrice": 0,
+            "remainParkingNum": null,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12,
+                    67
+                ]
+            }
+        },
+        {
+            "id": 137,
+            "name": "测试停车场2",
+            "address": "潜山路",
+            "distance": 10,
+            "unitPrice": 3,
+            "remainParkingNum": 105,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12,
+                    67
+                ]
+            }
+        }
+    ]
+}
+```
+
 
 ## 16.2 诱导预案访问接口
 
