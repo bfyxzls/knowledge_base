@@ -2107,7 +2107,7 @@ isExist:false
               "id": 1034,
               "name": "潜山路-长江西路3",
               "parkingAreaName": "长江西路",
-              "closestCoordinates": {
+              "geometry": {
                   "type": "Point",
                   "coordinates": [
                       117.226823,
@@ -2138,7 +2138,7 @@ isExist:false
               "id": 1035,
               "name": "潜山路-长江西路4",
               "parkingAreaName": "长江西路",
-              "closestCoordinates": {
+              "geometry": {
                   "type": "Point",
                   "coordinates": [
                       117.226823,
