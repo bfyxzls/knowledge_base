@@ -4168,12 +4168,11 @@ isExist:false   不存在
 ```
 {
 	"iccid":"12397183091",
-	"operator_type":1079,
-	"equipment_type":1080,
-	"dept":{
-		"id":1007
-	},
-	"status":1072
+	"operator":1079,
+	"phoneNum":"11111111111",
+	"snCode":"1",
+	"deptId":1014,
+	"remark":
 }
 ```
 
