@@ -2104,36 +2104,66 @@ isExist:false
       "status": "SUCCESS",
       "data": [
           {
-              "id": 1004,
-              "name": "test",
-              "parkingAreaName": "植保路",
-              "coordinates": {
+              "id": 1034,
+              "name": "潜山路-长江西路3",
+              "parkingAreaName": "长江西路",
+              "closestCoordinates": {
                   "type": "Point",
                   "coordinates": [
-                      117.23099401664943,
-                      31.852322000277283
+                      117.226823,
+                      31.853645
+                  ]
+              },
+              "coordinates": {
+                  "type": "MultiLineString",
+                  "coordinates": [
+                      [
+                          [
+                              117.221674,
+                              31.855322
+                          ],
+                          [
+                              117.226823,
+                              31.853645
+                          ]
+                      ]
                   ]
               },
               "usedParkingNum": null,
-              "totalParkingNum": null,
-              "unitPrice": null,
-              "distance": 0
+              "totalParkingNum": 0,
+              "unitPrice": 100,
+              "distance": 437
           },
           {
-              "id": 1000,
-              "name": "望江西路-创新大道",
-              "parkingAreaName": "植保路",
-              "coordinates": {
+              "id": 1035,
+              "name": "潜山路-长江西路4",
+              "parkingAreaName": "长江西路",
+              "closestCoordinates": {
                   "type": "Point",
                   "coordinates": [
-                      117.23099401664943,
-                      31.852322000277283
+                      117.226823,
+                      31.853645
+                  ]
+              },
+              "coordinates": {
+                  "type": "MultiLineString",
+                  "coordinates": [
+                      [
+                          [
+                              117.221674,
+                              31.855322
+                          ],
+                          [
+                              117.226823,
+                              31.853645
+                          ]
+                      ]
                   ]
               },
               "usedParkingNum": null,
-              "totalParkingNum": null,
-              "unitPrice": null,
-              "distance": 0
+              "totalParkingNum": 0,
+              "unitPrice": 100,
+              "distance": 437
           }
       ]
   }
