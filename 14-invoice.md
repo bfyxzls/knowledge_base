@@ -568,11 +568,13 @@
 ```
 开票成功
 {
-    "status": "SUCCESS"
+    "status": "SUCCESS",
+    "data":"开票成功"
 }
 开票失败
 {
-    "status": "FAILURE"
+    "status": "FAILURE",
+    "error":"开票失败"
 }
 ```
 
