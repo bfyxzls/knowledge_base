@@ -2623,55 +2623,44 @@ isExist:false   不存在
 ## 2.6.8 app端查看停车场详情
 
 - 功能描述: app端根据id查找停车场信息
-- 请求地址: `http://localhost:8080/infras/app/parkingAreas/{id}?access_token`
+- 请求地址: `http://localhost:8080/infras/app/roadSections/{id}?access_token`
 - 请求动作: `GET`
-- 请求示例: `http://localhost:8080/infras/app/parkingAreas/1037?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
+- 请求示例: `http://localhost:8080/infras/app/roadSections/1029?access_token=f1235ff1-521b-4ec3-add0-6c7c894ec4ee`
 - 返回示例:
 ```
 {
     "status": "SUCCESS",
     "data": {
-        "id": 1037,
-        "code": "700000",
-        "name": "岳西路停车场",
-        "coordinates": null,
-        "parkingPositionQuantity": 600,
-        "maintainEnterprise": null,
-        "province": "安徽省",
-        "city": "合肥市",
-        "district": "蜀山区",
-         "bizParkingAreaType":2,
-         "tags":["在线缴费"], 
-         "openingHour":"7:00-22:00",
-          "bizParkingAreaChargeDtos": [
-                     {
-                         "fee": 0,
-                         "hour": "15分钟"
-                     },
-                     {
-                         "fee": 5,
-                         "hour": "1小时"
-                     },
-                     {
-                         "fee": 7,
-                         "hour": "3小时"
-                     },
-                     {
-                         "fee": 9,
-                         "hour": "5小时"
-                     },
-                     {
-                         "fee": 10,
-                         "hour": "封顶"
-                     }
-                 ]   
-        "createdBy": "wyf",
-        "createdDate": 1502886018656,
-        "lastModifiedBy": "wyf",
-        "lastModifiedDate": 1504517002229
+        "name": "塔山路-周瑜大道",
+        "unitPrice": 300,
+        "parkingAreaName": "越城路",
+        "bizParkingAreaType": null,
+        "tags": null,
+        "openingHour": null,
+        "bizParkingAreaChargeDtos": [
+            {
+                "fee": 0,
+                "hour": "15分钟"
+            },
+            {
+                "fee": 5,
+                "hour": "1小时"
+            },
+            {
+                "fee": 7,
+                "hour": "3小时"
+            },
+            {
+                "fee": 9,
+                "hour": "5小时"
+            },
+            {
+                "fee": 10,
+                "hour": "封顶"
+            }
+        ]
     }
 }
-
 
 
 # 2.7 岗位信息访问接口
