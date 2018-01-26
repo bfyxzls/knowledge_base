@@ -547,7 +547,7 @@
 - 功能描述:  停车订单便捷开发票接口
 - 请求地址: `http://domain/customer/invoices/convenience`
 - 请求动作: `POST`
-- 请求示例: `http://domain/customer/invoices/convenience?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 请求示例: `http://domain/customer/invoices/convenience`
 
 - 请求数据示例  
 ```
