@@ -547,18 +547,19 @@
 - 功能描述:  停车订单便捷开发票接口
 - 请求地址: `http://domain/customer/invoices/convenience`
 - 请求动作: `POST`
-- 请求示例: `http://domain/customer/invoices/convenience?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 请求示例: `http://domain/customer/invoices/convenience`
 
 - 请求数据示例  
 ```
 {
-    "districtId": 1001,
     "ids":[
         "444144404440444044404440444344414447"
     ],
     "title":"abc",
     "mail":"123@qq.com",
-    "type":"1"
+    "type":"1",
+    "phoneNum":"15755551111",
+    "code":"123124"
 }
 
 ```
@@ -569,13 +570,23 @@
 开票成功
 {
     "status": "SUCCESS",
-    "data":"开票成功"
+    "data":"发票开具成功"
 }
 开票失败
 {
-    "status": "FAILURE",
-    "error":"开票失败"
-}
+     "status": "FAILURE",
+     "error":"发票开具失败，该订单已开具发票"
+ }
+ 订单不存在
+ {
+     "status": "FAILURE",
+     "error":"该订单不存在"
+ }
+ 验证码错误
+ {
+     "status": "FAILURE",
+     "error":"验证码错误"
+ }
 ```
 
 ### 14.3.10 获取发票下月票信息接口
@@ -627,6 +638,21 @@
             "name": "庐阳区"
         }
     ]
+}
+```
+
+### 14.3.12 便捷开发票获取验证码接口
+
+- 功能描述:  便捷开发票获取验证码
+- 请求地址: `http://domain/customer/invoices/getCode?phoneNum`
+- 请求动作: `GET`
+- 请求示例: `http://domain/customer/invoices/getCode?phoneNum=15755551111`
+
+- 返回数据示例  
+```
+{
+    "status": "SUCCESS",
+    "data": "验证码发送成功"
 }
 ```
 
