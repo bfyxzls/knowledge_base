@@ -2813,10 +2813,7 @@ isExist:false   不存在
     "coordinates": null,
     "parkingType": 2,
     "parkingDistribution": 1,
-    "roadSection": {
-        "id": 1020
-    },
-    "employees": []
+    "roadSectionId": 1001
 }
 ```
 - 返回示例:
@@ -3757,12 +3754,17 @@ isExist:false   不存在
     "id": 1005,
     "name": "小六",
     "gender": 2,
-    "dept": null,
+    "dept": {               //打星
+        "id":1001
+    },
+    
     "position": null,
     "positionText": null,
     "phoneNum": null,
     "sort": null,
-    "defaultPost": null,  
+    "defaultPost": {           //打星
+        "id":1001
+    },  
 }
 ```
 - 返回示例
@@ -3797,11 +3799,11 @@ isExist:false   不存在
 {
     "name": "123",
     "gender": 1,
-    "deptId": 2,
+    "deptId": 2,          //打星
     "position": 1005,
     "phoneNum": "小吧",
     "sort": 2,
-    "defaultPostId": 2   
+    "defaultPostId": 2     //打星
 }
 
 ```
