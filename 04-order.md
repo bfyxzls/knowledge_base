@@ -177,7 +177,8 @@
                 “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
-                "parkingId": 1017
+                "parkingId": 1017,
+                "couponFee": 1              //打星
             },
             {
                 "id": 10000107,
@@ -186,7 +187,8 @@
                 “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
-                "parkingId": 1017
+                "parkingId": 1017,
+                "couponFee": 1              //打星
             },
             {
                 "id": 10000109,
@@ -195,7 +197,8 @@
                 “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
-                "parkingId": 1017
+                "parkingId": 1017,
+                "couponFee": 1              //打星
             },
             {
                 "id": 10000111,
@@ -204,7 +207,8 @@
                 “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
-                "parkingId": 1017
+                "parkingId": 1017,
+                "couponFee": 1              //打星
             },
             {
                 "id": 10000089,
@@ -213,7 +217,8 @@
                 “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
-                "parkingId": 1017
+                "parkingId": 1017,
+                "couponFee": 1              //打星
             }
         ]
     }
