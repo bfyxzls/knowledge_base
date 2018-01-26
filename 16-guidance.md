@@ -75,7 +75,8 @@
     "city":"",
     "isOwnBusiness":false,
     "unitPrice":0,
-    "tags":[]
+    "tags":[],
+    "bizParkingAreaType":1
 }
 ```
 
