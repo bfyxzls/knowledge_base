@@ -2813,10 +2813,7 @@ isExist:false   不存在
     "coordinates": null,
     "parkingType": 2,
     "parkingDistribution": 1,
-    "roadSection": {
-        "id": 1020
-    },
-    "employees": []
+    "roadSectionId": 1001
 }
 ```
 - 返回示例:
