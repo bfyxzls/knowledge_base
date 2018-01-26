@@ -641,6 +641,21 @@
 }
 ```
 
+### 14.3.12 便捷开发票获取验证码接口
+
+- 功能描述:  便捷开发票获取验证码
+- 请求地址: `http://domain/customer/invoices/getCode?phoneNum`
+- 请求动作: `GET`
+- 请求示例: `http://domain/customer/invoices/getCode?phoneNum=15755551111`
+
+- 返回数据示例  
+```
+{
+    "status": "SUCCESS",
+    "data": "验证码发送成功"
+}
+```
+
 ## 14.4 Web端发票信息访问接口
 
 ### 14.4.1 Web端发票列表接口
