@@ -288,9 +288,9 @@ isExist:false   不存在
 ### 16.1.9 app端获取商业停车场信息
 
 - 功能描述:  app端获取停车场信息
-- 请求地址: `http://domain/guidance//app/bizParkingAreas/{id}`
+- 请求地址: `http://domain/guidance/app/bizParkingAreas/{id}`
 - 请求动作: `GET`
-- 请求示例: `http://domain/guidance//app/bizParkingAreas/112?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
+- 请求示例: `http://domain/guidance/app/bizParkingAreas/112?access_token=ef277fdb-6e80-433d-9155-9e6b58fa4e07`
 - 返回示例：
 
 
