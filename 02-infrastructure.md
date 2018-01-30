@@ -1117,7 +1117,8 @@ isExist:false   不存在
     "unitPrice":1,
     "monthBillNum":10,
     "monthBillPrice":100,
-    "parkingAreaId":1
+    "parkingAreaId":1,
+    "district": "蜀山区"
 }
        
 ```
