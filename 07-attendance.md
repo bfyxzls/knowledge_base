@@ -338,7 +338,7 @@
 - 功能描述: 上传运动轨迹
 - 请求地址: `http://domain/employee/attendanceRecords/uploadMotionTrail?access_token=token`
 - 请求动作: `PUT`
-- 请求示例: `http://localhost:8080/attendance/attendanceRecords/uploadMotionTrail?access_token=85221cc0-9837-45b9-bb72-29e7af104de1`
+- 请求示例: `http://localhost:8080/employee/attendanceRecords/uploadMotionTrail?access_token=85221cc0-9837-45b9-bb72-29e7af104de1`
 - 请求实体：PS:除了checkTime，其余的属性都需要前台传过来
 ```$xslt
 {
