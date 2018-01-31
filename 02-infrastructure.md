@@ -1023,8 +1023,9 @@ isExist:false   不存在
         "lastModifiedDate": 1504517002229
     }
 }
+```
+# 2.3 RoadSection路段信息访问接口
 
-# 2.3 路段信息访问接口
 ### 2.3.1 get接口
 - 功能描述: 根据id，查找路段信息
 - 请求地址: `http://localhost:8080/infras/roadSections/{id}?access_token`
@@ -1046,7 +1047,8 @@ isExist:false   不存在
         "createdBy": "wyf",
         "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": 1504517002229
+        "lastModifiedDate": 1504517002229,
+        "tags":[]
     }
 }
 
@@ -1074,7 +1076,8 @@ isExist:false   不存在
                 "createdBy": "wyf",
                 "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": 1504517002229
+                "lastModifiedDate": 1504517002229,
+                 "tags":[]
             },
             {
                 "id": 1021,
@@ -1088,7 +1091,8 @@ isExist:false   不存在
                 "createdBy": "wyf",
                 "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": 1504517002229
+                "lastModifiedDate": 1504517002229,
+                 "tags":[]
             }
         ],
         "last": true,
@@ -1118,7 +1122,8 @@ isExist:false   不存在
     "monthBillNum":10,
     "monthBillPrice":100,
     "parkingAreaId":1,
-    "district": "蜀山区"
+    "district": "蜀山区",
+     "tags":[]
 }
        
 ```
@@ -1139,7 +1144,8 @@ isExist:false   不存在
         "createdBy": "wyf",
         "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
-        "lastModifiedDate": 1504517002229
+        "lastModifiedDate": 1504517002229,
+         "tags":[]
     }
 }
 ```
@@ -1164,7 +1170,8 @@ isExist:false   不存在
     "parkingAreaId":123,
     "unitPrice": 300,
     "monthBillNum":100,
-    "monthBillPrice":100
+    "monthBillPrice":100,
+     "tags":[]
               
 }
 ```
@@ -1212,7 +1219,8 @@ isExist:false   不存在
                 "createdBy": "wyf",
                 "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
-                "lastModifiedDate": 1504517002229
+                "lastModifiedDate": 1504517002229,
+                 "tags":[]
             }
         ],
         "last": true,
@@ -2281,7 +2289,6 @@ isExist:false   不存在
         "city": "合肥市",
         "district": "蜀山区",
          "bizParkingAreaType":2,
-         "tags":["在线缴费"], 
          "openingHour":"7:00-22:00",
           "bizParkingAreaChargeDtos": [
                      {
@@ -2422,7 +2429,6 @@ isExist:false   不存在
     "city": "合肥市",
     "district": "蜀山区",
     "bizParkingAreaType":2,
-    "tags":["在线缴费"], 
     "openingHour":"7:00-22:00"      
 }
 ```
@@ -2465,7 +2471,6 @@ isExist:false   不存在
     "city": "合肥市",
     "district": "蜀山区",
     "bizParkingAreaType":2,
-    "tags":["在线缴费"], 
     "openingHour":"7:00-22:00"      
 }
 ```
@@ -2636,7 +2641,6 @@ isExist:false   不存在
         "unitPrice": 300,
         "parkingAreaName": "越城路",
         "bizParkingAreaType": null,
-        "tags": null,
         "openingHour": null,
         "bizParkingAreaChargeDtos": [
             {
