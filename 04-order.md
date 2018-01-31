@@ -177,7 +177,8 @@
                 “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
-                "parkingId": 1017
+                "parkingId": 1017,
+                "couponFee": 1              //打星
             },
             {
                 "id": 10000107,
@@ -186,7 +187,8 @@
                 “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
-                "parkingId": 1017
+                "parkingId": 1017,
+                "couponFee": 1              //打星
             },
             {
                 "id": 10000109,
@@ -195,7 +197,8 @@
                 “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
-                "parkingId": 1017
+                "parkingId": 1017,
+                "couponFee": 1              //打星
             },
             {
                 "id": 10000111,
@@ -204,7 +207,8 @@
                 “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
-                "parkingId": 1017
+                "parkingId": 1017,
+                "couponFee": 1              //打星
             },
             {
                 "id": 10000089,
@@ -213,7 +217,8 @@
                 “vehicleType”: "01",
                 "chargingStrategy": 1,
                 "parkingCode": "154140",
-                "parkingId": 1017
+                "parkingId": 1017,
+                "couponFee": 1              //打星
             }
         ]
     }
@@ -886,6 +891,109 @@
       }
   }
   ```
+  
+### 4.3.6 countTodayOrderNumGroupByDistrict接口
+
+- 功能描述：按区统计今日订单数量
+
+- 请求地址：`http://domain/order/stats/countTodayOrderNumGroupByDistrict?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/order/stats/countTodayOrderNumGroupByDistrict?access_token=35b95947-6e0c-4291-964c-75af974fcd44`
+
+- 返回示例：
+
+```JSON
+
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "district": "蜀山区",
+            "num": 4
+        },
+        {
+            "district": "庐阳区",
+            "num": 1
+        },
+        {
+            "district": "高新区",
+            "num": 1
+        }
+    ]
+}
+  
+```
+
+### 4.3.7 countTodayRealIncome接口
+
+- 功能描述：统计今日实收金额
+
+- 请求地址：`http://domain/order/stats/countTodayRealIncome?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/order/stats/countTodayRealIncome?access_token=35b95947-6e0c-4291-964c-75af974fcd44`
+
+- 返回示例：
+
+```JSON
+
+{
+    "status": "SUCCESS",
+    "data": {
+        "realIncome": 1001
+    }
+}
+  
+```
+
+### 4.3.8 countTodayArrears接口
+
+- 功能描述：统计今日欠费金额
+
+- 请求地址：`http://domain/order/stats/countTodayArrears?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/order/stats/countTodayArrears?access_token=35b95947-6e0c-4291-964c-75af974fcd44`
+
+- 返回示例：
+
+```JSON
+
+{
+    "status": "SUCCESS",
+    "data": {
+        "arrears": 400
+    }
+}
+  
+```
+
+### 4.3.9 countTodayCouponFee接口
+
+- 功能描述：统计今日优惠金额
+
+- 请求地址：`http://domain/order/stats/countTodayCouponFee?access_token`
+
+- 请求动作: `GET`
+
+- 请求示例：`http://localhost:8080/order/stats/countTodayCouponFee?access_token=35b95947-6e0c-4291-964c-75af974fcd44`
+
+- 返回示例：
+
+```JSON
+
+{
+    "status": "SUCCESS",
+    "data": {
+        "couponFee": 30
+    }
+}
+  
+```
 
 
 ## 4.4 车辆信息接口（VehicleController）
@@ -1411,6 +1519,7 @@ isExist:false
   {
     "orderId":1,
     "fee":1,
+    "calculatedFee":1,      //打星
     "couponId":"8f86bfd2-4c12-41b3-a781-d739e8982b24"
   }
 ```
