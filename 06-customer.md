@@ -847,7 +847,7 @@ PS:需要用admin用户获得access_token
                 "completeDate": "2017-08-03 17:26:49",
                 "fee": 222,
                 "period": 8770,
-                "appPayTypes": [
+                "payTypes": [
                     {
                         "fee": 222,
                         "payType": 4,
