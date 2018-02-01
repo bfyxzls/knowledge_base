@@ -186,14 +186,8 @@
             "numOfArrears": 0,
             "numOfOnParking": 2,
             "parkingOrderIdsToBePaid": [
-                {
-                    "id": 10000004,
-                    "status": 7
-                },
-                {
-                    "id": 10000006,
-                    "status": 1
-                }
+                10000004,
+                10000006,
             ]
         }
     ]
