@@ -1721,75 +1721,54 @@ sort=type,DESC 按照优惠券类型降序排序
     "data": {
         "content": [
             {
-                "id": "0957bab8-5449-4e4e-8133-3dc153b722ae",
-                "activityName": "圣诞优惠",
+                "id": "5a694f5f3536bc1d10ade964",
+                "activityName": "测试活动",
                 "template": {
-                    "validStartDate": 1511231430000,
-                    "validEndDate": 1511490630000,
+                    "validStartDate": "2017-11-21 19:30:30",
+                    "validEndDate": "2018-11-24 12:30:30",
                     "roadSections": [
                         {
-                            "id": 1003,
-                            "name": "1003路段"
+                            "id": 1001,
+                            "name": "植保路"
                         },
                         {
                             "id": 1002,
-                            "name": "1002路段"
+                            "name": "长江路"
                         }
                     ],
                     "isWholeRoadSection": false
                 },
                 "rule": {
-                    "type": "4",
-                    "discountAmount": 1000,
-                    "generateNum": 5,
+                    "type": 1,
+                    "freeHours": 2,
+                    "generateNum": 2,
                     "maxNum": 2
                 },
-                "status": 2
+                "status": 1
+            }
+        ],
+        "pageable": {
+            "sort": {
+                "sorted": false,
+                "unsorted": true
             },
-            {
-                "id": "408edc56-75c1-4efa-ac04-438403af5a0a",
-                "activityName": "圣诞优惠",
-                "template": {
-                    "validStartDate": 1511231430000,
-                    "validEndDate": 1511490630000,
-                    "roadSections": [
-                        {
-                            "id": 1003,
-                            "name": "1003路段"
-                        },
-                        {
-                            "id": 1002,
-                            "name": "1002路段"
-                        }
-                    ],
-                    "isWholeRoadSection": false
-                },
-                "rule": {
-                    "type": "4",
-                    "discountAmount": 500,
-                    "generateNum": 5,
-                    "maxNum": 1
-                },
-                "status": 2
-            }
-        ],
-        "totalElements": 37,
-        "totalPages": 19,
-        "last": false,
-        "number": 1,
-        "size": 2,
-        "sort": [
-            {
-                "direction": "DESC",
-                "property": "type",
-                "ignoreCase": false,
-                "nullHandling": "NATIVE",
-                "ascending": false,
-                "descending": true
-            }
-        ],
-        "first": false,
-        "numberOfElements": 2
+            "offset": 0,
+            "pageSize": 20,
+            "pageNumber": 0,
+            "unpaged": false,
+            "paged": true
+        },
+        "totalElements": 1,
+        "last": true,
+        "totalPages": 1,
+        "size": 20,
+        "number": 0,
+        "sort": {
+            "sorted": false,
+            "unsorted": true
+        },
+        "numberOfElements": 1,
+        "first": true
     }
 }
 ```
