@@ -736,7 +736,8 @@
         "parkingAreaName": "岳西路停车场",
         "vehicleType": "02",
         "chargingStrategyId": 1000,
-        "createdDate": "2017-08-10 14:50:32"
+        "createdDate": "2017-08-10 14:50:32",
+        "status":1
     }
 }
 ```
