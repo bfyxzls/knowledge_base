@@ -382,6 +382,7 @@
                 "carPlate": "皖A12345",
                 "parkingCode": "154140",
                 "roadSectionName": "岳西路-长江西路",
+                "parkingAreaName": "长江西路",
                 "district": "蜀山区",
                 "driveInTime": "2017-08-01 19:23:01",
                 "driveOutTime": "2017-08-02 15:13:14",
