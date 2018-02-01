@@ -176,89 +176,24 @@
     "status": "SUCCESS",
     "data": [
         {
-            "carPlate": "皖A12345",
-            "numOfArrears": 0,
-            "numOfOnParking": 34,
-            "parkingOrderIdsToBePaid": [
-                10000458,
-                10000457,
-                10000330,
-                10000399,
-                10000400,
-                10000401,
-                10000403,
-                10000404,
-                10000405,
-                10000406,
-                10000407,
-                10000421,
-                10000428,
-                10000429,
-                10000430,
-                10000431,
-                10000434,
-                10000424,
-                10000432,
-                10000433,
-                10000435,
-                10000282,
-                10000277,
-                10000286,
-                10000306,
-                10000298,
-                10000299,
-                10000284,
-                10000423,
-                10000426,
-                10000419,
-                10000422,
-                10000427,
-                10000425
-            ]
-        },
-        {
-            "carPlate": "赣HHHUHH",
+            "carPlate": "皖A13265",
             "numOfArrears": 0,
             "numOfOnParking": 0,
             "parkingOrderIdsToBePaid": []
         },
         {
-            "carPlate": "闽YYJVVU",
+            "carPlate": "苏C4192K",
             "numOfArrears": 0,
-            "numOfOnParking": 0,
-            "parkingOrderIdsToBePaid": []
-        },
-        {
-            "carPlate": "青GGHUHJ",
-            "numOfArrears": 0,
-            "numOfOnParking": 0,
-            "parkingOrderIdsToBePaid": []
-        },
-        {
-            "carPlate": "辽RYYYYU",
-            "numOfArrears": 0,
-            "numOfOnParking": 0,
-            "parkingOrderIdsToBePaid": []
-        },
-        {
-            "carPlate": "闽HHKHGH",
-            "numOfArrears": 0,
-            "numOfOnParking": 0,
-            "parkingOrderIdsToBePaid": []
-        },
-        {
-            "carPlate": "皖A58881",
-            "numOfArrears": 1,
-            "numOfOnParking": 0,
-            "parkingOrderIdsToBePaid": []
-        },
-        {
-            "carPlate": "皖A58883",
-            "numOfArrears": 1,
             "numOfOnParking": 2,
             "parkingOrderIdsToBePaid": [
-                10000347,
-                10000397
+                {
+                    "id": 10000004,
+                    "status": 7
+                },
+                {
+                    "id": 10000006,
+                    "status": 1
+                }
             ]
         }
     ]
