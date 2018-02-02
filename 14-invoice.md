@@ -773,10 +773,14 @@
         "invoiceMonthBills": [
             {
                 "customerCarPlateame": null,
-                                                             "status": 2,": "皖A10101",
+                "status": 2,": "皖A10101",
                 "customerPhoneNum": "18505652621",
-                "roadSectionIds": [
-                    1040
+                "roadSectionDetails": [
+                    {
+                        "id": 1019,
+                        "roadSectionName": "潜山路-长江西路",
+                        "parkingAreaName": "植保路"
+                    }
                 ],
                 "startMonth": "2018-1-1 00:00:00"
                 "endMonth": "2018-1-1 00:00:00",
