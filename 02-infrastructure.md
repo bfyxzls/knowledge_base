@@ -1099,63 +1099,15 @@ isExist:false   不存在
     "data": {
         "content": [
             {
-                "id": 1019,
-                "name": "潜山路-长江西路",
-                "level": 1004,
-                "levelText": "B级路段",
-                "coordinates": {
-                    "type": "MultiLineString",
-                    "coordinates": [
-                        [
-                            [
-                                117.234478,
-                                31.851152
-                            ],
-                            [
-                                117.235073,
-                                31.848532
-                            ],
-                            [
-                                117.235084,
-                                31.848254
-                            ],
-                            [
-                                117.23495,
-                                31.848031
-                            ],
-                            [
-                                117.234231,
-                                31.847552
-                            ],
-                            [
-                                117.232831,
-                                31.847051
-                            ],
-                            [
-                                117.231367,
-                                31.847147
-                            ]
-                        ]
-                    ]
-                },
-                "parkingNum": 104,
-                "unitPrice": 400,
-                "monthBillNum": null,
-                "monthBillPrice": null,
-                "parkingAreaId": 1029,
-                "parkingAreaName": "植保路",
-                "tags": null,
-                "roadSectionType": null
-            },
-            {
-                "id": 1020,
-                "name": "潜山路-长江西路2",
+                "id": 1040,
+                "name": "潜山路-长江西路8",
                 "level": 1004,
                 "levelText": "B级路段",
                 "coordinates": null,
-                "parkingNum": 2,
-                "unitPrice": 400,
+                "parkingNum": 0,
+                "unitPrice": 100,
                 "monthBillNum": 1,
+                "district": "蜀山区",
                 "monthBillPrice": 100,
                 "parkingAreaId": 1029,
                 "parkingAreaName": "植保路",
@@ -1184,100 +1136,27 @@ isExist:false   不存在
                 },
                 "parkingNum": 0,
                 "unitPrice": 500,
-                "monthBillNum": null,
-                "monthBillPrice": null,
+                "monthBillNum": 1,
+                "district": "蜀山区",
+                "monthBillPrice": 100,
                 "parkingAreaId": 1029,
                 "parkingAreaName": "植保路",
                 "tags": null,
                 "roadSectionType": null
             },
             {
-                "id": 1025,
-                "name": "黄山路-移湖路",
-                "level": 1006,
-                "levelText": "C级路段",
+                "id": 1020,
+                "name": "潜山路-长江西路2",
+                "level": 1004,
+                "levelText": "B级路段",
                 "coordinates": null,
-                "parkingNum": 0,
-                "unitPrice": 300,
-                "monthBillNum": null,
-                "monthBillPrice": null,
-                "parkingAreaId": 1031,
-                "parkingAreaName": "塔山路",
-                "tags": null,
-                "roadSectionType": null
-            },
-            {
-                "id": 1026,
-                "name": "周瑜大道-塔山路",
-                "level": 1006,
-                "levelText": "C级路段",
-                "coordinates": null,
-                "parkingNum": 0,
-                "unitPrice": 300,
-                "monthBillNum": null,
-                "monthBillPrice": null,
-                "parkingAreaId": 1033,
-                "parkingAreaName": "黄山路",
-                "tags": null,
-                "roadSectionType": null
-            },
-            {
-                "id": 1027,
-                "name": "周瑜大道-文昌路",
-                "level": 1006,
-                "levelText": "C级路段",
-                "coordinates": null,
-                "parkingNum": 0,
-                "unitPrice": 300,
-                "monthBillNum": null,
-                "monthBillPrice": null,
-                "parkingAreaId": 1032,
-                "parkingAreaName": "越城路",
-                "tags": null,
-                "roadSectionType": null
-            },
-            {
-                "id": 1028,
-                "name": "越城路-文明路",
-                "level": 1006,
-                "levelText": "C级路段",
-                "coordinates": null,
-                "parkingNum": 0,
-                "unitPrice": 300,
-                "monthBillNum": null,
-                "monthBillPrice": null,
-                "parkingAreaId": 1031,
-                "parkingAreaName": "塔山路",
-                "tags": null,
-                "roadSectionType": null
-            },
-            {
-                "id": 1029,
-                "name": "塔山路-周瑜大道",
-                "level": 1006,
-                "levelText": "C级路段",
-                "coordinates": null,
-                "parkingNum": 0,
-                "unitPrice": 300,
-                "monthBillNum": null,
-                "monthBillPrice": null,
-                "parkingAreaId": 1032,
-                "parkingAreaName": "越城路",
-                "tags": null,
-                "roadSectionType": null
-            },
-            {
-                "id": 1030,
-                "name": "黄山路-越城路",
-                "level": 1006,
-                "levelText": "C级路段",
-                "coordinates": null,
-                "parkingNum": 0,
-                "unitPrice": 300,
-                "monthBillNum": null,
-                "monthBillPrice": null,
-                "parkingAreaId": 1031,
-                "parkingAreaName": "塔山路",
+                "parkingNum": 2,
+                "unitPrice": 400,
+                "monthBillNum": 1,
+                "district": "蜀山区",
+                "monthBillPrice": 100,
+                "parkingAreaId": 1029,
+                "parkingAreaName": "植保路",
                 "tags": null,
                 "roadSectionType": null
             },
@@ -1290,83 +1169,7 @@ isExist:false   不存在
                 "parkingNum": 0,
                 "unitPrice": 100,
                 "monthBillNum": 1,
-                "monthBillPrice": 100,
-                "parkingAreaId": 1029,
-                "parkingAreaName": "植保路",
-                "tags": null,
-                "roadSectionType": null
-            },
-            {
-                "id": 1023,
-                "name": "金寨路-桐城路 南侧",
-                "level": 1022,
-                "levelText": "A级路段",
-                "coordinates": {
-                    "type": "MultiLineString",
-                    "coordinates": [
-                        [
-                            [
-                                117.276514,
-                                31.856474
-                            ],
-                            [
-                                117.277511,
-                                31.856579
-                            ],
-                            [
-                                117.280633,
-                                31.85719
-                            ]
-                        ],
-                        [
-                            [
-                                117.276514,
-                                31.856474
-                            ],
-                            [
-                                117.277511,
-                                31.856579
-                            ],
-                            [
-                                117.280633,
-                                31.85719
-                            ]
-                        ]
-                    ]
-                },
-                "parkingNum": 0,
-                "unitPrice": 500,
-                "monthBillNum": null,
-                "monthBillPrice": null,
-                "parkingAreaId": 1030,
-                "parkingAreaName": "庐江路",
-                "tags": null,
-                "roadSectionType": null
-            },
-            {
-                "id": 1041,
-                "name": "潜山路-长江西路9",
-                "level": 1004,
-                "levelText": "B级路段",
-                "coordinates": null,
-                "parkingNum": 0,
-                "unitPrice": 100,
-                "monthBillNum": 1,
-                "monthBillPrice": 100,
-                "parkingAreaId": 1029,
-                "parkingAreaName": "植保路",
-                "tags": null,
-                "roadSectionType": null
-            },
-            {
-                "id": 1040,
-                "name": "潜山路-长江西路8",
-                "level": 1004,
-                "levelText": "B级路段",
-                "coordinates": null,
-                "parkingNum": 0,
-                "unitPrice": 100,
-                "monthBillNum": 1,
+                "district": "蜀山区",
                 "monthBillPrice": 100,
                 "parkingAreaId": 1029,
                 "parkingAreaName": "植保路",
@@ -1382,6 +1185,7 @@ isExist:false   不存在
                 "parkingNum": 0,
                 "unitPrice": 100,
                 "monthBillNum": 1,
+                "district": "蜀山区",
                 "monthBillPrice": 100,
                 "parkingAreaId": 1029,
                 "parkingAreaName": "植保路",
@@ -1397,6 +1201,7 @@ isExist:false   不存在
                 "parkingNum": 0,
                 "unitPrice": 100,
                 "monthBillNum": 1,
+                "district": "蜀山区",
                 "monthBillPrice": 100,
                 "parkingAreaId": 1029,
                 "parkingAreaName": "植保路",
@@ -1412,6 +1217,7 @@ isExist:false   不存在
                 "parkingNum": 0,
                 "unitPrice": 100,
                 "monthBillNum": 1,
+                "district": "蜀山区",
                 "monthBillPrice": 100,
                 "parkingAreaId": 1029,
                 "parkingAreaName": "植保路",
@@ -1459,6 +1265,7 @@ isExist:false   不存在
                 "parkingNum": 0,
                 "unitPrice": 100,
                 "monthBillNum": 1,
+                "district": "蜀山区",
                 "monthBillPrice": 100,
                 "parkingAreaId": 1036,
                 "parkingAreaName": "长江西路",
@@ -1506,9 +1313,252 @@ isExist:false   不存在
                 "parkingNum": 0,
                 "unitPrice": 100,
                 "monthBillNum": 1,
+                "district": "蜀山区",
                 "monthBillPrice": 100,
                 "parkingAreaId": 1036,
                 "parkingAreaName": "长江西路",
+                "tags": null,
+                "roadSectionType": null
+            },
+            {
+                "id": 1078,
+                "name": "望江西路-创新大道",
+                "level": 1023,
+                "levelText": "B级路段",
+                "coordinates": null,
+                "parkingNum": 0,
+                "unitPrice": 1,
+                "monthBillNum": 10,
+                "district": "庐阳区",
+                "monthBillPrice": 100,
+                "parkingAreaId": 1030,
+                "parkingAreaName": "庐江路",
+                "tags": [],
+                "roadSectionType": null
+            },
+            {
+                "id": 1079,
+                "name": "望江西路-创新大道",
+                "level": 1023,
+                "levelText": "B级路段",
+                "coordinates": null,
+                "parkingNum": 0,
+                "unitPrice": 1,
+                "monthBillNum": 10,
+                "district": "庐阳区",
+                "monthBillPrice": 100,
+                "parkingAreaId": 1030,
+                "parkingAreaName": "庐江路",
+                "tags": [],
+                "roadSectionType": 1
+            },
+            {
+                "id": 1025,
+                "name": "黄山路-移湖路",
+                "level": 1006,
+                "levelText": "C级路段",
+                "coordinates": null,
+                "parkingNum": 0,
+                "unitPrice": 300,
+                "monthBillNum": 1,
+                "district": "庐江县",
+                "monthBillPrice": 100,
+                "parkingAreaId": 1031,
+                "parkingAreaName": "塔山路",
+                "tags": null,
+                "roadSectionType": null
+            },
+            {
+                "id": 1026,
+                "name": "周瑜大道-塔山路",
+                "level": 1006,
+                "levelText": "C级路段",
+                "coordinates": null,
+                "parkingNum": 0,
+                "unitPrice": 300,
+                "monthBillNum": 1,
+                "district": "庐江县",
+                "monthBillPrice": 100,
+                "parkingAreaId": 1033,
+                "parkingAreaName": "黄山路",
+                "tags": null,
+                "roadSectionType": null
+            },
+            {
+                "id": 1027,
+                "name": "周瑜大道-文昌路",
+                "level": 1006,
+                "levelText": "C级路段",
+                "coordinates": null,
+                "parkingNum": 0,
+                "unitPrice": 300,
+                "monthBillNum": 1,
+                "district": "庐江县",
+                "monthBillPrice": 100,
+                "parkingAreaId": 1032,
+                "parkingAreaName": "越城路",
+                "tags": null,
+                "roadSectionType": null
+            },
+            {
+                "id": 1030,
+                "name": "黄山路-越城路",
+                "level": 1006,
+                "levelText": "C级路段",
+                "coordinates": null,
+                "parkingNum": 0,
+                "unitPrice": 300,
+                "monthBillNum": 1,
+                "district": "庐江县",
+                "monthBillPrice": 100,
+                "parkingAreaId": 1031,
+                "parkingAreaName": "塔山路",
+                "tags": null,
+                "roadSectionType": null
+            },
+            {
+                "id": 1019,
+                "name": "潜山路-长江西路",
+                "level": 1004,
+                "levelText": "B级路段",
+                "coordinates": {
+                    "type": "MultiLineString",
+                    "coordinates": [
+                        [
+                            [
+                                117.234478,
+                                31.851152
+                            ],
+                            [
+                                117.235073,
+                                31.848532
+                            ],
+                            [
+                                117.235084,
+                                31.848254
+                            ],
+                            [
+                                117.23495,
+                                31.848031
+                            ],
+                            [
+                                117.234231,
+                                31.847552
+                            ],
+                            [
+                                117.232831,
+                                31.847051
+                            ],
+                            [
+                                117.231367,
+                                31.847147
+                            ]
+                        ]
+                    ]
+                },
+                "parkingNum": 104,
+                "unitPrice": 400,
+                "monthBillNum": 1,
+                "district": "蜀山区",
+                "monthBillPrice": 100,
+                "parkingAreaId": 1029,
+                "parkingAreaName": "植保路",
+                "tags": null,
+                "roadSectionType": null
+            },
+            {
+                "id": 1029,
+                "name": "塔山路-周瑜大道",
+                "level": 1006,
+                "levelText": "C级路段",
+                "coordinates": null,
+                "parkingNum": 0,
+                "unitPrice": 300,
+                "monthBillNum": 1,
+                "district": "庐江县",
+                "monthBillPrice": 100,
+                "parkingAreaId": 1032,
+                "parkingAreaName": "越城路",
+                "tags": null,
+                "roadSectionType": null
+            },
+            {
+                "id": 1028,
+                "name": "越城路-文明路",
+                "level": 1006,
+                "levelText": "C级路段",
+                "coordinates": null,
+                "parkingNum": 0,
+                "unitPrice": 300,
+                "monthBillNum": 1,
+                "district": "庐江县",
+                "monthBillPrice": 100,
+                "parkingAreaId": 1031,
+                "parkingAreaName": "塔山路",
+                "tags": null,
+                "roadSectionType": null
+            },
+            {
+                "id": 1023,
+                "name": "金寨路-桐城路 南侧",
+                "level": 1022,
+                "levelText": "A级路段",
+                "coordinates": {
+                    "type": "MultiLineString",
+                    "coordinates": [
+                        [
+                            [
+                                117.276514,
+                                31.856474
+                            ],
+                            [
+                                117.277511,
+                                31.856579
+                            ],
+                            [
+                                117.280633,
+                                31.85719
+                            ]
+                        ],
+                        [
+                            [
+                                117.276514,
+                                31.856474
+                            ],
+                            [
+                                117.277511,
+                                31.856579
+                            ],
+                            [
+                                117.280633,
+                                31.85719
+                            ]
+                        ]
+                    ]
+                },
+                "parkingNum": 0,
+                "unitPrice": 500,
+                "monthBillNum": 1,
+                "district": "庐阳区",
+                "monthBillPrice": 100,
+                "parkingAreaId": 1030,
+                "parkingAreaName": "庐江路",
+                "tags": null,
+                "roadSectionType": null
+            },
+            {
+                "id": 1041,
+                "name": "潜山路-长江西路9",
+                "level": 1004,
+                "levelText": "B级路段",
+                "coordinates": null,
+                "parkingNum": 0,
+                "unitPrice": 100,
+                "monthBillNum": 1,
+                "district": "蜀山区",
+                "monthBillPrice": 100,
+                "parkingAreaId": 1029,
+                "parkingAreaName": "植保路",
                 "tags": null,
                 "roadSectionType": null
             }
@@ -1519,25 +1569,24 @@ isExist:false   不存在
                 "unsorted": true
             },
             "offset": 0,
-            "pageSize": 20,
             "pageNumber": 0,
+            "pageSize": 20,
             "unpaged": false,
             "paged": true
         },
-        "totalPages": 1,
-        "totalElements": 18,
-        "last": true,
+        "last": false,
+        "totalPages": 2,
+        "totalElements": 21,
         "number": 0,
         "size": 20,
         "sort": {
             "sorted": false,
             "unsorted": true
         },
-        "numberOfElements": 18,
+        "numberOfElements": 20,
         "first": true
     }
 }
-
 ```
 ### 2.3.3 save接口
 - 功能描述:  添加新的路段信息
@@ -1641,39 +1690,44 @@ isExist:false   不存在
     "data": {
         "content": [
             {
-                "id": 1022,
-                "name": "望江西路-创新大道",
-                "level": 1023,
+                "id": 1040,
+                "name": "潜山路-长江西路8",
+                "level": 1004,
                 "levelText": "B级路段",
                 "coordinates": null,
-                "parkingArea": null,
-                "monthBillNum":100,
-                "monthBillPrice":100,
-                "createdBy": "wyf",
-                "createdDate": 1502886018656,
-                "lastModifiedBy": "wyf",
-                "lastModifiedDate": 1504517002229,
-                 "tags":[],
-                 "roadSectionType": 1
+                "parkingNum": 0,
+                "unitPrice": 100,
+                "monthBillNum": 1,
+                "district": "蜀山区",
+                "monthBillPrice": 100,
+                "parkingAreaId": 1029,
+                "parkingAreaName": "植保路",
+                "tags": null,
+                "roadSectionType": null
             }
         ],
+        "pageable": {
+            "sort": {
+                "sorted": false,
+                "unsorted": true
+            },
+            "offset": 0,
+            "pageNumber": 0,
+            "pageSize": 20,
+            "unpaged": false,
+            "paged": true
+        },
         "last": true,
         "totalPages": 1,
         "totalElements": 1,
         "number": 0,
         "size": 20,
-        "sort": [
-                    {
-                        "direction": "DESC",
-                        "property": "id",
-                        "ignoreCase": false,
-                        "nullHandling": "NATIVE",
-                        "ascending": false,
-                        "descending": true
-                    }
-                ],
-        "first": true,
-        "numberOfElements": 1
+        "sort": {
+            "sorted": false,
+            "unsorted": true
+        },
+        "numberOfElements": 1,
+        "first": true
     }
 }
 ```
@@ -1795,13 +1849,15 @@ isExist:false   不存在
 {
     "status": "SUCCESS",
     "data": {
-        "name": "潜山路-长江西路",
-        "unitPrice": 400,
+        "name": "潜山路-长江西路9",
+        "unitPrice": 100,
         "parkingAreaName": "植保路",
         "tags": null,
         "roadSectionType": null,
         "roadSectionCharges": {
-            "level": "A",
+            "level": 1004,
+            "name": "A",
+            "parentLevel": 1004,
             "roadSectionChargesFees": [
                 {
                     "fee": 0,
@@ -1828,8 +1884,43 @@ isExist:false   不存在
         }
     }
 }
-```
 
+```
+## 2.3.9获取路段等级
+
+- 请求地址: `http://localhost:8081/infras/roadSections/roadSectionLevel?access_token&`
+
+- 请求动作: `GET`
+
+- 请求示例: `localhost:8081/roadSections/roadSectionLevel?access_token=0de1a033-b114-4811-a522-a9f09393b20f`
+
+- 返回示例:
+
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "name": "A",
+            "level": 1004,
+            "parentLevel": 1004
+        },
+        {
+            "name": "A1",
+            "level": 1005,
+            "parentLevel": 1004
+        },
+        {
+            "name": "A2",
+            "level": 1006,
+            "parentLevel": 1004
+        },
+        {
+            "name": "B",
+            "level": 1152,
+            "parentLevel": 1152
+        }
+    ]
+}
 # 2.3 RoadSection接口开发
 ## 2.3.1 queryRoadSectionByName接口
 
@@ -1876,7 +1967,7 @@ isExist:false   不存在
               },
               "parkingNum": 0,
               "name": "长江路"
-          },
+          }
          
       ]
   }
