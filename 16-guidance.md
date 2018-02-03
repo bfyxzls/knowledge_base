@@ -427,6 +427,21 @@ isExist:false   不存在
 }
 ```
 
+### 16.1.11 获取剩余车位数
+- 功能描述： 获取剩余车位数
+- 请求地址: `http://domain/guidance/bizParkingAreas/remainParkingNum?access_token=ba7901a0-e3c1-44ca-96c5-b2dddd6da3e1&code=CODE`
+- 请求动作: `GET`
+- 请求示例: `http://domain/guidance/bizParkingAreas/remainParkingNum?access_token=ba7901a0-e3c1-44ca-96c5-b2dddd6da3e1&code=000820`
+
+- 返回示例：
+```
+{
+    "status": "SUCCESS",
+    "data": 10
+}
+
+```
+
 
 ## 16.2 诱导预案访问接口
 
