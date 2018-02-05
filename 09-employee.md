@@ -141,5 +141,101 @@
     - `phoneNum`: 手机号
     - `status`: 扎帐状态,1成功,2失败
     - `accountTime`: 扎帐日期，格式为yyyy-MM-dd
+    
+
+## 9.2 公司报表
+
+### 9.2.1 查询公司对账报表
+
+- 功能描述: 查询公司对账报表
+- 请求地址: `http://domain/employee/companyAccountReports/query`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/employee/companyAccountReports/query?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&date=`
+- 返回参数:
+```
+{
+    "alipay":10,
+    "weChat":10,
+    "date":2018-1-1 00:00:00   
+}
+```
+
+### 9.2.2 导出公司对账报表
+
+- 功能描述: 导出公司对账报表
+- 请求地址: `http://domain/employee/companyAccountReports/export`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/employee/companyAccountReports/export?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&date=`
+
+
+## 9.3 公司报表2
+
+### 9.3.1 查询公司对账报表
+
+- 功能描述: 查询公司对账报表
+- 请求地址: `http://domain/employee/companyOperatingReports/query`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/employee/companyOperatingReport/query?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&date=`
+- 返回参数:
+```
+{
+    "date":,
+    "parking":10,//当天收费总额
+    "arrearsPaid":10,//当天收欠费总额
+    "monthBill":0,//当天购买月票总额
+    "received":10,//到账金额
+    "notAccounted":10，//未扎帐
+    "coupon":10//优惠券金额
+}
+```
+
+### 9.3.2 导出公司对账报表
+
+- 功能描述: 导出公司对账报表
+- 请求地址: `http://domain/employee/companyOperatingReport/export`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/employee/companyOperatingReport/export?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&date=`
+
+
+
+
+## 9.4 员工报表
+
+### 9.4.1 员工报表
+
+- 功能描述: 查询员工对账报表
+- 请求地址: `http://domain/employee/employeeReports/query`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/employee/employeeReports/query?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&parkingAreaName=&roadSectionName=&employeeName=&username=&district=&startDate&endDate=`
+- 返回参数:
+```
+{
+    "date":,
+    "name":,
+    "username":,
+    "district":,
+    "roadSectionName":,
+    "parkingAreaName":,
+    "postName":,
+    "cash":0,// 当日现金收费总金额
+    "alipay":0,// 当日支付宝收费总金额
+    "weChat"0,// 当日微信收费总金额
+    "cashArrears":0,// 当日现金补缴总金额
+    "alipayArrears":0,// 当日支付宝补缴总金额
+    "weChatArrears":0,// 当日微信补缴总金额
+    "todayAccounted":0,
+    "notAccounted":0,// 未扎帐总金额
+    "replenishAccount":0,
+    "arrears":0,// 打欠费订单的金额
+    "total":0// 入账总计
+}
+```
+
+### 9.3.2 导出员工对账报表
+
+- 功能描述: 导出公司对账报表
+- 请求地址: `http://domain/employee/employeeReport/export`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/employee/employeeReport/export?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&&parkingAreaName=&roadSectionName=&employeeName=&username=&district=&startDate&endDate=`
 
 
