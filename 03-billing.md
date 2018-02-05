@@ -130,28 +130,24 @@ http://localhost:8080/billing/chargingStrategies/fee?access_token=69ff3003-dee1-
                 "maxFee": 5000,
                 "chargingRules": [
                     {
-                        "id": 1000,
                         "interval": 30,
                         "unit": 30,
                         "unitCost": 300,
                         "sort": 1
                     },
                     {
-                        "id": 1001,
                         "interval": 60,
                         "unit": 30,
                         "unitCost": 200,
                         "sort": 2
                     },
                     {
-                        "id": 1002,
                         "interval": 0,
                         "unit": 30,
                         "unitCost": 100,
                         "sort": 3
                     }
                 ],
-                "id": 1000,
                 "dateType": 1,
                 "vehicleType": 1
             },
@@ -161,28 +157,24 @@ http://localhost:8080/billing/chargingStrategies/fee?access_token=69ff3003-dee1-
                 "maxFee": 5000,
                 "chargingRules": [
                     {
-                        "id": 1003,
                         "interval": 60,
                         "unit": 30,
                         "unitCost": 400,
                         "sort": 1
                     },
                     {
-                        "id": 1004,
                         "interval": 60,
                         "unit": 30,
                         "unitCost": 300,
                         "sort": 2
                     },
                     {
-                        "id": 1005,
                         "interval": 0,
                         "unit": 30,
                         "unitCost": 200,
                         "sort": 3
                     }
                 ],
-                "id": 1001,
                 "dateType": 1,
                 "vehicleType": 2
             },
@@ -192,21 +184,18 @@ http://localhost:8080/billing/chargingStrategies/fee?access_token=69ff3003-dee1-
                 "maxFee": 5000,
                 "chargingRules": [
                     {
-                        "id": 1006,
                         "interval": 60,
                         "unit": 30,
                         "unitCost": 400,
                         "sort": 1
                     },
                     {
-                        "id": 1007,
                         "interval": 0,
                         "unit": 30,
                         "unitCost": 300,
                         "sort": 2
                     }
                 ],
-                "id": 1002,
                 "dateType": 2,
                 "vehicleType": 1
             },
@@ -216,21 +205,18 @@ http://localhost:8080/billing/chargingStrategies/fee?access_token=69ff3003-dee1-
                 "maxFee": 5000,
                 "chargingRules": [
                     {
-                        "id": 1008,
                         "interval": 60,
                         "unit": 30,
                         "unitCost": 500,
                         "sort": 1
                     },
                     {
-                        "id": 1009,
                         "interval": 0,
                         "unit": 30,
                         "unitCost": 400,
                         "sort": 2
                     }
                 ],
-                "id": 1003,
                 "dateType": 2,
                 "vehicleType": 2
             }
