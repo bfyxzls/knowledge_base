@@ -374,3 +374,53 @@
     "data": "上传位置成功"
 }
 ```
+
+### 7.1.8 queryAttendanceByPostId接口
+- 功能描述: 订单详情页获取指定岗位下员工当天签到信息
+- 请求地址: `http://domain/employee/attendanceRecords/queryAttendanceByPostId?postId&access_token`
+- 请求动作: `Get`
+- 请求示例: `http://localhost:8080/employee/attendanceRecords/queryAttendanceByPostId?postId=1021&access_token`
+- 返回示例
+```
+{
+    "status": "SUCCESS",
+    "data": [
+        {
+            "id": 1282,
+            "name": "11",
+            "postName": "3号岗",
+            "username": null,
+            "phoneNum": "18365265123",
+            "checkStatus": 1,
+            "checkTime": "2018-02-06 10:23:05"
+        },
+        {
+            "id": 1282,
+            "name": "11",
+            "postName": "3号岗",
+            "username": null,
+            "phoneNum": "18365265123",
+            "checkStatus": 2,
+            "checkTime": "2018-02-06 10:23:22"
+        },
+        {
+            "id": 1282,
+            "name": "11",
+            "postName": "3号岗",
+            "username": null,
+            "phoneNum": "18365265123",
+            "checkStatus": 1,
+            "checkTime": "2018-02-06 10:24:45"
+        },
+        {
+            "id": 1282,
+            "name": "11",
+            "postName": "3号岗",
+            "username": null,
+            "phoneNum": "18365265123",
+            "checkStatus": 2,
+            "checkTime": "2018-02-06 10:24:53"
+        }
+    ]
+}
+```
