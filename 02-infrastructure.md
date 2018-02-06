@@ -3287,19 +3287,11 @@ isExist:false   不存在
         "coordinates": null,
         "parkingType": 1,
         "parkingDistribution": 1,
-        "roadSection": {
-            "id": 1021,
-            "name": "岳西路-长江西路",
-            "level": 1022,
-            "levelText": "A级路段",
-            "coordinates": null,
-            "parkingArea": null,
-            "createdBy": "wyf",
-            "createdDate": 1502886018656,
-            "lastModifiedBy": "wyf",
-            "lastModifiedDate": 1504517002229
-        },
-        "employees": [],
+        "parkingAreaName":,
+        "roadSectionId":,
+        "roadSectionName",
+        "task"://新增岗位任务
+        
         "createdBy": "wyf",
         "createdDate": 1502886018656,
         "lastModifiedBy": "wyf",
@@ -3319,93 +3311,24 @@ isExist:false   不存在
     "status": "SUCCESS",
     "data": {
         "content": [
-            {
-                "id": 1014,
-                "name": "岗位1",
-                "direction": 1,
-                "coordinates": null,
-                "parkingType": 1,
-                "parkingDistribution": 1,
-                "roadSection": {
-                    "id": 1021,
-                    "name": "岳西路-长江西路",
-                    "level": 1022,
-                    "levelText": "A级路段",
-                    "coordinates": null,
-                    "parkingArea": null,
-                    "createdBy": "wyf",
-                    "createdDate": 1502886018656,
-                    "lastModifiedBy": "wyf",
-                    "lastModifiedDate": 1504517002229
-                },
+            {"id": 1014,
+              "name": "岗位1",
+               "direction": 1,
+               "coordinates": null,
+               "parkingType": 1,
+               "parkingDistribution": 1,
+               "parkingAreaName":,
+               "roadSectionId":,
+               "roadSectionName",
+               "task"://新增岗位任务    
+                  
                 "employees": [],
                 "createdBy": "wyf",
                 "createdDate": 1502886018656,
                 "lastModifiedBy": "wyf",
                 "lastModifiedDate": 1504517002229}
-            },
-            {
-                "id": 1015,
-                "name": "岗位2",
-                "direction": 1,
-                "coordinates": null,
-                "parkingType": 2,
-                "parkingDistribution": 1,
-                "roadSection": {
-                    "id": 1020,
-                    "name": "潜山路-怀宁路",
-                    "level": 1023,
-                    "levelText": "B级路段",
-                    "coordinates": null,
-                    "parkingArea": null,
-                    "createdBy": "wyf",
-                    "createdDate": 1502886018656,
-                    "lastModifiedBy": "wyf",
-                    "lastModifiedDate": 1504517002229
-                },
-                "employees": [],
-                "createdBy": "wyf",
-                "createdDate": 1502886018656,
-                "lastModifiedBy": "wyf",
-                "lastModifiedDate": 1504517002229
-            },
-            {
-                "id": 1020,
-                "name": "岗位3",
-                "direction": 1,
-                "coordinates": null,
-                "parkingType": 2,
-                "parkingDistribution": 1,
-                "roadSection": {
-                    "id": 1020,
-                    "name": "潜山路-怀宁路",
-                    "level": 1023,
-                    "levelText": "B级路段",
-                    "coordinates": null,
-                    "parkingArea": null,
-                    "createdBy": "wyf",
-                    "createdDate": 1502886018656,
-                    "lastModifiedBy": "wyf",
-                    "lastModifiedDate": 1504517002229
-                },
-                "employees": [],
-                "createdBy": "wyf",
-                "createdDate": 1502886018656,
-                "lastModifiedBy": "wyf",
-                "lastModifiedDate": 1504517002229
             }
-        ],
-        "last": true,
-        "totalElements": 3,
-        "totalPages": 1,
-        "number": 0,
-        "size": 20,
-        "sort": null,
-        "first": true,
-        "numberOfElements": 3
-    }
-}
-
+         ]
 ```
 ## 2.7.3 save接口
 - 功能描述: 添加新的岗位信息
@@ -3420,7 +3343,8 @@ isExist:false   不存在
     "coordinates": null,
     "parkingType": 2,
     "parkingDistribution": 1,
-    "roadSectionId": 1001
+    "roadSectionId": 1001,
+    "task":    //新增岗位任务
 }
 ```
 - 返回示例:
@@ -3434,18 +3358,12 @@ isExist:false   不存在
         "coordinates": null,
         "parkingType": 2,
         "parkingDistribution": 1,
-        "roadSection": {
-            "id": 1020,
-            "name": "潜山路-怀宁路",
-            "level": 1023,
-            "levelText": "B级路段",
-            "coordinates": null,
-            "parkingArea": null,
-            "createdBy": "wyf",
-            "createdDate": 1502886018656,
-            "lastModifiedBy": "wyf",
-            "lastModifiedDate": 1504517002229
-        },
+        "parkingAreaName":,
+        "roadSectionId":,
+        "roadSectionName",
+        "task"://新增岗位任务   
+         
+         ,
         "employees": [],
         "createdBy": "wyf",
         "createdDate": 1502886018656,
@@ -3468,7 +3386,8 @@ isExist:false   不存在
     "coordinates": null ,  
     "parkingType": 2 ,  
     "parkingDistribution": 2 ,  
-    "roadSectionId": 2             
+    "roadSectionId": 2 ，
+    "task"://新增岗位任务               
 }
 ```
 - 返回示例
@@ -3482,18 +3401,11 @@ isExist:false   不存在
         "coordinates": null,
         "parkingType": 2,
         "parkingDistribution": 1,
-        "roadSection": {
-            "id": 1020,
-            "name": "潜山路-怀宁路",
-            "level": 1023,
-            "levelText": "B级路段",
-            "coordinates": null,
-            "parkingArea": null,
-            "createdBy": "wyf",
-            "createdDate": 1502886018656,
-            "lastModifiedBy": "wyf",
-            "lastModifiedDate": 1504517002229
-        },
+        "parkingAreaName":,
+        "roadSectionId":,
+        "roadSectionName",
+        "task"://新增岗位任务  
+       
         "employees": [],
         "createdBy": "wyf",
         "createdDate": 1502886018656,
@@ -3521,18 +3433,11 @@ isExist:false   不存在
                 "coordinates": null,
                 "parkingType": 1,
                 "parkingDistribution": 1,
-                "roadSection": {
-                    "id": 1021,
-                    "name": "岳西路-长江西路",
-                    "level": 1022,
-                    "levelText": "A级路段",
-                    "coordinates": null,
-                    "parkingArea": null,
-                    "createdBy": "wyf",
-                    "createdDate": 1502886018656,
-                    "lastModifiedBy": "wyf",
-                    "lastModifiedDate": 1504517002229
-                },
+                "parkingAreaName":,
+                "roadSectionId":,
+                "roadSectionName",
+                "task"://新增岗位任务   
+                
                 "employees": [],
                 "createdBy": "wyf",
                 "createdDate": 1502886018656,
