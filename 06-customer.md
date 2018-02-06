@@ -257,7 +257,8 @@ PS:需要用admin用户获得access_token
         "shouldPay": 10000,
         "actualPay": 10000,
         "valid": true,
-        "description": null
+        "description": null，
+        "performanceIncluded"://是否计入绩效
     }
 }
 ```
@@ -287,7 +288,8 @@ PS:需要用admin用户获得access_token
                 "shouldPay": 10000,
                 "actualPay": 10000,
                 "valid": true,
-                "description": null
+                "description": null，
+                "performanceIncluded"://是否计入绩效
             },
             {
                 "id": 1001,
@@ -303,7 +305,8 @@ PS:需要用admin用户获得access_token
                 "shouldPay": 10000,
                 "actualPay": 10000,
                 "valid": true,
-                "description": null
+                "description": null，
+                "performanceIncluded"://是否计入绩效
             }
         ],
         "last": true,
@@ -338,7 +341,8 @@ PS:需要用admin用户获得access_token
     "actualPay": 10000,
     "valid": true,
     "description": null,
-    "district":1
+    "district":1,
+    "performanceIncluded"://是否计入绩效
 }
 ```
 - 返回示例
@@ -371,7 +375,8 @@ PS:需要用admin用户获得access_token
 - Body：
 ```
 {
-    "customerName": "ygao"
+    "customerName": "ygao"，
+    "performanceIncluded"://是否计入绩效 加入字段performanceIncluded
 }
 ```
 - 返回示例
@@ -392,7 +397,8 @@ PS:需要用admin用户获得access_token
         "shouldPay": 10000,
         "actualPay": 10000,
         "valid": true,
-        "description": null
+        "description": null，
+        "performanceIncluded"://是否计入绩效
     }
 }
 ```

@@ -239,3 +239,50 @@
 - 请求示例: `http://localhost:8080/employee/employeeReport/export?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&&parkingAreaName=&roadSectionName=&employeeName=&username=&district=&startDate&endDate=`
 
 
+## 9.5 支付流水记录
+
+### 9.5.1 支付宝支付流水
+
+- 功能描述: 支付宝流水
+- 请求地址: `http://domain/employee/payRecords/alipay`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/employee/payRecords/alipay?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&tradeId=&bizOrderId=&buyerAccount=&status=`
+- 返回参数:
+```
+
+{
+    "tradeId":,// 支付宝交易标号
+    "bizOrderId":, // 商户订单号
+    "buyerAccount":,// 卖家支付账号
+    "payTime":,// 支付时间
+    "tradeAmount":,// 交易金额
+    "receiveAmount":,// 实收金额
+    "payAmount":,// 买家付款金额
+    "invoiceAmount":,// 可开票金额
+    "belong":,// 业务归属
+    "payType":,// 付款渠道  1、现金支付 2、支付宝二维码支付 3、微信支付 4、支付宝支付 5、月票 6、免费 7、微信二维码支付 8、小程序支付
+    "bizName":, // 商户名称
+    "status":// 支付结果
+}
+```
+
+### 9.5.2 微信支付流水
+
+- 功能描述: 微信流水
+- 请求地址: `http://domain/employee/payRecords/weChat`
+- 请求动作: `GET`
+- 请求示例: `http://localhost:8080/employee/payRecords/weChat?access_token=69ff3003-dee1-40d5-a36f-c0c4fa55c431&tradeId=&bizOrderId=&openId=`
+- 返回参数:
+```
+{
+    "tradeId":,// 微信支付订单号
+    "bizOrderId":, // 商户订单号
+    "openId":,// 用户标识
+    "tradeType":,// 交易类型
+    "orderAmount":,// 订单金额
+    "cashAmount":, // 现金支付金额
+    "couponAmount":, // 代金券金额
+    "payTime":// 支付时间
+}
+
+```
